@@ -26,7 +26,42 @@
 5. `secret_eldara`: 兩項 CRITICAL（見上）；兩項 WARNING（埃爾莎大公未在 events 提及；與 `eldara-worldtree.yaml` 高度重複）
 
 - **結論**：結構與引用全部閉合，僅內容層級需修正。修正後可達全 A 級。
-- **下一步**：修正上述問題 → Git commit → 進入下一階段（FastAPI / Faction / City）
+- **修正執行**：已全部完成（10 處修改，含 2 CRITICAL + 8 WARNING）
+- **Git commit**: `f3e0fd0` — feat: Empire 層級完成
+
+---
+
+## 2026-05-12 23:55 Schema v0.3 — City → Settlement 重構 + CKII 聚落類型
+
+- **From**: 父代理 (Kimi Code CLI)
+- **To**: 未來的父代理 / 子代理
+- **任務**：回應用戶關於中世紀村莊/堡壘/修道院細化的需求，參考 CKII 分類法重構層級
+- **已完成**：
+  - [x] `layer` enum: `city` → `settlement`（schema.json + SCHEMA.md + PLAN.md）
+  - [x] 新增 `properties.settlement_type` enum: `[fortress, town, village, monastery, outpost]`
+    - `fortress` = 城堡/要塞/皇宮（對應 CKII Castle）
+    - `town` = 有城牆與行會的城鎮（對應 CKII City）
+    - `village` = 農業村莊（對應 CKII 未開發槽位）
+    - `monastery` = 修道院/大教堂（對應 CKII Temple）
+    - `outpost` = 哨站/邊境營地
+  - [x] 新增 `properties.wonders[]` 陣列（CKII 奇觀/紀念碑系統）
+    - Palace 不屬於 settlement_type，而是以 `wonders: [imperial_palace]` 附加於 settlement
+    - 大城巿（如首都）由多個不同 settlement_type 的 district 組成，無需 `metropolis` 標籤
+  - [x] SCHEMA.md 全部 `city` → `settlement`，中文「城市」→「定居點」
+  - [x] PLAN.md 層級鏈更新
+  - [x] `schema.json` JSON 語法驗證通過
+- **待完成**：
+  - [ ] 建立第一批 Settlement YAML 示範（建議：維特魯斯、奧斯堡、某邊境要塞、某修道院、某村莊）
+  - [ ] FastAPI 骨架需同步更新路由（`/settlement/{id}` 取代 `/city/{id}`）
+- **阻擋問題**：無
+- **重要設計決策**：
+  - 不新增 `village` 層級，而是將 `city` 廣義化為 `settlement`（定居點層）
+  - 大城巿的宏偉感由多樣 district 體現，非單一 `metropolis` 標籤（符合 CKII 一 County 多 Holdings 的設計）
+  - `wonders[]` 獨立於 `settlement_type`，可跨類型附加（城堡可以有皇宮奇觀，城鎮可以有大教堂奇觀）
+
+---
+
+## 2026-05-12 22:45 會話恢復與狀態確認
 
 ---
 

@@ -63,7 +63,7 @@ ankora-world/
 
 ### 1.4 SCHEMA.md 與 schema.json
 
-定義五級層次（continent → empire → city → district → room）與必填欄位，讓未來協作者（人類或 AI）知道如何新增地點。
+定義五級層次（continent → empire → settlement → district → room）與必填欄位，讓未來協作者（人類或 AI）知道如何新增地點。
 
 ---
 
@@ -75,7 +75,7 @@ ankora-world/
 
 1. **地理實體識別**
    - 遍歷全文，標記所有地名、建築名、區域名
-   - 分類層級：帝國（Empire）→ 城市（City）→ 區域（District）→ 房間（Room）
+   - 分類層級：帝國（Empire）→ 定居點（Settlement）→ 區域（District）→ 房間（Room）
    - 範例：塞拉菲昂神聖帝國 → 維斯塔波利斯 → 內城區 → 聖鑰院複合體
 
 2. **關係圖譜抽取**

@@ -18,7 +18,7 @@
     "layer": {
       "type": "string",
       "description": "Hierarchy tier",
-      "enum": ["continent", "geography", "empire", "city", "district", "room", "faction"]
+      "enum": ["continent", "geography", "empire", "settlement", "district", "room", "faction"]
     },
     "region": {
       "type": "string",
@@ -89,7 +89,18 @@
         },
         "population": {
           "type": ["integer", "null"],
-          "description": "Resident population (mainly for city/district)"
+          "description": "Resident population (mainly for settlement/district)"
+        },
+        "settlement_type": {
+          "type": "string",
+          "enum": ["fortress", "town", "village", "monastery", "outpost"],
+          "description": "CKII-inspired holding type: fortress (castle/military), town (walled burgh), village (rural), monastery (temple/religious), outpost (camp/frontier)"
+        },
+        "wonders": {
+          "type": "array",
+          "description": "CKII-style wonders / monuments attached to this settlement (e.g. imperial_palace, grand_cathedral, university)",
+          "items": { "type": "string" },
+          "minItems": 0
         }
       },
       "additionalProperties": true

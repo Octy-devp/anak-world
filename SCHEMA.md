@@ -15,15 +15,15 @@
 | 大陸 | `continent` | 整個安納克大陸 | Ankora |
 | 地理 | `geography` | 自然或宏觀地理實體（山脈、河流、深淵、森林、世界樹） | The Howling Peaks, Eldara, Abyssus |
 | 帝國 | `empire` | 政治實體、國家、帝國 | Seraphion Empire |
-| 城市 | `city` | 城市、首都、要塞都市 | Vetustapolis |
-| 區域 | `district` | 城市內的行政或功能區塊 | Inner City, Harbor District |
+| 定居點 | `settlement` | 城鎮、村莊、要塞、修道院等一切人類聚落 | Vetustapolis |
+| 區域 | `district` | 定居點內的行政或功能區塊 | Inner City, Harbor District |
 | 房間 | `room` | 可進入的具體空間，最小單位 | Sacred Key Complex, Throne Hall |
 | **勢力** | **`faction`** | **非國家組織：傭兵團、行會、宗教結社、秘密組織、貿易聯盟** | **Frostblade Company, Ochre Guild** |
 
 > **規則**：
 > - `room` 必須有 `parent_id` 指向所屬 `district`
-> - `district` → `city` → `empire` → `continent`
-> - `geography` 可獨立存在，或作為其他地點的空間背景（如城市位於山脈東麓）
+> - `district` → `settlement` → `empire` → `continent`
+> - `geography` 可獨立存在，或作為其他地點的空間背景（如定居點位於山脈東麓）
 > - `geography` 的 `parent_id` 通常指向 `continent`，也可指向另一 `geography`（如「龍脊隘口」屬於「怒嘯山脈」）
 > - **`faction` 可獨立存在，不屬於任何地點層級；通過 `influence[]` 描述其在各地點的活動**
 
@@ -35,7 +35,7 @@
 # ── 身份錨定（必填）──
 id: sacred_key_complex           # 全局唯一識別碼，snake_case，不可變
 name: 聖鑰院複合體               # 人類可讀名稱
-layer: room                      # [continent|empire|city|district|room]
+layer: room                      # [continent|empire|settlement|district|room]
 region: 內城區                    # 所屬區域名稱
 empire: 塞拉菲昂神聖帝國          # 所屬帝國名稱
 parent_id: inner_city            # 上一層級的 id（continent 可省略）
@@ -63,7 +63,7 @@ properties:
   access_level: restricted        # [public|restricted|private|secret]
   danger_level: low               # [none|low|medium|high|deadly]
   religion: 太陽神阿努信仰         # 主要信仰
-  population: 0                   # 常駐人口（區域/城市層級建議填寫）
+  population: 0                   # 常駐人口（區域/定居點層級建議填寫）
 
 # ── 關係即通道（connections，可選）──
 connections:
@@ -114,7 +114,7 @@ tags:
 
 ### `layer`
 - **型別**：string
-- **允許值**：`continent`、`geography`、`empire`、`city`、`district`、`room`
+- **允許值**：`continent`、`geography`、`empire`、`settlement`、`district`、`room`
 - **規則**：不可自創層級名稱
 
 ### `parent_id`
@@ -124,8 +124,8 @@ tags:
   - 其他層級必須指向上一層的真實 `id`
   - `geography` 指向 `continent` 或另一 `geography`
   - `empire` 指向 `continent`
-  - `city` 指向 `empire` 或 `geography`（如位於山脈中的城市）
-  - `district` 指向 `city`
+  - `settlement` 指向 `empire` 或 `geography`（如位於山脈中的定居點）
+  - `district` 指向 `settlement`
   - `room` 指向 `district`
 
 ### `atmosphere`
@@ -186,8 +186,8 @@ tags:
    ├── 01-west-seraphion/            # 帝國目錄（前綴數字確保排序）
    │   ├── empire.yaml               # 帝國本體資料
    │   └── locations/
-   │       └── vetustapolis/         # 城市目錄
-   │           ├── city.yaml         # 城市本體資料
+   │       └── vetustapolis/         # 定居點目錄
+   │           ├── settlement.yaml   # 定居點本體資料
    │           └── inner-city/       # 區域名稱用連字號
    │               └── sacred-key-complex.yaml
    ```
@@ -211,13 +211,13 @@ tags:
 
 ## 五、新增地點的標準流程（給協作者）
 
-1. **確認層級**：這個地點是 `empire`、`city`、`district` 還是 `room`？
+1. **確認層級**：這個地點是 `empire`、`settlement`、`district` 還是 `room`？
 2. **確認 `parent_id`**：上一層的地點 `id` 是否已存在？若不存在，先建立上層。
 3. **複製範本**：從 `sacred-key-complex.yaml` 複製結構。
 4. **填寫必填欄位**：`id`、`name`、`layer`、`region`、`empire`、`parent_id`、`description`、`atmosphere`、`tags`。
 5. **填寫可選欄位**：`connections`、`contents`、`events` 視原文內容決定。
 6. **命名檔案**：`{id}.yaml`（`id` 中的底線改為連字號）。
-7. **放入正確目錄**：`data/{帝國前綴}/locations/{城市}/{區域}/`
+7. **放入正確目錄**：`data/{帝國前綴}/locations/{定居點}/{區域}/`
 8. **跑驗證**：確認 YAML 語法正確，且 `parent_id` 與 `connections[].target` 均可解析。
 9. **提交 Git**：一個地點一個 commit，或一批相關地點一個 commit。
 
@@ -251,7 +251,7 @@ tags:
 
 ### 8.1 設計原則
 
-- **獨立於地點層級**：`faction` 不屬於 `continent → empire → city` 鏈，而是與 `geography` 平行的獨立層級
+- **獨立於地點層級**：`faction` 不屬於 `continent → empire → settlement` 鏈，而是與 `geography` 平行的獨立層級
 - **活動即影響**：通過 `influence[]` 描述組織在哪些地點有據點、招募點或秘密活動
 - **關係網絡**：通過 `relations[]` 描述與其他 `faction` 或 `empire` 的立場（友好/敵對/秘密）
 - **感官錨定於總部**：`atmosphere` 描述的是組織總部（`headquarters`）所在的空間感官
@@ -266,7 +266,7 @@ layer: faction
 
 # ── 組織屬性（必填）──
 type: mercenary            # [mercenary|guild|religious|secret_society|trade_league|political|academic]
-headquarters: ashtown      # 總部地點 id（可為 city 或 room）
+headquarters: ashtown      # 總部地點 id（可為 settlement 或 room）
 founding_year: 780
 ideology: 金幣即忠誠，刀劍即法律
 
@@ -343,7 +343,7 @@ tags:
 
 #### `headquarters`
 - **型別**：string
-- **說明**：組織總部所在地的 `id`，通常為 `city` 或 `room` 層級
+- **說明**：組織總部所在地的 `id`，通常為 `settlement` 或 `room` 層級
 
 #### `founding_year`
 - **型別**：integer
