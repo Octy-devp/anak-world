@@ -74,8 +74,8 @@
 | geography | 14 | ✅ 完成 |
 | empire | 5 | ✅ 完成 |
 | settlement | 11 | ✅ 完成（5首批 + 6第二批） |
-| district | 0 | ⏳ 未開始 |
-| room | 0 | ⏳ 未開始 |
+| district | 3 | ✅ 維特魯斯三區（內城/下城/城外） |
+| room | 13 | ✅ 維特魯斯內部空間完整建立 |
 | faction | 0 | ⏳ 未開始 |
 
 ### 22 個 Settlement 清單
