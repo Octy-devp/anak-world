@@ -1,0 +1,128 @@
+# ── 身份錨定（必填）──
+id: ashford_tower
+name: 阿什福德塔堡
+layer: settlement
+region: 西爾伯弗羅斯特南麓
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  阿什福德塔堡是護憲封建議會中一位伯爵的封地，坐落於西爾伯弗羅斯特邊疆大公國與帝國內陸之間的緩衝地帶，
+  靠近怒嘯山脈的北端餘脈。這座堡壘以灰色花崗岩砌成，主塔高聳而狹窄，如同一柄插入大地的斷劍。
+  四周環繞著乾涸的護城河溝壑與削尖的木樁柵欄，見證了邊境長年不斷的戰火與逃亡。
+
+  作為帝國北方邊境與內陸之間的緩衝帶，阿什福德塔堡長期承擔著收容從北方邊境撤下的傷兵與難民的重任。
+  西爾伯弗羅斯特邊疆大公國與阿爾比諾克拉西亞的百年戰爭中，無數被霜生的寒法凍傷的士兵、
+  失去家園的農民、以及從冰壁防線潰退下來的殘部，沿著山脈南麓的古道湧向這座堡壘。
+  伯爵開放城堡的馬廄、糧倉與教堂供難民棲身，以《大憲章》中的「古典庇護條款」為依據，
+  拒絕西爾伯弗羅斯特邊疆大公與教廷將難民強行徵編為「聖役軍團」的要求。
+
+  這種人道主義姿態使阿什福德塔堡在護憲議會中享有崇高聲譽，卻也讓伯爵的財政瀕臨破產。
+  堡壘周邊的臨時棚屋區逐年擴大，農田被難民營地侵佔，衛兵人數不足百人，
+  卻需維持近八百人的日常秩序。伯爵常自嘲：「我擁有一座塔堡，卻更像一座救濟院的院長。」
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 療傷草藥與艾草燻蒸的刺鼻氣息
+    - 難民棚屋中擁擊人體的汗酸與柴火煙味
+    - 馬廄中戰馬與傷兵繃帶的混合氣味  # inferred: true
+    - 北方山脈飄來的凍土冷冽與松脂味  # inferred: true
+  light: >
+    主塔高窗在清晨透入狹窄的冷白光柱，照亮塔內簡陋的療傷所；
+    黃昏時分，北方山脈的陰影提前籠罩堡壘，篝火與火把在棚屋區星羅棋布；
+    夜間，瞭望塔上的烽火成為方圓數十里唯一的光源。  # inferred: true
+  temperature: >
+    山麓地帶氣溫較平原低三至五度，冬季寒風從怒嘯山脈北端長驅直下，
+    棚屋區的難民常在黎明時分凍僵；夏季短暫涼爽，是難民傷口癒合的最佳時節。  # inferred: true
+  sound:
+    - 傷兵在療傷所中的呻吟與囈語
+    - 難民兒童在棚屋區的哭喊與嬉鬧聲
+    - 瞭望塔上衛兵換崗的銅號與腳步聲  # inferred: true
+    - 北方遠處傳來的狼嚎與風嘯  # inferred: true
+    - 馬廄中戰馬的嘶鳴與蹄鐵碰撞  # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 護憲封建議會／某伯爵領主  # inferred: true
+  access_level: public
+  danger_level: medium
+  religion: 普世教會西派
+  population: 800  # 含衛兵、難民與原住民；inferred: true
+  settlement_type: fortress
+
+# ── 關係即通道（connections）──
+connections:
+  - target: the_howling_peaks
+    type: physical
+    direction: 北方
+    description: >
+      阿什福德塔堡緊鄰怒嘯山脈北端餘脈，山脈是與北方白霜的天然屏障，
+      也是凍土寒風與難民逃亡路線的來源方向。
+  - target: the_flood_plain
+    type: conceptual
+    direction: 南方腹地
+    description: >
+      中央沖積平原是帝國的糧食命脈，但阿什福德塔堡幾乎無法從南方獲得穩定糧食供應。
+      選帝侯議會對北方邊境的救濟議案常年擱置，伯爵只能依靠護憲議會的微薄援助與本地獵捕維生。  # inferred: true
+  - target: vetustapolis
+    type: conceptual
+    direction: 南方遠處
+    description: >
+      維特魯斯的教廷與皇帝對北方邊境的災難採取忽視態度，
+      阿什福德塔堡的求救文書如同石沉大海，伯爵只能以《大憲章》的古典庇護條款獨自承擔人道重負。  # inferred: true
+  - target: flumen_geminus
+    type: physical
+    direction: 西方遠處
+    description: >
+      傑米努斯大河的北岸支流從山脈西側流淌而過，是堡壘獲取淡水與河魚的遙遠命脈，
+      但水道漫長且冬季結冰，運輸極為困難。  # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 療傷主塔
+    location: 堡壘中央
+    description: >
+      伯爵將主塔底層改建為臨時醫院，收容從北方邊境撤下的凍傷士兵與傷員。
+      塔內瀰漫著艾草與草藥的刺鼻氣息，修士與民間醫者在此不分晝夜地照料傷患。  # inferred: true
+  - item: landmark
+    name: 難民棚屋區
+    location: 堡壘外圍護城河溝壑之間
+    description: >
+      臨時搭建的木板、獸皮與蘆葦棚屋，收容著從冰壁防線潰退的難民與逃兵。
+      棚屋區逐年擴大，已超過堡壘本體的數倍，衛兵需每日巡邏以維持秩序。  # inferred: true
+  - item: npc
+    name: 阿什福德伯爵
+    location: 療傷主塔頂層
+    description: >
+      護憲封建議會中以人道主義著稱的伯爵，以《大憲章》古典庇護條款為盾，
+      拒絕將難民強行徵編為聖役軍團。他的財政因收容難民而瀕臨破產，卻在議會中贏得了小領主們的敬重。  # inferred: true
+  - item: resource
+    name: 山麓獵場
+    location: 堡壘東方山麓
+    description: >
+      怒嘯山脈南麓的稀疏林地與草甸，是堡壘獲取野味與皮毛的主要來源。
+      冬季獵物稀少，難民與衛兵常因爭奪獵物而發生衝突。  # inferred: true
+
+# ── 歷史事件（events）──
+events:
+  - id: ashford_refugee_crisis
+    year: 824
+    name: 阿什福德難民潮
+    description: >
+      白霜的冰壁防線在冬季發動大規模滲透，西爾伯弗羅斯特邊疆數個村莊被毀，
+      數百名難民湧入阿什福德塔堡。伯爵開放糧倉與教堂收容難民，以《大憲章》庇護條款拒絕教廷徵兵要求。
+      這一事件使堡壘人口從三百激增至八百，也讓護憲議會在選帝侯會議中首次提出「北方邊境救濟議案」。  # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 護憲議會
+  - 小領主
+  - 伯爵
+  - 邊境要塞
+  - 難民收容
+  - 怒嘯山脈
+  - 西爾伯弗羅斯特
+  - 人道主義

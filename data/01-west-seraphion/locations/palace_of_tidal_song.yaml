@@ -1,0 +1,112 @@
+# ── 身份錨定（必填）──
+id: palace_of_tidal_song
+name: 潮音宮
+layer: settlement
+region: 南方海岸礁岩
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  潮音宮是莫爾根王國的權力核心，建於南方海岸的海上礁岩之中。
+  第825年在位的塞拉芬·莫爾根（Seraph Morgan）被稱為「私掠王」，
+  他並非傳統貴族出身，而是莫爾根家族三代海商與海盜血統的繼承者。
+
+  王宮主大廳的地面由一整塊明晰海水晶鋪成，下方即是洶湧暗流與巡弋鯊魚。
+  據說莫爾根在接見不聽話的封臣時，會「不慎」讓對方看見地板下游過的鯊魚群。
+  「聖焰私掠艦隊」懸掛教廷旗幟進行海上劫掠，所得與西派教廷四六分成。
+  莫爾根王國壟斷南方海鹽、珍珠、珊瑚與香料貿易，
+  並暗中使用利貝塔尼亞的金幣作為黑市交易硬通貨。
+  塞拉芬對帝國內陸政治毫無興趣，他更關心如何突破利貝塔尼亞對海峽的封鎖，
+  以及如何將私掠所得洗白為「聖戰捐獻」。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 海鹽與礁岩藻類的濃烈鹹腥
+    - 明晰海水晶散發的微弱礦物冷香
+    - 私掠艦隊火藥與焦油的刺鼻氣息 # inferred: true
+    - 珊瑚與珍珠貝殼的淡淡鈣質氣味 # inferred: true
+  light: >
+    正午時分明晰海水晶將陽光折射為晃動的藍綠色光斑，投射於穹頂之上；
+    入夜後水晶下方懸掛的漁火與生物熒光透過地板，使大廳如置身海底。
+  temperature: >
+    海風終年調節，殿內涼爽潮濕；
+    海水晶地板終年冰冷，赤足行走會感到刺骨寒意。 # inferred: true
+  sound:
+    - 海浪持續拍打礁岩的轟鳴與潮音（宮殿得名由來）
+    - 海水晶地板下方暗流的低沉迴響
+    - 私掠艦隊歸港時的號角與水手呼喊
+    - 大廳中鯊魚巡弋時尾鰭劃水的細微聲響 # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 莫爾根王國（塞拉芬·莫爾根）
+  access_level: restricted
+  danger_level: high
+  religion: 普世教會西派（創世主阿薩，實質為海商傳統與私掠信仰的混合）
+  population: 8000  # inferred: true（海上軍事-商業要塞與王宮常駐人口）
+  settlement_type: fortress
+  wonders:
+    - crystal_sea_floor
+
+# ── 關係即通道（connections）──
+connections:
+  - target: saltwhite
+    type: physical
+    direction: 北方海岸
+    hidden: false
+    description: >
+      莫爾根王國的領地從鹽白港綿延至珍珠灣，潮音宮與鹽白城同處南方海岸，
+      私掠艦隊時常「誤劫」鹽白城商船，兩者關係充滿張力。
+  - target: aurum_river
+    type: conceptual
+    direction: 東南方海域
+    hidden: false
+    description: >
+      奧魯姆河出海口外海即利貝塔尼亞風息群島，塞拉芬·莫爾根日夜籌謀突破
+      利貝塔尼亞對海峽的封鎖，潮音宮的私掠戰略與奧魯姆河出海口的海上通道
+      息息相關。
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 明晰海水晶大廳
+    location: 潮音宮主殿
+    guardian: 莫爾根王家衛隊
+    description: >
+      主大廳地面由一整塊明晰海水晶鋪成，下方即是洶湧暗流與巡弋鯊魚。
+      水晶將上方光線折射為海底般的光影，既是建築奇觀，也是莫爾根威懾封臣的心理武器。
+  - item: resource
+    name: 南方海鹽與珍珠貿易壟斷
+    location: 潮音宮港與礁岩倉庫
+    guardian: 莫爾根商會
+    description: >
+      莫爾根王國壟斷南方海鹽、珍珠、珊瑚與香料貿易，
+      暗中使用利貝塔尼亞金幣作為黑市硬通貨，所得部分與西派教廷四六分成。
+  - item: npc
+    name: 塞拉芬·莫爾根（私掠王）
+    location: 潮音宮王座廳
+    description: >
+      第825年在位的莫爾根國王，被稱為「私掠王」。
+      三代海商與海盜血統的繼承者，對內陸政治毫無興趣，一心突破海峽封鎖。
+
+# ── 歷史事件（events）──
+events:
+  - id: seraph_morgan_coronation
+    year: 810
+    name: 塞拉芬·莫爾根繼承王位
+    description: >
+      塞拉芬·莫爾根繼承莫爾根王位，將私掠艦隊擴編為「聖焰私掠艦隊」，
+      懸掛教廷旗幟進行海上劫掠，確立與西派教廷四六分成的利益格局。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 要塞
+  - 王宮
+  - 海上礁岩
+  - 私掠
+  - 海商
+  - 海水晶
+  - 南方海岸
+  - 莫爾根王國

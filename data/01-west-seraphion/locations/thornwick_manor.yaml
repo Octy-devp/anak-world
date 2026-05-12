@@ -1,0 +1,120 @@
+# ── 身份錨定（必填）──
+id: thornwick_manor
+name: 荊棘維克莊園
+layer: settlement
+region: 維特魯斯東郊
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  荊棘維克莊園是護憲封建議會中一位騎士領主的封地，位於維特魯斯東郊的沖積平原邊緣。
+  與雄偉的城堡不同，這裡只有一座石砌主屋、一圈荊棘籬笆、以及散落其間的三十餘戶農舍。
+  莊園的名字來自籬笆上瘋長的野黑莓與薔薇，它們在春夏之交開出大片暗紅花朵，遠遠望去如同血跡斑斑的圍牆。
+
+  這位騎士擁有《大憲章》中明確記載的特權：拒絕大領主軍隊無償通過其領地。
+  在選帝侯私軍頻繁往來於維特魯斯與東方邊境的時代，這項特權成為了他最穩定的財源。
+  每當格蘭迪斯的麥穗軍團、莫爾根的邊境巡邏隊或教廷的聖秩騎士團經過莊園前的古道時，
+  騎士便會親自率領手下的十餘名扈從攔住去路，出示《大憲章》抄本，彬彬有禮地要求繳納「道路維護稅」。
+
+  這種做法令大領主們極為惱火，卻又無法在法理上反駁。
+  護憲伯爵艾德里安·馮·小赫斯曾在選帝侯議會中公開讚揚這位騎士「以古典憲法的文字守護了小貴族最後的尊嚴」。
+  然而，莊園周邊的農民對此並不熱衷——他們知道，每一次攔路索稅之後，過境的軍隊總會在離開時「順手」取走幾隻雞或一袋麥子。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 野黑莓與薔薇花朵的甜膩香氣  # 春夏之交瀰漫
+    - 石砌主屋壁爐中燃燒的蘋果木煙味
+    - 農舍豬圈與雞糞的混合氣息  # inferred: true
+    - 過境軍隊馬匹與鐵鏽的暫留氣味  # inferred: true
+  light: >
+    清晨時分，平原上的霧氣使莊園籠罩在一片乳白之中，僅荊棘籬笆頂端的暗紅花朵隱約可見；
+    正午天光開闊，石屋的白牆反射出刺眼的白茫；
+    黃昏時分，夕照將荊棘籬笆染成金紅，如同一圈燃燒的矮牆。  # inferred: true
+  temperature: >
+    屬沖積平原的溫帶氣候，夏季悶熱潮濕，冬季濕冷刺骨，
+    小冰期令霜凍提前到來，農作物生長期逐年縮短。  # inferred: true
+  sound:
+    - 風吹過平原蘆葦的窸窣聲
+    - 農婦在籬笆邊採摘黑莓時的閒談與笑語
+    - 過境軍隊的馬蹄與車輪碾壓古道聲  # inferred: true
+    - 騎士扈從攔路索稅時的號令與爭執聲  # inferred: true
+    - 遠處維特魯斯教廷鐘聲的微弱迴盪  # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 護憲封建議會／某騎士領主  # inferred: true
+  access_level: public
+  danger_level: low
+  religion: 普世教會西派
+  population: 200  # 含騎士、扈從與農戶；inferred: true
+  settlement_type: village
+
+# ── 關係即通道（connections）──
+connections:
+  - target: the_flood_plain
+    type: physical
+    direction: 坐落於邊緣
+    description: >
+      莊園位於中央沖積平原東緣，土壤屬於傑米努斯河南岸富含有機質的黑黏土，
+      地勢低窪，夏季多沼澤與池塘，適合黑莓與濕地作物生長。
+  - target: vetustapolis
+    type: physical
+    direction: 西方
+    description: >
+      維特魯斯聖光之城位於莊園西方約半日馬程處，是帝國的政治與宗教中心。
+      莊園前的古道是通往維特魯斯東郊的主要幹道之一，過境軍隊絡繹不絕。
+  - target: flumen_geminus
+    type: physical
+    direction: 南方近處
+    description: >
+      傑米努斯大河的支流從莊園南側蜿蜒而過，提供灌溉水源，
+      也是農民夏季捕魚與婦女浣衣的去處。  # inferred: true
+  - target: hess
+    type: conceptual
+    direction: 西方同盟
+    description: >
+      護憲伯爵艾德里安·馮·小赫斯是這位騎士在議會中的代言人。
+      兩家領地雖相距甚遠，但在《大憲章》古典特權的旗幟下結成了牢固的同盟。  # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 荊棘籬笆
+    location: 莊園外圍
+    description: >
+      環繞莊園的野生黑莓與薔薇籬笆，高約兩米，春夏開暗紅花朵，秋冬結黑果。
+      它既是邊界標記，也是防禦野獸與散兵的天然屏障，騎士的扈從常在籬笆後埋伏，監視過境軍隊的動向。  # inferred: true
+  - item: landmark
+    name: 憲章古道收稅站
+    location: 莊園東側幹道
+    description: >
+      一座以木板與碎石搭建的簡陋哨站，是騎士行使《大憲章》特權、向過境軍隊徵收「道路維護稅」的據點。
+      哨站木樑上掛著褪色的帝國旗幟與《大憲章》摘錄木牌。  # inferred: true
+  - item: npc
+    name: 荊棘維克騎士
+    location: 石砌主屋
+    description: >
+      一位精通《大憲章》條文的小騎士領主，以「拒絕大領主軍隊無償通過」的特權聞名於護憲議會。
+      他並非貪婪之人，只是深知沒有這項稅收，莊園連修繕籬笆的費用都拿不出。  # inferred: true
+
+# ── 歷史事件（events）──
+events:
+  - id: thornwick_charter_standoff
+    year: 823
+    name: 荊棘維克攔路事件
+    description: >
+      格蘭迪斯大公的一支麥穗軍團分隊途經莊園，拒絕繳納道路維護稅。
+      騎士率領扈從以荊棘籬笆為屏障擋住去路，雙方對峙三日，最終麥穗軍團指揮官因急於趕赴維特魯斯而妥協付款。
+      此事成為護憲議會在選帝侯會議中的著名案例。  # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 護憲議會
+  - 小領主
+  - 騎士
+  - 莊園
+  - 維特魯斯東郊
+  - 大憲章
+  - 道路維護稅

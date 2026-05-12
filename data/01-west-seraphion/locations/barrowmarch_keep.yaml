@@ -1,0 +1,109 @@
+# ── 身份錨定（必填）──
+id: barrowmarch_keep
+name: 巴羅瑪奇堡
+layer: settlement
+region: 格蘭迪斯邊境
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  巴羅瑪奇堡是護憲封建議會中一位男爵的封地，坐落於格蘭迪斯大公國邊境與帝國中部平原的交錯地帶。
+  這座小城堡以夯土與碎石築成，外牆覆蓋著年代久遠的黑苔，塔樓僅有三座，其中一座已因經費不足而半塌。
+
+  男爵領地內的農民長期承受格蘭迪斯大公奧托的武力威脅。
+  奧托的麥穗軍團時常在邊境巡弋，男爵不得不以高額獻金換取短暫的和平。
+  領地內的農民被迫將大部分收成交給教會與大公，僅餘的糧食連溫飽都難以維持。
+  在聖券惡性貶值的年代，教廷的什一稅與大公的「邊境保護費」幾乎榨乾了這片狹小領地的每一寸骨髓。
+
+  儘管如此，男爵仍以《大憲章》的古典憲法保護條款為盾牌，在選帝侯議會中緊隨護憲伯爵的腳步，
+  成為教廷與大領主之間微弱的平衡砝碼。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 夯土牆上潮濕霉苔的土腥味
+    - 地窖中陳年麥糠與腐壞蔬菜的酸腐氣息
+    - 衛兵皮革護甲與鏽鐵的混合氣味  # inferred: true
+    - 遠處格蘭迪斯麥田飄來的燒秸煙味  # inferred: true
+  light: >
+    塔樓箭窗僅容一人探身，透入的光線狹窄而慘淡；
+    庭院中央的石井在正午時分反射一小片白茫，其餘時刻整座城堡沉浸在昏黃與灰綠之間。  # inferred: true
+  temperature: >
+    石砌建築內終年陰冷，冬季寒風從塌毀塔樓的裂縫長驅直入；
+    夏季夯土牆蓄熱悶熱難當，地窖卻依舊冰涼。  # inferred: true
+  sound:
+    - 衛兵在石階上巡邏的稀疏腳步聲
+    - 農民在城外田地中的嘆息與鋤頭掘土聲
+    - 遠處麥穗軍團號角的悶響  # inferred: true
+    - 塌毀塔樓上烏鴉的嘶啞啼叫  # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 護憲封建議會／某男爵領主  # inferred: true
+  access_level: restricted
+  danger_level: medium
+  religion: 普世教會西派
+  population: 500  # 含農民與衛兵；inferred: true
+  settlement_type: fortress
+
+# ── 關係即通道（connections）──
+connections:
+  - target: the_flood_plain
+    type: physical
+    direction: 坐落於邊緣
+    description: >
+      巴羅瑪奇堡緊鄰中央沖積平原的北部邊緣，周遭農田是小冰期中日益貧瘠的麥田與蘿蔔地，
+      土壤肥沃度遠不及格蘭迪斯核心領地。
+  - target: golden_spire_castle
+    type: conceptual
+    direction: 北方
+    description: >
+      格蘭迪斯大公奧托的金穗堡是這座小城堡揮之不去的陰影。
+      麥穗軍團的巡弋與糧食禁運的威脅，使男爵領地時刻處於大領主的壓迫之下。
+  - target: vetustapolis
+    type: conceptual
+    direction: 南方遠處
+    description: >
+      維特魯斯是帝國法定的政治與宗教中心，但對這座邊境小堡而言，聖光之城的救濟與保護從未真正到達。
+      男爵只能在選帝侯議會中追隨護憲伯爵，遙遠地呼籲中央關注邊境小領主的困境。  # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 半塌主塔
+    location: 城堡內庭北側
+    description: >
+      三座塔樓中最高的一座，頂層已在去年冬季的暴風雪中坍塌。
+      殘留的石階上長滿黑苔，烏鴉在斷樑間築巢，成為領地衰敗最醒目的象徵。
+  - item: npc
+    name: 巴羅瑪奇男爵
+    location: 城堡主廳
+    description: >
+      一位在格蘭迪斯邊境苦苦支撐的小領主，擁有《大憲章》賦予的古典特權，卻無力對抗大公的武力。
+      他將僅存的財富用於僱傭三十名衛兵與修繕城牆，但所有人都知道，這座堡壘抵擋不住麥穗軍團的一次衝鋒。  # inferred: true
+  - item: resource
+    name: 邊境麥田
+    location: 城堡外圍農地
+    description: >
+      貧瘠的小麥與黑麥田，收成僅夠領地人口兩個月食用。
+      其餘部分需以什一稅交給教會、以保護費交給格蘭迪斯大公。  # inferred: true
+
+# ── 歷史事件（events）──
+events:
+  - id: barrowmarch_tower_collapse
+    year: 824
+    name: 巴羅瑪奇主塔坍塌
+    description: >
+      冬季暴風雪摧毀了城堡主塔頂層，男爵無力重建，只能以木板與草氈暫時封堵。
+      這一事件成為護憲議會在選帝侯會議中抱怨「大領主壓榨小貴族」的具體例證。  # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 護憲議會
+  - 小領主
+  - 男爵
+  - 邊境要塞
+  - 格蘭迪斯
+  - 糧食壓榨
+  - 破敗
