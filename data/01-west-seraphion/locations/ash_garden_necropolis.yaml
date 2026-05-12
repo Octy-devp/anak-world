@@ -1,0 +1,128 @@
+# ── 身份錨定（必填）──
+id: ash_garden_necropolis
+name: 灰土園墓窖
+layer: settlement
+region: 中央平原
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  灰土園墓窖緊鄰維特魯斯城牆外區，是維特魯斯最大的公共墓地。
+  因土地稀缺，土承載者修士們向地下挖掘了深達數層的迷宮式墓穴，
+  形成被稱為「地下層疊墓窖」（Catacombs）的龐大墓葬網絡。
+
+  緊鄰灰土園的安眠引者修道院（Monasterium Ductorum Quietis）負責治理無名死者的安葬與臨終禱告，
+  院內同時收容瀕死的老人與絕症患者，由土承載者修士以防腐與鎮痛技術緩解他們的最後痛苦。
+  這座修道院在維特魯斯民間被稱為「最後的慈惠所」——進入這裡的人，幾乎沒有人能活著出來。
+
+  牆壁上密密麻麻地鑿出了壁龕，塞滿了用粗布包裹的平民與聖奴遺體。
+  地下層疊墓窖是維特魯斯最古老、最密集的墓葬區，歷經青銅時代至今。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 防腐草藥與乾燥泥土的沉重氣息
+    - 粗布包裹遺體的陳舊塵埃味
+    - 臨終禱告堂中燻香與衰敗的混合氣息 # inferred: true
+    - 地下墓窖深處石灰岩的潮濕礦物味 # inferred: true
+  light: >
+    灰土園地表僅有蒼白天光與零星燭火；
+    臨終禱告堂內終年點燃長明燈，昏黃燈焰在低矮拱頂上投下搖曳陰影；
+    地下墓窖深處則幾近完全黑暗，僅有土承載者修士手中的微弱燭光在迷宮壁龕間遊移。
+  temperature: >
+    地表隨季節變化，冬季寒風從城牆外區長驅直入；
+    臨終禱告堂因石砌結構而終年陰涼；
+    地下墓窖則維持恆定的冰冷，越往下層越寒徹骨髓。
+  sound:
+    - 土承載者修士以防腐魔法延緩屍體腐敗時的低聲吟唱
+    - 臨終禱告堂中瀕死者的微弱呻吟與斷續喘息
+    - 鐵鏟挖掘墓穴的沉悶刮擦聲
+    - 寒風穿過墓窖通風孔的嗚咽迴聲 # inferred: true
+    - 遠處維特魯斯城牆上鐘聲的模糊餘韻 # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 土承載者修會（普世教會西派元素聖秩）
+  access_level: public
+  danger_level: low
+  religion: 普世教會西派（創世主阿薩）
+  population: 300
+  settlement_type: monastery
+  wonders:
+    - catacombs
+
+# ── 關係即通道（connections）──
+connections:
+  - target: vetustapolis
+    type: physical
+    direction: 緊鄰城牆
+    description: >
+      灰土園緊貼維特魯斯黑色玄武岩城牆的外側根部，
+      與城牆外區的棚戶帶僅隔一條泥濘小徑。
+      死者與生者在此共享狹窄的邊界。
+  - target: the_flood_plain
+    type: physical
+    direction: 坐落於上
+    description: >
+      墓窖與修道院坐落於中央沖積平原的邊緣地帶，
+      土壤因河流沉積而鬆軟，便於挖掘深層墓穴。
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 無名死者墓區
+    location: 灰土園地表東側
+    guardian: 土承載者修士
+    description: >
+      沒有墓碑的亂葬崗，平民與聖奴的遺體被粗布包裹後淺埋於此。
+      只有土承載者修士手中的登記冊記錄著每具遺體的編號與大致死因。
+      每逢雨季，泥濘中偶爾會暴露出腐朽的骨殖。
+  - item: landmark
+    name: 臨終禱告堂
+    location: 安眠引者修道院中央
+    guardian: 駐院土承載者長老
+    description: >
+      低矮的石砌聖堂，內設七張石床，專供瀕死者接受最後的禱告與鎮痛儀式。
+      牆壁上刻有《大憲章》時代的死亡禱文，空氣中瀰漫著安息草與乳香的濃烈氣息。
+  - item: landmark
+    name: 土承載者防腐工坊
+    location: 修道院北翼地下
+    guardian: 資深土承載者修士
+    description: >
+      調製防腐藥劑與處理遺體的秘密作坊。
+      架上排列著裝有草藥粉末、礦鹽與樹脂的陶罐，
+      中央石台上遺留著歷代修士研磨藥劑的凹痕。
+      據說某些古老配方源自青銅時代的葬儀傳統。
+  - item: landmark
+    name: 地下墓窖入口
+    location: 灰土園中央石亭下方
+    guardian: 兩名輪值土承載者修士
+    description: >
+      通往地下層疊墓窖的螺旋石階入口，石門上刻有阿薩的死亡禱文。
+      未經許可不得進入，但貧民們傳說深夜能聽見地下傳來的腳步聲——
+      那是土承載者在巡查數百年來積累的亡者之城。
+
+# ── 歷史事件（events）──
+events:
+  - id: catacombs_founded
+    year: 300
+    name: 地下層疊墓窖始建 # inferred: true
+    description: >
+      隨著維特魯斯人口膨脹與地表墓地飽和，土承載者修會開始向地下挖掘墓穴。
+      最初的壁龕僅有兩層，後歷經數百年擴建，形成今日深達數層的迷宮結構。
+      最底層甚至可以追溯到青銅時代的原始墓葬。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 修道院
+  - 墓園
+  - 夕照畿
+  - 維特魯斯城牆外區
+  - 土承載者
+  - 元素聖秩
+  - 無名死者
+  - 臨終關懷
+  - 地下墓窖
+  - 普世教會
+  - 西派

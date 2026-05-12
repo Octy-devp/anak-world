@@ -1,0 +1,129 @@
+# ── 身份錨定（必填）──
+id: corsair_anchorage
+name: 私掠艦隊錨地
+layer: settlement
+region: 南方海岸
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  莫爾根王國「聖焰私掠艦隊」的主要軍港與艦隊基地。
+  建於一處天然深水港灣，兩側峭壁如臂膀環抱，僅有一條狹窄水道可供大型戰艦進出。
+  港內常年停泊著二十餘艘懸掛教廷旗幟的私掠戰艦，船舷兩側繪有燃燒的熾天使圖案，
+  配備青銅撞角與輕快風帆。
+  塞拉芬·莫爾根在此設立王國海軍司令部，並以「聖戰捐獻」的名義將劫掠所得洗白。
+  港灣深處有隱秘的地下水道，據說通往潮音宮下方的暗流。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 火藥與焦油的刺鼻氣息
+    - 海鹽與潮濕鐵鏽的鹹腥
+    - 新鋸木材與防水焦油的混合氣味 # inferred: true
+    - 船艙深處發霉贓物與異國香料的悶臭 # inferred: true
+  light: >
+    白天，港灣兩側峭壁遮擋大半陽光，水面呈現幽深的墨綠色；
+    夜間戰艦桅杆上懸掛的教廷火炬與熾天使旗幟在風中搖曳，
+    將峭壁投射為巨大的、不斷晃動的暗影。
+  temperature: >
+    深水港灣終年陰涼，峭壁阻隔了午後陽光；
+    造船工坊的鍛爐與瀝青鍋使局部區域燥熱難當，
+    與港灣水面的潮濕冷風形成強烈對比。
+  sound:
+    - 戰艦收帆時繩索與滑輪的沉重摩擦聲
+    - 青銅撞角入水時的沉悶撞擊與金屬迴響
+    - 造船工坊的鐵錘敲打與鋸木聲
+    - 水手們以粗俗海盜俚語叫罵與賭博喧嘩 # inferred: true
+    - 港灣深處地下水道傳來的隱約水流迴響 # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 莫爾根王國（塞拉芬·莫爾根）
+  access_level: restricted
+  danger_level: high
+  religion: 普世教會西派（創世主阿薩，實質為私掠信仰與海商傳統混合）
+  population: 2000
+  settlement_type: fortress
+  wonders:
+    - sacred_flame_dock
+
+# ── 關係即通道（connections）──
+connections:
+  - target: palace_of_tidal_song
+    type: secret
+    direction: 北方
+    hidden: true
+    description: >
+      港灣深處有隱秘的地下水道，據說通往潮音宮下方的暗流；
+      僅有莫爾根王室與極少數艦隊高層知曉其確切入口。
+  - target: pearl_bay_village
+    type: physical
+    direction: 西方
+    hidden: false
+    description: >
+      沿南方海岸線向西為珍珠灣漁村，艦隊的徵稅站設於該地，
+      漁民與水手之間存在複雜的敵意與依存關係。
+  - target: wind_isles
+    type: conceptual
+    direction: 南方海域
+    hidden: false
+    description: >
+      聖焰私掠艦隊的主要劫掠目標之一，是利貝塔尼亞商船往返於風息群島的必經航線；
+      塞拉芬·莫爾根日夜籌謀突破利貝塔尼亞對海峽的封鎖。
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 聖焰艦隊軍港
+    location: 港灣核心水域
+    guardian: 聖焰私掠艦隊
+    description: >
+      二十餘艘懸掛教廷旗幟的私掠戰艦常年停泊於此，
+      船舷兩側繪有燃燒的熾天使圖案，配備青銅撞角與輕快風帆。
+      這是莫爾根王國海上霸權的最直接象徵。
+  - item: landmark
+    name: 造船工坊
+    location: 港灣東側岸壁
+    description: >
+      沿著天然岩壁搭建的大型造船工坊，晝夜不停修造與維護戰艦；
+      空氣中瀰漫著焦油、鋸末與燒灼金屬的氣味。
+  - item: resource
+    name: 火藥與青銅撞角儲藏庫
+    location: 港灣北側崖壁洞穴
+    guardian: 莫爾根王家衛隊
+    description: >
+      鑿入崖壁的隱蔽洞穴，儲存大量火藥、箭矢與青銅撞角備件；
+      戒備森嚴，非授權人員靠近可被就地射殺。
+  - item: landmark
+    name: 海軍司令部
+    location: 港灣西側礁岩建築
+    guardian: 塞拉芬·莫爾根私兵
+    description: >
+      由黑色火山岩砌成的堅固建築，懸掛莫爾根家族海蛇旗與教廷旗幟；
+      塞拉芬·莫爾根在此指揮私掠艦隊的劫掠行動與戰略部署。
+  - item: landmark
+    name: 劫掠贓物洗白倉庫
+    location: 港灣南岸地下倉庫
+    guardian: 聖焰商會會計
+    description: >
+      表面上是「聖戰捐獻物資」的臨時存放點，實際上是用於重新標記、
+      偽造文書與分贓的地下倉庫；所得與西派教廷按四六分成。
+  - item: landmark
+    name: 地下水道入口
+    location: 港灣最深處水下洞穴
+    hidden: true
+    description: >
+      隱藏於港灣最深處水面之下的洞穴入口，漲潮時幾乎完全被淹沒；
+      據說通往潮音宮下方的暗流，是莫爾根王室緊急逃生的秘密通道。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 要塞
+  - 軍港
+  - 私掠艦隊
+  - 聖焰私掠艦隊
+  - 莫爾根王國
+  - 南方海岸
+  - 地下水道
+  - 海軍司令部

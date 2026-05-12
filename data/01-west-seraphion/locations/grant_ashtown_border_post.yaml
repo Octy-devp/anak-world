@@ -1,0 +1,96 @@
+# ── 身份錨定（必填）──
+id: grant_ashtown_border_post
+name: 格蘭迪斯-阿申斯塔特邊境哨站
+layer: settlement
+region: 中央平原東緣
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  格蘭迪斯大公與阿申斯塔特自由市之間的邊境軍事要塞。
+  奧托大公以「糧道安全」為名，在阿申斯塔特邊境修築了一系列軍事哨站，實質封鎖了這座自由市的陸路補給。
+  這座要塞是其中最大的一座，駐紮著麥穗軍團的精銳部隊，牆頭懸掛格蘭迪斯的金穗旗幟。
+  阿申斯塔特則僱傭了施塔爾傭兵聯盟的「灰燼守衛」支隊在對面駐防，兩軍對峙已持續七年。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 城牆木柵與瀝青的防水氣味
+    - 青銅盔甲與長戟保養油的亞麻味
+    - 對峙雙方營火炊煙的混雜焦香 # inferred: true
+    - 隨營商人攤位的香料與醃肉味 # inferred: true
+    - 地下冰窖滲出的凍土與霉味 # inferred: true
+  light: >
+    白天：城牆箭塔的窄窗將陽光切割成條狀光斑，投射在操練場的塵土上；
+    黃昏：對面阿申斯塔特與灰燼守衛營地的篝火與本方哨站的火把形成對稱的光點陣列；
+    夜間：牆頭金穗旗幟在火把映照下閃爍，成為平原上最醒目的政治符號。
+  temperature: >
+    夏季石牆蓄熱，營房悶熱難當；冬季平原寒風毫無阻擋地掠過城牆，箭塔值守士兵需輪班取暖；
+    春秋短暫溫和，但日夜溫差極大。
+  sound:
+    - 麥穗軍團集結時的軍號與長戟頓地聲
+    - 對面灰燼守衛營地隱約傳來的傭兵方言與鐵匠錘擊聲
+    - 糧道封鎖檢查站的盤查喝令與車輪軋壓聲
+    - 隨營商人的討價還價與銅幣碰撞聲 # inferred: true
+    - 夜間城牆上巡邏腳步與風吹旗幟的獵獵聲 # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 格蘭迪斯大公國／麥穗軍團精銳部隊
+  access_level: restricted
+  danger_level: high
+  population: 650  # 約五百至八百人（駐軍 + 軍眷 + 隨營商人）；inferred: true
+  settlement_type: fortress
+
+# ── 關係即通道（connections）──
+connections:
+  - target: golden_spire_castle
+    type: physical
+    direction: 西方宗主
+    description: 格蘭迪斯大公宮殿，要塞的指揮權與補給線最終源自奧托大公
+  - target: ashtown
+    type: physical
+    direction: 東方對峙
+    description: 阿申斯塔特自由市邊境，灰燼守衛支隊在對面駐防，兩軍對峙已持續七年
+  - target: the_flood_plain
+    type: physical
+    direction: 坐落於上
+    description: 要塞位於中央沖積平原東緣，控制著通往阿申斯塔特的陸路糧道
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 主堡樓
+    location: 要塞核心
+    description: 麥穗軍團指揮官的駐地與軍事會議廳，牆上掛著格蘭迪斯金穗旗幟與平原地形沙盤
+  - item: landmark
+    name: 城牆與箭塔
+    location: 要塞外圍
+    description: 環繞要塞的石牆與木製箭塔，可監控東西兩側的平原道路與對面灰燼守衛動向
+  - item: landmark
+    name: 麥穗軍團駐軍營
+    location: 主堡樓兩側
+    description: 精銳部隊的常駐營地，駐軍約三百至五百人，配備青銅甲與長戟
+  - item: landmark
+    name: 糧道封鎖檢查站
+    location: 東向主干道
+    description: 奧托大公以「糧道安全」為名設立的陸路封鎖點，所有通往阿申斯塔特的糧車與商隊皆需盤查
+  - item: npc
+    name: 隨營商人
+    location: 要塞南側臨時攤位區
+    description: 依附軍隊生存的流動商人，販售補給品、劣酒、書信代筆與賭博服務
+  - item: resource
+    name: 地下冰窖
+    location: 主堡樓地下
+    description: 利用平原地下低溫儲存的冰塊窖，用於保存肉類與醫療用的降溫冰塊
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 邊境要塞
+  - 格蘭迪斯
+  - 阿申斯塔特
+  - 麥穗軍團
+  - 灰燼守衛
+  - 糧道封鎖
+  - 軍事對峙

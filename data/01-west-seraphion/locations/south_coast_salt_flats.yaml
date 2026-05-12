@@ -1,0 +1,120 @@
+# ── 身份錨定（必填）──
+id: south_coast_salt_flats
+name: 南方海岸鹽田
+layer: settlement
+region: 南方海岸
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  位於鹽白城與潮音宮之間的廣袤海鹽曬田區。
+  這裡的鹽工世代以曬鹽為生，將海水引入淺灘蒸發池，經日曬風乾後收穫粗鹽。
+  莫爾根王國壟斷了南方海鹽貿易，鹽工們只能以極低價格將產品賣給王國的「聖焰商會」，
+  再由商會高價轉售內陸。
+  近年來，部分鹽工開始暗中向凱撒里克帝國與利貝塔尼亞走私食鹽，
+  以規避莫爾根的壟斷盤剝。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 濃烈到嗆鼻的海鹽氣息
+    - 鹽工汗水與日曬皮革的酸臭 # inferred: true
+    - 曬鹽工棚木材與稻草頂的乾燥氣味 # inferred: true
+    - 遠處海風帶來的淡淡海藻腥氣
+  light: >
+    無遮無擋的鹽田在正午時分反射刺眼的白色強光，工人們以浸過鹽水的布條遮眼；
+    黃昏時分蒸發池水面如無數面破碎的鏡子，將落日折射為萬千金紅碎片。
+  temperature: >
+    白天鹽田在烈日下酷熱難當，地表溫度遠高於周圍海岸；
+    夜間海風帶走熱量，氣溫驟降，鹽工們需裹緊粗布斗篷御寒。
+  sound:
+    - 海水引入蒸發池時的潺潺流動聲
+    - 鹽工以木耙刮取鹽晶的沙沙聲響
+    - 曬鹽工棚在風中搖晃的吱嘎聲 # inferred: true
+    - 遠處聖焰商會收購站傳來的算盤撥動與爭執聲
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 莫爾根王國（聖焰商會）
+  access_level: public
+  danger_level: medium
+  religion: 普世教會西派（創世主阿薩）
+  population: 1800
+  settlement_type: village
+
+# ── 關係即通道（connections）──
+connections:
+  - target: saltwhite
+    type: physical
+    direction: 西方
+    hidden: false
+    description: >
+      沿南方海岸線向西即為鹽白城，是鹽田產品的主要交易點與走私中轉站；
+      鹽白城的自由民與鹽工之間存在緊密的經濟與血緣紐帶。
+  - target: palace_of_tidal_song
+    type: physical
+    direction: 東方
+    hidden: false
+    description: >
+      向東沿礁岩海岸可達潮音宮，莫爾根王國的海鹽壟斷總部設於該處；
+      聖焰商會的收購價格由潮音宮直接制定。
+  - target: pearl_bay_village
+    type: physical
+    direction: 南方
+    hidden: false
+    description: >
+      南方鄰近珍珠灣漁村，兩地居民時有通婚與勞力互助；
+      漁村多餘的勞力會在曬鹽旺季前來幫工。
+
+# ── 內容物（contents）──
+contents:
+  - item: resource
+    name: 海鹽蒸發池
+    location: 鹽田核心區
+    description: >
+      將海水引入淺灘後形成的層層蒸發池，經日曬風乾後池底沉積粗鹽結晶；
+      是整個南方海岸最重要的食鹽來源之一。
+  - item: landmark
+    name: 曬鹽工棚
+    location: 蒸發池邊緣
+    description: >
+      簡陋的木質工棚，以稻草或帆布為頂，供鹽工午休與儲放工具；
+      棚壁上刻滿了歷代鹽工的名字與抗議莫爾根壟斷的塗鴉。
+  - item: landmark
+    name: 聖焰商會收購站
+    location: 鹽田北側高地上
+    guardian: 聖焰商會會計與私兵
+    description: >
+      一座由黑色礁石砌成的單層建築，懸掛教廷旗幟與莫爾根商會標誌；
+      鹽工們被迫以極低價格將粗鹽賣給商會，再由商會高價轉售內陸。
+  - item: landmark
+    name: 秘密走私通道
+    location: 鹽田西緣沼澤地帶
+    hidden: true
+    description: >
+      鹽工們在沼澤蘆葦叢中開闢的隱蔽小徑，用於夜間向鹽白城走私者轉運食鹽；
+      走私所得直接運往凱撒里克帝國或利貝塔尼亞，規避莫爾根壟斷盤剝。
+  - item: landmark
+    name: 鹽工聚落
+    location: 鹽田東側避風處
+    description: >
+      世代曬鹽為生的家庭聚居地，房屋以鹽磚與夯土築成，簡陋但堅固；
+      聚落中央有一口由古老木輪驅動的淡水井，是整個社區的生命線。
+  - item: resource
+    name: 鹽晶儲藏窖
+    location: 鹽工聚落地下
+    description: >
+      開鑿於地下的鹽晶儲藏空間，利用地下恆溫環境保持食鹽乾燥；
+      部分窖藏被鹽工暗中截留，作為走私貨源。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 鹽田
+  - 曬鹽
+  - 南方海岸
+  - 莫爾根王國
+  - 聖焰商會
+  - 壟斷
+  - 走私
+  - 鹽工

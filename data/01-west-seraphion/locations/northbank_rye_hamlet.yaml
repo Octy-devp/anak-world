@@ -1,0 +1,89 @@
+# ── 身份錨定（必填）──
+id: northbank_rye_hamlet
+name: 北岸黑麥村
+layer: settlement
+region: 中央沖積平原北岸
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  位於中央沖積平原北岸的農奴村莊，受約恩維德河冰川礦物質滋養的砂質土壤排水快、地勢略高，適合黑麥、蘿蔔與馬鈴薯。
+  農民需將 40% 收成交給教會（靈糧稅），再向格蘭迪斯大公繳納 20% 實物地租，農閒季節還需服「聖役」——修築道路、加固堡壘、或參加麥穗軍團。
+  村莊中心有一座教廷代牧駐紮的小教堂，代牧由格蘭迪斯大公提名，同時擔任大公宮廷祭司。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 黑麥稈與泥土的乾澀氣息
+    - 蘿蔔葉與馬鈴薯窖的潮濕土腥
+    - 教堂低階薰香的廉價柏木味
+    - 聖役勞工營地的汗味與草藥膏 # inferred: true
+  light: >
+    開闊平原上無遮無擋的天光，夏季正午白得刺眼；
+    秋季夕照將黑麥田染成深金，遠處金穗堡的輪廓如剪影般矗立；
+    冬晨薄霧中，教堂尖頂是唯一可見的垂直標記。
+  temperature: >
+    夏季受北岸砂質土壤調節而偏乾熱，夜間約恩維德河風帶來涼意；
+    冬季濕冷刺骨，北岸偶有小雪，農奴棚屋難以抵禦寒風。
+  sound:
+    - 風吹過黑麥田的沙沙聲
+    - 農閒季節聖役勞工修築道路的號子與鎬擊石聲
+    - 教堂鐘聲在平原上的遙遠迴盪
+    - 收稅官馬隊接近時的蹄聲與犬吠 # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 格蘭迪斯大公國／普世教會西派教廷（代牧區）
+  access_level: restricted
+  danger_level: medium
+  population: 1250  # 約一千至一千五百人；inferred: true
+  settlement_type: village
+
+# ── 關係即通道（connections）──
+connections:
+  - target: golden_spire_castle
+    type: physical
+    direction: 南方
+    description: 宗主領地金穗堡，收稅官與聖役徵發隊定期往返
+  - target: the_flood_plain
+    type: physical
+    direction: 坐落於上
+    description: 村莊坐落於中央沖積平原北岸砂質土壤區
+  - target: jarnvid_river
+    type: physical
+    direction: 北界
+    description: 約恩維德河構成村莊北界，提供灌溉與冰川礦物質水源
+
+# ── 內容物（contents）──
+contents:
+  - item: resource
+    name: 北岸黑麥田
+    location: 村莊四周平原
+    description: 受約恩維德河冰川礦物質滋養的砂質土壤上種植的黑麥，是格蘭迪斯糧食壟斷的基層來源
+  - item: resource
+    name: 蘿蔔圃與馬鈴薯窖
+    location: 村莊農舍後方
+    description: 輔助作物，儲存於地下窖中以渡過小冰期的嚴冬
+  - item: landmark
+    name: 教廷代牧教堂
+    location: 村莊中心
+    description: 由格蘭迪斯大公提名的代牧駐紮於此，同時擔任大公宮廷祭司，主持靈糧稅徵收儀式
+  - item: landmark
+    name: 聖役勞工營地
+    location: 村莊東側臨時搭建區
+    description: 農閒季節農奴被徵發修築道路與堡壘時的臨時宿營地
+  - item: landmark
+    name: 格蘭迪斯收稅站
+    location: 村莊入口主幹道旁
+    description: 徵收 20% 實物地租的據點，麥穗軍團士兵輪值看守
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 農奴村莊
+  - 格蘭迪斯
+  - 聖役封建制
+  - 靈糧稅
+  - 黑麥
+  - 教廷代牧
+  - 麥穗軍團

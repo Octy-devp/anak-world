@@ -1,0 +1,88 @@
+# ── 身份錨定（必填）──
+id: dam_ruins_outpost
+name: 堤壩遺跡哨站
+layer: settlement
+region: 中央沖積平原
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  位於中央沖積平原上一處青銅時代古代堤壩遺跡旁的小型哨站。
+  這裡是格蘭迪斯大公「麥穗軍團」巡邏隊的駐紮點，也是監控周邊農奴村莊動向的前哨。
+  堤壩遺跡的殘垣斷壁為哨站提供了天然掩體，地下水道系統中仍流淌著來自傑米努斯河的灌溉水。
+  哨站駐軍約五十人，配備青銅甲與長戟，主要任務是鎮壓農民暴動與追緝逃奴。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 青銅盔甲保養油的亞麻氣味
+    - 古代堤壩石材風化後的塵土與石灰氣息
+    - 地下水道潮濕磚石的霉味
+    - 營火烤餅與醃肉的煙燻味 # inferred: true
+  light: >
+    白天：陽光透過堤壩殘垣的缺口形成狹長光柱，在碎石地面上切割出明暗交錯的條紋；
+    夜間：瞭望台與地下水道入口的油脂火把搖曳昏黃，將人影拉長投在斷壁上。
+  temperature: >
+    夏季殘垣遮擋直射陽光，內部陰涼；冬季地下水道散發濕冷，營房靠燃煤勉強維持；
+    石砌結構使溫度日變化緩慢，但常年偏潮濕。
+  sound:
+    - 麥穗軍團巡邏隊行進時的青銅甲碰撞與長戟頓地聲
+    - 地下水道暗流湧動的低沉汩汩聲
+    - 瞭望台上哨兵的腳步聲與號角練習
+    - 夜風穿過堤壩殘垣縫隙的嗚咽 # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 格蘭迪斯大公國／麥穗軍團
+  access_level: restricted
+  danger_level: high
+  population: 175  # 約一百五十至二百人（駐軍 + 隨軍工匠）；inferred: true
+  settlement_type: outpost
+
+# ── 關係即通道（connections）──
+connections:
+  - target: golden_spire_castle
+    type: physical
+    direction: 宗主
+    description: 格蘭迪斯大公的宮殿與麥穗軍團總部，巡邏隊定期回報與換防
+  - target: the_flood_plain
+    type: physical
+    direction: 坐落於上
+    description: 哨站位於中央沖積平原的古代堤壩遺跡旁
+  - target: flumen_geminus
+    type: physical
+    direction: 南方近處
+    description: 傑米努斯大河的地下水道仍為哨站提供灌溉水與部分生活用水
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 麥穗軍團駐軍營房
+    location: 堤壩遺跡內部改建區
+    description: 以古代堤壩殘垣為牆壁搭建的簡易營房，駐軍約五十人，配備青銅甲與長戟
+  - item: landmark
+    name: 古代堤壩殘垣瞭望台
+    location: 遺跡最高處
+    description: 利用青銅時代堤壩遺跡高度搭建的瞭望台，可監控周邊數里農田與道路
+  - item: landmark
+    name: 地下水道入口
+    location: 堤壩遺跡基部
+    description: 青銅時代灌溉系統的殘留水道，至今仍流淌傑米努斯河的灌溉水
+  - item: landmark
+    name: 逃奴牢籠
+    location: 營房地下
+    description: 追緝逃奴後的臨時監禁處，等待押送至金穗堡或就地處置
+  - item: resource
+    name: 糧草儲藏室
+    location: 堤壩遺跡內側乾燥處
+    description: 儲備供駐軍與巡邏隊使用的糧食與草料，由格蘭迪斯領地定期配給
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 哨站
+  - 格蘭迪斯
+  - 麥穗軍團
+  - 古代堤壩
+  - 逃奴
+  - 軍事

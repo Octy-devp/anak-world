@@ -1,0 +1,119 @@
+# ── 身份錨定（必填）──
+id: pearl_bay_village
+name: 珍珠灣漁村
+layer: settlement
+region: 南方海岸
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  位於莫爾根王國南方海岸「珍珠灣」的漁村，綿延三百里海岸線的中段。
+  村民以採珠、珊瑚採集與近海漁業為生，但實際上大部分收益都被莫爾根王國的
+  「聖焰私掠艦隊」以「保護稅」的名義徵收。
+  灣內淺灘遍佈珍珠牡蠣床，珊瑚礁如迷宮般環繞入海口。
+  村民穿著色彩鮮豔的帆布服飾，與莫爾根領地內陸陰鬱的封建氛圍形成對比。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 海鹽與潮濕海藻的濃烈鹹腥
+    - 珍珠牡蠣與貝殼的淡淡鈣質氣味
+    - 彩色帆布染料的化學辛香 # inferred: true
+    - 漁獲與曬乾魚貨的濃烈海鮮氣 # inferred: true
+  light: >
+    清晨時分海面泛著珍珠母貝般的虹彩微光；
+    正午陽光穿透淺灘，將珊瑚礁投射為水底迷宮般的斑駁陰影；
+    黃昏時分漁火點點，與天際線的暮光融為一體。
+  temperature: >
+    海風終年調節，夏季涼爽，冬季溫和；
+    但夜間潮水退去時沙灘會散失熱量，顯得微涼。 # inferred: true
+  sound:
+    - 海浪輕拍淺灘的柔和節奏
+    - 漁民收網時的號子與笑語
+    - 珊瑚礁區潮汐湧動的咕嚕聲 # inferred: true
+    - 私掠艦隊徵稅站傳來的粗魯呵斥與金屬碰撞聲
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 莫爾根王國（聖焰私掠艦隊徵稅站）
+  access_level: public
+  danger_level: medium
+  religion: 普世教會西派（創世主阿薩，實質混雜海商傳統）
+  population: 2500
+  settlement_type: village
+
+# ── 關係即通道（connections）──
+connections:
+  - target: palace_of_tidal_song
+    type: physical
+    direction: 北方
+    hidden: false
+    description: >
+      珍珠灣漁村位於潮音宮南方海岸線上，是莫爾根王國的附屬聚落，
+      定期向潮音宮繳納珍珠與漁獲稅賦。
+  - target: saltwhite
+    type: physical
+    direction: 西方
+    hidden: false
+    description: >
+      沿南方海岸線向西即可抵達鹽白城，兩地漁民與商販時有往來，
+      鹽白城的玻璃器皿與染料在此頗受歡迎。
+  - target: wind_isles
+    type: conceptual
+    direction: 南方海域
+    hidden: false
+    description: >
+      珍珠灣漁民的航海傳說中，南方遠海的風息群島是自由與財富的象徵；
+      偶有利貝塔尼亞商船繞過莫爾根封鎖線，在此悄悄交易香料與異國織物。
+
+# ── 內容物（contents）──
+contents:
+  - item: resource
+    name: 珍珠牡蠣床
+    location: 灣內淺灘
+    description: >
+      淺灘遍佈珍珠牡蠣床，是漁村最重要的經濟來源，
+      但最佳採集點已被聖焰私掠艦隊徵稅站劃為「王產」。
+  - item: landmark
+    name: 珊瑚礁迷宮
+    location: 入海口
+    description: >
+      珊瑚礁如迷宮般環繞入海口，漁船需熟悉水道方可通行；
+      傳說迷宮深處有溺亡水手的幽靈徘徊。 # inferred: true
+  - item: landmark
+    name: 漁船碼頭
+    location: 灣內避風處
+    description: >
+      簡陋的木質碼頭，停泊著數十艘小型漁船與採珠艇；
+      碼頭邊晾曬著色彩鮮豔的帆布漁網，是漁村最鮮明的視覺標誌。
+  - item: landmark
+    name: 聖焰私掠艦隊徵稅站
+    location: 碼頭東側高地上
+    guardian: 聖焰私掠艦隊稅吏
+    description: >
+      一座由礁石與廢船木板搭建的粗糙要塞，懸掛著教廷旗幟；
+      稅吏們在此登記漁獲、徵收「保護稅」，並以低價強購珍珠。
+  - item: landmark
+    name: 帆布染坊
+    location: 漁村聚落西緣
+    description: >
+      利用本地海藻與貝殼提煉染料，為漁民製作色彩鮮豔的帆布服飾；
+      染坊廢水使附近淺灘呈現奇異的藍綠色。 # inferred: true
+  - item: resource
+    name: 海鹽曬場
+    location: 沙灘高地
+    description: >
+      利用日曬風乾海水的小型曬鹽場，產量有限，主要供漁民自用；
+      大宗海鹽貿易被莫爾根王國壟斷。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 漁村
+  - 珍珠灣
+  - 採珠
+  - 珊瑚礁
+  - 南方海岸
+  - 莫爾根王國
+  - 私掠艦隊
+  - 帆布染坊

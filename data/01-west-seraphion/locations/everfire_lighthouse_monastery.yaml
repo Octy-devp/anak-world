@@ -1,0 +1,128 @@
+# ── 身份錨定（必填）──
+id: everfire_lighthouse_monastery
+name: 永火燈塔修道院
+layer: settlement
+region: 中央平原
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  永火燈塔修道院（Monasterium Pharis Ignis Perpetui）坐落於維特魯斯北方高坡，
+  原為廢棄烽火台改建而成。
+
+  塔頂維持一盞不滅燈火，為夜間歸城的流浪者與盲人指引方向。
+  院內收容失明與殘疾貧民，他們以編織毛氈與研磨草藥換取食宿，
+  在教廷救濟體系的邊緣勉強維持著一絲溫暖。
+
+  修道院的烽火台與靜默之塔（維特魯斯東郊）的哨塔遙相呼應，
+  構成維特魯斯東郊警戒網絡的北端節點。
+  雖然名為「修道院」，但院內修士人數稀少，
+  大部分住民是因殘疾而被社會遺棄的貧民與盲人。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 燈油與動物油脂燃燒後的焦香
+    - 乾燥羊毛與粗麻毛氈的溫暖氣息
+    - 草藥研磨室中艾草與薄荷的混合藥香
+    - 高坡凍土與枯草的乾澀寒味 # inferred: true
+  light: >
+    塔頂不滅燈火在夜間如同一顆懸於北方的孤星，
+    橙紅色焰光在數里之外仍可辨識；
+    日間則僅有塔樓高處的狹小窗洞透入蒼白天光，
+    院內迴廊終年籠罩在昏黃的燈影之中。
+  temperature: >
+    北方高坡終年受凍土寒風侵襲，石砌塔樓牆壁冰冷徹骨；
+    修士與收容者的寢室靠毛氈與少量柴火勉強維持溫度，
+    草藥研磨室因持續運作而略顯溫暖。
+  sound:
+    - 塔頂燈火迎風搖曳的呼呼燃燒聲
+    - 失明貧民編織毛氈時木梭與粗麻的摩擦節奏
+    - 草藥研磨室中石臼碾碎乾草的細碎聲響
+    - 夜間寒風穿過廢棄烽火台縫隙的尖嘯 # inferred: true
+    - 遠處維特魯斯城牆上巡邏兵腳步的模糊回聲 # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 普世教會西派教廷（基層修道院）
+  access_level: public
+  danger_level: low
+  religion: 普世教會西派（創世主阿薩）
+  population: 400
+  settlement_type: monastery
+  wonders:
+    - everfire_beacon
+
+# ── 關係即通道（connections）──
+connections:
+  - target: vetustapolis
+    type: physical
+    direction: 南方
+    description: >
+      沿北方高坡小徑向南約數里即可抵達維特魯斯城牆北門，
+      夜間歸城的流浪者與盲人依靠塔頂燈火辨識方向。
+  - target: the_flood_plain
+    type: physical
+    direction: 坐落於上
+    description: >
+      修道院坐落於中央沖積平原的北方緩坡高地上，
+      腳下即是遼闊的凍土平原。
+
+# ── 內容物（contents）──
+contents:
+  - item: npc
+    name: 收容的失明貧民
+    location: 修道院東側收容樓
+    guardian: 無
+    description: >
+      約百餘名因戰爭、疾病或先天殘疾而失明的貧民，
+      他們以編織毛氈與研磨草藥換取每日兩餐與過夜草蓆。
+      多數人終生未離開過高坡，對維特魯斯的認知僅限於傳說與風聲。
+  - item: landmark
+    name: 毛氈編織坊
+    location: 修道院南翼長廳
+    guardian: 無
+    description: >
+      一間通風良好的石砌長廳，失明者們坐在草蓆上以觸覺編織粗羊毛氈。
+      成品由教廷巡察僧不定期收走，據稱運往下城區救濟院分發，
+      但貧民們從未見過報酬。
+  - item: landmark
+    name: 草藥研磨室
+    location: 修道院西翼底層
+    guardian: 駐院修士
+    description: >
+      石臼、陶罐與風乾草藥堆滿的狹小房間。
+      修士們指導殘疾貧民研磨艾草、薄荷與金盞花，
+      製成簡易止痛膏與退熱藥粉，供修道院自用與周邊村莊交換。
+  - item: landmark
+    name: 烽火台瞭望層
+    location: 塔樓頂層
+    guardian: 輪值修士
+    description: >
+      原為古代烽火台的瞭望平台，現已改建為燈火維護間。
+      平台四面開窗，可遠眺維特魯斯城牆、靜默之塔與北方平原的地平線。
+      日間亦作為東郊警戒網絡的觀察哨。
+
+# ── 歷史事件（events）──
+events:
+  - id: everfire_beacon_lit
+    year: 610
+    name: 永火燈塔點燃 # inferred: true
+    description: >
+      艾森瓦爾二世重建聖光之城後，於維特魯斯北方高坡修繕廢棄烽火台，
+      設立永火燈塔以指引夜間歸城的商旅與信使。
+      後逐漸演變為收容失明貧民的修道院。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 修道院
+  - 夕照畿
+  - 維特魯斯北郊
+  - 救濟
+  - 盲人
+  - 毛氈
+  - 草藥
+  - 烽火台
+  - 普世教會
+  - 西派
