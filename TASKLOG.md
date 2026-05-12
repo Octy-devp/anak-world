@@ -23,7 +23,7 @@
 | room | 0 | ⏳ 未開始 |
 | faction | 0 | ⏳ 未開始 |
 
-### 17 個 Settlement 清單
+### 22 個 Settlement 清單
 
 | # | 名稱 | 帝國 | 類型 | Wonder |
 |---|------|------|------|--------|
@@ -44,8 +44,14 @@
 | 15 | 阿申斯塔特 | 塞拉菲昂 | town | cold_forge_guildhall |
 | 16 | 小赫斯領 | 塞拉菲昂 | village | charter_stone_tower |
 | 17 | 金穗堡 | 塞拉菲昂 | fortress | golden_spire_keep |
+| 18 | 潮音宮 | 塞拉菲昂 | fortress | crystal_sea_floor |
+| 19 | 霜尖塔要塞 | 塞拉菲昂 | fortress | ice_wall_bastion |
+| 20 | Barrowmarch Keep | 塞拉菲昂 | fortress | — |
+| 21 | Thornwick Manor | 塞拉菲昂 | village | — |
+| 22 | Ashford Tower | 塞拉菲昂 | fortress | — |
 
 ### 近期提交
+- `ecffebc` — 塞拉菲昂選帝侯首都補齊：潮音宮 + 霜尖塔要塞 + 3個小貴族領地
 - `8869453` — 塞拉菲昂帝國選帝侯機制深入：五大特別市聯盟 + 護憲議會 + 6個新 Settlement
 - `796692e` — 塔拉薩歷史地位補充（七海同盟發源地）
 - `7416471` — 風息群島城邦連接方式修正（石橋 → 渡船）
