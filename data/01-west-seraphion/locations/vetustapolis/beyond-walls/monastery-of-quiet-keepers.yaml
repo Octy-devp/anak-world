@@ -1,0 +1,73 @@
+# ── 身份錨定（必填）──
+id: monastery_of_quiet_keepers
+name: 安眠引者修道院
+layer: room
+region: 城牆外區
+empire: 塞拉菲昂神聖帝國
+parent_id: beyond_walls
+
+# ── 敘事錨定（必填）──
+description: >
+  緊鄰灰土園，負責治理無名死者的安葬與臨終禱告。
+  院內同時收容瀕死的老人與絕症患者，由土承載者修士以防腐與鎮痛技術緩解最後痛苦。
+  這座修道院在維特魯斯民間被稱為「最後的慈惠所」——
+  進入這裡的人，幾乎沒有人能活著出來。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 濃重藥草與防腐草藥氣味
+    - 瀕死者體液的酸腐氣息  # inferred: true
+    - 陳年薰香的殘留  # inferred: true
+  light: 昏暗燭光與高窗透入的灰白天光，終年籠罩在薄暮之中  # inferred: true
+  temperature: 涼爽但沉悶，不透風的滯留空氣  # inferred: true
+  sound:
+    - 臨終者的微弱呻吟與喘息
+    - 低聲禱告與誦經
+    - 修士輕柔的腳步與藥瓶碰撞聲  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 土承載者修會  # inferred: true
+  access_level: public
+  danger_level: low
+  religion: 創世主阿薩信仰  # inferred: true
+
+# ── 關係即通道（connections）──
+connections:
+  - target: ash_garden_catacombs
+    type: physical
+    direction: 緊鄰
+    hidden: false
+    description: 與灰土園墓窖緊鄰，負責無名死者安葬
+  - target: tower_of_silence
+    type: physical
+    direction: 東方
+    hidden: false
+    description: 與東郊靜默之塔遙望，同屬東郊宗教設施  # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 臨終禱告堂
+    description: 為瀕死者進行最後禱告的聖堂
+  - item: landmark
+    name: 瀕死收容病房
+    description: 收容瀕死老人與絕症患者的病房
+  - item: landmark
+    name: 土承載者防腐與鎮痛工坊
+    description: 修士進行防腐與鎮痛技術的工坊
+  - item: landmark
+    name: 無名死者登記處
+    description: 登記與管理無名死者的文書處
+  - item: landmark
+    name: 地下墓窖入口
+    description: 通往灰土園地下層疊墓窖的入口
+
+# ── 快速標籤（tags）──
+tags:
+  - 宗教
+  - 修道院
+  - 臨終關懷
+  - 平民
+  - 醫療

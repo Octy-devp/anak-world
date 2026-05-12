@@ -1,0 +1,60 @@
+# ── 身份錨定（必填）──
+id: basal_monasteries
+name: 基層修道院群
+layer: room
+region: 下城區
+empire: 塞拉菲昂神聖帝國
+parent_id: lower_city
+
+# ── 敘事錨定（必填）──
+description: >
+  下城區三座基層修道院，各自承擔不同救濟與生產功能。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 石灰岩與隕鐵碎塊的冷冽粉塵味  # inferred: true
+    - 毛氈與草藥的乾燥氣味  # inferred: true
+    - 農耕泥土與黑麥的清香  # inferred: true
+    - 修道院食堂的簡樸麥粥味  # inferred: true
+  light: 永火燈塔修道院塔頂的不滅燈火；修道院禮拜堂的微弱燭光  # inferred: true
+  temperature: 石牆建築冬暖夏涼，燈塔高處風大較冷  # inferred: true
+  sound:
+    - 修女與修士的誦經聲  # inferred: true
+    - 紡織與研磨草藥的勞作聲  # inferred: true
+    - 夜間歸城流浪者的腳步聲  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 普世教會西派教廷（慈惠騎士團與各修道院）  # inferred: true
+  access_level: public
+  danger_level: low
+  religion: 普世教會西派（創世主阿薩）
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 慈恩之盾修道院（Monasterium Scuti Caritatis）
+    description: >
+      東南角破舊城門旁，收容戰爭孤兒與棄嬰，慈惠騎士團修女治理。
+      牆以廢棄隕鐵碎塊與石灰岩混砌。
+  - item: landmark
+    name: 永火燈塔修道院（Monasterium Pharis Ignis Perpetui）
+    description: >
+      北方高坡，原廢棄烽火台改建。塔頂不滅燈火為夜間歸城流浪者與盲人指引方向。
+      收容失明與殘疾貧民，以編織毛氈與研磨草藥換取食宿。
+  - item: landmark
+    name: 麥穗與磐石修道院（Monasterium Spicae et Petrae）
+    description: >
+      西側農貿集市邊緣，兼具農耕與手工業。
+      修士多為破產工匠與失地農民，以勞動換取庇護，部分產出捐贈大救濟院廚房。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 修道院
+  - 救濟
+  - 慈惠
+  - 孤兒
+  - 盲人
+  - 農耕
+  - 基層

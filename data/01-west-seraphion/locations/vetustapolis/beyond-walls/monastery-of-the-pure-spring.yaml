@@ -1,0 +1,71 @@
+# ── 身份錨定（必填）──
+id: monastery_of_the_pure_spring
+name: 淨瓶之泉修道院
+layer: room
+region: 城牆外區
+empire: 塞拉菲昂神聖帝國
+parent_id: beyond_walls
+
+# ── 敘事錨定（必填）──
+description: >
+  位於城牆外礦泉邊，由水流動者修女主持。
+  院內專收得了傳染病、或因處理隕鐵而慢性中毒導致皮膚潰爛的工匠。
+  修道院以一座天然礦泉為核心，水流動者們相信這眼泉水具有微弱的淨化之力，
+  雖遠不及古代魔法的威能，但足以讓高燒的孩童安然入睡。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 天然礦泉的硫磺與濕潤氣息
+    - 藥草與消毒水的苦澀
+    - 皮膚潰爛的腐臭與膿液氣味
+    - 濕石與青苔的潮味  # inferred: true
+  light: 礦泉池水面反射的蒼白微光；病房內微弱的油燈  # inferred: true
+  temperature: 泉水沁涼，病房內悶熱與寒顫交替  # inferred: true
+  sound:
+    - 泉水滴落與流動的輕響
+    - 病患的低聲呻吟與咳嗽
+    - 修女輕柔的禱告與安慰話語
+    - 夜晚孩童斷續的哭聲  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 水流動者修會  # inferred: true
+  access_level: public
+  danger_level: medium
+  religion: 創世主阿薩信仰  # inferred: true
+
+# ── 關係即通道（connections）──
+connections:
+  - target: beyond_walls
+    type: physical
+    direction: 城牆外
+    hidden: false
+    description: 位於城牆外礦泉邊
+
+# ── 內容物（contents）──
+contents:
+  - item: resource
+    name: 天然礦泉池
+    description: 修道院核心的天然礦泉，水流動者相信具有微弱淨化之力
+  - item: landmark
+    name: 傳染病隔離病房
+    description: 專門收治傳染病患者的隔離病房
+  - item: landmark
+    name: 隕鐵中毒治療室
+    description: 治療因處理隕鐵而慢性中毒導致皮膚潰爛工匠的治療室
+  - item: landmark
+    name: 水流動者修女居所
+    description: 主持修道院的水流動者修女們的居所
+  - item: landmark
+    name: 淨瓶徽記祭壇
+    description: 供奉淨瓶徽記的祭壇
+
+# ── 快速標籤（tags）──
+tags:
+  - 宗教
+  - 修道院
+  - 醫療
+  - 傳染病
+  - 礦泉
+  - 平民

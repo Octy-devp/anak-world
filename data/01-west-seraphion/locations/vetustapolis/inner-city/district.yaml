@@ -1,0 +1,59 @@
+# ── 身份錨定（必填）──
+id: inner_city
+name: 內城區
+layer: district
+region: 內城區
+empire: 塞拉菲昂神聖帝國
+parent_id: vetustapolis
+
+# ── 敘事錨定（必填）──
+description: >
+  神權與皇權的黃金囚籠，玄武岩城牆、聖鑰院複合體、暮光宮所在地。
+  包含聖鑰院複合體與暮光宮兩個核心 room。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 沉香與沒藥
+    - 拋光黑曜石的冷冽氣息
+    - 羊皮紙與墨水的酸腐味
+  light: 正午聖光大教堂穹頂的七彩光斑與永恆暮色的紫黑色澤
+  temperature: 石板地面終年散發冷意，夏季悶熱冬季陰冷
+  sound:
+    - 整點鐘聲迴盪
+    - 低聲禱告
+    - 樞機議會的爭辯迴響
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 普世教會西派教廷
+  access_level: restricted
+  danger_level: medium
+  religion: 普世教會西派（創世主阿薩）
+
+# ── 關係即通道（connections）──
+connections:
+  - target: vetustapolis
+    type: physical
+    direction: 下方
+    hidden: false
+    description: 通過玄武岩城門連接下城區
+  - target: lower_city
+    type: physical
+    direction: 下方
+    hidden: false
+    description: 石階向下通往工匠迷宮般的下城區
+  - target: twilight_palace
+    type: physical
+    direction: 北側
+    hidden: false
+    description: 杜寧高地北側的暮光宮
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 宗教
+  - 皇權
+  - 教廷
+  - 宮殿
+  - 貴族
+  - 夕照

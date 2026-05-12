@@ -1,0 +1,67 @@
+# ── 身份錨定（必填）──
+id: ash_garden_catacombs
+name: 灰土園與地下層疊墓窖
+layer: room
+region: 城牆外區
+empire: 塞拉菲昂神聖帝國
+parent_id: beyond_walls
+
+# ── 敘事錨定（必填）──
+description: >
+  維特魯斯最大的公共墓地，緊鄰安眠引者修道院。
+  因土地稀缺，土承載者們向地下挖掘了深達數層的迷宮式墓穴。
+  牆壁密密麻麻鑿出壁龕，塞滿用粗布包裹的平民與聖奴遺體。
+  瀰漫防腐草藥與泥土氣味，偶爾能聽見土承載者以防腐魔法延緩屍體腐敗時的低聲吟唱。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 防腐草藥與泥土氣息
+    - 屍體腐敗的甜膩霉味  # inferred: true
+  light: 地下墓窖的昏暗燭光與壁龕間的搖曳燈影  # inferred: true
+  temperature: 陰冷潮濕，終年不散的寒氣  # inferred: true
+  sound:
+    - 土承載者低聲吟唱防腐咒語
+    - 腳步在石板與泥土間的沉悶迴響  # inferred: true
+    - 墓穴深處的滴水聲  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 土承載者修會  # inferred: true
+  access_level: public
+  danger_level: low
+  religion: 創世主阿薩信仰  # inferred: true
+
+# ── 關係即通道（connections）──
+connections:
+  - target: monastery_of_quiet_keepers
+    type: physical
+    direction: 緊鄰
+    hidden: false
+    description: 與安眠引者修道院相鄰，共同管理無名死者
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 灰土園地面墓區
+    description: 維特魯斯最大的公共墓地地面區域
+  - item: landmark
+    name: 地下層疊墓窖
+    description: 深達數層的迷宮式墓穴，牆壁密密麻麻鑿出壁龕
+  - item: landmark
+    name: 壁龕與粗布遺體
+    description: 塞滿用粗布包裹的平民與聖奴遺體的壁龕群
+  - item: landmark
+    name: 土承載者防腐工坊
+    description: 土承載者修士進行防腐儀式與延緩屍體腐敗的工坊
+  - item: landmark
+    name: 無名死者安葬區
+    description: 專門安葬無名死者的墓區
+
+# ── 快速標籤（tags）──
+tags:
+  - 墓地
+  - 宗教
+  - 平民
+  - 迷宮
+  - 地下

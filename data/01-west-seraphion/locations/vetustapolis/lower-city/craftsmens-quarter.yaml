@@ -1,0 +1,66 @@
+# ── 身份錨定（必填）──
+id: craftsmens_quarter
+name: 百工坊區
+layer: room
+region: 下城區
+empire: 塞拉菲昂神聖帝國
+parent_id: lower_city
+
+# ── 敘事錨定（必填）──
+description: >
+  下城區最核心的工匠迷宮，分為多條專業街巷。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 鞣革的尿騷味與動物內臟腐臭味
+    - 鍛爐煤灰與汗水氣味
+    - 亞麻籽油與蛋彩的氣味
+    - 羊脂與鋸木屑
+  light: 鍛爐火紅餘燼照亮昏暗街巷；狹窄巷道中的微弱天光  # inferred: true
+  temperature: 鍛爐區悶熱難當，通風處稍涼  # inferred: true
+  sound:
+    - 鐵錘敲擊鐵砧的鏗鏘聲
+    - 學徒拉動皮風箱的呼嘯聲
+    - 木工鋸木聲
+    - 染匠踩踏木桶的濺水聲  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 各行會自治  # inferred: true
+  access_level: public
+  danger_level: low
+  religion: 普世教會西派（創世主阿薩）
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 打鐵街（金屬坊）
+    description: >
+      滿是煤灰與汗水，學徒拉動皮風箱，少數密室有資深工匠以「冷鍛技術」處理隕鐵。
+      每座鍛爐旁掛著阿薩神徽，每次打鐵被稱為「聖火之禱」。
+  - item: landmark
+    name: 鞣革與染坊巷
+    description: >
+      沿排水渠而建，氣味最恐怖。鞣製皮革的尿騷味與動物內臟腐臭味終年不散。
+      染匠踩在裝滿植物染料和明礬的大木桶裡。
+  - item: landmark
+    name: 木作與羊毛紡織區
+    description: >
+      木匠雕刻修道院長椅和聖徽；平民婦女與聖奴轉動紡錘織造粗糙羊毛毯。
+  - item: landmark
+    name: 繪畫與聖像工坊區
+    description: >
+      亞麻籽油與蛋彩氣味，畫師以隕鐵粉調製顏料，宣稱聖像「永不褪色」。
+      許多畫師同時是教廷「視覺書記」，記錄異端審訊與聖女巡遊。
+      也有專為各國皇室與選帝侯繪製肖像的宮廷畫師。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 工匠
+  - 行會
+  - 鍛爐
+  - 鞣革
+  - 紡織
+  - 聖像
+  - 冷鍛

@@ -1,0 +1,79 @@
+# ── 身份錨定（必填）──
+id: tower_of_silence
+name: 靜默之塔
+layer: room
+region: 城牆外區
+empire: 塞拉菲昂神聖帝國
+parent_id: beyond_walls
+
+# ── 敘事錨定（必填）──
+description: >
+  位於東郊荒野上的一座孤塔，遠遠望去如同一根折斷的黑色手指指向天空。
+  上層是七名年幼聖女候選人（白袍雛鳥）的封閉教化所，
+  課程包括神學、醫藥、音律與饑餓苦行。
+  塔內終年絕對靜默，候選人以手勢與眼神交流，
+  僅在每週一次「聖火禱告」中才能出聲。
+  下層是教廷騎士團哨兵站與修道士駐地，
+  承擔觀察維特魯斯邊境地帶動向的軍事瞭望功能。
+  塔頂烽火台與遠處永火燈塔修道院的燈火遙相呼應，
+  構成維特魯斯東郊警戒網絡。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 石塔內的塵埃與陳舊霉味  # inferred: true
+    - 烽火台油脂與燈火的焦味  # inferred: true
+    - 年幼女孩們的皂香與草藥氣息  # inferred: true
+  light: 高窗透入的蒼白天光；夜間烽火與永火燈塔的遙遙火光  # inferred: true
+  temperature: 高處風大，終年陰冷徹骨  # inferred: true
+  sound:
+    - 絕對靜默，僅有呼吸與衣物摩擦
+    - 每週聖火禱告時的集體誦唱
+    - 塔頂風嘯穿過縫隙的尖嘯  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 普世教會西派教廷
+  access_level: restricted
+  danger_level: medium
+  religion: 創世主阿薩信仰  # inferred: true
+
+# ── 關係即通道（connections）──
+connections:
+  - target: monastery_of_quiet_keepers
+    type: physical
+    direction: 西方
+    hidden: false
+    description: 與安眠引者修道院遙望，同屬東郊宗教設施  # inferred: true
+  - target: everfire_lighthouse_monastery
+    type: physical
+    direction: 東北方高坡
+    hidden: false
+    description: 塔頂烽火台與永火燈塔修道院遙相呼應
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 上層聖女候選區
+    description: 七名白袍雛鳥的封閉居室、神學課堂、音律室與饑餓苦行室
+  - item: landmark
+    name: 下層騎士團哨兵站
+    description: 教廷騎士團武裝駐地、邊境觀察哨
+  - item: landmark
+    name: 塔頂烽火台
+    description: 與永火燈塔修道院遙相呼應的軍事烽火台
+  - item: npc
+    name: 白袍雛鳥
+    description: 七名年幼的聖女候選人，終年生活在絕對靜默中
+  - item: npc
+    name: 教廷騎士團哨兵
+    description: 駐守下層的教廷騎士團成員，負責邊境瞭望
+
+# ── 快速標籤（tags）──
+tags:
+  - 宗教
+  - 教廷
+  - 軍事
+  - 聖女
+  - 靜默
+  - 烽火

@@ -1,0 +1,106 @@
+# ── 身份錨定（必填）──
+id: shantytown_and_gau
+name: 棚戶帶與夕照畿
+layer: room
+region: 城牆外區
+empire: 塞拉菲昂神聖帝國
+parent_id: beyond_walls
+
+# ── 敘事錨定（必填）──
+description: >
+  沿著維特魯斯厚重的城牆根部，蔓延著一片片由逃荒農奴搭建的草棚。
+  他們連進入下城區的資格都沒有，只能在冬夜的寒風中等待救濟院偶爾施捨的熱湯。
+  再往外五十里，是綿延的農業腹地——夕照畿（Gau of the Dusk）。
+  這裡有廣袤的凍土麥田，農奴們在刺骨的寒風中勞作，
+  維持著維特魯斯這座「百萬人口寄生迷宮」的最後一口氣。
+  然而，大部分收成都被格蘭迪斯大公與教廷的收稅官在田裡就瓜分殆盡，
+  能運入維特魯斯的糧食，永遠不夠餵飽所有張開的嘴。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 凍土與枯草的乾澀氣味
+    - 農奴草棚的潮濕稻草與動物糞便味
+    - 遠處棚戶炊煙的微弱暖意
+    - 收稅官營地的皮革與馬匹氣息
+  light: >
+    蒼白冬日陽光下無邊際的枯黃麥田；
+    黃昏時城牆根的長長暗影；
+    夜間僅有零星篝火與遠處修道院燈火。
+  temperature: >
+    冬季濕冷刺骨，寒風從北方凍原直灌而來；
+    夏季短暫溫和，但小冰期使夏季越來越短；
+    春秋晝夜溫差極大，晨霜厚重。
+  sound:
+    - 寒風穿過草棚縫隙的嗚咽
+    - 農奴勞作的低沉號子與鐮刀割麥聲
+    - 遠處狼嚎與烏鴉的聒噪
+    - 收稅官馬隊經過的蹄聲
+    - 救濟院熱湯發放時的嘈雜人聲
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 格蘭迪斯大公（收稅）/ 教廷（收稅）/ 瓦羅蘭特皇室（名義上）
+  access_level: public
+  danger_level: medium
+  population: 15000  # inferred: true（農奴與棚戶居民）
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 城牆根草棚帶
+    location: 維特魯斯城牆根部
+    description: 逃荒農奴搭建的成片草棚，他們連進入下城區的資格都沒有，終年瑟縮於寒風中。
+  - item: landmark
+    name: 逃荒農奴聚居地
+    location: 棚戶帶深處
+    description: 來自各地破產莊園的農奴聚集地，等待救濟或尋找進入城市的機會。
+  - item: landmark
+    name: 救濟熱湯發放點
+    location: 草棚帶中央空地
+    guardian: 大救濟院派遣的慈惠騎士團修士
+    description: 救濟院偶爾在此施捨熱湯與硬麵包，排隊者從深夜就開始等待。
+  - item: landmark
+    name: 夕照畿凍土麥田
+    location: 城牆外五十里農業腹地
+    description: 廣袤的凍土麥田，農奴在刺骨寒風中勞作，維持維特魯斯的糧食供應。
+  - item: landmark
+    name: 教廷收稅官駐所
+    location: 夕照畿主要道路旁
+    description: 教廷派遣的收稅官在田裡就直接徵收40%的「靈糧稅」。
+  - item: landmark
+    name: 格蘭迪斯糧倉分窖
+    location: 夕照畿北側
+    description: 格蘭迪斯大公在此設立的分窖，收繳20%實物地租後直接存入地窖。
+  - item: landmark
+    name: 冬季結冰水井
+    location: 棚戶帶各處
+    description: 農奴與棚戶居民唯一的水源，冬季結冰時需砸開冰面取水。
+
+# ── 關係即通道（connections）──
+connections:
+  - target: beyond_walls
+    type: physical
+    direction: 核心區域
+    description: 棚戶帶與夕照畿是城牆外區最主要的組成部分
+  - target: lower_city
+    type: physical
+    direction: 南方城牆內
+    description: 農奴與棚戶居民仰望但無法進入的下城區
+  - target: the_flood_plain
+    type: physical
+    direction: 北方
+    description: 夕照畿的凍土麥田向北延伸，與中央沖積平原接壤
+  - target: flumen_geminus
+    type: physical
+    direction: 東方
+    description: 傑米努斯河支流為夕照畿提供灌溉水源
+
+# ── 快速標籤（tags）──
+tags:
+  - 農奴
+  - 棚戶
+  - 凍土麥田
+  - 夕照畿
+  - 救濟
+  - 收稅

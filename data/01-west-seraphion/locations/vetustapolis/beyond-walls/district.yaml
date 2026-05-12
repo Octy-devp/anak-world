@@ -1,0 +1,75 @@
+# ── 身份錨定（必填）──
+id: beyond_walls
+name: 城牆外區
+layer: district
+region: 城牆外區
+empire: 塞拉菲昂神聖帝國
+parent_id: vetustapolis
+
+# ── 敘事錨定（必填）──
+description: >
+  出了厚重維特魯斯城門，是被小冰河期氣候摧殘的荒涼地帶。
+  凍土、枯黃雜草與遠處白茫茫地平線，構成了維特魯斯真正的面貌——
+  被內城區沉香與下城區煙火掩蓋的殘酷安納克大地。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 凍土與枯草的乾澀氣味
+    - 防腐草藥與泥土氣息
+    - 遠處棚戶的炊煙與腐臭
+    - 冬季寒風的刺骨冷冽
+  light: 蒼白冬日陽光；遠處地平線的白茫；夜間僅有巡邏火把與修道院燈火
+  temperature: 冬季濕冷刺骨，夏季短暫溫和，春秋晝夜溫差大
+  sound:
+    - 寒風穿過城牆縫隙的嗚咽
+    - 遠處狼嚎
+    - 農奴勞作的低沉號子
+    - 修道院鐘聲的模糊迴盪
+    - 烽火台上警報號角的孤獨鳴響
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 格蘭迪斯大公與普世教會西派教廷  # inferred: true
+  access_level: public
+  danger_level: medium
+  population: 50000  # inferred: true
+
+# ── 關係即通道（connections）──
+connections:
+  - target: vetustapolis
+    type: physical
+    direction: 上方城牆內
+    hidden: false
+    description: 穿過厚重城門進入維特魯斯城內
+  - target: lower_city
+    type: physical
+    direction: 上方下城區
+    hidden: false
+    description: 經由下水道出口與下城區相連
+  - target: the_flood_plain
+    type: physical
+    direction: 北方
+    hidden: false
+    description: 北方沖積平原農田
+  - target: flumen_geminus
+    type: physical
+    direction: 東方
+    hidden: false
+    description: 傑米努斯河灌溉水源
+  - target: everfire_lighthouse_monastery
+    type: physical
+    direction: 東北方高坡
+    hidden: false
+    description: 永火燈塔修道院
+
+# ── 內容物（contents）──
+contents: []
+
+# ── 快速標籤（tags）──
+tags:
+  - 貧民區
+  - 農業
+  - 墓地
+  - 修道院
+  - 邊境

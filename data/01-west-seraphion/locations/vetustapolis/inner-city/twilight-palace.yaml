@@ -1,0 +1,100 @@
+# ── 身份錨定（必填）──
+id: twilight_palace
+name: 暮光宮
+layer: room
+region: 內城區
+empire: 塞拉菲昂神聖帝國
+parent_id: inner_city
+
+# ── 敘事錨定（必填）──
+description: >
+  暮光宮坐落於內城區北側的杜寧高地（Dawning Highland），建於古代巨石地基之上。
+  曾是帝國輝煌的頂峰：地熱噴泉自動循環，大理石浮雕描繪統一時代的凱旋場景，
+  雙尖塔上的青銅太陽圓盤比聖光大教堂的還要巨大。
+  如今西翼局部坍塌，花園長滿荊棘與野罌粟，
+  宴會廳壁畫上艾森瓦爾一世的鐵手被教廷畫師覆蓋上了聖光。
+  夕照帝利奧三世每年僅在加冕紀念日與豐收節兩次公開露面，其餘時間如同被圈養的幽靈。
+  地下隱藏著建於青銅時代的維修暗道（類似羅馬 Passetto di Borgo），
+  連接著下城區的古老下水道體系，是皇權最後的秘密避難所。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 腐朽的紫金色天鵝絨
+    - 荊棘與野罌粟的澀味
+    - 地下磚石隧道的潮濕霉味
+    - 地熱噴泉殘留的硫磺氣息
+  light: 宴會廳天窗透入的蒼白斜光；地下暗道中火把的跳動陰影；夜間僅有巡邏火把
+  temperature: 廳堂陰冷徹骨，地下暗道潮濕發霉，西翼坍塌處灌入寒風
+  sound:
+    - 風穿過破窗的嗚咽
+    - 地下暗道中滴水的迴響
+    - 遠處聖鑰院鐘聲的模糊迴盪
+    - 利奧三世踱步的孤獨回音
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 夕照帝利奧三世（實質被教廷軟禁）
+  access_level: restricted
+  danger_level: low
+  religion: 普世教會西派（創世主阿薩）
+
+# ── 關係即通道（connections）──
+connections:
+  - target: inner_city
+    type: physical
+    direction: 南側
+    hidden: false
+    description: 杜寧高地連接內城區
+  - target: sacred_key_complex
+    type: secret
+    direction: 地下
+    hidden: true
+    description: 地下暗道相連聖鑰院複合體
+  - target: lower_city
+    type: secret
+    direction: 地下
+    hidden: true
+    description: 下水道出口通往古老下水道體系與下城區
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 杜寧高地
+    location: 內城區北側
+    description: >
+      艾森瓦爾一世時代命名的高地，意為「安納克將迎來光明」，暮光宮坐落於此。
+  - item: landmark
+    name: 宴會廳
+    location: 暮光宮主體建築內
+    description: >
+      壁畫上艾森瓦爾一世被教廷畫師覆蓋為慈祥聖徒，天窗透入蒼白斜光。
+  - item: landmark
+    name: 花園
+    location: 暮光宮內
+    description: >
+      長滿荊棘與野罌粟，地熱噴泉已廢棄。
+  - item: landmark
+    name: 西翼坍塌區
+    location: 暮光宮西翼
+    description: >
+      缺乏修繕而局部坍塌，寒風灌入。
+  - item: landmark
+    name: 地下暗道網絡
+    location: 暮光宮地下
+    description: >
+      建於青銅時代的維修暗道，連接下城區古老下水道體系，是皇權最後的秘密避難所。
+  - item: artifact
+    name: 青銅太陽圓盤
+    location: 暮光宮雙尖塔頂
+    description: >
+      比聖光大教堂更大的青銅太陽圓盤，現已鏽蝕。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 皇權
+  - 宮殿
+  - 夕照帝
+  - 廢墟
+  - 密道
+  - 軟禁

@@ -1,0 +1,78 @@
+# ── 身份錨定（必填）──
+id: disabitato
+name: 廢墟農耕區
+layer: room
+region: 下城區
+empire: 塞拉菲昂神聖帝國
+parent_id: lower_city
+
+# ── 敘事錨定（必填）──
+description: >
+  在下城區的縫隙中，平民與低階修士利用乾涸的古代噴泉池、坍塌宮殿廢墟之間的空地，
+  種植耐寒的黑麥、蘿蔔與捲心菜。
+  麥穗與磐石修道院的修士們在農貿集市邊緣開墾了最大片的廢墟農田。
+  街道上除了工匠，還會看到穿著破爛的牧童，趕著幾隻瘦骨嶙峋的黑山羊或豬隻，
+  在古代大理石柱的基座下啃食青苔和雜草。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 肥沃泥土與腐殖質的氣息
+    - 黑麥與捲心菜的青綠氣味
+    - 山羊與豬隻的騷臭味
+    - 古代大理石風化的粉塵味
+  light: >
+    坍塌宮殿間隙灑下的斑駁陽光；
+    古代噴泉池底部反射的柔和天光；
+    黃昏時農田與廢墟交織的蒼茫暮色。
+  temperature: >
+    夏季午後在廢墟間稍顯悶熱，冬季寒風穿過石縫直刺骨髓。
+  sound:
+    - 鋤頭翻土的悶響
+    - 牧童的吆喝與牲畜鈴聲
+    - 風穿過斷壁殘垣的嗚咽
+    - 遠處下城區鍛爐的鏗鏘迴響
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 麥穗與磐石修道院 / 自耕農民
+  access_level: public
+  danger_level: low
+  population: 3000  # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 廢墟農田
+    location: 下城區各處廢墟間隙
+    description: 平民與修士在坍塌宮殿與乾涸噴泉池間開墾的農田，種植黑麥、蘿蔔與捲心菜。
+  - item: landmark
+    name: 乾涸噴泉池菜園
+    location: 古代公共噴泉遺址
+    description: 利用乾涸的古代噴泉池底部積土種植根莖作物，池壁提供避風效果。
+  - item: landmark
+    name: 麥穗與磐石修道院農墾區
+    location: 農貿集市邊緣
+    description: 麥穗與磐石修道院修士開墾的最大片廢墟農田，兼顧救濟與自給農耕。
+  - item: npc
+    name: 廢墟牧童
+    location: 古代大理石柱基座下
+    description: 穿著破爛的牧童，趕著瘦骨嶙峋的黑山羊或豬隻，在大理石柱基座下啃食青苔和雜草。
+
+# ── 關係即通道（connections）──
+connections:
+  - target: lower_city
+    type: physical
+    direction: 周圍
+    description: 散布於下城區各處廢墟之間
+  - target: craftsmen_quarter
+    type: physical
+    direction: 東方
+    description: 靠近百工坊區的廢墟農田為工匠提供副食
+
+# ── 快速標籤（tags）──
+tags:
+  - 農耕
+  - 廢墟
+  - 修道院
+  - 自給

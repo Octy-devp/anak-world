@@ -1,0 +1,59 @@
+# ── 身份錨定（必填）──
+id: water_rights_monopoly
+name: 水權壟斷區
+layer: room
+region: 下城區
+empire: 塞拉菲昂神聖帝國
+parent_id: lower_city
+
+# ── 敘事錨定（必填）──
+description: >
+  古代引水渠（類似羅馬水道橋）已斷裂。大救濟院修復了一小段，
+  使教廷控制區與少數慈惠所有潔淨水源。
+  下城區平民必須每日排隊向教廷「水承載者」乞求「神聖之水」——
+  每次取水需在登記冊上按指印並接受簡易告解。
+  靠近斷裂水道橋滲漏處偷取污水的貧民，成為黑市上最不起眼的贏家。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 潮濕石塊與青苔的氣味
+    - 污水的酸腐臭
+    - 教廷聖水的淡淡硫磺味  # inferred: true
+  light: 斷裂水道橋下的陰暗微光；取水點的稀疏燈火  # inferred: true
+  temperature: 潮濕陰冷，冬季結冰時更為嚴寒  # inferred: true
+  sound:
+    - 排隊平民的低聲抱怨與咳嗽
+    - 水滴從斷裂石縫滲落的滴答聲
+    - 水承載者宣讀教條的單調誦念  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 普世教會西派教廷（大救濟院）  # inferred: true
+  access_level: restricted
+  danger_level: medium
+  religion: 普世教會西派（創世主阿薩）
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 斷裂的水道橋遺跡
+    description: 古代引水渠（類似羅馬水道橋）的斷裂遺跡，部分石拱仍聳立於下城區
+  - item: landmark
+    name: 教廷「水承載者」取水點
+    description: 大救濟院修復的潔淨水源取水點，由教廷水承載者管理
+  - item: landmark
+    name: 登記冊與告解亭
+    description: 平民取水時需按指印登記並接受簡易告解的設施
+  - item: landmark
+    name: 黑市污水偷取點
+    description: 靠近斷裂水道橋滲漏處，貧民暗中偷取污水進行黑市交易的據點
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 水權
+  - 教廷
+  - 大救濟院
+  - 黑市
+  - 貧民
+  - 壟斷

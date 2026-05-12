@@ -1,0 +1,58 @@
+# ── 身份錨定（必填）──
+id: bridge_markets
+name: 橋樑市集
+layer: room
+region: 下城區
+empire: 塞拉菲昂神聖帝國
+parent_id: lower_city
+
+# ── 敘事錨定（必填）──
+description: >
+  傑米努斯河貫穿下城區，河面上橫跨幾座古代遺留的大理石與青銅橋樑。
+  橋上擠滿違章建築般的木板商鋪。因神恩券已貶值成廢紙，這裡成為維特魯斯最大的「以物易物」黑市——
+  用醃魚換鐵釘，用黑麥麵包換獸皮。
+  拱洞下住著無數無家可歸者，夜間點起微弱燭火，如同河面上漂浮的幽靈。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 河水的潮濕氣味
+    - 醃魚的鹹腥
+    - 黑麥麵包的酵母香
+    - 陳舊木板與霉味  # inferred: true
+  light: 夜間木板商鋪的微弱燭火；橋洞下幽靈般的點點火光  # inferred: true
+  temperature: 河風帶來濕涼，橋洞下冬季濕冷徹骨  # inferred: true
+  sound:
+    - 討價還價的喧囂
+    - 傑米努斯河的流水低語
+    - 夜間無家可歸者的低語與咳嗽  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 黑市行會與河盜  # inferred: true
+  access_level: public
+  danger_level: medium
+  religion: 普世教會西派（創世主阿薩）
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 木板商鋪群
+    description: 擠滿古代橋樑的違章建築式木板商鋪，販賣各類雜貨與黑市物品
+  - item: landmark
+    name: 以物易物黑市
+    description: 維特魯斯最大的以物易物市場，神恩券貶值後的主要交易方式
+  - item: landmark
+    name: 橋洞下的無家可歸者營地
+    description: 拱洞下聚居的無家可歸者，夜間點起微弱燭火
+  - item: landmark
+    name: 河盜與黑幫的地下兌換點
+    description: 黑市交易的地下據點，暗中進行非法貨物與資訊交換  # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 黑市
+  - 橋樑
+  - 以物易物
+  - 貧民
+  - 河盜

@@ -1,0 +1,71 @@
+# ── 身份錨定（必填）──
+id: lower_city
+name: 下城區
+layer: district
+region: 下城區
+empire: 塞拉菲昂神聖帝國
+parent_id: vetustapolis
+
+# ── 敘事錨定（必填）──
+description: >
+  出了內城區玄武岩城門，便是百萬平民、行會工匠與聖奴的居所。
+  建築毫無籌劃，木屋和泥磚房直接建在古代神廟斷壁殘垣與乾涸大浴場遺址裡。
+  空氣中瀰漫鞣革尿騷味、鍛爐煤灰與腐爛蔬菜酸臭——與內城區沉香沒藥形成鮮明對比。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 鞣革的尿騷味
+    - 鍛爐的煤灰
+    - 腐爛蔬菜的酸臭
+    - 亞麻籽油與蛋彩的氣味
+    - 羊脂與鋸木屑
+  light: 狹窄巷道中的微弱天光；鍛爐的火紅餘燼；夜間木板商鋪的微弱燭火
+  temperature: 鍛爐區悶熱，河風稍涼，冬季濕冷徹骨
+  sound:
+    - 鐵錘敲擊鐵砧的鏗鏘聲
+    - 木工鋸木聲
+    - 船夫號子與流水低語
+    - 貧民的喧囂與爭吵
+    - 金堅牢者巡邏的鐵靴聲
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 普世教會西派教廷與各行會共治  # inferred: true
+  access_level: public
+  danger_level: medium
+  religion: 普世教會西派（創世主阿薩）
+  population: 1000000  # inferred: true
+
+# ── 關係即通道（connections）──
+connections:
+  - target: vetustapolis
+    type: physical
+    direction: 上方
+    hidden: false
+    description: 下城區是維特魯斯三層空間之一，向上即為整座城市本體
+  - target: inner_city
+    type: physical
+    direction: 上方
+    hidden: false
+    description: 通過玄武岩城門連接內城區
+  - target: flumen_geminus
+    type: physical
+    direction: 貫穿
+    hidden: false
+    description: 傑米努斯河東西貫穿下城區
+  - target: beyond_walls
+    type: physical
+    direction: 下方
+    hidden: false
+    description: 向下通往城牆外區
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 平民
+  - 工匠
+  - 行會
+  - 貧民窟
+  - 廢墟
+  - 聖奴
+  - 下城區

@@ -1,0 +1,180 @@
+# ── 身份錨定（必填）──
+id: sacred_key_complex
+name: 聖鑰院複合體
+layer: room
+region: 內城區
+empire: 塞拉菲昂神聖帝國
+parent_id: inner_city
+
+# ── 敘事錨定（必填）──
+description: >
+  聖鑰院並非單一建築，而是維特魯斯核心區中最龐大的宮殿-教堂-政務重地，
+  也是普世教會西派教廷——即「聖座」（Holy See）——的物質化身。
+  整個建築群以一座宏偉的雙翼宮殿為軸心，向四周輻射出教堂、修院、騎士團會院、經院、監獄與救濟設施。
+  名義上，所有建築與機構皆隸屬於教皇與樞機議會；
+  實際上，以東殿為核心的救濟體系長期享有「神聖的獨立」，
+  成為同一屋簷下另一股不可忽視的力量。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 陳年薰香與沒藥
+    - 地下潮濕霉味
+    - 劣質木漿與油墨的酸腐氣味
+    - 隕鐵永火祭壇的硫磺氣息
+  light: 彩色玻璃過濾的昏黃夕照；宗座宮西殿終年深紫色天鵝絨帷幕的永恆暮色；聖火中庭隕鐵聖火盆的跳動火光
+  temperature: 陰涼，地下墓窖徹骨寒冷，聖火中庭溫暖
+  sound:
+    - 遠處鐘聲迴盪
+    - 低聲禱告與拉丁頌歌
+    - 樞機議會的爭辯迴響
+    - 地下暗河的潺潺流水
+    - 金堅牢者鎖子甲的摩擦聲
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 普世教會西派教廷
+  access_level: restricted
+  danger_level: medium
+  religion: 普世教會西派（創世主阿薩）
+
+# ── 關係即通道（connections）──
+connections:
+  - target: inner_city
+    type: physical
+    direction: 中央
+    hidden: false
+    description: 聖鑰院複合體位於內城區中央
+  - target: twilight_palace
+    type: secret
+    direction: 地下
+    hidden: true
+    description: 地下暗道相連暮光宮
+  - target: lower_city
+    type: secret
+    direction: 地下
+    hidden: true
+    description: 古老下水道體系相連下城區
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 聖座宮（雙翼之心）
+    location: 聖鑰院複合體中央軸心
+    description: >
+      黑色玄武岩與白色大理石骨架構成的雙翼宮殿，中央長廊「恩典之軸」分東西兩翼。
+  - item: landmark
+    name: 宗座宮（西殿）
+    location: 恩典之軸西翼
+    guardian: 教皇格里高利十一世
+    description: >
+      教皇格里高利十一世的絕對範圍，冷硬哥德式高塔與拋光黑曜石外牆。
+      三樓深紫色天鵝絨帷幕，底層宗座議事大殿設樞機議會二十四席，
+      北翼真實之座小堂用於異端審訊，地下三層為聖座寶庫。
+  - item: landmark
+    name: 慈慧宮（東殿）
+    location: 恩典之軸東翼
+    guardian: 聖女塞拉菲娜五世
+    description: >
+      聖女塞拉菲娜五世的領地，淺灰色花崗岩與深色橡木建造。
+      七柱廳掌管糧衣醫居工育殯七大救濟事務，
+      聖火中庭設有隕鐵聖火盆終年不熄。
+  - item: landmark
+    name: 聖光大教堂
+    location: 聖鑰院北翼
+    guardian: 金堅牢者騎士團
+    description: >
+      雙尖塔頂鑲嵌青銅太陽圓盤，地下聖堂（Crypta Septem Clavium）
+      存放七把黑曜石鑰匙與瓦萊里安斷劍「霜咬」碎片。
+  - item: landmark
+    name: 聖秩總修院
+    location: 聖鑰院複合體內
+    description: >
+      元素聖秩中央神學院，四方庭院，中央設有隕鐵永火祭壇。
+  - item: landmark
+    name: 聖輪經院
+    location: 聖鑰院北翼
+    guardian: 樞機議會
+    description: >
+      中央圖書館，以巨型水車驅動升降書架。水車被稱為「聖輪」，
+      其運轉被視為「阿薩恩典流轉」的隱喻。
+  - item: landmark
+    name: 神恩鑄幣所
+    location: 聖鑰院北翼
+    guardian: 教廷財政總管
+    description: >
+      聖券（神恩券）印製中心，日夜運作，周邊空氣中常年飄散劣質木漿與油墨的酸腐氣味。
+      第754年後逐步推行紙幣，至第825年已貶值到連乞丐都拒絕接受。
+  - item: landmark
+    name: 殉道者聖龕
+    location: 聖鑰院複合體內
+    description: >
+      供奉六勇者遺物，第七座空壁龕為「最後英雄」預留。
+  - item: landmark
+    name: 熾天使堂
+    location: 聖鑰院複合體內
+    guardian: 聖殿騎士團
+    description: >
+      聖殿騎士團中央會院，三廊式巴西利卡，後方設有營房、兵器庫與訓練場，
+      外牆部署十二米隕鐵弩炮。
+  - item: landmark
+    name: 護教軍營房
+    location: 聖鑰院複合體外圍
+    description: >
+      八千至一萬人駐地，護教軍的常設軍營。
+  - item: landmark
+    name: 靈魂檢疫塔
+    location: 聖鑰院東翼外圍
+    guardian: 金堅牢者
+    description: >
+      獨立七層圓塔，實為軟禁政治犯的高級監獄。
+      夕照帝利奧三世曾多次「因病」被送往此塔，
+      教廷以「靈魂檢疫」為名變相軟禁皇帝。
+  - item: landmark
+    name: 樞機墓窖
+    location: 熾天使堂地下
+    description: >
+      熾天使堂地下墓窖，設有二十四個墓室，供樞機議會成員安葬。
+  - item: landmark
+    name: 聖淨療養院
+    location: 聖鑰院複合體內
+    description: >
+      維特魯斯最大的教會醫院。
+  - item: landmark
+    name: 慈惠堂
+    location: 聖鑰院複合體內
+    guardian: 慈惠騎士團
+    description: >
+      慈惠騎士團中央會院。
+  - item: landmark
+    name: 靈糧大倉
+    location: 聖鑰院複合體東翼附近
+    description: >
+      救濟糧中央囤積庫。
+  - item: landmark
+    name: 救濟廚房
+    location: 聖鑰院複合體東翼附近
+    description: >
+      最大公共廚房，負責救濟餐食製備。
+  - item: landmark
+    name: 藥草園
+    location: 聖鑰院複合體內
+    description: >
+      種植席爾凡森民傳入草藥，中央設有隕鐵鑄框古井。
+  - item: landmark
+    name: 懺悔迴廊
+    location: 地下
+    description: >
+      地下封閉走廊，連接宗座宮、真實之座小堂與靈魂檢疫塔。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 宗教
+  - 教廷
+  - 聖座
+  - 宮殿
+  - 教堂
+  - 密道
+  - 監獄
+  - 救濟
+  - 西派

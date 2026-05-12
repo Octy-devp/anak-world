@@ -1,0 +1,58 @@
+# ── 身份錨定（必填）──
+id: arena_slums
+name: 競技場貧民窟
+layer: room
+region: 下城區
+empire: 塞拉菲昂神聖帝國
+parent_id: lower_city
+
+# ── 敘事錨定（必填）──
+description: >
+  下城區最深處，聳立著一座古代環形競技場遺址——無人記得它的名字，只被稱為「大環廢墟」。
+  曾經容納數萬觀眾，如今內部塞滿幾千戶貧民。
+  他們直接在看台拱洞裡搭起爐灶，用碎石和木板隔出「房間」；
+  原本皇家的觀覽台掛滿洗過的破爛衣服，在風中飄蕩如同破爛旗幟。
+  金堅牢者偶爾進入「徵召聖奴」，帶走最健壯的青年。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 爐灶煙熏與簡陋炊食的氣味
+    - 破爛衣物的霉味與皂角殘留
+    - 碎石與塵土的乾燥氣息  # inferred: true
+  light: 拱洞內的昏暗微光；露天看台處的蒼白天光  # inferred: true
+  temperature: 石質建築夏季悶熱、冬季陰冷徹骨  # inferred: true
+  sound:
+    - 貧民區的喧囂與孩童哭喊  # inferred: true
+    - 風穿過破爛衣物的獵獵聲
+    - 金堅牢者鐵靴踏入時的沉重腳步聲  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 無實際控制者，教廷間接監管  # inferred: true
+  access_level: public
+  danger_level: high
+  religion: 普世教會西派（創世主阿薩）
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 大環廢墟遺址
+    description: 古代環形競技場遺址，無人記得原名，只被稱為「大環廢墟」
+  - item: landmark
+    name: 拱洞內的貧民「房間」
+    description: 貧民在看台拱洞內以碎石和木板隔出的簡陋居所
+  - item: landmark
+    name: 皇家觀覽台的破衣晾曬區
+    description: 原本皇家專用的觀覽台，現掛滿洗過的破爛衣服，風中飄蕩如破爛旗幟
+  - item: landmark
+    name: 聖奴徵召點
+    description: 金堅牢者偶爾進入帶走最健壯青年的徵召地點
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 貧民窟
+  - 廢墟
+  - 聖奴
+  - 競技場
+  - 底層
