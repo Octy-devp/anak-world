@@ -4,6 +4,55 @@
 
 ---
 
+## 2026-05-13 00:00 當前狀態總覽
+
+- **Schema**: v0.3（layer: settlement, settlement_type enum, wonders[], districts[]）
+- **文檔**: AGENTS.md v0.3（數據來源優先級: geography > empire > source > inferred）
+- **YAML 總數**: 31 個（index.yaml + 14 geography + 5 empire + 11 settlement）
+- **提交總數**: 15 個
+
+### 已完成層級
+
+| 層級 | 數量 | 狀態 |
+|------|------|------|
+| continent | 1 (`index.yaml`) | ✅ 完成 |
+| geography | 14 | ✅ 完成 |
+| empire | 5 | ✅ 完成 |
+| settlement | 11 | ✅ 完成（5首批 + 6第二批） |
+| district | 0 | ⏳ 未開始 |
+| room | 0 | ⏳ 未開始 |
+| faction | 0 | ⏳ 未開始 |
+
+### 11 個 Settlement 清單
+
+| # | 名稱 | 帝國 | 類型 | Wonder |
+|---|------|------|------|--------|
+| 1 | 維特魯斯 | 塞拉菲昂 | town | grand_cathedral, sacred_key_complex, twilight_palace |
+| 2 | 奧斯堡 | 凱撒里克 | fortress | icewall_palace, horn_of_dawnbreak |
+| 3 | 霜望要塞 | 凱撒里克 | fortress | — |
+| 4 | 流泉修道院 | 塞拉菲昂 | monastery | healing_spring |
+| 5 | 赤土鎮 | 塞拉菲昂 | village | — |
+| 6 | 霍羅托里亞 | 北境諸邦 | town | geothermal_springs |
+| 7 | 席爾瓦裡翁 | 艾爾達拉 | town | crystal_court |
+| 8 | 塔拉薩 | 自由城邦 | town | grand_courthouse, thalassan_league_market |
+| 9 | 菲惹港 | 自由城邦 | town | grand_dock |
+| 10 | 昂科拉 | 自由城邦 | town | great_shipyard |
+| 11 | 艾歐利斯 | 自由城邦 | town | windbreath_council_hall |
+
+### 近期提交
+- `796692e` — 塔拉薩歷史地位補充（七海同盟發源地）
+- `7416471` — 風息群島城邦連接方式修正（石橋 → 渡船）
+- `f9a2eb1` — 第二批 Settlement：四大帝國首都補齊 + geography 一致性修正
+- `ab9d192` — 第一批 Settlement 示範（5個定居點）
+- `f8f335e` — Schema v0.3：city → settlement 重構
+
+### 待完成
+- [ ] District / Room 層級（維特魯斯三層空間、奧斯堡同心圓等）
+- [ ] Faction 層級（霜刃傭兵團、銀葉商會、黑曜石守望者、赭石行會）
+- [ ] FastAPI 骨架
+
+---
+
 ## 2026-05-12 23:35 Empire YAML 深度驗證完成
 
 - **驗證方式**：3 個子代理並行（West+East / North+South / SecretEldara）
