@@ -1,0 +1,40 @@
+id: ankora
+name: 安納克大陸
+layer: continent
+description: >
+  安納克大陸是世界樹「艾爾達拉」根系擁抱的廣袤大地。
+  大洪水後，被怒嘯山脈與阿比蘇斯深淵分割為東西兩大命運舞台，
+  以及北境的冰壁與南境的自由城邦。
+atmosphere:
+  scent:
+    - 遠海鹽風
+    - 松針與腐殖土
+  light: 隨緯度與季節劇烈變化的自然天光
+  temperature: 溫帶至寒帶，南北差異極大
+  sound:
+    - 怒嘯山脈的永恆風聲
+    - 大河流域的流水低語
+properties:
+  controlled_by: 無
+  access_level: public
+  danger_level: medium
+tags:
+  - 大陸
+  - 世界樹
+  - 大洪水
+empires:
+  - id: west_seraphion
+    name: 塞拉菲昂神聖帝國
+    region: 西殿
+  - id: east_caesaric
+    name: 凱撒里克帝國
+    region: 東殿
+  - id: north_frost
+    name: 北境諸邦
+    region: 北殿
+  - id: south_libertania
+    name: 自由城邦聯盟
+    region: 南殿
+  - id: secret_eldara
+    name: 艾爾達拉秘境
+    region: 秘境

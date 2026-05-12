@@ -1,0 +1,198 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ankora.world/schema/location-v0.1.json",
+  "title": "Ankora World Location",
+  "description": "Schema for a single location in the Ankora World static YAML database",
+  "type": "object",
+  "required": ["id", "name", "layer", "region", "empire", "description", "atmosphere", "tags"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Globally unique identifier, snake_case",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name"
+    },
+    "layer": {
+      "type": "string",
+      "description": "Hierarchy tier",
+      "enum": ["continent", "empire", "city", "district", "room"]
+    },
+    "region": {
+      "type": "string",
+      "description": "Name of the containing region or district"
+    },
+    "empire": {
+      "type": "string",
+      "description": "Name of the containing empire"
+    },
+    "parent_id": {
+      "type": ["string", "null"],
+      "description": "ID of the parent location in the hierarchy (null only for continent)",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "description": {
+      "type": "string",
+      "description": "Narrative description of the location"
+    },
+    "atmosphere": {
+      "type": "object",
+      "description": "Sensory anchors for the location",
+      "required": ["scent", "light", "temperature", "sound"],
+      "properties": {
+        "scent": {
+          "type": "array",
+          "description": "Array of smell descriptions",
+          "items": { "type": "string" },
+          "minItems": 0
+        },
+        "light": {
+          "type": "string",
+          "description": "Light quality description"
+        },
+        "temperature": {
+          "type": "string",
+          "description": "Temperature feeling"
+        },
+        "sound": {
+          "type": "array",
+          "description": "Array of sound descriptions",
+          "items": { "type": "string" },
+          "minItems": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "properties": {
+      "type": "object",
+      "description": "Optional property tags",
+      "properties": {
+        "controlled_by": {
+          "type": "string",
+          "description": "Faction or entity that controls this location"
+        },
+        "access_level": {
+          "type": "string",
+          "enum": ["public", "restricted", "private", "secret"],
+          "description": "Access restriction level"
+        },
+        "danger_level": {
+          "type": "string",
+          "enum": ["none", "low", "medium", "high", "deadly"],
+          "description": "Danger level"
+        },
+        "religion": {
+          "type": "string",
+          "description": "Dominant religion"
+        },
+        "population": {
+          "type": ["integer", "null"],
+          "description": "Resident population (mainly for city/district)"
+        }
+      },
+      "additionalProperties": true
+    },
+    "connections": {
+      "type": "array",
+      "description": "Relationships / passages to other locations",
+      "items": {
+        "type": "object",
+        "required": ["target", "type", "direction"],
+        "properties": {
+          "target": {
+            "type": "string",
+            "description": "Target location id",
+            "pattern": "^[a-z0-9_]+$"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["physical", "secret", "conceptual", "scent", "sound"],
+            "description": "Type of connection"
+          },
+          "direction": {
+            "type": "string",
+            "description": "Relative direction or descriptive bearing"
+          },
+          "hidden": {
+          "type": "boolean",
+            "description": "Whether this connection is secret",
+            "default": false
+          },
+          "description": {
+            "type": "string",
+            "description": "Narrative description of the passage"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "contents": {
+      "type": "array",
+      "description": "Items, NPCs, documents or landmarks found here",
+      "items": {
+        "type": "object",
+        "required": ["item", "name"],
+        "properties": {
+          "item": {
+            "type": "string",
+            "enum": ["artifact", "npc", "document", "resource", "landmark"],
+            "description": "Category of the content"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the item/NPC/document"
+          },
+          "location": {
+            "type": "string",
+            "description": "Specific sub-location within this place"
+          },
+          "guardian": {
+            "type": "string",
+            "description": "Guardian or custodian"
+          },
+          "description": {
+            "type": "string",
+            "description": "Detailed description"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "events": {
+      "type": "array",
+      "description": "Historical events tied to this location",
+      "items": {
+        "type": "object",
+        "required": ["id", "year", "name"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique event identifier"
+          },
+          "year": {
+            "type": "integer",
+            "description": "Ankora calendar year (negative for pre-Flood)"
+          },
+          "name": {
+            "type": "string",
+            "description": "Event name"
+          },
+          "description": {
+            "type": "string",
+            "description": "Narrative description of the event"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "tags": {
+      "type": "array",
+      "description": "Searchable tags",
+      "items": { "type": "string" },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}
