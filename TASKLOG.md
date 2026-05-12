@@ -4,6 +4,34 @@
 
 ---
 
+## 2026-05-12 17:00 計劃變更記錄
+
+- **From**: 父代理 (Kimi Code CLI)
+- **To**: 未來的父代理 / 子代理
+- **任務**：Schema 擴展 — 新增 `faction` 層級計劃
+- **已完成**：
+  - [x] 用戶確認需要非國家組織系統
+  - [x] 搜索原文，確認 326 處提及傭兵/行會/宗教/秘密組織
+  - [x] 更新 `schema.json`：`layer` enum 加入 `"faction"`
+  - [x] 更新 `SCHEMA.md` v0.2：
+    - 五級層次 → 六級層次
+    - 新增第八節「勢力層級（Faction Layer）」
+    - 定義 `type`、`headquarters`、`influence[]`、`relations[]`、`members[]` 等欄位
+  - [x] 更新 `PLAN.md`：第三階段加入「勢力層（Faction Layer）」
+  - [x] Git commit（待執行）
+- **待完成**：
+  - [ ] 建立 `data/factions/` 目錄
+  - [ ] 建立第一批 Faction YAML（建議：霜刃傭兵團、銀葉商會、黑曜石守望者、赭石行會）
+  - [ ] 更新 FastAPI 骨架，支援 `/faction/{id}` 與 `/faction/{id}/presence` 端點
+- **阻擋問題**：無
+- **重要設計決策**：
+  - `faction` 獨立於地點層級，與 `geography` 平行
+  - Faction YAML 統一放於 `data/factions/`，不按帝國分區（因為跨越多個帝國）
+  - `influence[]` 描述組織在各地點的活動痕跡（總部/據點/招募點/秘密活動）
+  - `relations[]` 描述與其他 faction 或 empire 的立場（allied/friendly/neutral/hostile/secret）
+
+---
+
 ## 2026-05-12 16:30 交接記錄
 
 - **From**: 父代理 (Kimi Code CLI)

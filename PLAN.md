@@ -117,6 +117,7 @@ ankora-world/
 
 ## 第三階段：未來擴展（本輪不執行，僅預留）
 
+- **勢力層（Faction Layer）**：新增 `faction` 層級 YAML，涵蓋傭兵團、行會、宗教結社、秘密組織、貿易聯盟。通過 `influence[]` 描述跨地點活動，`relations[]` 描述勢力關係網
 - **圖譜層**：引入 Kuzu 嵌入式圖資料庫，支援複雜圖查詢（最短路徑、勢力範圍）
 - **視覺化**：React + Cytoscape.js 靜態網頁，GitHub Pages 托管
 - **AI 敘事層**：MCP / Function Calling 接口，讓 Claude / Gemini 透過 API 讀取世界資料

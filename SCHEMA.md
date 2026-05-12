@@ -1,14 +1,14 @@
 # Ankora-World YAML Schema 規範
 
-> **版本**：v0.1  
-> **用途**：定義 `data/` 下所有地點 YAML 檔案的欄位、型別與填充規則。  
+> **版本**：v0.2  
+> **用途**：定義 `data/` 下所有 YAML 檔案的欄位、型別與填充規則（地點 + 勢力）。  
 > **原則**：靜態優先、層次錨定、感官即索引、關係即通道。
 
 ---
 
-## 一、五級層次（The Five Tiers）
+## 一、六級層次（The Six Tiers）
 
-每個地點必須明確屬於以下五級之一，不可跳級：
+每個 YAML 實體必須明確屬於以下六級之一：
 
 | 層級 | 英文名 | 說明 | 範例 |
 |------|--------|------|------|
@@ -18,12 +18,14 @@
 | 城市 | `city` | 城市、首都、要塞都市 | Vetustapolis |
 | 區域 | `district` | 城市內的行政或功能區塊 | Inner City, Harbor District |
 | 房間 | `room` | 可進入的具體空間，最小單位 | Sacred Key Complex, Throne Hall |
+| **勢力** | **`faction`** | **非國家組織：傭兵團、行會、宗教結社、秘密組織、貿易聯盟** | **Frostblade Company, Ochre Guild** |
 
 > **規則**：
 > - `room` 必須有 `parent_id` 指向所屬 `district`
 > - `district` → `city` → `empire` → `continent`
 > - `geography` 可獨立存在，或作為其他地點的空間背景（如城市位於山脈東麓）
 > - `geography` 的 `parent_id` 通常指向 `continent`，也可指向另一 `geography`（如「龍脊隘口」屬於「怒嘯山脈」）
+> - **`faction` 可獨立存在，不屬於任何地點層級；通過 `influence[]` 描述其在各地點的活動**
 
 ---
 
@@ -239,3 +241,162 @@ tags:
 | 版本 | 日期 | 變更 |
 |------|------|------|
 | v0.1 | 2026-05-12 | 初始版本，定義五級層次與基礎欄位 |
+
+---
+
+## 八、勢力層級（Faction Layer）— v0.2 新增
+
+> **狀態**：計劃階段，欄位規範已定，尚未產出具體 YAML。  
+> **用途**：描述非國家組織（傭兵團、行會、宗教結社、秘密組織、貿易聯盟）的結構、活動範圍與勢力關係。
+
+### 8.1 設計原則
+
+- **獨立於地點層級**：`faction` 不屬於 `continent → empire → city` 鏈，而是與 `geography` 平行的獨立層級
+- **活動即影響**：通過 `influence[]` 描述組織在哪些地點有據點、招募點或秘密活動
+- **關係網絡**：通過 `relations[]` 描述與其他 `faction` 或 `empire` 的立場（友好/敵對/秘密）
+- **感官錨定於總部**：`atmosphere` 描述的是組織總部（`headquarters`）所在的空間感官
+
+### 8.2 Faction YAML 結構（計劃規範）
+
+```yaml
+# ── 身份錨定（必填）──
+id: frostblade_company
+name: 霜刃傭兵團
+layer: faction
+
+# ── 組織屬性（必填）──
+type: mercenary            # [mercenary|guild|religious|secret_society|trade_league|political|academic]
+headquarters: ashtown      # 總部地點 id（可為 city 或 room）
+founding_year: 780
+ideology: 金幣即忠誠，刀劍即法律
+
+# ── 敘事錨定（必填）──
+description: >
+  北境最著名的傭兵團，由退役霜生戰士與人類混血組成。
+  他們在約恩維德山脈南麓的凍土要塞中訓練，
+  以能在極寒中戰鬥聞名，收費高昂但從不背叛雇主。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 凍土與鐵鏽
+    - 傷口藥膏的刺鼻
+    - 混合血統士兵的皮革與汗味
+  light: 極北長夜的慘白與營火搖曳的橙紅
+  temperature: 終年冰寒，室內靠地熱溫泉勉強維持
+  sound:
+    - 鐵劍互擊的鏗鏘
+    - 極北風嘯穿過要塞縫隙
+    - 混血士兵的低聲咒罵（夾雜霜生語與人類方言）
+
+# ── 活動範圍（influence，可選但建議填寫）──
+influence:
+  - target: the_howling_peaks
+    presence: outpost
+    description: 隘口附近的哨站，監控東西商隊，收取「保護費」
+  - target: the_flood_plain
+    presence: recruitment
+    description: 每年秋季在豐收節市集設攤招募新兵，專挑破產農民
+  - target: north_frost
+    presence: covert
+    description: 團長與某部落首領有血緣關係，暗中獲取霜生戰術情報
+
+# ── 勢力關係（relations，可選但建議填寫）──
+relations:
+  - target: west_seraphion
+    stance: hostile
+    description: 曾參與格蘭迪斯大公與皇帝的私戰，殺死過帝國正規軍
+  - target: north_frost
+    stance: secret
+    description: 團長母親是霜生貴族，這個秘密若曝光將摧毀傭兵團的信譽
+
+# ── 關鍵成員（members，可選）──
+members:
+  - role: 團長
+    name: 維爾姆·霜咬
+    status: alive
+  - role: 創始人
+    name: 老約恩
+    status: dead
+
+# ── 歷史事件（events，可選）──
+events:
+  - id: frostblade_founding
+    year: 780
+    name: 霜刃傭兵團成立
+    description: 老約恩率領十七名混血逃兵在凍土要塞立下血誓
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 傭兵
+  - 北境
+  - 混血
+  - 極寒作戰
+```
+
+### 8.3 欄位規範
+
+#### `type`
+- **型別**：string
+- **允許值**：`mercenary`、`guild`、`religious`、`secret_society`、`trade_league`、`political`、`academic`
+- **說明**：組織的核心性質
+
+#### `headquarters`
+- **型別**：string
+- **說明**：組織總部所在地的 `id`，通常為 `city` 或 `room` 層級
+
+#### `founding_year`
+- **型別**：integer
+- **說明**：成立年份，安納克曆
+
+#### `ideology`
+- **型別**：string
+- **說明**：組織的核心理念或口號，簡短有力
+
+#### `influence[]`
+- **型別**：object[]
+- **說明**：組織在各地點的活動痕跡
+- **必填子欄位**：
+  - `target`：string（地點 `id`）
+  - `presence`：string（`headquarters`、`stronghold`、`outpost`、`recruitment`、`covert`、`ritual_site`）
+  - `description`：string
+
+#### `relations[]`
+- **型別**：object[]
+- **說明**：與其他勢力的關係
+- **必填子欄位**：
+  - `target`：string（`empire` 或 `faction` 的 `id`）
+  - `stance`：string（`allied`、`friendly`、`neutral`、`hostile`、`secret`）
+  - `description`：string
+
+#### `members[]`
+- **型別**：object[]
+- **說明**：關鍵成員清單
+- **子欄位**：
+  - `role`：string
+  - `name`：string
+  - `status`：string（`alive`、`dead`、`missing`、`legendary`）
+
+### 8.4 目錄規則
+
+Faction YAML 統一放於 `data/factions/` 目錄，不按帝國分區：
+
+```
+data/
+├── factions/
+│   ├── frostblade-company.yaml
+│   ├── silverleaf-consortium.yaml
+│   ├── sisters-of-the-tear.yaml
+│   └── ash-covenant.yaml
+```
+
+> **理由**：faction 跨越多個帝國與地理區域，不適合歸入單一帝國目錄。
+
+---
+
+## 九、版本歷史
+
+| 版本 | 日期 | 變更 |
+|------|------|------|
+| v0.1 | 2026-05-12 | 初始版本，定義五級層次與基礎欄位 |
+| v0.2 | 2026-05-12 | 新增 `faction` 層級計劃，定義非國家組織的欄位規範（`influence`、`relations`、`members`）|
