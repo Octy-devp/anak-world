@@ -1,0 +1,133 @@
+# ── 身份錨定（必填）──
+id: secret_eldara
+name: 艾爾達拉秘境
+layer: empire
+region: 西南部
+empire: 無
+parent_id: ankora
+
+# ── 敘事錨定（必填）──
+description: >
+  艾爾達拉秘境並非人類意義上的帝國，而是異種族森民（席爾凡／Sylvans）的唯美隱世國度。
+  其統治者為「席爾瓦裡翁」（Silverleaf Concord），一個以母系血統為基礎的貴族長老制社會。
+  森民擁有銀白色長髮與尖耳，肌膚如月光下的瓷器般剔透，不追求擴張與征服，
+  以「唯美與永恆」為至高信條。他們的魔法來自與世界樹艾爾達拉的「共鳴」，
+  流水、烈焰、大地、疾風四大元素在歌聲中聽從召喚。
+  森民拒絕金屬工具，認為隕鐵是「深淵的毒」，使用「生長工藝」而非鍛造。
+  核心居所「水晶宮廷」並非人類建築，而是世界樹根系與礦脈共鳴生長出的水晶樹脂結構。
+  大洪水時期，倖存者蜷縮於世界樹蔭庇之下。
+  第483年，費羅斯誓約成立，森民首次大規模與人類合作對抗霜生；
+  第485年極北會戰中，希爾薇恩化身銀葉聖樹；
+  第490年，森民啟動「大隱遁」，以濃厚的迷霧結界將艾特恩瓦爾德森海徹底封閉，退回深處。
+  第682年，普世教會頒布《花園論》，將森民定義為「主神的謙卑從神」，
+  同時將森民魔法納入「神恩」體系。
+  至第825年，迷霧結界仍然存在，森民成為神話中的存在，
+  艾特恩瓦爾德森海成為傳說之地。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 樹脂與松針的甜膩
+    - 腐殖土與蘑菇的濕潤
+    - 水晶的礦物清冽
+    - 霧雨的無味清新
+    - 邊境處飄來的神聖帝國薰香  # inferred: true
+  light: >
+    黎明時樹冠縫隙的淡金光束、正午的翠綠濾光、月夜時水晶牆壁的銀藍微光，
+    永恆不散的薄霧使光線呈現夢幻的散射
+  temperature: 恆溫濕潤，冬暖夏涼，樹雨帶來的涼意  # inferred: true
+  sound:
+    - 樹葉的沙沙細語（有人說是世界樹的低語）
+    - 根系的緩慢生長聲（人耳幾乎聽不見，但森民能感知）  # inferred: true
+    - 樹雨敲打水晶的清脆
+    - 遠方帝國邊境巡邏隊的號角（不協和音）  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 席爾瓦裡翁
+  access_level: secret
+  danger_level: medium
+  religion: 世界樹之靈艾爾達拉（共鳴信仰）
+  population: null  # 森民數量不為外界所知
+
+# ── 關係即通道（connections）──
+connections:
+  - target: eldara_worldtree
+    type: physical
+    direction: 核心
+    description: 世界樹艾爾達拉是秘境的全部，森民與之共生
+  - target: the_howling_peaks
+    type: physical
+    direction: 東方
+    description: 怒嘯山脈西麓的融雪滋養世界樹根系
+  - target: sylvaine_river
+    type: physical
+    direction: 東北方
+    description: 希爾薇恩河從森林流向傑米努斯大河，是與外界的唯一自然通道
+  - target: the_abyssus
+    type: conceptual
+    direction: 對立
+    description: 世界樹代表生命與自然魔法，深淵代表死亡與毀滅技術
+  - target: west_seraphion
+    type: conceptual
+    direction: 東北方
+    description: 與塞拉菲昂帝國的邊境關係緊張，迷霧結界阻止入侵
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 水晶宮廷（Crystal Court）
+    location: 世界樹主幹與根系交會處
+    description: >
+      並非人類意義上的建築，而是世界樹的「器官」。
+      由樹脂與水晶混合物構成，內部充滿流動光線與永恆薄霧，
+      牆壁隨晝夜變色：黎明淡金、正午翠綠、月夜銀藍。
+  - item: npc
+    name: 席爾瓦裡翁長老議會
+    location: 水晶宮廷最深處的共鳴大廳
+    description: >
+      以母系血統為基礎的貴族長老制議會，
+      在月光下討論著與人類世界無關的永恆話題，
+      決定著森民與世界樹的命運。
+
+# ── 歷史事件（events）──
+events:
+  - id: the_great_seclusion
+    year: 490
+    name: 大隱遁
+    description: >
+      森民見證人類戰後的殘酷與貪婪後，啟動大隱遁。
+      世界樹艾爾達拉的邊界開始自動擴張，濃厚的迷霧結界湧出，
+      將艾特恩瓦爾德森海徹底封閉。森民退回深處，進入「修養紀元」。
+  - id: ferroth_oath
+    year: 483
+    name: 費羅斯誓約
+    description: >
+      席爾瓦裡翁長老因世界樹幻象而打破隱遁，
+      森民首次大規模與人類合作，共同對抗霜生的第二次白色洪流。
+  - id: battle_of_utter_north
+    year: 485
+    name: 極北會戰
+    description: >
+      決戰在極北荒原爆發。安納克聯軍擊潰霜生主力，
+      希爾薇恩為阻止混戰而釋放禁術「生命綻放」，化身銀葉聖樹。
+  - id: doctrine_of_the_garden
+    year: 682
+    name: 《花園論》頒布與森民魔法教典化
+    description: >
+      普世教會頒布《花園論》，將艾特恩瓦爾德森海詮釋為創世主的「聖地花園」，
+      將森民定義為「主神的謙卑從神」，同時將森民魔法納入「神恩」體系。
+      人類法師的元素魔法被視為從森民獲得的「特許權柄」。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 秘境
+  - 森民
+  - 席爾凡
+  - 世界樹
+  - 隱世國度
+  - 自然魔法
+  - 迷霧結界
+  - 水晶宮廷
+  - 大隱遁
+  - 非人類政權

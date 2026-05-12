@@ -1,0 +1,102 @@
+id: west_seraphion
+name: 塞拉菲昂神聖帝國
+layer: empire
+region: 西部
+empire: 無
+parent_id: ankora
+description: >
+  位於安納克大陸西部的龐大帝國，曾經的霸權心臟。
+  名義上由六大選帝侯選舉皇帝，但自巴爾塔薩的後裔以來，瓦羅蘭特皇室已經虛位化。
+  現任皇帝被稱為「夕照帝」，直轄領地僅剩維特魯斯周邊五十里的狹小區域，連宮殿的修繕費用都需要向教廷借債。
+  教廷擁有加冕權與廢立權（《大憲章》第754年確立），西派教廷主張「加冕權至上」，認為教權高於皇權。
+  六大選帝侯——格蘭迪斯大公、莫爾根國王、西爾伯弗羅斯特邊疆大公、維特魯斯特别市長、塔拉薩七海同盟代表、里弗邦德——各自為政，私戰不斷。
+  皇帝無法獨立行使任何實質性權力，除非能說服至少四位選帝侯。
+  到第七世紀末，帝國經濟的三大支柱無一倖存：隕鐵礦脈枯竭、神恩券濫發貶值、小冰期導致農作物減產四成。
+  格蘭迪斯大公壟斷中部平原的麥田，用糧食換取忠誠。
+  宗教為普世教會西派，信奉創世主阿薩，創造了「神聖語」將技術詞彙宗教化。
+  到了第825年，塞拉菲昂已淪為一個美麗而虛弱的影子，帝國議會因議事癱瘓而解散，法律形同虛設，神恩券在黑市上的價值已低於印刷花費。
+
+atmosphere:
+  scent:
+    - 維特魯斯的薰香與腐敗  # inferred: true
+    - 沖積平原的麥香  # inferred: true
+    - 教廷檔案庫的羊皮紙霉味  # inferred: true
+    - 宮殿的衰敗氣息  # inferred: true
+  light: 聖光之城日落時的蒼白夕照（「夕照帝」得名由來）  # inferred: true
+  temperature: 溫帶，但小冰期影響下冬季越來越長  # inferred: true
+  sound:
+    - 選帝侯議會的爭吵  # inferred: true
+    - 教廷鐘聲  # inferred: true
+    - 私戰的遙遠廝殺  # inferred: true
+    - 農民的嘆息  # inferred: true
+
+properties:
+  controlled_by: 普世教會西派教廷
+  access_level: public
+  danger_level: medium
+  religion: 普世教會西派（創世主阿薩）
+  population: 5000000  # 約四百萬至六百萬（第825年估算）；inferred: true
+
+connections:
+  - target: the_howling_peaks
+    type: physical
+    direction: 東界
+    description: 怒嘯山脈是與凱撒里克帝國的天然邊界，魯普圖斯隘口是唯一的便捷通道
+  - target: the_flood_plain
+    type: physical
+    direction: 核心腹地
+    description: 中央沖積平原是帝國的糧食命脈，但實際由格蘭迪斯大公控制
+  - target: flumen_geminus
+    type: physical
+    direction: 貫穿
+    description: 傑米努斯大河東西貫穿帝國，是貿易與運輸的生命線
+  - target: eldara_worldtree
+    type: conceptual
+    direction: 西南邊境
+    description: 世界樹森林在帝國西南邊境，森民與帝國關係緊張
+
+contents:
+  - item: artifact
+    name: 熾天使之冠
+    location: 維特魯斯聖鑰院
+    guardian: 普世教會西派教廷
+    description: >
+      第757年格里高利十世為巴爾塔薩鑄造的新皇冠，以黃金為骨架，鑲嵌七顆隕石碎片。
+      象徵七位熾天使的庇佑，教廷宣稱其「比鐵冠更古老，比血統更神聖」。
+  - item: document
+    name: 《大憲章》（Magna Carta Imperialis）
+    location: 教廷檔案庫與各選帝侯領地
+    guardian: 普世教會西派教廷
+    description: >
+      第754年簽訂的帝國根本法，確立選帝侯制度、教廷加冕權與廢立權，以及選帝侯議會的制法否決權。
+      標誌著艾森瓦爾王朝世襲傳統的終結與瓦羅蘭特皇室的誕生。
+
+events:
+  - id: iron_crown_uprising
+    year: 726
+    name: 鐵冠起義
+    description: >
+      巴爾塔薩率領赤土農民軍攻陷維特魯斯，艾森瓦爾五世自焚於中央神殿。
+      艾森瓦爾王朝的正統統治宣告終結，帝國進入長達二十七年的法統危機。
+  - id: magna_carta_imperialis
+    year: 754
+    name: 《大憲章》簽訂
+    description: >
+      教廷、瓦羅蘭特皇室與六大實權領主達成三方妥協：確立選舉帝制、教廷加冕權與廢立權、選帝侯制法否決權。
+      巴爾塔薩的家族被確立為「瓦羅蘭特皇室」，其譜系被教廷神學家偽造為可追溯至瓦萊里安血脈。
+  - id: silberfrost_mobilization_dispute
+    year: 788
+    name: 西爾伯弗羅斯特動員法之爭
+    description: >
+      面對白霜邊境襲擾，西爾伯弗羅斯特邊疆大公伊薩克二世請求選帝侯議會動員增援，
+      遭格蘭迪斯、莫爾根、塔拉薩與里弗邦德拒絕，議會陷入長達一年的僵局。
+      伊薩克二世當眾撕毀《大憲章》副本，此後選帝侯議會再未通過任何實質性法案。
+
+tags:
+  - 帝國
+  - 神權
+  - 夕照
+  - 選帝侯
+  - 教廷
+  - 破碎冠冕
+  - 西派

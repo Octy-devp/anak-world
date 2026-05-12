@@ -1,0 +1,106 @@
+# ── 身份錨定（必填）──
+id: north_frost
+name: 北境諸邦
+layer: empire
+region: 北部
+empire: 無
+parent_id: ankora
+
+# ── 敘事錨定（必填）──
+description: >
+  北境諸邦並非單一國家，而是散居於約恩維德山脈與極北冰原之間的人類城邦、部落與獨立領地的鬆散集合。
+  其核心成員包括：
+  （一）霍羅托里亞——由自稱「瓦萊里安第一公民」繼承者的軍事領袖統治的溫泉城邦，
+  拒絕普世教會，堅持「大陸眾神」信仰，第790年後徹底封閉國門，頒布《工藝封存令》；
+  （二）伯格施米德——隕鐵礦山與鍛造中心，曾是塞拉菲昂的選帝侯之一，
+  現已封閉礦道、不再過問外界；
+  （三）各種小領主、部落聯盟與礦山聚落，彼此無統屬關係，僅以地理鄰近與共同禦寒需求維繫鬆散聯繫。
+  與此同時，更北方的霜生部族（The Frostborn）於第801年經歷宗教起義，
+  建立了「阿爾比諾克拉西亞」（The Revelation of Whitefrost）。
+  霜生擁有文字、經典、倫理法與常備軍，是與人類北境諸邦並存的獨立文明，不屬於北境諸邦的一部分。
+  第810年，霍羅托里亞與阿爾比諾克拉西亞達成「冰晶協定」，進行技術交換；
+  雙方邊界持續進行「邊界禮儀戰」——有限的襲擊與反襲擊，戰後交換俘虜與技術。
+  至第825年，人類城邦與霜生之間的關係已從「消滅異端」轉為「敵對合作」，
+  這種關係令南方帝國無法理解。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 霍羅托里亞溫泉的硫磺  # inferred: true
+    - 冰原的無味空虛  # inferred: true
+    - 礦山的金屬粉塵  # inferred: true
+    - 霜生邊界的緊張氣息  # inferred: true
+  light: >
+    極晝的慘白、極夜的漆黑與極光（綠與紫的舞動）、
+    溫泉谷地的蒸汽折射  # inferred: true
+  temperature: >
+    極寒，但溫泉谷地終年溫暖  # inferred: true
+  sound:
+    - 冰川移動的深層轟鳴  # inferred: true
+    - 溫泉的氣泡咕嚕  # inferred: true
+    - 邊界禮儀戰的短促廝殺  # inferred: true
+    - 霍羅托里亞封閉國門後的死寂  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 無單一統治者
+  access_level: restricted
+  danger_level: high
+  religion: 大陸眾神信仰（霍羅托里亞）、山神信仰與部落禁忌（其他聚落）
+  population: null
+
+# ── 關係即通道（connections）──
+connections:
+  - target: northern_mountains
+    type: physical
+    direction: 南界
+    hidden: false
+    description: 約恩維德山脈是北境諸邦與南方帝國的天然屏障
+  - target: jarnvid_river
+    type: physical
+    direction: 南麓
+    hidden: false
+    description: 約恩維德河發源於山脈，向南流入傑米努斯大河
+  - target: the_howling_peaks
+    type: conceptual
+    direction: 南方
+    hidden: false
+    description: 怒嘯山脈東北連綿山脈與約恩維德山脈相接
+
+# ── 歷史事件（events）──
+events:
+  - id: battle_of_utter_north
+    year: 485
+    name: 極北會戰
+    description: >
+      決戰在極北荒原爆發，安納克聯軍在瓦萊里安領導下擊潰霜生主力，
+      霜生大可汗死於冰原。此役標誌著「鐵器時代霸權」的確立，
+      也為霍羅托里亞的起源埋下種子——部分聯軍選擇留守極北。
+  - id: albinocracy_founding
+    year: 803
+    name: 霜生宗教起義與阿爾比諾克拉西亞誕生
+    description: >
+      「冰血先知」出現於極北之地，宣稱嚴冬之神卡德摩斯並非要求人肉為糧，
+      而是要求在嚴寒中證明靈魂純潔。第803年頒布《白經》，
+      建立「冰眾公社」與「嚴冬唯一論」。霜生從此擁有文字、經典、倫理法與常備軍，
+      不再是南方史書中的「野蠻部落」。
+  - id: crystal_pact
+    year: 810
+    name: 冰晶協定
+    description: >
+      阿爾比諾克拉西亞與霍羅托里亞達成技術交換協定。
+      雙方邊界持續進行「邊界禮儀戰」——有限襲擊與反襲擊，戰後交換俘虜與技術情報。
+      這種「敵對合作」令南方帝國貴族無法理解。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 北境
+  - 極北
+  - 鬆散聯盟
+  - 霍羅托里亞
+  - 伯格施米德
+  - 霜生
+  - 阿爾比諾克拉西亞
+  - 邊界禮儀戰
+  - 舊火
+  - 溫泉技藝

@@ -1,0 +1,83 @@
+# ── 身份錨定（必填）──
+id: south_libertania
+name: 自由城邦聯盟
+layer: empire
+region: 東南部
+empire: 無
+parent_id: ankora
+
+# ── 敘事錨定（必填）──
+description: >
+  自由城邦聯盟的前身為利貝塔尼亞（Libertania），即原安納克自由聯邦，
+  由風息群島的七個商業城邦組成。其政治體制為漢撒同盟、威尼斯與熱那亞的混合聯邦制，
+  各城邦以「薩穆德拉盟誓」（Samudra Pact）維繫，沒有常備軍，
+  僅在季風來臨時集結帆隊聯防。風息議會（Windbreath Council）作為協商機構運作。
+  第754年《大憲章》簽訂時，利貝塔尼亞代表拒絕簽字，理由是「自由城邦不受封建契約約束」。
+  第775年，利貝塔尼亞正式宣布脫離塞拉菲昂帝國，實行「風役護照」制度——
+  任何願意為城邦服役三年的人，無論出身，均可獲得公民權與土地。
+  該聯邦壟斷大陸跨洋貿易，參與南方海鹽、珍珠、珊瑚與香料貿易，以金幣取代塞拉菲昂的神恩券，
+  到第800年人均財富已超過維特魯斯，證明了「沒有教會的社會也可以繁榮」。
+  聯邦信奉「風母與七洋靈」的泛靈信仰，務實的海洋文化使其「不崇拜任何神祇，只信奉契約與風向」。
+  第800年後與塞拉菲昂關係緊張，塞拉菲昂海軍試圖封鎖風息群島，
+  但城邦的輕快帆船與隕鐵加固艦隊使封鎖效果有限。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 全年鹽風
+    - 混合香料
+    - 松脂焦油
+    - 珊瑚與海藻
+    - 異國貨幣的金屬味  # inferred: true
+  light: 熱帶強光與銳利陰影、潟湖波光、夕照金紅、夜間藍眼淚  # inferred: true
+  temperature: 常年濕熱無冬，季風時涼爽，午後雷陣雨  # inferred: true
+  sound:
+    - 帆索噼啪
+    - 多國語言喧囂
+    - 潮汐漲退
+    - 風息議會的風鳴  # inferred: true
+    - 遠方暴風雨雷鳴  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 風息議會
+  access_level: public
+  danger_level: low
+  religion: 風母與七洋靈
+  population: null
+
+# ── 關係即通道（connections）──
+connections:
+  - target: wind_isles
+    type: physical
+    direction: 核心領土
+    description: 風息群島是自由城邦聯盟的全部領土，七城邦組成聯邦核心
+  - target: aurum_river
+    type: physical
+    direction: 西北方
+    description: 奧魯姆河出海口是群島與大陸的主要聯繫通道
+  - target: the_abyssus
+    type: conceptual
+    direction: 西方遠海
+    description: 某些老水手聲稱在群島最南端暴風夜可聽到深淵的低頻嗡鳴
+
+# ── 歷史事件（events）──
+events:
+  - id: great_charter_refusal
+    year: 754
+    name: 《大憲章》拒簽
+    description: 利貝塔尼亞代表拒絕在《大憲章》上簽字，理由為「自由城邦不受封建契約約束」
+  - id: libertania_independence
+    year: 775
+    name: 利貝塔尼亞獨立宣言
+    description: 利貝塔尼亞正式宣布脫離塞拉菲昂帝國，實行「風役護照」制度
+
+# ── 快速標籤（tags）──
+tags:
+  - 商業
+  - 海洋
+  - 自由城邦
+  - 聯邦制
+  - 貿易
+  - 反封建
+  - 風息群島
