@@ -123,7 +123,7 @@ contents:
     description: >
       八千至一萬人駐地，護教軍的常設軍營。
   - item: landmark
-    name: 靈魂檢疫塔
+    name: 檢疫塔
     location: 聖鑰院東翼外圍
     guardian: 金堅牢者
     description: >
@@ -140,6 +140,7 @@ contents:
     location: 聖鑰院複合體內
     description: >
       維特魯斯最大的教會醫院。
+      醫院騎士團的修士在聖鑰院的辦公地點，負責醫院的行政與救濟工作，是服務最廣的教廷騎士團。
   - item: landmark
     name: 慈惠堂
     location: 聖鑰院複合體內
@@ -165,7 +166,7 @@ contents:
     name: 懺悔迴廊
     location: 地下
     description: >
-      地下封閉走廊，連接宗座宮、真實之座小堂與靈魂檢疫塔。
+      地下封閉走廊，連接宗座宮、真實之座小堂與檢疫塔。
 
 # ── 快速標籤（tags，必填）──
 tags:

@@ -107,15 +107,14 @@ contents:
     guardian: 十二名最高級樞機
     description: >
       教廷心臟，雙翼宮殿為幾何軸心，輻射教堂、修院、騎士團會院、經院、監獄與救濟設施。
-      樞機議會二十四人（八席由大修道院長兼任）在此議事，保管七把黑曜石鑰匙與「四色權戒」。
+      詳細結構見 room 層 `sacred_key_complex.yaml`。
   - item: landmark
     name: 暮光宮
     location: 內城區北側杜寧高地
     guardian: 夕照帝利奧三世（實質被教廷軟禁）
     description: >
-      皇權的黃金囚籠。建於古代巨石地基之上，曾擁有地熱噴泉與比聖光大教堂更巨大的青銅太陽圓盤。
-      如今西翼局部坍塌，花園長滿荊棘與野罌粟；地下暗藏青銅時代的維修暗道，
-      連接下城區古老下水道體系，成為皇權最後的秘密避難所。
+      皇權的黃金囚籠，建於古代巨石地基之上。西翼坍塌，花園荒蕪，地下暗藏通往古老下水道的維修暗道。
+      詳細結構見 room 層 `twilight_palace.yaml`。
   - item: landmark
     name: 六聖徒神殿
     location: 內城區中央廣場
@@ -142,8 +141,7 @@ contents:
     location: 內城區聖鑰院東翼外圍
     guardian: 金堅牢者
     description: >
-      獨立七層圓塔，實為軟禁政治犯的高級監獄。夕照帝利奧三世曾多次「因病」被送往此塔，
-      教廷以「靈魂檢疫」為名變相軟禁皇帝。
+      獨立七層圓塔，實為軟禁政治犯的高級監獄。詳細描述見 `sacred_key_complex.yaml` 內「檢疫塔」。
   - item: landmark
     name: 阿薩慈惠所
     location: 下城區與內城區交界

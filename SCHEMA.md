@@ -179,22 +179,9 @@ tags:
 1. **檔案名**：必須與 `id` 一致，加 `.yaml` 副檔名。  
    範例：`id: sacred_key_complex` → 檔名 `sacred-key-complex.yaml`
 
-2. **目錄結構**：
-   ```
-   data/
-   ├── index.yaml                    # 大陸索引
-   ├── 01-west-seraphion/            # 帝國目錄（前綴數字確保排序）
-   │   ├── empire.yaml               # 帝國本體資料
-   │   └── locations/
-   │       └── vetustapolis/         # 定居點目錄
-   │           ├── settlement.yaml   # 定居點本體資料
-   │           └── inner-city/       # 區域名稱用連字號
-   │               └── sacred-key-complex.yaml
-   ```
+2. **一檔一地點**：每個 YAML 檔案只描述一個地點，不可合併多個地點。
 
-3. **一檔一地點**：每個 YAML 檔案只描述一個地點，不可合併多個地點。
-
-4. **index.yaml 格式**：
+3. **index.yaml 格式**：
    ```yaml
    id: ankora
    name: 安納克大陸
@@ -209,17 +196,89 @@ tags:
 
 ---
 
-## 五、新增地點的標準流程（給協作者）
+## 五、定居點粒度分級（Tier System）
+
+粒度分級直接對應 CKII 政治層級（見 AGENTS.md 第三節），而非主觀的「重要性」。這確保架構複雜度只出現在應該出現的地方：
+
+| 級別 | 對應 CKII 層級 | 適用對象 | 目錄結構 | 說明 |
+|------|---------------|----------|----------|------|
+| **Tier 1** | **Empire Capital** | 帝國首都、聯邦核心 | `locations/{settlement}/` 含 `settlement.yaml` + `district/` + `room/*.yaml` | 維特魯斯、奧斯堡、霍羅托里亞、塔拉薩、席爾瓦裡翁 |
+| **Tier 2** | **Duchy / Kingdom Capital** | 選帝侯首都、大公國宮殿、重要自治城邦 | `locations/{settlement}.yaml` 為主，可額外開少數獨立 `room/*.yaml` | 金穗堡、潮音宮、雙子門市、菲惹港等 |
+| **Tier 3** | **County（普通）** | 普通城鎮、村莊、哨站、小修道院、邊境堡壘 | 單一 `locations/{settlement}.yaml` | 赤土鎮、小赫斯領、珍珠灣漁村、流泉修道院等 |
+
+### 5.1 為什麼這樣分級？
+
+- **Tier 1 = Empire 心臟**：這些定居點是整個帝國的敘事引擎，內部結構複雜到單一 YAML 無法承載（如維特魯斯的三層空間、奧斯堡的雙頭制同心圓）。
+- **Tier 2 = Duchy/Kingdom 心臟**：選帝侯領地首都或重要自治城邦，有自己的政治實體和獨特建築，但未達到帝國首都的敘事密度。例如金穗堡是格蘭迪斯大公國的權力中心，但不需要像維特魯斯那樣拆出 13 個 room。
+- **Tier 3 = 普通 County**：CKII 中的基本地塊單位。它們是地圖上的「點」，提供資源、人口、軍事價值，但內部空間不需要獨立展開。
+
+### 5.2 目錄結構範例
+
+**Tier 1（維特魯斯）**：
+```
+data/01-west-seraphion/locations/vetustapolis/
+├── settlement.yaml
+├── inner-city/
+│   ├── district.yaml
+│   └── sacred-key-complex.yaml
+└── lower-city/
+    ├── district.yaml
+    └── bridge-markets.yaml
+```
+
+**Tier 2（金穗堡 / 潮音宮）**：
+```
+data/01-west-seraphion/locations/
+├── golden-spire-castle.yaml    # settlement 層，內含 districts/contents
+└── golden-spire-rooms/         # 可選：僅關鍵 room 獨立（如大公的戰爭廳）
+    └── war-council-hall.yaml
+```
+
+**Tier 3（赤土鎮 / 珍珠灣漁村）**：
+```
+data/01-west-seraphion/locations/red-earth-hamlet.yaml
+# 單一檔案，所有 district/room 資訊內嵌於 contents/districts 欄位
+```
+
+### 5.3 選擇原則
+
+- **按政治層級判定，而非主觀感受**：新建 settlement 時，先確認它在 CKII 層級中屬於 Empire Capital / Duchy Capital / 普通 County。
+- **Tier 2 升級到 Tier 1 需審查**：僅當該定居點有「超過 3 個值得獨立描述的 room 級空間」且敘事密度確實等同帝國首都時，才允許展開為 Tier 1。
+- **不強制降級**：已展開的 Tier 1 不會因為「內容變少」而被強制合併回單檔。
+
+### 5.4 欄位使用對照表
+
+| 欄位 | Tier 1 | Tier 2 | Tier 3 |
+|------|--------|--------|--------|
+| `districts`（預告陣列） | ✅ 必填 | ✅ 建議 | ⚪ 可省略 |
+| 獨立 `district.yaml` | ✅ 允許 | ❌ 不允許 | ❌ 不允許 |
+| 獨立 `room.yaml` | ✅ 允許 | ✅ 少量（≤5） | ❌ 不允許 |
+| `contents`（內嵌 landmark） | ✅ 摘要 | ✅ 主要描述處 | ✅ 主要描述處 |
+| `atmosphere`（獨立檔案） | ✅ 每層獨立 | ⚪ 僅 settlement | ⚪ 僅 settlement |
+
+> **核心原則**：`settlement.yaml` 的 `contents` 在 Tier 1 中應保持**摘要性**，詳細描述交給獨立的 `room` 檔案；在 Tier 2/3 中，`contents` 是主要描述載體，允許較長篇幅。
+
+---
+
+## 六、新增地點的標準流程（給協作者）
 
 1. **確認層級**：這個地點是 `empire`、`settlement`、`district` 還是 `room`？
-2. **確認 `parent_id`**：上一層的地點 `id` 是否已存在？若不存在，先建立上層。
-3. **複製範本**：從 `sacred-key-complex.yaml` 複製結構。
-4. **填寫必填欄位**：`id`、`name`、`layer`、`region`、`empire`、`parent_id`、`description`、`atmosphere`、`tags`。
-5. **填寫可選欄位**：`connections`、`contents`、`events` 視原文內容決定。
-6. **命名檔案**：`{id}.yaml`（`id` 中的底線改為連字號）。
-7. **放入正確目錄**：`data/{帝國前綴}/locations/{定居點}/{區域}/`
-8. **跑驗證**：確認 YAML 語法正確，且 `parent_id` 與 `connections[].target` 均可解析。
-9. **提交 Git**：一個地點一個 commit，或一批相關地點一個 commit。
+2. **確認粒度級別**：如果是 `settlement`，按 CKII 政治層級判定：
+   - Empire Capital → **Tier 1**
+   - Duchy / Kingdom Capital → **Tier 2**
+   - 普通 County → **Tier 3**（預設）
+3. **確認 `parent_id`**：上一層的地點 `id` 是否已存在？若不存在，先建立上層。
+4. **複製範本**：
+   - Tier 1：從 `vetustapolis/settlement.yaml` 複製結構
+   - Tier 2/3：從同帝國內任一單檔 settlement（如 `ostburg.yaml`）複製結構
+5. **填寫必填欄位**：`id`、`name`、`layer`、`region`、`empire`、`parent_id`、`description`、`atmosphere`、`tags`。
+6. **填寫可選欄位**：`connections`、`contents`、`events` 視原文內容決定。
+7. **命名檔案**：`{id}.yaml`（`id` 中的底線改為連字號）。
+8. **放入正確目錄**：
+   - Tier 1：`data/{帝國前綴}/locations/{定居點}/{區域}/`
+   - Tier 2/3：`data/{帝國前綴}/locations/`
+9. **跑驗證**：確認 YAML 語法正確，且 `parent_id` 與 `connections[].target` 均可解析。
+10. **提交 Git**：一個地點一個 commit，或一批相關地點一個 commit。
 
 ---
 
