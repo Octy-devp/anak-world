@@ -48,9 +48,9 @@ geographies:
     region: 中央
     description: 縱貫大陸中央的南北山脈，如巨龍脊骨隔開東西兩大帝國。傑米努斯河從魯普圖斯隘口貫穿而過
   - id: northern_mountains
-    name: 格萊西姆山脈
+    name: 約恩維德山脈
     region: 北部
-    description: 橫亙極北的山脈屏障，北境諸邦的家園，格萊西姆河發源於此
+    description: 橫亙極北的山脈屏障，北境諸邦的家園，約恩維德河發源於此。Jarnvid 意為「鐵森林」
   - id: southern_mountains
     name: 塔爾塔魯斯山脈
     region: 南部
@@ -67,10 +67,10 @@ geographies:
     name: 奧魯姆河
     region: 東部
     description: 凱撒里克境內的主要河流，發源於東部山區，向東南流淌入海，風息群島位於其出海口外海。Aurum 意為「黃金」
-  - id: glaciem_river
-    name: 格萊西姆河
+  - id: jarnvid_river
+    name: 約恩維德河
     region: 北部
-    description: 發源於北部格萊西姆山脈，向南流淌，在沖積平原北側匯入傑米努斯大河。Glaciem 意為「冰河」
+    description: 發源於北部約恩維德山脈，向南流淌，在沖積平原北側匯入傑米努斯大河
   - id: tartarus_stream
     name: 塔爾塔魯斯暗河
     region: 南部
