@@ -1,0 +1,99 @@
+# ── 身份錨定（必填）──
+id: the_flood_plain
+name: 中央沖積平原
+layer: geography
+region: 西部
+empire: 塞拉菲昂神聖帝國
+parent_id: ankora
+
+# ── 敘事錨定（必填）──
+description: >
+  位於傑米努斯大河中游的廣袤沖積平原，由傑米努斯大河（主河道）、約恩維德河（北）與希爾薇恩河（南）三河交匯沖積而成。
+  這片平原是安納克大陸的糧食命脈與文明搖籃，壟斷了塞拉菲昂神聖帝國的糧食供應，也是《大憲章》後選帝侯制度的經濟基礎。
+  三河交匯造就了顯著的土壤分區：北岸受約恩維德河冰川礦物質影響，形成砂質土壤，排水快、地勢略高，適合黑麥、蘿蔔與馬鈴薯；中央傑米努斯主河道兩側為最肥沃的淤泥土壤，是小麥、大麥與亞麻的核心產區，每年春季經歷季節性泛濫，退去後留下深褐色淤泥，被農民稱為「阿薩的饋贈」；南岸受希爾薇恩河腐殖質與微量元素滋養，形成富含有機質的黑黏土壤，地勢低窪，常年分布沼澤與池塘，適合濕地作物與水生植物。
+  平原上遍布人工開挖的灌溉渠，形成複雜的「水網迷宮」；古代堤壩遺跡散落各處，其中最大的一座上建有格蘭迪斯大公的宮殿「金穗堡」，其地窖儲糧可供應維特魯斯三年。
+  每年秋季的「豐收節」是此地最重要的節慶，皇帝亦會在此時公開露面。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 河水腥味與泥土氣息 # 全年瀰漫
+    - 春季濕土與腐殖質的氣息 # inferred: true
+    - 夏季麥香與汗味 # inferred: true
+    - 秋季乾草與篝火煙 # inferred: true
+    - 冬季霜凍與枯莖的冷澀 # inferred: true
+  light: >
+    夏季正午呈刺眼白茫，麥浪在強光下幾乎與天空融為一體；
+    秋季夕照將田野染成金紅，遠處金穗堡的輪廓在暮光中如剪影般矗立；
+    春季陰雲密布時，水田反射灰綠色的天光；
+    冬季晨霧瀰漫，一切景物呈現蒼白而朦朧的質感。
+  temperature: >
+    夏季悶熱潮濕，正午時分田野上升騰熱氣；
+    冬季濕冷刺骨，北岸偶有小雪，南岸沼澤結薄冰；
+    春秋溫和短暫，日夜溫差小，受龐大水體調節。
+  sound:
+    - 水車的吱嘎聲 # 灌溉季全年可聞
+    - 農民的號子與鐮刀割麥聲 # 秋季收割
+    - 春汛的遠雷與河水咆哮 # 春季泛濫期
+    - 夏季夜晚的蛙鳴 # inferred: true
+    - 風吹過河岸蘆葦的窸窣聲 # inferred: true
+    - 麥浪的沙沙聲 # 秋季風起時
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 格蘭迪斯大公
+  access_level: public
+  danger_level: low
+
+# ── 關係即通道（connections）──
+connections:
+  - target: flumen_geminus
+    type: physical
+    direction: 貫穿
+    description: 傑米努斯大河東西貫穿平原中央，主河道寬達數百米
+  - target: jarnvid_river
+    type: physical
+    direction: 北界匯入
+    description: 約恩維德河從北方帶來冰川礦物質，在平原北側匯入，使北岸土壤偏砂質
+  - target: sylvaine_river
+    type: physical
+    direction: 南界匯入
+    description: 希爾薇恩河從世界樹森林帶來腐殖質與微量元素，在平原南側匯入，使南岸土壤偏黑黏
+  - target: the_howling_peaks
+    type: conceptual
+    direction: 東方
+    description: 怒嘯山脈西麓的融雪是平原水源的根本保障
+  - target: eldara_worldtree
+    type: conceptual
+    direction: 南方
+    description: 世界樹的樹雨與蒸騰作用調節了平原的微氣候，使此處比同緯度更濕潤
+  - target: west_seraphion
+    type: conceptual
+    direction: 全境
+    description: 平原是塞拉菲昂帝國的糧食核心，格蘭迪斯大公以此壟斷政治籌碼
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 金穗堡
+    location: 古代堤壩遺跡之上
+    description: 格蘭迪斯大公奧托的宮殿，地窖儲糧可供應維特魯斯三年
+  - item: landmark
+    name: 古代堤壩遺跡
+    location: 平原各處，最大一處為金穗堡地基
+    description: 青銅時代遺留的水利工程殘骸，見證了平原的農耕歷史
+  - item: resource
+    name: 麥田
+    location: 中央淤泥區與北岸砂質區
+    description: 帝國最主要的糧食來源，小麥、大麥與黑麥的廣袤種植區
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 農業
+  - 糧倉
+  - 沖積平原
+  - 河流
+  - 格蘭迪斯
+  - 選帝侯
+  - 豐收節
+  - 公共

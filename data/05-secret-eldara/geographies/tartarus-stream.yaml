@@ -1,0 +1,92 @@
+id: tartarus_stream
+name: 塔爾塔魯斯暗河
+layer: geography
+region: 南部
+empire: 無
+parent_id: ankora
+
+description: >
+  塔爾塔魯斯暗河並非單一河流，而是無數地下支流從塔爾塔魯斯山脈的裂縫與溶洞中滲出，
+  匯聚而成的龐大地下水系。水流在絕對黑暗中奔湧，水質富含硫磺與礦物質，呈現詭異的乳白色，
+  接觸皮膚會造成灼傷。河道中有地下瀑布與巨型溶洞，某些地方的洞頂高達百米。
+  暗河最終在深淵邊緣的「哭泣峭壁」墜入虛空，水聲如萬人齊哭，傳說在深淵底部形成地下海。
+
+atmosphere:
+  scent:
+    - 地下空間的潮濕霉味
+    - 硫磺的刺鼻氣息
+    - 礦物質的金屬腥甜
+    - 深淵方向的腐敗氣息
+  light: >
+    絕對黑暗中的幽綠微光，來自岩壁上的發光真菌與某些礦物的微弱磷光，
+    暗河瀑布的水花在微光中折射出詭異的乳白色暈影
+  temperature: >
+    恆溫潮濕，比地表溫暖，地熱從岩層深處滲透而來，
+    越接近深淵越灼熱，空氣中瀰漫著蒸騰的硫磺蒸汽
+  sound:
+    - 地下水在巨型溶洞中的迴盪轟鳴
+    - 地下瀑布墜落的咆哮
+    - 水滴從百米洞頂落下的清脆聲響
+    - 遠方深淵的低頻嗡鳴透過岩層傳來
+
+properties:
+  controlled_by: 無
+  access_level: secret
+  danger_level: deadly
+
+connections:
+  - target: southern_mountains
+    type: physical
+    direction: 發源地
+    description: 無數地下支流從塔爾塔魯斯山脈的裂縫與溶洞中滲出，匯聚成主暗河
+  - target: the_abyssus
+    type: physical
+    direction: 終點
+    description: 暗河在深淵邊緣墜入虛空，傳說在深淵底部形成地下海，水聲從下方迴盪而上
+  - target: eldara_worldtree
+    type: conceptual
+    direction: 對立
+    description: 暗河是死亡與腐蝕之水，與世界樹的希爾薇恩河（生命之水）形成地下水的陰陽兩極
+
+contents:
+  - item: landmark
+    name: 哭泣峭壁
+    location: 暗河終點，深淵邊緣
+    description: >
+      暗河在此墜入虛空，水流撞擊岩壁發出萬人齊哭般的轟鳴，
+      乳白色水霧在幽綠微光中如幽靈飄蕩
+  - item: resource
+    name: 發光真菌群
+    location: 暗河岩壁
+    description: 利用地熱與硫化氫進行化能合成的幽綠色發光真菌與苔藓，是地下唯一光源
+  - item: resource
+    name: 硫磺溫泉礦脈
+    location: 暗河支流交匯處
+    description: 富含硫磺與稀有礦物質的熱液沉積物，煉金術士夢寐以求的材料
+  - item: npc
+    name: 無眼白色甲蟲群
+    location: 暗河溶洞底部
+    description: 在絕對黑暗中演化的變異生物，以發光真菌為食，對震動極為敏感
+
+events:
+  - id: tartarus_stream_formation
+    year: 0
+    name: 暗河的誕生
+    description: >
+      大洪水撕裂地殼後，地下水系改道，無數支流滲入塔爾塔魯斯山脈的裂縫，
+      匯聚成這條通往深淵的死亡之河
+  - id: bridge_of_the_abyss_destroyed
+    year: 478
+    name: 深淵之橋摧毀
+    description: >
+      馬庫斯引發地熱炸彈摧毀橫跨星隕深淵的天然隕鐵岩柱，
+      格雷克斯與橋一同墜入深淵，暗河在此見證了毀滅與奇蹟的交會
+
+tags:
+  - 秘境
+  - 暗河
+  - 地下水系
+  - 硫磺
+  - 深淵邊緣
+  - 死亡之水
+  - 大洪水遺跡

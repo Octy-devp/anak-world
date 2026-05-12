@@ -1,0 +1,60 @@
+id: ruptus_pass
+name: 魯普圖斯隘口
+layer: geography
+region: 中央
+empire: 爭議
+parent_id: ankora
+
+description: >
+  魯普圖斯隘口是怒嘯山脈中段的斷裂峽谷，傑米努斯大河東西貫穿其間。
+  這裡是安納克大陸東西兩側唯一的便捷陸路與水路通道，兩岸峭壁高達百米，
+  水流極速，漩渦與暗礁密布。
+  隘口北岸屬塞拉菲昂帝國，南岸屬凱撒里克帝國，邊境稅站與走私密道共存。
+  傳說隘口是大洪水時期某位古神用巨劍劈開山脈所致，故名「斷裂」。
+  只有經驗最豐富的「峽谷行會」船夫才能駕船通過險灘。
+
+atmosphere:
+  scent:
+    - 潮濕岩壁的霉味與礦物質
+    - 湍急水流的水霧腥味
+    - 兩岸稅站的馬匹與鐵鏽
+    - 走私者火把酒與焦油味
+  light: 兩岸峭壁間的狹窄一線天，正午僅有片刻陽光直射河面，多數時間呈現幽綠水光折射
+  temperature: 峽谷內恆溫陰涼，不受外界季節影響，水霧使人濕透
+  sound:
+    - 水流撞擊礁石的轟鳴
+    - 船夫指揮的號子與纜繩摩擦
+    - 兩岸峭壁的風嘯迴盪
+    - 邊境稅站的銅鐘與號角
+
+properties:
+  controlled_by: 峽谷行會（實際）/ 東西帝國（名義）
+  access_level: restricted
+  danger_level: high
+  population: 800
+
+connections:
+  - target: the_howling_peaks
+    type: physical
+    direction: 貫穿
+    description: 隘口切穿怒嘯山脈中央段，是山脈最狹窄處
+  - target: flumen_geminus
+    type: physical
+    direction: 東西貫穿
+    description: 傑米努斯大河從隘口東西奔流，水流極速，暗礁密布
+  - target: west_seraphion
+    type: physical
+    direction: 西方出口
+    description: 隘口西端通往塞拉菲昂帝國的沖積平原
+  - target: east_caesaric
+    type: physical
+    direction: 東方出口
+    description: 隘口東端通往凱撒里克帝國的東部平原
+
+tags:
+  - 隘口
+  - 邊境
+  - 戰略要道
+  - 走私
+  - 峽谷行會
+  - 怒嘯山脈

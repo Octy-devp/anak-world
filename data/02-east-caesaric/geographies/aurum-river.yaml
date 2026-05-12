@@ -1,0 +1,58 @@
+id: aurum_river
+name: 奧魯姆河
+layer: geography
+region: 東部
+empire: 凱撒里克帝國
+parent_id: ankora
+
+description: >
+  奧魯姆河是凱撒里克帝國境內的主要河流，發源於東部山區，向東南流淌入海。
+  河名 Aurum（黃金）來自夕照時分河水呈現的金紅色澤，也暗指沿岸曾經繁盛的砂金礦。
+  與傑米努斯大河不同，奧魯姆河是獨立入海的河流，兩河之間是凱撒里克的核心農業區。
+  出海口外海就是風息群島，商船從此啟航，帶著東方的隕鐵與香料前往群島交易。
+  每年夏季，河口的泥沙堆積會改變航道，只有熟悉水道的本地引水人才能安全進出。
+
+atmosphere:
+  scent:
+    - 上游山區的清冽礦物味
+    - 中游平原的麥香與泥土
+    - 下游出海口的海鹽與泥沙腥味
+    - 沿岸碼頭的焦油與魚腥
+  light: 上游山區的幽綠水光、中游平原的開闊天光、下游夕照金紅（Aurum 之名由來）、入海口晨霧的蒼白
+  temperature: 上游冰涼、中游溫和、下游受海洋調節冬暖夏涼
+  sound:
+    - 上游山澗的湍急轟鳴
+    - 中游水車的吱嘎與農民號子
+    - 下游船帆的噼啪與海鳥鳴叫
+    - 入海口潮汐的漲退低語
+
+properties:
+  controlled_by: 凱撒里克帝國
+  access_level: public
+  danger_level: low
+
+connections:
+  - target: east_caesaric
+    type: conceptual
+    direction: 貫穿
+    description: 河流貫穿凱撒里克帝國東部，是帝國的農業與貿易動脈
+  - target: wind_isles
+    type: physical
+    direction: 東南方入海口
+    description: 出海口外海就是風息群島，泥沙與養分形成了群島珊瑚礁的基礎
+  - target: flumen_geminus
+    type: conceptual
+    direction: 西方平行
+    description: 與傑米努斯大河平行流淌，兩河之間是凱撒里克的核心農業區
+  - target: the_howling_peaks
+    type: conceptual
+    direction: 西方
+    description: 河流發源於東部山區，與怒嘯山脈東麓的地質有同源關係
+
+tags:
+  - 河流
+  - 黃金之河
+  - 凱撒里克
+  - 航海
+  - 風息群島
+  - 貿易

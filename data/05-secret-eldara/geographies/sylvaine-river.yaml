@@ -1,0 +1,59 @@
+id: sylvaine_river
+name: 希爾薇恩河
+layer: geography
+region: 西南部
+empire: 無
+parent_id: ankora
+
+description: >
+  希爾薇恩河是傑米努斯大河的西向支流，發源於艾爾達拉世界樹森林的深處。
+  河水帶著世界樹樹脂的淡金色與森林腐殖質的翠綠，在陽光下呈現夢幻的色澤。
+  森民稱之為「世界樹的血脈」，拒絕任何人類在河岸建立定居點。
+  河流向東北流淌，在沖積平原南側匯入傑米努斯大河，
+  匯流處可見淡金與泥黃的分界線，被當地漁民稱為「兩水之交」。
+  河岸兩側生長著巨大的蕨類與發光苔藓，夜間如星河落地。
+
+atmosphere:
+  scent:
+    - 世界樹樹脂的甜膩與蜂蜜味
+    - 森林腐殖土的濕潤
+    - 發光苔藓的微弱磷火氣息
+    - 匯流處的淡水魚腥味
+  light: 黎明時河面倒映樹冠的淡金光束、正午的翠綠濾光、夜間苔藓與水下微生物的幽藍微光
+  temperature: 恆溫涼爽，冬暖夏涼，世界樹的蒸騰作用調節了局部氣候
+  sound:
+    - 樹葉落入水面的輕柔撲通
+    - 根系在水下的緩慢生長聲
+    - 夜行水鳥的鳴叫
+    - 匯流處與傑米努斯大河的交匯低語
+
+properties:
+  controlled_by: 席爾凡森民
+  access_level: secret
+  danger_level: low
+
+connections:
+  - target: eldara_worldtree
+    type: physical
+    direction: 上游發源
+    description: 河流發源於世界樹森林深處，被森民視為聖河
+  - target: flumen_geminus
+    type: physical
+    direction: 東北匯入
+    description: 在沖積平原南側匯入傑米努斯大河，匯流處水色分明
+  - target: the_flood_plain
+    type: physical
+    direction: 東岸
+    description: 河流東岸是沖積平原的南界，黑黏土壤適合濕地作物
+  - target: the_howling_peaks
+    type: conceptual
+    direction: 東北方
+    description: 遠方怒嘯山脈西麓的融雪間接補給了森林地下水系
+
+tags:
+  - 河流
+  - 世界樹
+  - 森民
+  - 自然魔法
+  - 秘境
+  - 發光苔藓

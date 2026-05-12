@@ -1,0 +1,98 @@
+# ── 身份錨定（必填）──
+id: jarnvid_river
+name: 約恩維德河
+layer: geography
+region: 北部
+empire: 無
+parent_id: ankora
+
+# ── 敘事錨定（必填）──
+description: >
+  約恩維德河發源於約恩維德山脈南麓的冰川與永凍層，是安納克大陸北部最重要的河流之一。
+  上游由冰川融水匯聚而成，清澈見底但冰冷刺骨，河床布滿被冰川磨圓的巨石；
+  中游流速減緩，兩岸是鐵森林的邊緣，水中帶有微量鐵鏽色；
+  下游進入平原，河水變寬變淺，冬季北岸結冰，中央仍有流動水道。
+  每年春季發生「冰川潰決」——上游冰川湖突然潰堤，河水暴漲，沖毀下游堤壩，
+  北境部落將此視為山神憤怒，會在河岸舉行獻祭。
+  北境的獵人會沿河南下，到沖積平原的市集交換毛皮與琥珀。
+  河流在沖積平原北側匯入傑米努斯大河，匯流處水色清冽與泥黃分明。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 上游的清冽無味
+    - 中游的鐵鏽與松脂
+    - 下游的濕土與腐殖質
+  light: 上游的冰川藍（水中懸浮的冰晶折射）、中游的幽綠（鐵森林蔭蔽）、下游的泥黃與天空倒影
+  temperature: 全年冰涼，夏季亦不超過十度，冬季接近結冰
+  sound:
+    - 上游的湍急與巨石撞擊
+    - 中游的緩流低語
+    - 春季潰決時的毀滅性轟鳴
+    - 冬季薄冰下的暗流
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 無
+  access_level: public
+  danger_level: medium
+  religion: 山神信仰
+  population: 0
+
+# ── 關係即通道（connections）──
+connections:
+  - target: northern_mountains
+    type: physical
+    direction: 北段發源
+    hidden: false
+    description: 發源於約恩維德山脈南麓的冰川與永凍層
+  - target: the_howling_peaks
+    type: conceptual
+    direction: 南方流經
+    hidden: false
+    description: 河流沿怒嘯山脈西麓南下，山脈融水不斷補給
+  - target: flumen_geminus
+    type: physical
+    direction: 南端匯入
+    hidden: false
+    description: 在沖積平原北側匯入傑米努斯大河，匯流處水色清冽與泥黃分明
+  - target: the_flood_plain
+    type: physical
+    direction: 東岸
+    hidden: false
+    description: 河流東岸是格蘭迪斯大公領地的北界，砂質土壤適合黑麥
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 冰川磨圓巨石灘
+    location: 上游河床
+    description: 被冰川緩慢磨蝕成完美橢圓的巨型岩石，散落於清澈河床上
+  - item: resource
+    name: 琥珀
+    location: 下游河岸砂礦
+    description: 北境獵人沿河采集的珍貴樹脂化石，用於與平原市集交換
+  - item: landmark
+    name: 山神獻祭臺
+    location: 中游河岸（多處）
+    description: 北境部落以石塊壘成的簡易祭臺，春季潰決前舉行獻祭
+
+# ── 歷史事件（events）──
+events:
+  - id: glacier_burst_1124
+    year: 1124
+    name: 大冰川潰決
+    description: >
+      約恩維德山脈主峰冰川湖潰堤，約恩維德河暴漲，沖毀下游多處定居點與堤壩。
+      此後北境諸邦將春季冰川潰決視為山神憤怒，開始在河岸獻祭。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 河流
+  - 冰川
+  - 北境諸邦
+  - 鐵森林
+  - 沖積平原
+  - 傑米努斯河
+  - 琥珀
+  - 潰決

@@ -1,0 +1,105 @@
+id: southern_mountains
+name: 塔爾塔魯斯山脈
+layer: geography
+region: 南部
+empire: 無
+parent_id: ankora
+
+description: >
+  塔爾塔魯斯山脈，安納克大陸最南端的死亡屏障，隔開已知世界與阿比蘇斯大無底洞。
+  其岩石呈現不自然的紫黑色，帶有金屬光澤，隕鐵礦脈裸露於地表，是大洪水時期地殼撕裂的傷疤。
+  深淵持續釋放地熱與硫磺，在山脈南麓形成「熱霾區」——即使在嚴冬，某些谷地仍終年溫暖，
+  生長著不應存在的熱帶植物，與周圍荒涼形成詭異對比。
+  這裡是已知世界的最後門檻，也是盜礦者與煉金術士冒死前來的禁地。
+
+atmosphere:
+  scent:
+    - 乾燥塵土與裸露岩石的礦物氣息
+    - 山腰溫泉的硫磺蒸汽
+    - 南坡劇毒氣體與燒焦金屬的刺鼻味
+    - 熱霾谷中異常花香，甜膩到令人作嘔
+  light: >
+    北坡是蒼白的天光，山腰溫泉蒸汽折射出不屬於此地的彩虹，
+    熱霾谷的光線因熱氣而扭曲顫動，南坡則是無光的黑暗，
+    僅有深淵方向傳來的幽綠微光如垂死之眼
+  temperature: >
+    北坡炎熱乾燥，山腰溫暖潮濕，溫泉區終年蒸騰，
+    南坡灼熱難耐，地熱從岩縫中持續湧出，冬季亦不受影響
+  sound:
+    - 間歇泉噴發的轟鳴如雷
+    - 地下蒸汽穿透岩層的嘶嘶聲
+    - 岩石因熱脹冷縮而爆裂的脆響
+    - 暗河墜入深淵的遙遠轟鳴
+    - 熱霾谷中變異植物夜間發出的微弱嗡鳴
+
+properties:
+  controlled_by: 黑曜石守望者
+  access_level: restricted
+  danger_level: high
+
+connections:
+  - target: the_howling_peaks
+    type: conceptual
+    direction: 北方
+    description: 南端斷續山脈鏈與怒嘯山脈地質同源，皆為大洪水時期的地殼傷疤
+  - target: the_abyssus
+    type: physical
+    direction: 南方
+    description: 山脈是深淵與已知世界的最後屏障，某些峭壁上可見深淵邊緣的紫黑色岩石
+  - target: tartarus_stream
+    type: physical
+    direction: 山體內部
+    description: 無數地下暗河從山脈滲入，匯聚成塔爾塔魯斯暗河，最終墜入深淵
+  - target: wind_isles
+    type: conceptual
+    direction: 東南方
+    description: 山脈東南麓的熱霾區與風息群島的熱帶氣候可能有关联，深淵地熱的遠程影響
+
+contents:
+  - item: resource
+    name: 裸露隕鐵礦脈
+    location: 山脈南坡岩壁
+    description: >
+      帶有暗紅色天然紋路的神秘金屬，比青銅更輕、比鋼鐵更堅韌，
+      且對魔法有天然的親和性，引來無數盜礦者冒死開採
+  - item: landmark
+    name: 守望者之座
+    location: 塔爾塔魯斯主峰
+    description: 黑曜石守望者的最南哨站，俯視深淵的孤絕要塞
+  - item: resource
+    name: 熱霾谷變異植物
+    location: 山腰地熱活躍谷地
+    description: >
+      受隕鐵輻射與地熱影響而變異的蕨類與藤蔓，
+      夜間發出微弱藍光，被煉金術士視為珍貴材料
+  - item: npc
+    name: 黑曜石守望者南哨
+    location: 守望者之座
+    description: >
+      身披黑曜石鎧甲的古老守護者，阻止凡人進入深淵核心，
+      以類似風聲的低鳴交流，面容從未被人看清
+
+events:
+  - id: tartarus_geothermal_awakening
+    year: 0
+    name: 地熱之牆的形成
+    description: >
+      大洪水時期，隕鐵撞擊或地殼撕裂不僅形成了阿比蘇斯深淵，
+      也撕裂了南部地殼，釋放出永不停歇的地熱與硫磺，
+      塔爾塔魯斯山脈成為隔開已知世界與毀滅的死亡屏障
+  - id: obsidian_southwatch_established
+    year: 328
+    name: 守望者之座建立
+    description: >
+      黑曜石之約後，守望者在塔爾塔魯斯主峰建立最南哨站，
+      監視深淵邊界，防止凡人誤入星隕深淵的核心
+
+tags:
+  - 秘境
+  - 山脈
+  - 地熱
+  - 硫磺
+  - 隕鐵
+  - 深淵邊緣
+  - 黑曜石守望者
+  - 死亡屏障

@@ -1,0 +1,105 @@
+# ── 身份錨定（必填）──
+id: northern_mountains
+name: 約恩維德山脈
+layer: geography
+region: 北部
+empire: 北境諸邦
+parent_id: ankora
+
+# ── 敘事錨定（必填）──
+description: >
+  約恩維德山脈橫亙安納克大陸極北，是抵禦極地風暴的天然屏障。
+  Jarnvid 意為「鐵森林」——不是普通的森林，而是被隕鐵礦脈滲透的扭曲黑松林。
+  樹幹呈現不自然的金屬光澤，樹脂帶有鐵鏽味，傳說被隕鐵輻射扭曲的生物出沒其中。
+  北境諸邦散居於山脈北麓的冰原與峽灣之間，並非單一國家，而是部落聯盟。
+  山脈西側朝向未知海洋，有深邃的峽灣；某些谷地因地熱活動而終年不凍，形成「冰火之谷」。
+  山脈阻擋極北冷空氣，使傑米努斯河北段冬季僅結薄冰，維持通航。
+  約恩維德河發源於山脈南麓的冰川與永凍層，向南流淌。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 極北的空虛無味
+    - 鐵森林的樹脂與鐵鏽混合味
+    - 溫泉谷地的硫磺
+    - 冰裂隙的古老壓縮空氣
+  light: 極晝的慘白、極夜的漆黑與極光（綠與紫的舞動）、鐵森林中樹幹的金屬微光反射
+  temperature: 極寒（主峰）→ 寒冷（山腰）→ 涼爽（南坡）
+  sound:
+    - 冰川移動的深層轟鳴（地底感）
+    - 永恆風嘯
+    - 冰裂隙的爆裂聲
+    - 溫泉的氣泡咕嚕
+    - 鐵森林中樹脂滴落的清脆
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 北境諸邦部落聯盟
+  access_level: restricted
+  danger_level: high
+  religion: 山神信仰、鐵森林禁忌
+  population: 0
+
+# ── 關係即通道（connections）──
+connections:
+  - target: the_howling_peaks
+    type: physical
+    direction: 東南方
+    hidden: false
+    description: 東北連綿山脈與怒嘯山脈北端相接，形成大陸東北部的山弧
+  - target: jarnvid_river
+    type: physical
+    direction: 南麓
+    hidden: false
+    description: 冰川融水與山溪匯聚成約恩維德河，向南流淌
+  - target: north_frost
+    type: conceptual
+    direction: 山脈以北與山間
+    hidden: false
+    description: 北境諸邦散居於山脈北麓的冰原與峽灣之間
+  - target: flumen_geminus
+    type: conceptual
+    direction: 南方
+    hidden: false
+    description: 山脈阻擋極北冷空氣，使杰米努斯河北段冬季僅結薄冰，維持通航
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 鐵森林（Jarnvid）
+    location: 山腰地帶
+    description: >
+      被隕鐵礦脈滲透的扭曲黑松林，樹幹呈現不自然的金屬光澤，
+      樹脂帶有鐵鏽味。北境諸邦的聖地與禁忌之地。
+  - item: landmark
+    name: 冰火之谷
+    location: 山脈西側峽灣谷地
+    description: 因地熱活動而終年不凍的谷地，溫泉蒸氣與極地冰雪共存
+  - item: resource
+    name: 隕鐵礦脈
+    location: 山脈深處與鐵森林地下
+    description: 與怒嘯山脈同源的隕鐵礦脈，帶有暗紅色紋路
+  - item: landmark
+    name: 冰川舌
+    location: 北坡極地側
+    description: 終年冰雪覆蓋的緩慢移動冰川，冰裂隙深不可測
+
+# ── 歷史事件（events）──
+events:
+  - id: glacier_burst_1124
+    year: 1124
+    name: 大冰川潰決
+    description: >
+      約恩維德山脈主峰冰川湖突然潰堤，約恩維德河暴漲，
+      沖毀下游北境諸邦多處定居點。此後部落將春季潰決視為山神憤怒，開始在河岸獻祭。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 山脈
+  - 極北
+  - 鐵森林
+  - 北境諸邦
+  - 冰川
+  - 峽灣
+  - 隕鐵
+  - 秘境

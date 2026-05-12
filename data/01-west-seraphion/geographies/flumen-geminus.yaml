@@ -1,0 +1,137 @@
+# ── 身份錨定（必填）──
+id: flumen_geminus
+name: 傑米努斯大河
+layer: geography
+region: 中央
+empire: 無
+parent_id: ankora
+
+# ── 敘事錨定（必填）──
+description: >
+  傑米努斯大河（Flumen Geminus，意為「雙生之河」）是安納克大陸的母親河、東西動脈與文明搖籃，
+  東西貫穿整片大陸，是所有帝國與城邦的生命線。
+
+  上游（西部高地）發源於靠近世界樹區域的崇山峻嶺之間，河道深切峽谷，水流清澈湍急，落差極大，
+  水聲如雷，魚類稀少但體型巨大。兩岸峭壁林立，僅有山羊與少數冒險者能通行。
+
+  西段接納來自世界樹森林的希爾薇恩河，北段接納來自約恩維德山脈的約恩維德河，
+  三河於中游交匯。交匯後河道驟然變寬，流速減緩，泥沙沉積形成廣袤的中央沖積平原。
+  此處兩岸無數支流與沼澤交錯，季節性氾濫帶來肥沃淤泥，農田綠浪翻滾。
+
+  河流從魯普圖斯隘口切穿怒嘯山脈，隘口段兩岸峭壁百米高，水流極速，漩渦與暗礁密布，
+  只有經驗最豐富的船夫才能通過。魯普圖斯隘口是東西唯一的便捷水路，也是東西貿易的咽喉。
+
+  下游（東部平原）河道分叉，沙洲密布，鹹淡水交匯，漁業發達，蘆葦叢生。
+  無數渡口、水車磨坊、漁村與河盜據點星羅棋布於兩岸。
+  大河最終注入東部海洋，與風息群島共享同一海域。
+
+  人文上，傑米努斯河是東西貿易的命脈，塞拉菲昂的糧食與凱撒里克的隕鐵經由水路運輸。
+  魯普圖斯隘口段的船夫形成獨特的「峽谷行會」，世代相傳險灘航線的秘密。
+  沖積平原段的農民每年秋季舉行「淤泥祭」，感謝河流帶來的肥沃土壤。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 上游清冽的礦物味
+    - 中游泥沙與腐殖土的濕潤氣息
+    - 下游鹹淡水混合的腥味
+    - 隘口段潮濕岩壁的霉味
+    - 兩岸蘆葦的甜腥
+  light: >
+    上游峡谷的幽綠水光折射、中游平原的開闊天光倒影、
+    下游三角洲的夕照金紅、隘口段的狹窄一線天
+  temperature: >
+    上游冰涼，中游溫和，下游受海洋影響偏暖；
+    冬季北岸結冰而南岸不結，南北兩岸溫差顯著
+  sound:
+    - 上游湍急的轟鳴
+    - 中游緩流的低語
+    - 船槳划水的節奏聲
+    - 漁歌與河盜的警哨
+    - 水車磨坊的吱嘎轉動
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 無
+  access_level: public
+  danger_level: medium
+  population: null
+
+# ── 關係即通道（connections）──
+connections:
+  - target: the_howling_peaks
+    type: physical
+    direction: 中央段貫穿
+    description: 河流從魯普圖斯隘口切穿怒嘯山脈，是東西唯一的便捷水路
+  - target: ruptus_pass
+    type: physical
+    direction: 中央段
+    description: 隘口是河流切穿山脈之處，水流湍急，兩岸峭壁如刀削
+  - target: northern_mountains
+    type: physical
+    direction: 北段
+    description: 約恩維德河從北部山脈發源，在此匯入主河
+  - target: jarnvid_river
+    type: physical
+    direction: 北岸匯入
+    description: 約恩維德河攜帶冰川融水與礦物質，在此匯入，使北岸水質冷冽清澈
+  - target: eldara_worldtree
+    type: physical
+    direction: 西段南岸
+    description: 希爾薇恩河從世界樹森林流出，帶著樹脂與落葉的淡金色，在此匯入
+  - target: sylvaine_river
+    type: physical
+    direction: 西段南岸匯入
+    description: 希爾薇恩河的匯流點，兩水交會處可見淡金與泥黃的分界線
+  - target: the_flood_plain
+    type: physical
+    direction: 中游
+    description: 三河交匯後河道變寬，流速減緩，泥沙沉積形成廣袤沖積平原
+  - target: aurum_river
+    type: conceptual
+    direction: 東方平行
+    description: 奧魯姆河在東方平行入海，兩河之間是凱撒里克的核心農業區
+  - target: wind_isles
+    type: conceptual
+    direction: 東方入海口
+    description: 大河最終注入東部海洋，與風息群島共享同一海域
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 魯普圖斯隘口航道
+    location: 中央段峽谷
+    description: 怒嘯山脈中唯一的東西水路通道，水流極速，漩渦與暗礁密布，只有經驗最豐富的船夫才能通過
+  - item: landmark
+    name: 三河交匯口
+    location: 中游沖積平原西緣
+    description: 傑米努斯大河、希爾薇恩河與約恩維德河交匯之處，淡金、泥黃與冰藍三色河水在此交融
+  - item: npc
+    name: 峽谷行會
+    location: 魯普圖斯隘口段
+    description: 世代相傳險灘航線秘密的船夫行會，掌握隘口段唯一的可靠航道圖
+  - item: resource
+    name: 河砂金
+    location: 下游河床與沙洲
+    description: 從西部高地沖刷而來的細微金砂，是沿岸漁民的副業收入來源
+
+# ── 歷史事件（events）──
+events:
+  - id: great_flood
+    year: 0
+    name: 大洪水
+    description: 地殼劇變重塑了傑米努斯河的河道，上游峽谷與中央沖積平原皆形成於此時期
+  - id: iron_crown_uprising
+    year: 726
+    name: 鐵冠起義
+    description: 教廷分裂導致東西帝國對峙加劇，魯普圖斯隘口航道一度封閉，東西貿易幾乎斷絕
+
+# ── 快速標籤（tags）──
+tags:
+  - 母親河
+  - 東西動脈
+  - 文明搖籃
+  - 水路
+  - 沖積平原
+  - 魯普圖斯隘口
+  - 貿易
