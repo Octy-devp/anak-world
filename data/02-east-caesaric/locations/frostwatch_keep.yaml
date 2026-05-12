@@ -1,0 +1,138 @@
+# ── 身份錨定（必填）──
+id: frostwatch_keep
+name: 霜望要塞
+layer: settlement
+region: 北部邊境
+empire: 凱撒里克帝國
+parent_id: east_caesaric
+
+# ── 敘事錨定（必填）──
+description: >
+  霜望要塞坐落於凱撒里克帝國最北端的凍原高地，
+  是帝國面向阿爾比諾克拉西亞（白霜）的第一道鋼鐵屏障。
+  這座要塞並非自然發展的聚落，而是純粹的軍事前哨，
+  由奧羅·伊格尼斯軍團的邊境支隊常駐守衛，
+  直接監視北方霜生動態與「內克桑之息」的侵襲路徑。
+  要塞由削尖的隕鐵樁、地熱溝渠與瞭望塔組成複合防禦體系，
+  專門針對白霜「冰壁步兵」的寒法滲透戰術而設計。
+  據傳要塞地下挖掘有深達十米的冰窖與隕鐵儲藏庫，
+  能在極端寒法攻擊下為守軍提供避難所。
+  這裡是凱撒里克「北伐派」的精神起點，
+  士兵們每日清晨面向北方，以劍擊盾應和破曉號角的回聲——
+  那是從遙遠的奧斯堡傳來的、穿越凍原的低鳴。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 凍原永凍土的沉悶土腥味
+    - 隕鐵樁表面的冰冷金屬氣息
+    - 地熱溝渠逸散的硫磺蒸汽味
+    - 軍營帳篷內的陳年皮革與羊毛脂味  # inferred: true
+    - 遠處霜生營地方向飄來的、幾乎難以察覺的雪腥氣  # inferred: true
+  light: >
+    極北長夜中的慘白天光與瞭望塔頂的烽火橙紅交替閃爍，
+    地熱溝渠的蒸汽在空氣中折射出虹彩微光，
+    室內僅靠牛油蠟燭與地熱燈勉強維持昏黃  # inferred: true
+  temperature: >
+    終年酷寒，室外溫度常在零下三十度以下，
+    地熱溝渠與冰窖勉強維持室內可生存溫度，
+    任何裸露皮膚在風中停留超過一分鐘即會凍傷  # inferred: true
+  sound:
+    - 極北風嘯穿過隕鐵樁縫隙的尖銳鳴響
+    - 瞭望塔上守望者定時敲擊的警鐘
+    - 地熱溝渠中蒸汽與流水奔湧的沉悶轟鳴
+    - 遠方傳來的、疑似霜生戰鼓或冰裂的低頻震動  # inferred: true
+    - 奧斯堡破曉號角穿越凍原的悠遠迴聲  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 奧羅·伊格尼斯軍團（邊境支隊）
+  access_level: restricted
+  danger_level: high
+  religion: 東派正教（隨軍牧師）
+  population: 2000  # inferred: true
+  settlement_type: fortress
+
+# ── 關係即通道（connections）──
+connections:
+  - target: east_caesaric
+    type: conceptual
+    direction: 南方後方
+    description: 霜望要塞是凱撒里克帝國北方邊境的前哨，直接向奧斯堡的攝政帝與伊斯洛茲議會負責
+  - target: the_howling_peaks
+    type: physical
+    direction: 西方
+    description: 怒嘯山脈東麓的支脈向北延伸，形成要塞西側的天然屏障與隕鐵礦脈來源
+  - target: northern_mountains
+    type: physical
+    direction: 北方
+    description: 約恩維德山脈橫亙極北，白霜的滲透路徑與「內克桑之息」皆從山脈以北襲來
+  - target: ostburg
+    type: conceptual
+    direction: 南方遠處
+    description: 每日破曉時分，奧斯堡的破曉號角聲穿越凍原傳至此處，成為守軍的精神支柱
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 隕鐵瞭望塔群
+    location: 要塞外圍防線
+    description: >
+      以隕鐵強化骨架的高塔群，塔頂裝設隕鐵警報器，
+      能在霜生寒法接近時發出藍光與低鳴。  # inferred: true
+  - item: landmark
+    name: 地熱溝渠網絡
+    location: 要塞地下與外圍
+    description: >
+      利用特爾馬嶺地熱資源修建的溝渠系統，
+      既能融化積雪、防止寒法冰封地面，也為地下冰窖提供熱源。  # inferred: true
+  - item: npc
+    name: 奧羅·伊格尼斯邊境支隊指揮官
+    location: 要塞指揮塔
+    description: >
+      由攝政帝直接任命的軍團指揮官，通常出身克羅諾斯家族的親信騎士，
+      負責統籌北方邊境的巡邏、警戒與小規模衝突應對。  # inferred: true
+  - item: artifact
+    name: 霜生大可汗戰旗殘片
+    location: 要塞榮譽廳
+    description: >
+      極北會戰後繳獲的白色戰旗殘片，懸掛於要塞榮譽廳牆壁，
+      提醒每一名守軍：「霜生必須死」（Mori Glotta）。  # inferred: true
+  - item: resource
+    name: 隕鐵儲藏庫
+    location: 地下冰窖深處
+    description: >
+      儲存隕鐵原料與成品武器的地窖，溫度恆定且受地熱保護，
+      是北方邊境維持戰鬥力的命脈。  # inferred: true
+
+# ── 歷史事件（events）──
+events:
+  - id: frostwatch_founding
+    year: 730
+    name: 霜望要塞初建
+    description: >
+      奧斯堡奠基後不久，馬庫斯·克羅諾斯下令在北方凍原高地上修築前哨要塞，
+      以確保東遷成果不被霜生南下襲擾摧毀。  # inferred: true
+  - id: frostwatch_expansion
+    year: 754
+    name: 霜望要塞擴建
+    description: >
+      凱撒里克帝國正式成立後，攝政帝加大對北方邊境的投入，
+      霜望要塞從木質哨站升格為隕鐵強化的永久要塞。  # inferred: true
+  - id: frostwatch_sanguinis_scare
+    year: 824
+    name: 真霜滲透警報
+    description: >
+      要塞巡邏隊在凍原深處發現被肢解的屍體，疑似真霜桑圭尼斯的食骨者所為。
+      守軍自此加強夜間巡邏，並禁止士兵單獨離開要塞超過一里格。  # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 邊境要塞
+  - 軍事
+  - 奧羅·伊格尼斯
+  - 白霜前線
+  - 極寒
+  - 地熱
+  - 隕鐵
+  - 北伐派

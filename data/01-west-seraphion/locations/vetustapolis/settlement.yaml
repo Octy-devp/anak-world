@@ -1,0 +1,214 @@
+# ── 身份錨定（必填）──
+id: vetustapolis
+name: 維特魯斯
+layer: settlement
+region: 中央平原
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  維特魯斯（Vetustapolis），又稱「聖光之城」（City of Sacred Light），
+  是塞拉菲昂神聖帝國的法定首都與普世教會西派教廷的心臟。
+
+  城市位於中央沖積平原之上，傑米努斯大河貫穿而過，
+  河上有七座以青銅與大理石築成的橋樑，每座橋供奉一位元素聖人。
+  城市被高達十餘米的黑色玄武岩城牆包圍，城牆上佈滿青銅弩炮，
+  見證了這座古城歷經無數劫難的防禦傳統。
+
+  第451年，霜生發動「第二次白色洪流」攻陷維特魯斯，
+  將宏偉的神殿凍結成冰雕，把祭司們釘在青銅太陽圓盤上，
+  城市淪為廢墟長達百餘年。
+  第582年，普世教會在廢墟上成立，確立創世主阿薩為唯一至高神，
+  並創造「神聖鐵水語」將技術詞彙徹底宗教化。
+  第610年，艾森瓦爾二世即位後將維特魯斯重建為宏偉的「聖光之城」，
+  傑米努斯河上七座青銅與大理石橋樑竣工，帝國進入穩定繁榮期。
+  第726年，艾森瓦爾五世於中央神殿自焚，火焰吞噬了王朝近一百五十年的統治正統，
+  城市被巴爾塔薩攻陷；後雖重建，皇權已淪為教廷與選帝侯博弈的傀儡，
+  維特魯斯逐漸演變為教權直轄市。
+
+  城市由三層空間疊加而成：
+  內城區是神權與皇權的黃金囚籠，以聖鑰院複合體與暮光宮為軸心；
+  下城區是寄生於古代廢墟上的工匠迷宮，百萬平民、行會工匠與聖奴聚居於此；
+  城牆外區則是生與死的荒野邊界，灰土園墓窖、修道院與凍土農田綿延至夕照畿。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 沉香與沒藥（內城區聖殿與貴族宅邸瀰漫的昂貴香氣）
+    - 鞣革的尿騷味、鍛爐的煤灰與腐爛蔬菜的酸臭（下城區工匠迷宮的日常氣息）
+    - 凍土寒風與枯黃雜草的乾澀氣味（城牆外區的荒野氣息） # inferred: true
+  light: >
+    正午時分聖光大教堂穹頂的彩繪玻璃將陽光折射為七彩光斑；
+    黃昏時傑米努斯河面映照青銅橋欄的暖金光暈；
+    夜間神殿長明燈與巡邏火把在黑色城牆上投下跳動的陰影。
+  temperature: >
+    內城區石板地面終年散發冷意，夏季玄武岩城牆蓄熱悶熱難當，冬季石材建築陰冷徹骨；
+    下城區河風稍涼但鍛爐餘溫氤氳；
+    城牆外區凍土麥田受小冰期影響，冬季越來越長。
+  sound:
+    - 聖鑰院與各教堂的鐘聲迴盪（整點與禱告時刻）
+    - 下城區鐵錘敲擊鐵砧的鏗鏘聲與木工鋸木聲
+    - 傑米努斯河七橋下的流水低語與船夫號子
+    - 遠處狼嚎與寒風穿過城牆縫隙的嗚咽（城牆外區） # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 普世教會西派教廷
+  access_level: public
+  danger_level: medium
+  religion: 普世教會西派（創世主阿薩）
+  population: 1200000  # inferred: true（source 稱「百萬平民」、「百萬人口寄生迷宮」）
+  settlement_type: town
+  wonders:
+    - grand_cathedral
+    - sacred_key_complex
+    - twilight_palace
+
+# ── 區域預告（district 層）──
+districts:
+  - id: inner_city
+    name: 內城區
+    description: 神權與皇權的黃金囚籠，玄武岩城牆、聖鑰院複合體、暮光宮所在地
+  - id: lower_city
+    name: 下城區
+    description: 寄生於古代廢墟上的工匠迷宮，百工坊區、橋樑市集、競技場貧民窟
+  - id: beyond_walls
+    name: 城牆外區
+    description: 生與死的荒野邊界，灰土園墓窖、多座修道院、農田與棚戶帶
+
+# ── 關係即通道（connections）──
+connections:
+  - target: the_flood_plain
+    type: physical
+    direction: 坐落於上
+    description: 維特魯斯建於中央沖積平原的心臟地帶，土壤肥沃，交通便利
+  - target: flumen_geminus
+    type: physical
+    direction: 貫穿
+    description: 傑米努斯大河東西貫穿城市，七座青銅與大理石橋樑橫跨其上，每座供奉一位元素聖人
+  - target: the_howling_peaks
+    type: conceptual
+    direction: 東方遠眺
+    description: 晴天時自城牆東段可遠眺怒嘯山脈的雪線與魯普圖斯隘口的輪廓
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 聖光大教堂
+    location: 內城區聖鑰院北翼
+    guardian: 金堅牢者騎士團
+    description: >
+      維特魯斯最高的宗教建築，雙尖塔頂鑲嵌青銅太陽圓盤，可在正午折射七彩光譜。
+      地下聖堂存放七把黑曜石鑰匙與英雄瓦萊里安的斷劍「霜咬」碎片。
+  - item: landmark
+    name: 聖鑰院複合體
+    location: 內城區中央
+    guardian: 十二名最高級樞機
+    description: >
+      教廷心臟，雙翼宮殿為幾何軸心，輻射教堂、修院、騎士團會院、經院、監獄與救濟設施。
+      樞機議會二十四人（八席由大修道院長兼任）在此議事，保管七把黑曜石鑰匙與「四色權戒」。
+  - item: landmark
+    name: 暮光宮
+    location: 內城區北側杜寧高地
+    guardian: 夕照帝利奧三世（實質被教廷軟禁）
+    description: >
+      皇權的黃金囚籠。建於古代巨石地基之上，曾擁有地熱噴泉與比聖光大教堂更巨大的青銅太陽圓盤。
+      如今西翼局部坍塌，花園長滿荊棘與野罌粟；地下暗藏青銅時代的維修暗道，
+      連接下城區古老下水道體系，成為皇權最後的秘密避難所。
+  - item: landmark
+    name: 六聖徒神殿
+    location: 內城區中央廣場
+    guardian: 普世教會西派教廷
+    description: >
+      將勇者一行人納入教會神學體系的正統神殿，希爾薇恩居中，瓦萊里安排於側翼，
+      是西派教廷正統性的核心象徵與朝聖中心。廣場上矗立著巨大的六聖徒雕像。
+  - item: landmark
+    name: 聖輪經院
+    location: 內城區聖鑰院北翼
+    guardian: 樞機議會
+    description: >
+      中央圖書館，以巨型水車驅動升降書架。水車被稱為「聖輪」，
+      其運轉被視為「阿薩恩典流轉」的隱喻。
+  - item: landmark
+    name: 神恩鑄幣所
+    location: 內城區聖鑰院北翼
+    guardian: 教廷財政總管
+    description: >
+      聖券（神恩券）印製中心，日夜運作，周邊空氣中常年飄散劣質木漿與油墨的酸腐氣味。
+      第754年後逐步推行紙幣，至第825年已貶值到連乞丐都拒絕接受。
+  - item: landmark
+    name: 靈魂檢疫塔
+    location: 內城區聖鑰院東翼外圍
+    guardian: 金堅牢者
+    description: >
+      獨立七層圓塔，實為軟禁政治犯的高級監獄。夕照帝利奧三世曾多次「因病」被送往此塔，
+      教廷以「靈魂檢疫」為名變相軟禁皇帝。
+  - item: landmark
+    name: 阿薩慈惠所
+    location: 下城區與內城區交界
+    guardian: 聖女塞拉菲娜五世
+    description: >
+      大救濟院的分支機構，掌管救濟糧食分配、修道院醫院運作、孤兒與聖奴登記，
+      是帝國社會救濟體系的實際執行中樞。
+  - item: landmark
+    name: 麥穗與磐石修道院
+    location: 下城區廢墟農田
+    guardian: 基層修道院長
+    description: >
+      下城區三座基層修道院之一，修士們在廢墟農田開墾黑麥、蘿蔔與捲心菜，
+      兼顧救濟與自給農耕。
+  - item: artifact
+    name: 七把黑曜石鑰匙
+    location: 聖光大教堂地下聖堂
+    guardian: 金堅牢者終年守衛
+    description: >
+      傳說中開啟教廷最高聖所的七把鑰匙，由黑曜石雕琢而成，
+      是普世教會西派教廷最高權力的物質象徵。
+  - item: artifact
+    name: 四色權戒
+    location: 聖鑰院
+    guardian: 十二名最高級樞機
+    description: >
+      象徵教廷四重權柄的權戒，具體形制與傳承儀式僅限最高級樞機知曉。
+
+# ── 歷史事件（events）──
+events:
+  - id: frostborn_sack_of_vetustapolis
+    year: 451
+    name: 霜生攻陷維特魯斯
+    description: >
+      霜生發動「第二次白色洪流」攻陷維特魯斯，將宏偉的神殿凍結成冰雕，
+      把祭司們釘在青銅太陽圓盤上，城市陷入長達百餘年的廢墟狀態。
+  - id: universal_church_founded
+    year: 582
+    name: 普世教會成立
+    description: >
+      普世教會在維特魯斯廢墟上成立，確立創世主阿薩為唯一至高神，
+      創造「神聖鐵水語」將技術詞彙徹底宗教化，奠定今日標準語的基礎。
+  - id: reconstruction_under_eisenwald_ii
+    year: 610
+    name: 艾森瓦爾二世重建聖光之城
+    description: >
+      艾森瓦爾二世時期重建維特魯斯為「聖光之城」，
+      傑米努斯河上七座青銅與大理石橋樑竣工，每座橋供奉一位元素聖人。
+      城市再度成為帝國的政治與宗教中心。
+  - id: eisenwald_v_self_immolation
+    year: 726
+    name: 艾森瓦爾五世自焚
+    description: >
+      艾森瓦爾五世於中央神殿自焚，火焰吞噬了艾森瓦爾王朝近一百五十年的統治正統。
+      城市被巴爾塔薩攻陷；後雖重建，皇權已淪為教廷與選帝侯博弈的傀儡。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 聖光之城
+  - 首都
+  - 教廷
+  - 普世教會
+  - 七橋
+  - 樞機
+  - 神聖鐵水語
+  - 西派
+  - 重建
+  - 夕照

@@ -198,6 +198,33 @@
         "additionalProperties": false
       }
     },
+    "districts": {
+      "type": "array",
+      "description": "Preview of child districts within this settlement (for settlement layer only)",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "District identifier"
+          },
+          "name": {
+            "type": "string",
+            "description": "Human-readable district name"
+          },
+          "settlement_type": {
+            "type": "string",
+            "description": "Functional type of this district (e.g. fortress, monastery, town)"
+          },
+          "description": {
+            "type": "string",
+            "description": "Brief description of the district"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
     "tags": {
       "type": "array",
       "description": "Searchable tags",

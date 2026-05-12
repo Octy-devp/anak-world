@@ -51,7 +51,7 @@
   - [x] PLAN.md 層級鏈更新
   - [x] `schema.json` JSON 語法驗證通過
 - **待完成**：
-  - [ ] 建立第一批 Settlement YAML 示範（建議：維特魯斯、奧斯堡、某邊境要塞、某修道院、某村莊）
+  - [x] 建立第一批 Settlement YAML 示範（維特魯斯、奧斯堡、霜望要塞、流泉修道院、赤土鎮）
   - [ ] FastAPI 骨架需同步更新路由（`/settlement/{id}` 取代 `/city/{id}`）
 - **阻擋問題**：無
 - **重要設計決策**：

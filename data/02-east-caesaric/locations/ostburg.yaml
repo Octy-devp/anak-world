@@ -1,0 +1,152 @@
+# ── 身份錨定（必填）──
+id: ostburg
+name: 奧斯堡
+layer: settlement
+region: 特爾馬嶺
+empire: 凱撒里克帝國
+parent_id: east_caesaric
+
+# ── 敘事錨定（必填）──
+description: >
+  奧斯堡（Dawnstar Citadel）坐落於東方平原的「特爾馬嶺」（Geothermal Ridge）之上，
+  這是一片由古代火山活動與星隕撞擊共同塑造的高原。
+  城市並非自然發展的商業聚落，而是第726年至第735年間，
+  由東遷軍團與赭石行會流亡工匠強行構築的軍事-政務重地。
+  馬庫斯·克羅諾斯選定此地為「新維特魯斯」，
+  並以實用主義風格捨棄了舊都的宏偉建築傳統。
+  城市結構呈同心圓三重防禦：外環城容納自由農與工匠，內環城為騎士與貴族居所，
+  中央矗立着冰壁宮——攝政帝的居所與帝國軍事指揮中樞。
+  第754年，東方貴族在奧斯堡城牆上升起晨星旗，
+  正式建立凱撒里克帝國，與塞拉菲昂決裂。
+  晨星自此成為帝國的精神圖騰，預示正統終將歸來。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 凍土的礦物與硫磺氣息
+    - 松針與針葉林的樹脂味
+    - 軍營的汗臭與皮革鞣製味
+    - 隕鐵冷鍛時的焦糊金屬味  # inferred: true
+    - 冰壁宮內永不消散的冰冷石塵味  # inferred: true
+  light: >
+    冰壁宮內僅靠昏黃燭光照明，黑曜石地面吸收幾乎所有光線，
+    僅在破曉號角鳴響時，高塔狹窗才透入一線蒼白天光  # inferred: true
+  temperature: >
+    寒冷徹骨。冰壁宮不設任何暖爐，冬季室內與室外溫差甚微，
+    攝政帝與士兵同受嚴寒以磨礪意志  # 原文提及冰壁宮無暖爐；與士兵同寒為推斷 inferred: true
+  sound:
+    - 破曉號角每日清晨的低沉悠遠鳴響
+    - 外環城工匠廊的鐵錘敲擊與弩炮試射聲  # inferred: true
+    - 內環城騎士訓練場的劍盾交擊與號令聲  # inferred: true
+    - 地熱溝渠中蒸汽逸散的嘶嘶低鳴  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 克羅諾斯家族（攝政帝）
+  access_level: restricted
+  danger_level: medium
+  religion: 東派正教
+  population: 50000  # inferred: true
+  settlement_type: fortress
+  wonders:
+    - icewall_palace
+    - horn_of_dawnbreak
+
+# ── 關係即通道（connections）──
+connections:
+  - target: east_caesaric
+    type: conceptual
+    direction: 核心
+    description: 奧斯堡是凱撒里克帝國的心臟，攝政帝與伊斯洛茲議會駐蹕於此
+  - target: the_howling_peaks
+    type: physical
+    direction: 西方
+    description: 怒嘯山脈橫亙西方，魯普圖斯隘口是通往塞拉菲昂的險要通道
+  - target: aurum_river
+    type: physical
+    direction: 東南方
+    description: 奧魯姆河流經帝國東部，為奧斯堡提供水源與東南方貿易動脈
+  - target: flumen_geminus
+    type: conceptual
+    direction: 西方遠處
+    description: 傑米努斯大河東岸是東遷的終點，奧斯堡與舊世界隔河相望
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 冰壁宮（Icewall Palace）
+    location: 內環城中央
+    description: >
+      攝政帝居所與帝國軍事指揮中樞。無暖爐，牆壁厚達三米，內嵌隕鐵網架，
+      黑曜石地面，能抵禦白霜寒法的滲透。
+  - item: landmark
+    name: 霜誓廳（Hall of the Frost Oath）
+    location: 冰壁宮主殿
+    description: >
+      黑曜石地面鋪就的圓形大廳，中央刻有銘文「正統不在血脈中，而在誓言裡」。
+      伊斯洛茲議會在此召開，攝政帝坐於圓桌正北的「劍位」。
+  - item: artifact
+    name: 破曉號角（Horn of Dawnbreak）
+    location: 冰壁宮最高塔樓
+    guardian: 攝政帝直屬號手衛隊
+    description: >
+      以霜生大可汗腿骨（極北會戰戰利品）與隕鐵鑄成的巨型號角。
+      每日清晨鳴響，聲音低沉悠遠，能穿透薄霧傳達至十里外軍營，
+      宣告攝政帝仍存活、正統仍未斷絕。
+  - item: artifact
+    name: 瓦萊里安劍鞘碎片
+    location: 榮譽大廳
+    description: >
+      懸掛於榮譽大廳牆壁上的古老殘片，傳說屬於大元帥瓦萊里安的佩劍「霜咬」之鞘。
+      是凱撒里克軍事榮譽的最高象徵。
+  - item: landmark
+    name: 雙陽大教堂（Cathedral of the Twin Suns）
+    location: 內環城中央
+    description: >
+      東派正教的最高聖所，雙尖塔設計象徵「政教共生」。
+      正統牧首駐蹕於此，其產生由攝政帝與伊斯洛茲共同提名。
+  - item: landmark
+    name: 劍誓池（Pool of Sword-Oath）
+    location: 奧斯堡內環城
+    description: >
+      騎士受封時以隕鐵劍割掌、滴血宣誓的聖池。
+      誓言為：「劍不折，膝不屈，背不向敵。」
+
+# ── 歷史事件（events）──
+events:
+  - id: founding_of_ostburg
+    year: 729
+    name: 奧斯堡奠基
+    description: >
+      馬庫斯·克羅諾斯率東遷隊伍抵達特爾馬嶺，選定傑米努斯河東岸高地為「新維特魯斯」，
+      開始興建奧斯堡。第一座皇宮實際上是擴大了三倍的邊防堡壘。
+  - id: establishment_of_dyarchy_ostburg
+    year: 729
+    name: 雙頭制在奧斯堡確立
+    description: >
+      馬庫斯以「攝政帝」身份統治，讓艾森瓦爾六世保持虛位皇帝身份，
+      開創皇帝（正統之源）與攝政帝（政務之首）並存的雙頭制。
+  - id: dawnbreak_horn_first_sound
+    year: 735
+    name: 破曉號角初鳴
+    description: >
+      奧斯堡基本建成之際，破曉號角首次鳴響，
+      宣告東方正統據點的確立。  # inferred: true
+  - id: caesaric_established
+    year: 754
+    name: 凱撒里克帝國正式成立
+    description: >
+      東方貴族在奧斯堡城牆上升起晨星旗，馬庫斯·克羅諾斯在霜誓廳宣布不承認西派教廷與《大憲章》，
+      凱撒里克帝國以「正統繼承者」身份與塞拉菲昂決裂。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 首都
+  - 要塞
+  - 軍事
+  - 晨星
+  - 雙頭制
+  - 冰壁宮
+  - 攝政帝
+  - 正統
+  - 東派正教
