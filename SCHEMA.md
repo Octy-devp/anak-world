@@ -13,12 +13,17 @@
 | 層級 | 英文名 | 說明 | 範例 |
 |------|--------|------|------|
 | 大陸 | `continent` | 整個安納克大陸 | Ankora |
+| 地理 | `geography` | 自然或宏觀地理實體（山脈、河流、深淵、森林、世界樹） | The Howling Peaks, Eldara, Abyssus |
 | 帝國 | `empire` | 政治實體、國家、帝國 | Seraphion Empire |
 | 城市 | `city` | 城市、首都、要塞都市 | Vetustapolis |
 | 區域 | `district` | 城市內的行政或功能區塊 | Inner City, Harbor District |
 | 房間 | `room` | 可進入的具體空間，最小單位 | Sacred Key Complex, Throne Hall |
 
-> **規則**：`room` 必須有 `parent_id` 指向所屬 `district`；`district` 指向 `city`；依此類推。
+> **規則**：
+> - `room` 必須有 `parent_id` 指向所屬 `district`
+> - `district` → `city` → `empire` → `continent`
+> - `geography` 可獨立存在，或作為其他地點的空間背景（如城市位於山脈東麓）
+> - `geography` 的 `parent_id` 通常指向 `continent`，也可指向另一 `geography`（如「龍脊隘口」屬於「怒嘯山脈」）
 
 ---
 
@@ -107,7 +112,7 @@ tags:
 
 ### `layer`
 - **型別**：string
-- **允許值**：`continent`、`empire`、`city`、`district`、`room`
+- **允許值**：`continent`、`geography`、`empire`、`city`、`district`、`room`
 - **規則**：不可自創層級名稱
 
 ### `parent_id`
@@ -115,8 +120,9 @@ tags:
 - **規則**：
   - `continent` 可為 `null`
   - 其他層級必須指向上一層的真實 `id`
+  - `geography` 指向 `continent` 或另一 `geography`
   - `empire` 指向 `continent`
-  - `city` 指向 `empire`
+  - `city` 指向 `empire` 或 `geography`（如位於山脈中的城市）
   - `district` 指向 `city`
   - `room` 指向 `district`
 
@@ -220,7 +226,7 @@ tags:
 | 錯誤 | 範例 | 修正 |
 |------|------|------|
 | `id` 含空格或連字號 | `sacred-key` | `sacred_key` |
-| `layer` 拼錯 | `Room` | `room`（全小寫） |
+| `layer` 值不在白名單 | `mountain` | `geography`（請使用標準層級名稱） |
 | `parent_id` 指向自己 | `parent_id: sacred_key_complex` | 指向上一層 `inner_city` |
 | `connections.target` 不存在 | `target: non_existent_place` | 確認目標 `id` 已建立 |
 | `atmosphere.scent` 為 string 而非 array | `scent: 薰香` | `scent: ["薰香"]` |
