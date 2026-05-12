@@ -49,15 +49,15 @@ connections:
   - target: thalassa
     type: physical
     direction: 西北方
-    description: 石橋與堤道連接菲惹港與塔拉薩  # inferred: true
+    description: 渡船與帆船連接菲惹港與塔拉薩  # inferred: true
   - target: anchora
     type: physical
     direction: 東南方
-    description: 石橋與堤道連接菲惹港與昂科拉  # inferred: true
+    description: 渡船與帆船連接菲惹港與昂科拉  # inferred: true
   - target: aeolis
     type: physical
     direction: 西南方
-    description: 石橋與堤道連接菲惹港與艾歐利斯  # inferred: true
+    description: 渡船與帆船連接菲惹港與艾歐利斯  # inferred: true
 
 # ── 內容物（contents）──
 contents:
@@ -78,3 +78,7 @@ tags:
   - 冒險家
   - 風息群島
   - 自由城邦
+  - 海風
+  - 鹽味
+  - 多國語言喧囂
+  - 錢幣碰撞聲

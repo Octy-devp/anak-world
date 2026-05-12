@@ -37,15 +37,15 @@ connections:
   - target: thalassa
     type: physical
     direction: 西北方  # inferred: true
-    description: 經石橋與堤道通往主島群西北島的塔拉薩  # inferred: true
+    description: 經渡船與帆船通往主島群西北島的塔拉薩  # inferred: true
   - target: free_port
     type: physical
     direction: 東北方  # inferred: true
-    description: 經石橋與堤道通往主島群東北島的菲惹港  # inferred: true
+    description: 經渡船與帆船通往主島群東北島的菲惹港  # inferred: true
   - target: anchora
     type: physical
     direction: 東南方  # inferred: true
-    description: 經石橋與堤道通往主島群東南島的昂科拉  # inferred: true
+    description: 經渡船與帆船通往主島群東南島的昂科拉  # inferred: true
 
 tags:
   - 風息議會
@@ -53,3 +53,7 @@ tags:
   - 中立
   - 露天議政廳
   - 城邦
+  - 海風
+  - 鹽味
+  - 石柱鳴響
+  - 代表低語

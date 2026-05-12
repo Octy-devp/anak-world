@@ -49,15 +49,15 @@ connections:
   - target: free_port
     type: physical
     direction: 東北方
-    description: 石橋與堤道連接塔拉薩與菲惹港  # inferred: true
+    description: 渡船與帆船連接塔拉薩與菲惹港  # inferred: true
   - target: anchora
     type: physical
     direction: 東南方
-    description: 石橋與堤道連接塔拉薩與昂科拉  # inferred: true
+    description: 渡船與帆船連接塔拉薩與昂科拉  # inferred: true
   - target: aeolis
     type: physical
     direction: 東南方
-    description: 石橋與堤道連接塔拉薩與艾歐利斯  # inferred: true
+    description: 渡船與帆船連接塔拉薩與艾歐利斯  # inferred: true
 
 # ── 內容物（contents）──
 contents:
@@ -88,3 +88,8 @@ tags:
   - 商法仲裁
   - 風息群島
   - 自由城邦
+  - 海風
+  - 鹽味
+  - 法庭辯論聲
+  - 銅鐘聲
+

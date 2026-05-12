@@ -37,15 +37,15 @@ connections:
   - target: thalassa
     type: physical
     direction: 西北方  # inferred: true
-    description: 經石橋與堤道通往主島群西北島的塔拉薩  # inferred: true
+    description: 經渡船與帆船通往主島群西北島的塔拉薩  # inferred: true
   - target: free_port
     type: physical
     direction: 北方  # inferred: true
-    description: 經石橋與堤道通往主島群東北島的菲惹港  # inferred: true
+    description: 經渡船與帆船通往主島群東北島的菲惹港  # inferred: true
   - target: aeolis
     type: physical
     direction: 西北方  # inferred: true
-    description: 經石橋與堤道通往主島群中央島的艾歐利斯  # inferred: true
+    description: 經渡船與帆船通往主島群中央島的艾歐利斯  # inferred: true
 
 tags:
   - 造船
@@ -54,3 +54,8 @@ tags:
   - 工匠
   - 港口
   - 城邦
+  - 海風
+  - 鹽味
+  - 斧頭劈木聲
+  - 鐵錘敲釘聲
+  
