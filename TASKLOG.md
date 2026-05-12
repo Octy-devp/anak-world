@@ -50,7 +50,7 @@
   - [x] `PLAN.md` 撰寫（可見於根目錄）
   - [x] `SCHEMA.md` v0.1 撰寫（五級層次、必填欄位、YAML 範本）
   - [x] `schema.json` v0.1 撰寫（JSON Schema Draft 7）
-  - [x] `data/index.yaml` 撰寫（五殿 + 秘境索引）
+  - [x] `data/index.yaml` 撰寫（五大區域 + 秘境索引）
   - [x] 原始文本移入 `source/ankora-chronicles.md`
   - [x] Git commit `b33e632`
 - **待完成**：

@@ -109,7 +109,7 @@ tasks/
 | 目錄結構 | ✅ 完成 | `data/`, `api/`, `site/`, `source/` 已建立 |
 | SCHEMA.md | ✅ 完成 | v0.1，含 `geography` 層級 |
 | schema.json | ✅ 完成 | v0.1，機器可驗證 |
-| data/index.yaml | ✅ 完成 | 五殿 + 秘境索引 |
+| data/index.yaml | ✅ 完成 | 五大區域 + 秘境索引 |
 | PLAN.md | ✅ 完成 | 可見於根目錄 |
 | AGENTS.md | ✅ 完成 | v0.2，定義子代理協作協議 |
 | FastAPI 骨架 | ⬜ 未開始 | 待 schema 穩定後建立 |

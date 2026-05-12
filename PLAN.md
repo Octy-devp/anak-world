@@ -28,7 +28,7 @@ ankora-world/
 ├── source/
 │   └── ankora-chronicles.md    # 原始文本移入此處
 ├── data/                       # 權威結構化資料
-│   ├── index.yaml              # 五殿 + 秘境索引
+│   ├── index.yaml              # 五大區域 + 秘境索引
 │   ├── 01-west-seraphion/
 │   │   ├── empire.yaml
 │   │   └── locations/

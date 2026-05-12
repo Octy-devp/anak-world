@@ -25,16 +25,16 @@ tags:
 empires:
   - id: west_seraphion
     name: 塞拉菲昂神聖帝國
-    region: 西殿
+    region: 夕照之地
   - id: east_caesaric
     name: 凱撒里克帝國
-    region: 東殿
+    region: 晨星之地
   - id: north_frost
     name: 北境諸邦
-    region: 北殿
+    region: 霜咬北境
   - id: south_libertania
     name: 自由城邦聯盟
-    region: 南殿
+    region: 自由南境
   - id: secret_eldara
     name: 艾爾達拉秘境
     region: 秘境
