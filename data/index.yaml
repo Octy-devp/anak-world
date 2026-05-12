@@ -4,9 +4,9 @@ layer: continent
 description: >
   安納克大陸是世界樹「艾爾達拉」根系擁抱的廣袤大地，呈南北走向。
   大洪水後，被三道山脈與一道深淵重塑：
-  北部山脈橫亙極北，中央怒嘯山脈如脊骨縱貫南北隔開東西兩大帝國，
-  南部山脈則隔開了已知世界與大無底洞的迷霧。
-  數條大河東西貫穿其間，中央沖積平原是整片大陸的糧食命脈。
+  北部格萊西姆山脈橫亙極北，中央怒嘯山脈如脊骨縱貫南北隔開東西兩大帝國，
+  南部塔爾塔魯斯山脈則隔開了已知世界與大無底洞的迷霧。
+  四條大河東西或南北貫穿其間，中央沖積平原是整片大陸的糧食命脈。
 atmosphere:
   scent:
     - 遠海鹽風
@@ -16,7 +16,7 @@ atmosphere:
   temperature: 溫帶至寒帶，南北差異極大
   sound:
     - 怒嘯山脈的永恆風聲
-    - 大河流域的流水低語
+    - 傑米努斯河的流水低語
     - 遠方深淵的低頻嗡鳴
 properties:
   controlled_by: 無
@@ -46,31 +46,39 @@ geographies:
   - id: the_howling_peaks
     name: 怒嘯山脈
     region: 中央
-    description: 縱貫大陸中央的南北山脈，如巨龍脊骨隔開東西兩大帝國
+    description: 縱貫大陸中央的南北山脈，如巨龍脊骨隔開東西兩大帝國。傑米努斯河從魯普圖斯隘口貫穿而過
   - id: northern_mountains
-    name: 北部山脈
+    name: 格萊西姆山脈
     region: 北部
-    description: 橫亙極北的山脈屏障，北境諸邦的家園
+    description: 橫亙極北的山脈屏障，北境諸邦的家園，格萊西姆河發源於此
   - id: southern_mountains
-    name: 南部山脈
+    name: 塔爾塔魯斯山脈
     region: 南部
-    description: 隔開已知世界與大無底洞的南方屏障
-  - id: river_el
-    name: 艾爾大河
+    description: 隔開已知世界與大無底洞的南方屏障，山脈以南即為無人知曉的深淵
+  - id: ruptus_pass
+    name: 魯普圖斯隘口
     region: 中央
-    description: 東西貫穿大陸的主河流，發源於西部高地，貫穿怒嘯山脈的斷劍峽谷，中游形成沖積平原
-  - id: river_vitus
-    name: 維特河
+    description: 怒嘯山脈中段的斷裂峽谷，傑米努斯河東西貫穿其間，是東西帝國少數的陸路通道
+  - id: flumen_geminus
+    name: 傑米努斯大河
+    region: 中央
+    description: 東西貫穿大陸的主河流，發源於西部高地，貫穿魯普圖斯隘谷，中游形成沖積平原。 Geminus 意為「雙生」
+  - id: aurum_river
+    name: 奧魯姆河
     region: 東部
-    description: 凱撒里克境內的主要河流，發源於東部山區，向東南流淌入海，風息群島位於其出海口外海
-  - id: river_frost
-    name: 霜河
+    description: 凱撒里克境內的主要河流，發源於東部山區，向東南流淌入海，風息群島位於其出海口外海。Aurum 意為「黃金」
+  - id: glaciem_river
+    name: 格萊西姆河
     region: 北部
-    description: 發源於北部山脈，向南流淌，在沖積平原北側匯入艾爾大河
+    description: 發源於北部格萊西姆山脈，向南流淌，在沖積平原北側匯入傑米努斯大河。Glaciem 意為「冰河」
+  - id: tartarus_stream
+    name: 塔爾塔魯斯暗河
+    region: 南部
+    description: 南部地下河流，傳說流向大無底洞之底，無人知其源頭與終點。Tartarus 意為「冥淵」
   - id: the_flood_plain
     name: 中央沖積平原
     region: 西部
-    description: 艾爾大河中游的廣袤沖積平原，大陸糧食核心產區，目前由塞拉菲昂某選帝侯封建領有
+    description: 傑米努斯大河中游的廣袤沖積平原，大陸糧食核心產區，目前由選帝侯格蘭迪斯大公封建領有
   - id: eldara_worldtree
     name: 艾爾達拉世界樹
     region: 西南部
@@ -78,8 +86,15 @@ geographies:
   - id: the_abyssus
     name: 阿比蘇斯大無底洞
     region: 南部
-    description: 南部山脈以南的巨型深淵，隕鐵與失傳技術的源頭，目前無人知曉其底部
+    description: 塔爾塔魯斯山脈以南的巨型深淵，隕鐵與失傳技術的源頭，目前無人知曉其底部
   - id: wind_isles
     name: 風息群島
     region: 東南部
-    description: 維特河出海口外海的群島，自由城邦聯盟的核心，政體參考漢撒同盟與威尼斯混合聯邦制
+    description: >
+      奧魯姆河出海口外海的群島，自由城邦聯盟的核心。
+      政體參考漢撒同盟、威尼斯、熱那亞的混合聯邦制。
+      主要城邦：
+      1. 塔拉薩（Thalassa）：行政與法律核心，古老石造港口，法學家與書吏的聚集地
+      2. 菲惹港（Free Port）：開拓先鋒，桅杆如林的巨型碼頭，匯聚各國貨幣與流亡技術人才
+      3. 昂科拉（Anchora）：群島最大造船廠與醃魚場，調度北海木材與糧食
+      4. 艾歐利斯（Aeolis）：風息議會（Windbreath Council）永久召開地，純粹中立協商區域
