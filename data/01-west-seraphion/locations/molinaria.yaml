@@ -1,0 +1,101 @@
+# ── 身份錨定（必填）──
+id: molinaria
+name: 莫利納里亞磨坊鎮
+layer: settlement
+region: 格蘭迪斯大公國境內
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  莫利納里亞磨坊鎮座落於傑米努斯河一條支流的水力湍急處，
+  是格蘭迪斯大公國境內為周邊農村磨麥的集中加工點。
+  鎮上五座水力磨坊沿河道排列，巨大的木製水輪終年轉動，
+  將周邊數十個村莊的小麥與大麥磨成麵粉。
+
+  磨坊主們向格蘭迪斯大公繳納「水輪稅」以換取壟斷經營權，
+  農民則以實物支付磨麥費用——通常是每十袋麥子抽成一袋作為報酬。
+  每逢秋收季節，運麥的牛車在河邊道路上排成長龍，
+  塵土與麥糠飛揚，是中央平原上特有的繁忙景象。 # inferred: true
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 新磨麵粉的乾燥穀香與麥糠粉塵味
+    - 水車木軸與齒輪潤滑油的亞麻氣息 # inferred: true
+    - 河道濕泥與水生植物的潮濕氣味 # inferred: true
+    - 秋季運麥牛車揚起的塵土與牲畜糞便氣息 # inferred: true
+  light: >
+    白天磨坊內部僅有高挑窗戶透入的垂直光柱，空氣中懸浮的麥糠如金色微塵；
+    黃昏時水輪剪影映在河面上，夕照將木製建築染成琥珀色；
+    夜間磨坊靠油脂燈與爐火照明，光影在水車葉片上跳動。 # inferred: true
+  temperature: >
+    磨坊內部終年涼爽，石砌牆壁與河流水氣調節溫度；
+    夏季水車濺起的水霧帶來涼意，冬季河風穿過木造縫隙令人瑟縮；
+    爐房烘烤麵包處燥熱異常，與磨粉車間形成鮮明對比。 # inferred: true
+  sound:
+    - 水車木輪轉動時的沉重軋軋聲與水流傾瀉聲
+    - 石磨碾壓麥粒的沉悶摩擦聲 # inferred: true
+    - 農民卸貨時的吆喝與牛車制動的吱嘎聲 # inferred: true
+    - 秋季長龍隊伍中孩童嬉戲與婦女閒談的嘈雜人聲 # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 格蘭迪斯大公國（磨坊主行會） # inferred: true
+  access_level: public
+  danger_level: low
+  religion: 普世教會西派（創世主阿薩）
+  population: 900  # 磨坊工匠、運輸工與家眷約八百至一千人；inferred: true
+  settlement_type: village
+  wonders: []
+
+# ── 關係即通道（connections）──
+connections:
+  - target: flumen_geminus
+    type: physical
+    direction: 南方支流
+    description: >
+      莫利納里亞座落於傑米努斯河支流的水力湍急處，
+      河水驅動五座磨坊的水車，是鎮上生計的根本。 # inferred: true
+  - target: golden_spire_castle
+    type: conceptual
+    direction: 宗主
+    description: >
+      磨坊主們向格蘭迪斯大公繳納「水輪稅」換取壟斷經營權，
+      秋收季節優先將麵粉運往金穗堡的糧倉。 # inferred: true
+  - target: the_flood_plain
+    type: physical
+    direction: 坐落於上
+    description: >
+      磨坊鎮位於中央沖積平原的核心農作區，
+      周邊數十個村莊的小麥與大麥皆匯集於此加工。 # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 五座水力磨坊
+    location: 河道兩岸
+    description: >
+      沿傑米努斯河支流排列的五座大型水力磨坊，每座配有巨大的木製水輪與石磨。
+      其中最大的一座「大公磨坊」由格蘭迪斯家族直接控股，優先處理領地稅糧。 # inferred: true
+  - item: resource
+    name: 磨麥壟斷權
+    location: 磨坊主行會帳房
+    description: >
+      格蘭迪斯大公授予的區域磨麥壟斷執照，
+      農民不得私設磨坊，違者處以沒收麥種之刑。 # inferred: true
+  - item: npc
+    name: 老磨坊主赫爾曼
+    location: 第三號磨坊
+    description: >
+      年逾六十的磨坊技師，據稱能僅憑石磨聲響判斷麥粒濕度與出粉率。
+      他暗中同情農民，常在夜間以「損耗」為名少抽半成磨麥費。 # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 村莊
+  - 磨坊鎮
+  - 格蘭迪斯大公國
+  - 傑米努斯河
+  - 糧食加工
+  - 水力

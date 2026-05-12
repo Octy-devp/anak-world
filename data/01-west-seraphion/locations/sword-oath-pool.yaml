@@ -1,0 +1,136 @@
+# ── 身份錨定（必填）──
+id: sword_oath_pool
+name: 劍誓池
+layer: settlement
+region: 夕照畿郊外
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  劍誓池坐落於維特魯斯西北郊的緩坡台地上，距城牆約三里格，
+  是塞拉菲昂神聖帝國境內最古老、最具政治象徵意義的軍事-宗教遺跡之一。  # inferred: true
+
+  相傳此池開鑿於艾森瓦爾王朝早期，池壁以青銅與隕鐵混鑄，傳説是第一位皇帝為了紀念在統一安納克大陸過程中犧牲的騎士而建造。
+  池水終年不涸，呈現淡紅色澤——據說是數百年來騎士滴血立誓所致，
+  但教廷神學家堅稱此乃池底赤鐵礦脈的自然反射。  # inferred: true
+
+  第726年，馬庫斯·克羅諾斯從維特魯斯火海中救出年幼的艾森瓦爾六世後，
+  率東遷隊伍在此駐紮三日，公開祭拜艾森瓦爾五世的骨灰，
+  並向追隨者宣告皇統未絕。這一事件使劍誓池成為東西兩大帝國
+  共同宣稱正統性的歷史錨點。
+
+  往昔，帝國騎士受封時必須以隕鐵劍割掌，滴血入池，
+  宣誓：「劍不折，膝不屈，背不向敵。」
+  然而到了第825年，隨著帝國軍事榮譽傳統的衰落與教廷對儀式壟斷權的強化，
+  這項古老儀式已極少舉行。池邊的石碑爬滿青苔，守池修士僅餘三人。  # inferred: true
+
+  凱撒里克帝國在奧斯堡複製了一座同名劍誓池，
+  宣稱東方的副本才是「真正的誓言之心」，
+  而塞拉菲昂則堅持此處為正統源頭。
+  兩座劍誓池的敘事張力，成為正統性之爭中最隱蔽也最持久的戰場。  # inferred: true
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 池水淡淡的金屬鏽味與礦物氣息  # inferred: true
+    - 陳年血跡氧化後的鐵腥味  # inferred: true
+    - 郊野枯草與松針的乾燥氣息  # inferred: true
+  light: >
+    午後的斜陽穿過稀疏的橡樹林，在池面投下破碎的金斑；
+    黃昏時分，池水反射暮光呈現暗紅色澤；
+    夜間僅有守池修士點燃的長明燈在池畔搖曳。  # inferred: true
+  temperature: >
+    郊野台地終年涼爽，池水因地下湧泉而維持微涼，
+    冬季晨間水面會升起薄霧。  # inferred: true
+  sound:
+    - 池底湧泉的咕嚕低鳴  # inferred: true
+    - 風吹過橡樹林的沙沙聲  # inferred: true
+    - 守池修士低聲誦念古代誓詞的絮語  # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 普世教會西派教廷  # inferred: true
+  access_level: public
+  danger_level: none
+  religion: 普世教會西派（創世主阿薩）
+  population: 12  # inferred: true
+  settlement_type: monastery
+  wonders: []
+
+# ── 關係即通道（connections）──
+connections:
+  - target: vetustapolis
+    type: physical
+    direction: 東南
+    description: >
+      沿西北郊驛道向東南行約三里格可達維特魯斯城牆；
+      這條道路亦是第726年馬庫斯東遷隊伍離開維特魯斯時所經之路。
+  - target: the_flood_plain
+    type: conceptual
+    direction: 歷史縱深
+    description: >
+      劍誓池的儀式傳統與中央沖積平原的軍事封建文化同根同源，
+      兩座劍誓池（維特魯斯郊外與奧斯堡）的敘事張力，
+      象徵著安納克大陸政治統一性的永久斷裂。  # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 劍誓池本體
+    location: 台地中央
+    guardian: 守池修士
+    description: >
+      一座直徑約六米的圓形石砌水池，池壁鑲嵌著斑駁的青銅銘板，
+      上面刻有歷代騎士的姓名與誓言殘篇。
+      池水終年不涸，呈淡紅色澤。  # inferred: true
+  - item: landmark
+    name: 艾森瓦爾五世祭壇遺跡
+    location: 池北十步
+    guardian: 守池修士
+    description: >
+      一座風化的石質祭壇，據稱馬庫斯曾在此祭拜艾森瓦爾五世骨灰。
+      祭壇上至今仍留有燃燒痕跡與香灰殘留。  # inferred: true
+  - item: document
+    name: 騎士名錄石碑
+    location: 池畔長廊
+    guardian: 守池修士
+    description: >
+      一方斷裂的黑色石碑，上刻數百個姓名——皆為曾於此池滴血立誓的騎士。
+      碑面下半部已磨損不可辨識，據傳是第726年暴民破壞所致。  # inferred: true
+  - item: npc
+    name: 守池修士長奧古斯丁
+    location: 池畔修士居所
+    guardian: 無
+    description: >
+      年逾六十的老修士，負責維護劍誓池的日常祭禮與導覽。
+      他堅信西派教廷對此處擁有無可爭議的管轄權，
+      對東方奧斯堡的「複製品」嗤之以鼻。  # inferred: true
+
+# ── 歷史事件（events）──
+events:
+  - id: marcus_vigil_at_pool
+    year: 726
+    name: 馬庫斯劍誓池之祭
+    description: >
+      馬庫斯·克羅諾斯救出幼帝艾森瓦爾六世後，
+      於維特魯斯郊外劍誓池旁駐紮三日，
+      公開祭拜艾森瓦爾五世骨灰，並向追隨者宣告皇統未絕。
+      此舉標誌著東方大遷徙的開始。
+  - id: valerian_ashes_to_pool
+    year: 825
+    name: 瓦萊里安撒灰入池
+    description: >
+      凱撒里克攝政帝瓦萊里安·克羅諾斯將塞拉菲昂密使信件公開焚燒，
+      灰燼撒入奧斯堡劍誓池，以示對西部偽朝的最輕蔑回應。
+      （註：塞拉菲昂的劍誓池為原版，奧斯堡為東遷後複製。）
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 遺跡
+  - 軍事儀式
+  - 宗教聖所
+  - 正統性象徵
+  - 維特魯斯郊外
+  - 夕照之地
+  - 雙帝敘事

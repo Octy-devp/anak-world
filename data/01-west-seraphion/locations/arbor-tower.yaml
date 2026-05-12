@@ -1,0 +1,115 @@
+# ── 身份錨定（必填）──
+id: arbor_tower
+name: 阿爾博塔瞭望塔
+layer: settlement
+region: 西南邊境
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  阿爾博塔瞭望塔（Arbor Tower，意為「樹之塔」）是塞拉菲昂神聖帝國西南邊境最孤獨的軍事前哨，
+  建於一棵巨樹殘骸的腐朽根系之上。
+  這棵巨樹據信是世界樹艾爾達拉在遠古時代的一條根脈延伸，
+  在大洪水時期被地殼撕裂所折斷，留下直徑超過十五公尺的殘幹基座。
+  帝國邊防軍在第650年前後將這座天然高台改建為瞭望塔，
+  用於監控世界樹森林邊緣的動向。
+
+  到了第825年，阿爾博塔駐軍僅有十二人，由一名修士兼軍士長指揮。
+  他們的補給每兩個月從拉迪克斯守望修道院運來一次，
+  冬季時常因積雪與林間小徑泥濘而延誤。
+  駐軍的生活極其單調：觀測、記錄、祈禱、等待。
+
+  巨樹殘骸的內部已被蟻蝕與真菌掏空，形成一個天然的豎井空間。
+  軍士長的指揮室就設在這個空洞底部，牆壁上仍能看見巨樹年輪的紋理。
+  據說在滿月之夜，年輪紋理會發出微弱的淡金色光芒——
+  但所有駐軍都被告知這是「礦物磷光」，不必驚慌。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 巨樹殘骸內部腐朽木材與真菌的濕悶甜腐味
+    - 石砌增補結構中灰漿與石灰的乾燥粉塵味  # inferred: true
+    - 森林方向飄來的樹脂與腐殖土氣息
+    - 駐軍營房中毛毯與人體的悶臭  # inferred: true
+    - 夜間偶爾從巨樹殘骸深處飄出的淡淡花香（無法解釋，無人追查）  # inferred: true
+  light: >
+    白天透過巨樹殘骸頂端的裂口與箭窗射入垂直光柱，塵埃在光線中緩慢旋轉；
+    夜間僅有油脂燈與少量蠟燭，但據稱滿月時年輪紋理會發出微弱的淡金色自體光。  # inferred: true
+  temperature: >
+    巨樹殘骸內部恆溫冬暖夏涼，但石砌增補結構在冬季會變得濕冷；
+    夏季森林方向的霧氣帶來異常涼意，與世界樹結界的恆溫效應有關。  # inferred: true
+  sound:
+    - 風吹過巨樹殘骸頂端裂口的空洞呼嘯
+    - 森林邊緣的鳥鳴與昆蟲振翅（白天）
+    - 駐軍士兵在狹窄空間中低聲交談與棋盤遊戲的聲響  # inferred: true
+    - 巨樹殘骸內部木材在溫度變化時的細微爆裂聲  # inferred: true
+    - 夜間從森林方向傳來的不明低頻嗡鳴（從未確認來源）  # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 拉迪克斯守望修道院 / 修士兼軍士長  # inferred: true
+  access_level: restricted
+  danger_level: medium
+  religion: 普世教會西派（創世主阿薩）
+  population: 12  # 駐軍及指揮官；inferred: true
+  settlement_type: outpost
+  wonders: []
+
+# ── 關係即通道（connections）──
+connections:
+  - target: eldara_worldtree
+    type: conceptual
+    direction: 西方近處
+    description: >
+      世界樹森林的迷霧結界位於瞭望塔西方不遠處，從塔頂可俯瞰結界邊緣的淡金色霧氣流動。
+      塔的存在本身就是對森民的一種監視聲明——儘管沒有人知道森民是否在意。
+  - target: radix_specula
+    type: physical
+    direction: 東南方
+    description: >
+      拉迪克斯守望修道院是阿爾博塔的補給與指揮上級，兩地之間以狹窄林間小徑相連，
+      快馬約兩個時辰可達。  # inferred: true
+  - target: terminus_hamlet
+    type: physical
+    direction: 東南方低處
+    description: >
+      特爾米努斯邊境村位於阿爾博塔東南方的谷地中，從塔頂可遠遠望見村莊的炊煙。  # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 巨樹殘骸基座（Truncus Arboris）
+    location: 瞭望塔主體結構
+    description: >
+      直徑超過十五公尺的巨樹殘幹基座，內部已被蟻蝕與真菌掏空形成天然豎井。
+      石砌增補結構圍繞殘幹而建，構成瞭望塔的主體。
+      牆壁上清晰可見的年輪紋理據信超過三千年，
+      滿月之夜會發出微弱的淡金色光芒——駐軍稱之為「樹的記憶」，軍士長稱之為「礦物磷光」。
+  - item: resource
+    name: 頂層觀測台
+    location: 巨樹殘骸頂端石砌結構
+    guardian: 駐軍哨兵
+    description: >
+      以隕鐵加固的石砌觀測台，設有四面瞭望窗與一台老舊的單筒望遠鏡。
+      這是帝國西南邊境最高的觀測點，天氣晴朗時可遠眺世界樹森林結界邊緣的樹冠輪廓。
+      但大多數時候，濃霧與森林方向的低雲令視野不足一里。  # inferred: true
+  - item: npc
+    name: 修士兼軍士長加百列·樹輪（Gabriel Annulus）
+    location: 巨樹殘骸空洞底部指揮室
+    description: >
+      四十八歲的前修道院園丁，因在一次爭執中打傷同僚而被調任至阿爾博塔已有八年。
+      他是駐軍中唯一親眼見過「銀色光點在霧中移動」的人，
+      但他在正式報告中將其記錄為「狐狸眼睛反光」。
+      他開始相信巨樹殘骸仍有某種生命，並在私下對其低聲祈禱——不是向阿薩，而是向「樹本身」。  # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 瞭望塔
+  - 邊境
+  - 軍事
+  - 席爾瓦因邊境領
+  - 世界樹
+  - 巨樹殘骸
+  - 森民隔離
+  - inferred: true

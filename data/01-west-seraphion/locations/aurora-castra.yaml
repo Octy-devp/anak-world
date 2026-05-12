@@ -1,0 +1,153 @@
+# ── 身份錨定（必填）──
+id: aurora_castra
+name: 奧羅拉堡
+layer: settlement
+region: 東部邊境
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  奧羅拉堡（Aurora Castra，意為「黎明要塞」）是東境邊防公國的首都，
+  坐落於塞拉菲昂神聖帝國東部邊境的石砌要塞群核心。
+  這座要塞由灰色花崗岩與隕鐵加固的城牆構成，最初建於第610年前後，
+  作為艾森瓦爾二世時期向東擴張的軍事前哨，後因魯普圖斯隘口的戰略價值而逐漸擴建為公爵駐地。
+
+  到了第825年，奧羅拉堡已成為監控凱撒里克帝國動向的前線指揮所。
+  要塞高塔上終年燃燒著烽火，一旦東方出現大規模軍隊調動，
+  煙信可在半日內傳至維特魯斯。
+  公爵家族「馮·奧斯特馬克」（von Ostmark）世代鎮守此地，
+  但他們並非選帝侯，在帝國議會中僅有列席權而無投票權。
+
+  要塞內部實行嚴格的軍事化管理制度：平民與商隊只能在外圍集市活動，
+  核心堡壘區僅限軍事人員與公爵家臣進入。
+  小冰期令東部邊境的冬季越發漫長，糧食補給時常短缺，
+  要塞守軍偶爾需要向過境商隊徵收「過冬稅」。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 烽火台燃燒松脂與狼糞的刺鼻濃煙
+    - 石砌城牆縫隙中滲出的潮濕霉味
+    - 軍械庫中亞麻籽油與隕鐵保養劑的氣息  # inferred: true
+    - 外圍集市上烤餅與醃肉的油膩香氣  # inferred: true
+    - 冬雪將至時凜冽的東風帶來的乾冷塵土  # inferred: true
+  light: >
+    黎明時分要塞高塔迎向東方第一線曙光，灰色石牆被染成淡金色（「奧羅拉」得名由來）；
+    正午僅有箭窗與瞭望孔透入狹窄光柱；
+    夜間依賴烽火、油脂火把與少量隕鐵燈（散發微弱的藍白光）照明。  # inferred: true
+  temperature: >
+    石砌堡壘內部終年陰冷，夏季短暫涼爽，冬季嚴寒徹骨；
+    小冰期令最近十年的冬季延長了將近一個月，守軍常在城牆上結霜。  # inferred: true
+  sound:
+    - 晨號與換崗時的銅號聲
+    - 風穿過箭窗與城垛的嗚咽迴盪
+    - 遠方怒嘯山脈東坡傳來的隱隶風嘯
+    - 外圍集市商隊駝鈴與討價還價的喧囂  # inferred: true
+    - 鐵匠鋪修補盔甲與矛頭的叮噹節奏  # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 東境邊防公爵馮·奧斯特馬克家族  # inferred: true
+  access_level: restricted
+  danger_level: high
+  religion: 普世教會西派（創世主阿薩）
+  population: 3200  # 要塞守軍、軍眷與外圍集市居民合計；inferred: true
+  settlement_type: fortress
+  wonders: []
+
+# ── 關係即通道（connections）──
+connections:
+  - target: the_howling_peaks
+    type: physical
+    direction: 東方近處
+    description: >
+      怒嘯山脈西坡緩坡向下延伸，奧羅拉堡坐落於山脈西麓最後一道丘陵之上，
+      是監控東坡凱撒里克動向的最佳位置。
+  - target: ruptus_pass
+    type: physical
+    direction: 東方遠處
+    description: >
+      魯普圖斯隘口是怒嘯山脈中唯一的東西通道，奧羅拉堡承擔隘口以南的防禦壓力，
+      與隘口西端的邊境稅站保持信鴿聯絡。  # inferred: true
+  - target: specula_ruptus
+    type: physical
+    direction: 東北方向
+    description: >
+      斯佩庫拉魯普圖斯哨塔是奧羅拉堡的前哨據點，兩地之間有修繕良好的軍用驛道相連，
+      快馬半日可達。  # inferred: true
+  - target: via_mercatorum
+    type: physical
+    direction: 南方
+    description: >
+      維亞默卡托魯姆商道村位於奧羅拉堡南側的商隊必經之路上，
+      公爵的「過冬稅」主要徵收對象即為途經此村的東西商隊。  # inferred: true
+  - target: twin_gates
+    type: conceptual
+    direction: 西方遠處
+    description: >
+      五大特別市聯盟之一的雙子門市是奧羅拉堡糧食與隕鐵補給的主要來源，
+      但第825年的議會癱瘓令這條補給線變得極不穩定。  # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 黎明高塔（Turris Aurora）
+    location: 要塞核心堡壘中央
+    description: >
+      奧羅拉堡最高的瞭望塔，高七層，頂層設有終年不熄的烽火台。
+      塔頂可俯瞰東方凱撒里克平原的遼闊地平線，天氣晴朗時甚至能辨識東方邊境的煙塵。
+      「奧羅拉」之名源於黎明時分石塔被東方曙光染成金色的壯觀景象。
+  - item: district
+    name: 外圍集市（Forum Exterior）
+    location: 要塞城牆外側的環形聚落
+    description: >
+      商隊、農民與隨軍工匠的混居區。這裡有客棧、馬廄、鐵匠鋪與臨時糧倉，
+      但無永久建築許可——公爵隨時可以下令焚毀外圍集市以清空射界。
+      集市居民活在「隨時可能被燒」的陰影中，卻因商路利益而無法離開。
+  - item: npc
+    name: 東境邊防公爵阿爾布雷希特·馮·奧斯特馬克
+    location: 黎明高塔下的公爵廳
+    description: >
+      第825年的東境邊防公爵，五十餘歲，左臂在第787年的一次凱撒里克騎兵襲擾中受傷致残。
+      他長期不滿於帝國議會對東部邊境的忽視，多次請求維特魯斯增撥軍餉而未果。
+      據傳他私下與凱撒里克的某些邊境伯爵保持書信往來，以確保雙方不會因誤判而開戰。  # inferred: true
+  - item: resource
+    name: 東境烽火網絡
+    location: 以奧羅拉堡為中心的丘陵線上
+    guardian: 麥穗軍團東境分隊
+    description: >
+      三座輔助烽火台與奧羅拉堡主塔構成預警網絡，可在半日內將東方軍情傳至維特魯斯。
+      維護這套網絡需要大量乾柴、狼糞與松脂，是東境邊防公國最大的固定開支。  # inferred: true
+
+# ── 歷史事件（events）──
+events:
+  - id: aurora_castra_founding
+    year: 610
+    name: 奧羅拉堡初建
+    description: >
+      艾森瓦爾二世時期，為向東擴張影響力而修建的軍事前哨。
+      最初的建築僅有一座木製瞭望塔與一圈土牆。  # inferred: true
+  - id: eastmark_duchy_established
+    year: 712
+    name: 東境邊防公國設立
+    description: >
+      教廷正式承認馮·奧斯特馬克家族對東部邊境的世襲防禦權，
+      奧羅拉堡從軍事前哨升格為公爵駐地。  # inferred: true
+  - id: caesaric_border_skirmish_787
+    year: 787
+    name: 第787年東境騎兵衝突
+    description: >
+      凱撒里克帝國邊境騎兵越過魯普圖斯隘口以南的未定邊界，襲擾奧羅拉堡外圍集市。
+      東境邊防公爵阿爾布雷希特的父親在戰鬥中陣亡，公爵本人左臂致残。  # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 要塞
+  - 邊境
+  - 軍事
+  - 公爵領
+  - 凱撒里克壓力
+  - 烽火
+  - 東境邊防公國
+  - inferred: true

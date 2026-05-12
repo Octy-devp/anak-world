@@ -1,0 +1,110 @@
+# ── 身份錨定（必填）──
+id: corallium_cove
+name: 科拉利烏姆珊瑚灣
+layer: settlement
+region: 莫爾根王國境內
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  科拉利烏姆珊瑚灣位於莫爾根王國南方海岸一處隱蔽的小海灣，
+  與珍珠灣漁村僅隔一道低矮的礁岩岬角。
+  這裡的淺海遍布色彩斑斕的珊瑚礁，潮間帶的礁池中盛產珍珠貝與稀有紅珊瑚，
+  是莫爾根王國海產珍貿易鏈條上不起眼卻不可或缺的一環。
+
+  灣內居民不足千人，多為潛水採珠人與珊瑚雕琢工匠，
+  他們以驚人的肺活量與對潮汐規律的精準掌握著稱。
+  由於珊瑚灣規模太小，聖焰私掠艦隊僅在此設有一名稅吏與兩名衛兵，
+  徵稅方式也比珍珠灣寬鬆——這使得珊瑚灣成為漁民與走私者
+  私下交易的灰色地帶，利貝塔尼亞金幣在此悄然流通。 # inferred: true
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 退潮後礁池中海藻與珊瑚的濃烈鹹腥
+    - 珍珠貝肉曬乾後的淡淡鈣質甜香 # inferred: true
+    - 珊瑚雕琢工坊中研磨粉塵的細膩礦物味 # inferred: true
+    - 走私者暗中交易時點燃的異國香料菸草氣息 # inferred: true
+  light: >
+    正午陽光穿透淺海，將珊瑚礁折射為晃動的紅橙與碧藍色斑紋，投射於白沙海底；
+    黃昏時分海水呈現深邃的紫羅蘭色，與天際的橘紅暮光交融；
+    夜間僅有採珠人頭戴的油脂燈籠在漆黑水面上飄浮，如螢火蟲群游弋於海灣。 # inferred: true
+  temperature: >
+    海風終年溫和，夏季涼爽，冬季罕見霜凍；
+    但潛水採珠人長時間浸泡於海水中，體溫流失迅速，
+    上岸後需以烈酒與篝火迅速恢復體溫，關節風濕是此地常見的職業病。 # inferred: true
+  sound:
+    - 潮汐湧入礁池的規律嘩啦聲與氣泡破裂的細響 # inferred: true
+    - 潛水採珠人浮出水面時的換氣喘息與沉重的呼吸節奏 # inferred: true
+    - 珊瑚雕琢工坊中金屬鑿刀與砂輪的尖銳摩擦聲 # inferred: true
+    - 夜間走私小船划槳的輕微水聲與壓低的交易私語 # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 莫爾根王國（聖焰私掠艦隊稅吏） # inferred: true
+  access_level: public
+  danger_level: medium
+  religion: 普世教會西派（混雜海商傳統與潮汐信仰） # inferred: true
+  population: 800  # 採珠人、雕琢工匠與家眷約七百至九百人；inferred: true
+  settlement_type: village
+  wonders: []
+
+# ── 關係即通道（connections）──
+connections:
+  - target: pearl_bay_village
+    type: physical
+    direction: 東方近處
+    description: >
+      與珍珠灣漁村僅隔一道低矮礁岩岬角，步行約一刻鐘可達，
+      兩地漁民時常互通物資，珊瑚灣的珍稀紅珊瑚與珍珠灣的大宗牡蠣形成互補。 # inferred: true
+  - target: palace_of_tidal_song
+    type: conceptual
+    direction: 宗主
+    description: >
+      定期向潮音宮繳納珊瑚與珍珠稅賦，但因規模較小，
+      聖焰私掠艦隊的盤剝程度遠低於珍珠灣漁村。 # inferred: true
+  - target: wind_isles
+    type: conceptual
+    direction: 南方海域
+    description: >
+      傳聞有利貝塔尼亞走私小船利用夜間潮汐繞過莫爾根巡邏線，
+      在此以金幣換取紅珊瑚與上等珍珠，再運往風息群島高價出售。 # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: resource
+    name: 紅珊瑚礁床
+    location: 海灣淺海與礁池
+    description: >
+      色彩斑斕的紅珊瑚群聚生於淺海礁石之上，是科拉利烏姆最珍貴的資源。
+      珊瑚枝經雕琢後可作為教廷樞機的權杖鑲飾與維特魯斯貴族的珠寶原料。 # inferred: true
+  - item: resource
+    name: 潮間帶珍珠貝
+    location: 灣內礁池
+    description: >
+      礁池中密集分布的小型珍珠貝，產出量雖不及珍珠灣，
+      但顆粒圓潤、色澤偏粉紅，在利貝塔尼亞黑市上頗受歡迎。 # inferred: true
+  - item: landmark
+    name: 珊瑚雕琢工坊
+    location: 海灣北岸避風處
+    description: >
+      幾座以礁岩與廢船板搭建的簡陋工坊，工匠們以金屬鑿刀與砂輪
+      將紅珊瑚雕琢成珠寶與宗教飾品，粉塵使工匠的手指終年泛紅。 # inferred: true
+  - item: npc
+    name: 老採珠人納西索
+    location: 礁岩岬角潛水點
+    description: >
+      年逾五十的潛水採珠人，據稱能在水下閉氣超過四分鐘，
+      熟知每一處礁池的潮汐規律與珍珠貝分布。他暗中為利貝塔尼亞走私者引路，
+      換取異國香料與不受教廷監控的金幣。 # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 村莊
+  - 珊瑚灣
+  - 莫爾根王國
+  - 採珠
+  - 紅珊瑚
+  - 南方海岸
+  - 走私

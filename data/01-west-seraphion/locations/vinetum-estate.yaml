@@ -1,0 +1,95 @@
+# ── 身份錨定（必填）──
+id: vinetum_estate
+name: 維內圖姆葡萄園莊園
+layer: settlement
+region: 格蘭迪斯大公國境內
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  維內圖姆葡萄園莊園是格蘭迪斯大公國境內一處旁支貴族的葡萄酒產地，
+  位於中央沖積平原西緣的緩坡台地上。這裡的土壤富含礫石與石灰質，
+  適合釀造供應維特魯斯貴族餐桌的高酸度白葡萄酒。
+
+  莊園由一座低矮的石砌主屋、三座地下酒窖與連綿數里的棚架葡萄園組成。
+  農奴與自由佃農在季節交替時修剪藤枝、採摘果實，
+  釀成的酒液以橡木桶封裝，經驛道運往金穗堡與維特魯斯。
+  格蘭迪斯大公奧托對葡萄酒稅抽成甚重，但允許莊園主保留部分佳釀
+  用於賄賂教廷樞機與維特魯斯宮廷侍從。 # inferred: true
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 成熟葡萄發酵後的甜酸果香
+    - 橡木桶內壁烘烤過的焦糖與香草氣息 # inferred: true
+    - 石灰質土壤經日曬後的乾燥礦物味 # inferred: true
+    - 秋季葡萄藤落葉腐熟後的泥土霉香 # inferred: true
+  light: >
+    清晨薄霧中，成排的葡萄藤在東方天際投下長長的陰影；
+    正午陽光穿透棚架葉隙，在地面灑落斑駁的綠金色光點；
+    黃昏時主屋石牆被夕照染成蜂蜜色，酒窖中僅有油脂燈的昏黃搖曳。 # inferred: true
+  temperature: >
+    夏季葡萄園在日曬下燥熱，但主屋厚牆內保持涼爽；
+    冬季北風自平原長驅直入，農奴棚屋靠葡萄藤枝燃燒取暖；
+    地下酒窖終年維持陰涼恆溫，是小冰期難得的穩定空間。 # inferred: true
+  sound:
+    - 秋風穿過葡萄藤架的沙沙細響 # inferred: true
+    - 榨酒坊木輪與石槽碾壓葡萄的沉重節奏 # inferred: true
+    - 莊園主以拉丁文朗讀釀酒帳冊的單調聲音 # inferred: true
+    - 遠處驛道牛車駛過時的車輪吱嘎與鞭響 # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 格蘭迪斯旁支貴族（莊園主） # inferred: true
+  access_level: restricted
+  danger_level: low
+  religion: 普世教會西派（創世主阿薩）
+  population: 600  # 農奴、佃農與釀酒工匠約五百至七百人；inferred: true
+  settlement_type: village
+  wonders: []
+
+# ── 關係即通道（connections）──
+connections:
+  - target: golden_spire_castle
+    type: physical
+    direction: 東北方
+    description: >
+      經中央平原驛道向東北方約一日半馬程可達金穗堡，
+      莊園每年需向格蘭迪斯大公繳納固定配額的葡萄酒作為封建賦稅。 # inferred: true
+  - target: the_flood_plain
+    type: physical
+    direction: 坐落於上
+    description: >
+      莊園位於中央沖積平原西緣的緩坡台地，
+      土壤由傑米努斯河古河道沖積的礫石與石灰質構成。 # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 石砌主屋與地下酒窖
+    location: 莊園中央高地
+    description: >
+      低矮的石砌主屋附帶三座拱頂地下酒窖，存放著歷年釀造的橡木桶葡萄酒。
+      部分陳年佳釀專供維特魯斯宮廷與教廷樞機，是莊園主政治周旋的籌碼。 # inferred: true
+  - item: resource
+    name: 礫石灰質葡萄園
+    location: 莊園周邊緩坡
+    description: >
+      連綿數里的棚架葡萄園，土壤富含礫石與石灰質，
+      出產的高酸度白葡萄酒在維特魯斯貴族間頗受青睞。 # inferred: true
+  - item: npc
+    name: 莊園主維內圖姆男爵
+    location: 石砌主屋
+    description: >
+      格蘭迪斯大公國的旁支小貴族，以葡萄酒莊園的產出維繫家族存續。
+      擅長在格蘭迪斯的重稅與維特魯斯宮廷的索賄之間周旋求生。 # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 村莊
+  - 葡萄酒莊園
+  - 格蘭迪斯大公國
+  - 中央平原
+  - 農奴聚落
+  - 貴族旁支

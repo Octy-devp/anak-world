@@ -1,0 +1,117 @@
+# ── 身份錨定（必填）──
+id: via_mercatorum
+name: 維亞默卡托魯姆商道村
+layer: settlement
+region: 東部邊境
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  維亞默卡托魯姆（Via Mercatorum，意為「商人之路」）是東西商隊穿越塞拉菲昂東部邊境時必經的一座小村，
+  坐落於傑米努斯河北岸的緩坡之上，商道沿著河岸向東延伸至魯普圖斯隘口。
+  這座村莊沒有城牆，也沒有領主城堡，僅有數十座低矮的木屋、一座兼作禮拜堂的客棧，
+  以及一片供商隊紮營的河灘空地。
+
+  村莊的經濟完全依賴過境貿易：東方凱撒里克的隕鐵、東方平原的羊毛與皮革經此西運，
+  西方的糧食、鹽與青銅器具經此東運。
+  客棧老闆兼任兌換商與情報販子，馬廄師傅同時是蹄鐵匠與獸醫。
+  每年的商隊旺季（春末至秋初），村莊人口會從不足兩百人暴增至上千。
+
+  第825年，小冰期與聖券貶值雙重打擊令東西貿易量銳減，
+  維亞默卡托魯姆的客棧常常空無一人。
+  奧羅拉堡的「過冬稅」愈發沉重，村民們開始私下討論是否要向南遷徙，
+  前往雙子門市或焰紋市尋求生計。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 馬廄中乾草與牲畜糞便的混合氣味
+    - 客棧廚房烤餅與燉肉的香料香氣  # inferred: true
+    - 傑米努斯河河岸的濕泥與蘆葦氣息
+    - 商隊帳篷中羊毛、皮革與防腐草藥的悶臭  # inferred: true
+    - 淡季時爐火熄滅後木屋發霉的陳腐味  # inferred: true
+  light: >
+    白天是開闊的河岸天光，沒有高建築遮擋；
+    黃昏時商隊營火與客棧窗燈在河岸邊星羅棋布；
+    夜間僅有客棧與少數常駐戶的油燈，其餘一片漆黑。  # inferred: true
+  temperature: >
+    河岸地帶夏季悶熱潮濕，蚊蟲成群；
+    冬季寒風沿河面長驅直入，木屋難以抵擋，
+    村民常在客棧大堂圍爐過夜。  # inferred: true
+  sound:
+    - 商隊駝鈴與馬蹄的節奏聲（旺季）
+    - 傑米努斯河的緩流低語
+    - 客棧中多語言交織的喧嘩與討價還價
+    - 淡季時風穿過空蕩馬廄的吱嘎與呼嘯  # inferred: true
+    - 夜間河岸蛙鳴與蟲唱（夏季）  # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 東境邊防公國（徵稅權）/ 地方自治（日常）  # inferred: true
+  access_level: public
+  danger_level: low
+  religion: 普世教會西派（創世主阿薩）
+  population: 180  # 常駐人口，旺季可達千人以上；inferred: true
+  settlement_type: village
+  wonders: []
+
+# ── 關係即通道（connections）──
+connections:
+  - target: flumen_geminus
+    type: physical
+    direction: 南側緊鄰
+    description: >
+      傑米努斯河北岸的緩坡是村莊的基址，商道沿河岸向東延伸。
+      河水為村莊提供飲水與牲畜飲料，也為商隊提供了最後的補水點之一。
+  - target: ruptus_pass
+    type: physical
+    direction: 東方遠處
+    description: >
+      商道沿傑米努斯河向東延伸至魯普圖斯隘口，那是東西陸路與水路的唯一通道，
+      也是商隊必須繳納邊境稅的關卡。  # inferred: true
+  - target: aurora_castra
+    type: physical
+    direction: 北方
+    description: >
+      奧羅拉堡位於村莊北方丘陵之上，公爵的徵稅官每季會率巡邏隊前來商道村徵收「過冬稅」。  # inferred: true
+  - target: twin_gates
+    type: conceptual
+    direction: 西方遠處
+    description: >
+      雙子門市是西方最近的較大城鎮，許多商隊在此裝卸貨物、僱傭護衛。
+      維亞默卡托魯姆的客棧老闆與雙子門市的商人行會保持著鬆散的情報交換。  # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 三幣客棧（Trivium Inn）
+    location: 村莊中央十字路口
+    description: >
+      村莊唯一的客棧，兼作禮拜堂、兌換所與情報站。
+      其名「三幣」源於客棧門口掛著的三種貨幣——塞拉菲昂聖券、凱撒里克金幣與峽谷行會信用籤——
+      象徵這裡是東西貿易的交匯點。
+      二樓設有一間小型禮拜堂，供奉創世主阿薩與旅行守護聖人。
+  - item: npc
+    name: 客棧老闆瑪格達·三幣
+    location: 三幣客棧
+    description: >
+      六十餘歲的寡婦，據稱年輕時曾隨商隊東行至凱撒里克帝國深處。
+      她精通三種方言，能辨識大部分貨幣的真偽，也掌握著東西商路最新的價格與動亂情報。
+      奧羅拉堡的公爵徵稅官與她都保持著一種微妙的互相利用關係。  # inferred: true
+  - item: resource
+    name: 河灘營地
+    location: 傑米努斯河北岸河灘
+    description: >
+      一片經過人工平整的河灘空地，可同時容納十餘支商隊紮營。
+      旺季時這裡帳篷林立、篝火通宵，淡季時則長滿蘆葦與野莓。  # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 村莊
+  - 商道
+  - 邊境
+  - 客棧
+  - 東西貿易
+  - 東境邊防公國
+  - inferred: true

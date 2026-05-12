@@ -1,0 +1,98 @@
+# ── 身份錨定（必填）──
+id: isgrav
+name: 伊斯格拉夫冰墓
+layer: settlement
+region: 西爾伯弗羅斯特邊境
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  伊斯格拉夫冰墓是西爾伯弗羅斯特邊境凍土帶上無數「冰墓」之一——
+  一個被白霜寒法師瞬間冰封的廢棄村落，其居民與建築在極寒中凝固為永恆的邊界標記。
+
+  第805年小冰期回返後，百年戰爭的前線不斷南壓，博雷阿利斯與西爾伯弗羅斯特邊境的村莊頻遭白霜法師襲擊。
+  那些被瞬間冰封的村落成為了無聲的邊界標記，可耕地面積銳減，無數農民在睡夢中被凍成冰雕。
+  伊斯格拉夫便是這些冰墓中最靠近霜尖塔要塞的一座，其半透明的冰層下仍能辨識出茅屋的輪廓與凍結的人形。
+
+  西爾伯弗羅斯特的冰防役士兵在巡邏時必須穿越這片冰墓區，
+  那些凝固在冰層中的面孔成為了他們揮之不去的心理陰影。
+  伊薩克大公曾下令在冰墓周圍豎立隕鐵樁以阻擋寒法擴散，但收效甚微。
+  到了第825年，伊斯格拉夫已被視為凍土帶上的禁忌之地，
+  只有最絕望的逃難者或施塔爾傭兵聯盟的偵察兵會在暴風雪中暫時躲入冰窖遺跡。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 凍土與永凍層的無機冷冽氣息
+    - 冰層深處被封存數十年的陳年積雪壓縮空氣味
+    - 隕鐵樁在極寒中散發的乾燥金屬味 # inferred: true
+    - 冰窖遺跡中殘留的苔蘚與凍土霉味 # inferred: true
+  light: >
+    極北長夜的慘白微光穿透厚達數米的冰層，
+    使整座村落呈現詭異的半透明藍白色澤；
+    月光下，冰層內的凍結人形投射出模糊而扭曲的剪影。 # inferred: true
+  temperature: >
+    終年極寒，室外溫度常在零下三十五度以下；
+    冰層內部的溫度更低，觸摸裸露的冰面可在數秒內造成凍傷。 # inferred: true
+  sound:
+    - 極北永恆風嘯穿過冰層與隕鐵樁的尖嘯
+    - 冰層深處因溫度變化而產生的緩慢擠壓與爆裂細響 # inferred: true
+    - 冰防役巡邏隊遠處的鐵靴踏雪聲 # inferred: true
+    - 風雪中偶爾傳來的、難以辨識來源的冰裂回音 # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 無（廢棄地） # inferred: true
+  access_level: public
+  danger_level: deadly
+  religion: 無
+  population: 0
+  settlement_type: village
+  wonders: []
+
+# ── 關係即通道（connections）──
+connections:
+  - target: frostspire
+    type: physical
+    direction: 南方
+    hidden: false
+    description: >
+      沿凍土巡邏道向南約一日行程可達霜尖塔要塞；
+      這條道路亦是冰防役補給線與巡邏路線，但冬季常因暴風雪中斷。 # inferred: true
+  - target: northern_mountains
+    type: conceptual
+    direction: 北方
+    hidden: false
+    description: >
+      約恩維德山脈橫亙極北，伊斯格拉夫冰墓位於山脈南麓凍土帶的最前緣，
+      是帝國與白霜勢力之間無聲的界碑。 # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 冰封村落遺跡
+    location: 冰墓中央
+    guardian: 無
+    description: >
+      數十座茅屋與一座小禮拜堂被完整的冰層封存在內，
+      建築輪廓清晰可辨，居民凍結的姿態維持著最後一刻的驚恐或沉睡。
+      冰層表面的隕鐵樁環繞村落形成不完整的防護圈。
+  - item: landmark
+    name: 殘存冰窖入口
+    location: 村落廣場下方
+    guardian: 無
+    description: >
+      一座深達十米的地下冰窖部分入口尚未被冰層完全封死，
+      內部殘存少量陳年積雪與凍土磚結構。
+      偶有逃難者或傭兵在暴風雪中暫時躲入，但深處的寒法殘餘仍具危險性。 # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 廢棄村落
+  - 冰墓
+  - 邊境
+  - 凍土帶
+  - 白霜前線
+  - 西爾伯弗羅斯特
+  - 禁忌之地

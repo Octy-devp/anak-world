@@ -1,0 +1,118 @@
+# ── 身份錨定（必填）──
+id: frostborg
+name: 弗羅斯特堡
+layer: settlement
+region: 西爾伯弗羅斯特邊境
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  弗羅斯特堡是《霜戒法》頒布後由邊境村莊改造而成的地下冰窖軍事堡壘，
+  坐落於霜尖塔要塞東北方的凍土帶上，直接面對白霜的冰壁防線壓力。
+
+  第790年伊薩克大公頒布《霜戒法》後，邊境村莊全面軍事堡壘化，
+  地下挖掘深達十米的冰窖以躲避白霜法師的寒法攻擊。
+  弗羅斯特堡的原村民被編入軍事編制，男子服冰防役，女子編織防寒毛氈與熬製草藥。
+  堡壘以黑曜石與凍土磚砌成外牆，覆蓋冰層以增強防禦，
+  地下冰窖網絡儲存糧食、草藥與凍原苔蘚燃料，是北方生存的最後保障。
+
+  到了第825年，弗羅斯特堡已成為西爾伯弗羅斯特邊境防線的重要節點，
+  但帝國議會癱瘓後的軍費與糧食斷絕使其物資日益枯竭。
+  施塔爾傭兵聯盟的一支小隊駐紮在堡壘外圍的廢棄哨塔中，
+  實際上分享著堡壘的補給線與巡邏範圍，使伊薩克的命令難以徹底執行。 # inferred: true
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 深埋冰窖中陳年積雪的壓縮空氣味
+    - 凍土磚與黑曜石在極寒中的無機冷冽氣息
+    - 防寒毛氈的羊毛脂與動物油脂氣味 # inferred: true
+    - 熬製草藥的苦澀根莖氣息 # inferred: true
+    - 傭兵營地中劣質烈酒與煙草的酸腐氣味 # inferred: true
+  light: >
+    堡壘地表僅有極北長夜的慘白微光與冰壁反射的冷藍；
+    地下冰窖深處僅有動物油脂燈的搖曳昏黃；
+    瞭望塔上的烽火台在警戒時投射出斷續的橘紅光柱。 # inferred: true
+  temperature: >
+    終年極寒，室外溫度常在零下三十度以下；
+    冰窖深處因地熱溝渠維持穩定低溫，堡壘內靠燃燒凍原苔蘚與動物糞便勉強維持生存溫度。 # inferred: true
+  sound:
+    - 極北永恆風嘯穿過瞭望塔與射擊孔的尖嘯
+    - 冰防役士兵在城牆上巡邏的鐵靴踏雪聲
+    - 地下冰窖深處冰層緩慢擠壓的呻吟 # inferred: true
+    - 傭兵營地中的低聲咒罵與骰子滾動 # inferred: true
+    - 遠方冰墓區偶爾傳來的冰裂細響 # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 西爾伯弗羅斯特邊疆大公國（伊薩克·西爾伯弗羅斯特）
+  access_level: restricted
+  danger_level: high
+  religion: 普世教會西派（創世主阿薩，實質為軍事化地方信仰）
+  population: 400  # inferred: true
+  settlement_type: fortress
+  wonders: []
+
+# ── 關係即通道（connections）──
+connections:
+  - target: frostspire
+    type: physical
+    direction: 西南
+    hidden: false
+    description: >
+      沿凍土巡邏道向西南約一日半行程可達霜尖塔要塞；
+      弗羅斯特堡的補給與命令傳遞皆依賴此通道，但冬季暴風雪時常中斷聯繫。 # inferred: true
+  - target: isgrav
+    type: conceptual
+    direction: 東北方
+    hidden: false
+    description: >
+      弗羅斯特堡與伊斯格拉夫冰墓之間的凍土帶是冰防役巡邏的核心區域，
+      士兵們每日往返於堡壘與冰墓之間，監視白霜動向。 # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 十米深冰窖網絡
+    location: 堡壘地下
+    guardian: 冰防役工兵隊
+    description: >
+      由《霜戒法》下令挖掘的地下冰窖網絡，深達十米，
+      以躲避白霜法師的寒法攻擊。
+      冰窖中儲存糧食、草藥與凍原苔蘚燃料，是弗羅斯特堡生存的最後保障。
+  - item: landmark
+    name: 黑曜石凍土堡牆
+    location: 堡壘外圍
+    guardian: 冰防役駐軍
+    description: >
+      以黑曜石與凍土磚砌成的堡壘外牆，表面覆蓋冰層以增強防禦。
+      牆上設有射擊孔與瞭望台，是抵禦白霜滲透的第一道防線。 # inferred: true
+  - item: npc
+    name: 弗羅斯特堡指揮官
+    location: 堡壘指揮廳
+    guardian: 冰防役禁衛軍
+    description: >
+      第825年在任的弗羅斯特堡軍事指揮官，負責執行《霜戒法》與冰防役調度。
+      在帝國議會癱瘓、物資斷絕的困境下，不得不與施塔爾傭兵聯盟妥協，
+      實質上淪為伊薩克大公與傭兵之間的緩衝人。 # inferred: true
+
+# ── 歷史事件（events）──
+events:
+  - id: frostborg_fortified
+    year: 790
+    name: 弗羅斯特堡軍事堡壘化
+    description: >
+      伊薩克大公頒布《霜戒法》後，弗羅斯特堡由邊境村莊改造為軍事堡壘，
+      村民轉為軍事編制，地下挖掘十米深冰窖以抵禦寒法攻擊。 # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 要塞
+  - 邊境堡壘
+  - 北方邊境
+  - 凍土帶
+  - 軍事化
+  - 冰窖
+  - 西爾伯弗羅斯特
+  - 白霜前線

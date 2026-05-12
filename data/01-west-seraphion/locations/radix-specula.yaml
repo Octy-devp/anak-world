@@ -1,0 +1,146 @@
+# ── 身份錨定（必填）──
+id: radix_specula
+name: 拉迪克斯守望修道院
+layer: settlement
+region: 西南邊境
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  拉迪克斯守望修道院（Radix Specula，意為「根之瞭望」）是席爾瓦因邊境領的首都，
+  坐落於塞拉菲昂神聖帝國西南邊境的一片古老橡樹林邊緣，與艾爾達拉世界樹森林的迷霧結界遙遙相對。
+  這座修道院由教廷直接任命的邊境修道院長管理，非選帝侯領地，
+  其核心使命只有一個：監控森民（席爾凡）的動向，並確保世界樹森林的結界不會向帝國領地擴張。
+
+  修道院的建築風格融合了塞拉菲昂的石砌修道院傳統與邊境實用主義：
+  外牆以灰色花崗岩築成，內部庭院種植著教廷認可的藥草與蔬菜；
+  最高建築是一座十二邊形的瞭望塔「根之眼」，塔頂設有晝夜輪值的修士哨兵。
+  修士們同時是神職人員與邊境哨兵，他們的祈禱書中夾雜著植物學筆記與森林觀測日誌。
+
+  第825年，席爾瓦因邊境領面臨前所未有的緊張：
+  世界樹森林的迷霧結界在過去十年間已緩慢擴張了數百公尺，
+  侵蝕了帝國邊境的幾塊農田與獵場。
+  修道院長向維特魯斯與教廷多次發出警告，但帝國議會的癱瘓令回應始終停留在紙面上。
+  修士們在祈禱與恐懼中等待——他們不知道森民是否正在結界深處注視著他們。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 修道院藥草園中薰衣草與鼠尾草的乾燥芳香
+    - 古老橡樹林飄來的腐殖土與樹皮氣息
+    - 石砌禮拜堂中陳年薰香與蜂蠟蠟燭的沉穩甜膩
+    - 邊境方向飄來的淡淡霧氣濕潤味（無味卻令人不安）  # inferred: true
+    - 修士們亞麻長袍上的皂角與陽光曝曬氣息  # inferred: true
+  light: >
+    修道院內部以彩色玻璃與蠟燭為主，光線昏黃而莊嚴；
+    「根之眼」瞭望塔頂則日夜需要保持對森林方向的觀測，
+    夜間修士們使用微弱的油燈，避免火光引起森林深處的注意。  # inferred: true
+  temperature: >
+    石砌建築冬暖夏涼，但西南邊境的冬季濕冷刺骨；
+    夏季森林方向的霧氣會帶來異常的涼意，
+    與世界樹結界附近的恆溫效應有關。  # inferred: true
+  sound:
+    - 修道院禮拜堂的定時鐘聲與低聲誦經
+    - 瞭望塔上風向標的吱嘎轉動
+    - 古老橡樹林邊緣的貓頭鷹叫聲與夜行動物窸窣
+    - 修士哨兵在塔頂記錄觀測時的羽毛筆刮紙聲  # inferred: true
+    - 森林深處偶爾傳來的不明低鳴（從未確認來源）  # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 普世教會西派教廷（邊境修道院長）  # inferred: true
+  access_level: restricted
+  danger_level: medium
+  religion: 普世教會西派（創世主阿薩）
+  population: 260  # 修士、見習修士與少量服役農奴；inferred: true
+  settlement_type: monastery
+  wonders: []
+
+# ── 關係即通道（connections）──
+connections:
+  - target: eldara_worldtree
+    type: conceptual
+    direction: 西方遠處
+    description: >
+      艾爾達拉世界樹森林位於修道院西方，濃厚的迷霧結界是肉眼可見的邊界。
+      修道院的核心使命是監控這片森林的動向，但修士們從未也越過結界——
+      所有試圖進入迷霧的人都再也沒有回來。
+  - target: terminus_hamlet
+    type: physical
+    direction: 南方
+    description: >
+      特爾米努斯邊境村是修道院轄下的農奴聚落，村民為修道院耕種田地、砍伐邊界木材，
+      並報告任何來自森林方向的異常跡象。  # inferred: true
+  - target: arbor_tower
+    type: physical
+    direction: 西北方向
+    description: >
+      阿爾博塔瞭望塔是修道院的前哨據點，兩地之間有一條狹窄的林間小徑相連，
+      快馬約兩個時辰可達。  # inferred: true
+  - target: west_seraphion
+    type: conceptual
+    direction: 東北方
+    description: >
+      修道院長的報告需經由維特魯斯教廷層層上遞，但第825年的議會癱瘓令這條行政通道幾乎失效。  # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 根之眼瞭望塔（Oculus Radix）
+    location: 修道院庭院中央
+    description: >
+      一座十二邊形石塔，高五層，是修道院最高的建築。
+      塔頂設有四面觀測窗，分別對準世界樹森林的四個方向。
+      修士哨兵每四個時辰輪換一次，記錄迷霧結界的顏色、厚度與任何可見的移動。
+      第825年的觀測日誌顯示，結界的淡金色光芒在滿月之夜會變得更加強烈。  # inferred: true
+  - item: district
+    name: 藥草園與農圃（Hortus Custodiae）
+    location: 修道院東側圍牆內
+    description: >
+      修士們自給自足的農業區，種植藥用植物、蔬菜與少量穀物。
+      園圃邊緣立有界碑，標示「此處以東為帝國領地，以西為未知之境」。
+      偶有森林方向的霧氣飄入園圃，接觸過霧氣的植物生長速度會短暫加快——
+      這一現象被修道院長嚴令禁止記錄於任何可外流文件中。  # inferred: true
+  - item: npc
+    name: 邊境修道院長塞拉菲姆·橡木（Seraphim Quercus）
+    location: 修道院長室與根之眼瞭望塔
+    description: >
+      第825年的拉迪克斯守望修道院院長，六十二歲，曾在維特魯斯聖鑰院修習神學與植物學。
+      他是過去三十年間唯一持續向教廷警告結界擴張的人，但他的報告被歸檔為「邊境神經官能症」。
+      他私下相信森民並非神話，而是真實存在的高智慧種族，但從未在禮拜堂中公開表達這一觀點。  # inferred: true
+  - item: document
+    name: 《邊境觀測日誌》（Limes Diarium）
+    location: 根之眼瞭望塔檔案室
+    guardian: 邊境修道院長
+    description: >
+      自第795年起持續記錄的森林邊境觀測檔案，內容包括迷霧結界的變化、
+      森林方向的不明聲響、以及任何疑似森民活動的痕跡。
+      日誌中多次提到「銀色光點於霧中閃爍」、「樹根 overnight 移位」等無法解釋的現象，
+      但所有記錄均以「疑似自然現象」結尾，以符合教廷的審查標準。  # inferred: true
+
+# ── 歷史事件（events）──
+events:
+  - id: radix_specula_founding
+    year: 582
+    name: 拉迪克斯守望修道院建立
+    description: >
+      普世教會西派在西南邊境建立專職監控修道院，以應對森民大隱遁後的邊境權力真空。
+      修道院長由教廷直接任命，不受地方領主節制。  # inferred: true
+  - id: mist_expansion_815
+    year: 815
+    name: 第815年迷霧擴張事件
+    description: >
+      世界樹森林的迷霧結界在春季異常擴張，吞噬了修道院西方約三百公尺的三塊農田。
+      事後在擴張邊緣發現了奇異的水晶樹脂碎片，但教廷調查團抵達時碎片已經「遺失」。  # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 修道院
+  - 邊境
+  - 教廷
+  - 森民監控
+  - 席爾瓦因邊境領
+  - 迷霧結界
+  - 世界樹
+  - inferred: true

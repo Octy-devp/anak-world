@@ -1,0 +1,102 @@
+# ── 身份錨定（必填）──
+id: ruina_damni
+name: 魯伊納達姆遺跡村
+layer: settlement
+region: 格蘭迪斯大公國境內
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  魯伊納達姆遺跡村座落於中央沖積平原一處青銅時代古代堤壩遺跡的邊緣地帶，
+  與格蘭迪斯大公國的「堤壩遺跡哨站」僅隔半里之遙。
+  這裡的居民多為租種格蘭迪斯領地邊陲薄田的貧農、逃奴，
+  以及因戰亂與饑荒淪落至此的流民。
+
+  村莊以古代堤壩殘垣斷壁為天然屏障搭建棚屋，
+  地下水道的滲漏水為有限的農田提供勉強的灌溉。
+  由於過於靠近麥穗軍團哨站，村民時常遭受巡邏隊的盤查與勒索，
+  年輕男女偶有被強征為軍中雜役或領地莊園勞工。
+  這裡是格蘭迪斯大公國最貧困、最絕望的角落之一。 # inferred: true
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 古代堤壩石材風化後的鹼性塵土味
+    - 貧瘠土壤與腐熟糞肥的嗆鼻土腥 # inferred: true
+    - 地下水道滲漏處的潮濕霉味與沼氣 # inferred: true
+    - 貧民棚屋中劣質燃煤與陳年木柴的濃煙味 # inferred: true
+  light: >
+    白天陽光被堤壩殘垣切割成狹長的明暗條紋，棚屋深處終年昏暗；
+    夜間僅有少量油脂火把與簡陋灶火在斷壁間明滅，
+    哨站瞭望台的燈光從高處冷冷地俯視著村莊。 # inferred: true
+  temperature: >
+    夏季堤壩殘垣遮擋部分日曬，內部稍顯陰涼；
+    冬季濕冷從地下水道滲透而上，棚屋難以抵擋寒風；
+    石砌殘垣日溫變化緩慢，夜間釋放蓄積的寒意，使村莊比周邊平原更冷。 # inferred: true
+  sound:
+    - 地下水道滲漏水滴落入積水潭的規律滴答聲 # inferred: true
+    - 遠處堤壩遺跡哨站麥穗軍團巡邏的腳步聲與甲冑碰撞聲
+    - 貧農在薄田中勞作的沉悶鋤地聲與偶爾的咳嗽 # inferred: true
+    - 夜風穿過堤壩殘垣縫隙的嗚咽與嬰孩夜啼的淒厲 # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 格蘭迪斯大公國（實質無治理，僅有麥穗軍團盤剝） # inferred: true
+  access_level: public
+  danger_level: high
+  religion: 普世教會西派（創世主阿薩，但教廷救濟極少抵達） # inferred: true
+  population: 400  # 貧農、流民與逃奴約三百至五百人；inferred: true
+  settlement_type: village
+  wonders: []
+
+# ── 關係即通道（connections）──
+connections:
+  - target: dam_ruins_outpost
+    type: physical
+    direction: 東方近處
+    description: >
+      與格蘭迪斯大公的「堤壩遺跡哨站」僅隔半里之遙，
+      村民每日在麥穗軍團的監視下勞作，承受盤查、勒索與強征。 # inferred: true
+  - target: the_flood_plain
+    type: physical
+    direction: 坐落於上
+    description: >
+      遺跡村位於中央沖積平原邊陲，土壤貧瘠，
+      僅靠古代堤壩地下水道的滲漏水維持有限灌溉。 # inferred: true
+  - target: golden_spire_castle
+    type: conceptual
+    direction: 宗主
+    description: >
+      名義上隸屬格蘭迪斯大公國，但奧托大公從未將救濟或保護延伸至這片邊陲遺跡帶，
+      遺跡村的存在僅是為堤壩哨站提供廉價勞力與情報來源。 # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 殘垣棚屋聚落
+    location: 堤壩遺跡西緣陰影處
+    description: >
+      以古代堤壩殘垣斷壁為天然屏障搭建的簡陋棚屋群，
+      屋頂覆蓋枯草與廢木板，無法抵禦嚴冬與暴雨。 # inferred: true
+  - item: landmark
+    name: 滲漏農田
+    location: 地下水道出口附近
+    description: >
+      靠古代堤壩地下水道滲漏水勉強灌溉的狹長農田，土質貧瘠，
+      產量僅夠村民半數口糧，其餘需以打零工或偷獵補充。 # inferred: true
+  - item: npc
+    name: 逃奴婦人瑪爾塔
+    location: 棚屋聚落北端
+    description: >
+      三年前從金穗堡領地莊園逃出的農奴婦人，在遺跡村藏匿至今。
+      她暗中為其他逃奴指引地下水道的隱蔽路徑，傳聞與堤壩哨站某位年輕哨兵有曖昧關係。 # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 村莊
+  - 貧民聚落
+  - 格蘭迪斯大公國
+  - 古代堤壩
+  - 逃奴
+  - 中央平原

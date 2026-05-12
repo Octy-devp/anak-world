@@ -1,0 +1,105 @@
+# ── 身份錨定（必填）──
+id: vaktorn
+name: 瓦克托恩哨站
+layer: settlement
+region: 西爾伯弗羅斯特邊境
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  瓦克托恩哨站是西爾伯弗羅斯特邊境最前線的軍事哨站，
+  坐落於約恩維德山脈南麓的凍土高地上，是監控白霜動向與寒法師活動的第一道肉眼防線。
+
+  隨著第805年小冰期回返與百年戰爭的低強度衝突持續，白霜的滲透與霜生襲擊成為北方邊境的日常威脅。
+  瓦克托恩哨站由霜尖塔要塞直接管轄，駐紮著專門獵殺與監視寒法師的精銳小隊。
+  哨站的核心是一座以隕鐵與黑曜石加固的瞭望塔，塔頂設有終年不熄的烽火台與寒法探測儀——
+  一種以隕鐵共振頻率感應極寒魔力波動的粗糙裝置。 # inferred: true
+
+  到了第825年，瓦克托恩哨站的駐軍已縮減至不足百人，
+  補給線因帝國議會癱瘓而時常中斷，施塔爾傭兵聯盟的偵察兵偶爾會分享情報以換取避風的營地。
+  哨站周圍的凍土帶上散落著數座小型冰墓，提醒著駐軍他們所面對的敵人擁有瞬間毀滅一座村落的力量。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 凍土與永凍層的無機冷冽氣息
+    - 隕鐵樁與黑曜石在極寒中的乾燥金屬味 # inferred: true
+    - 動物油脂燈燃燒時的腥膻煙氣 # inferred: true
+    - 寒法師獵人隨身藥囊中驅寒草藥的辛辣氣味 # inferred: true
+  light: >
+    極北長夜的慘白微光與冰壁反射的冷藍佔據天空；
+    瞭望塔頂的烽火台在警戒狀態下投射出刺目的橘紅光柱；
+    寒法探測儀的隕鐵核心在感應到魔力波動時發出微弱的藍白色磷光。 # inferred: true
+  temperature: >
+    終年極寒，室外溫度常在零下四十度以下；
+    瞭望塔內部靠燃燒凍原苔蘚與動物糞便勉強維持可生存溫度，
+    但塔頂觀測台幾乎無法長時間停留。 # inferred: true
+  sound:
+    - 極北永恆風嘯穿過瞭望塔結構的尖嘯
+    - 隕鐵探測儀間歇發出的低沉共振嗡鳴 # inferred: true
+    - 寒法師獵人巡邏隊的鐵靴踏雪聲與壓低聲響的號令 # inferred: true
+    - 遠方冰墓區傳來的斷續冰裂細響 # inferred: true
+    - 烽火台木柴爆裂的噼啪聲 # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 西爾伯弗羅斯特邊疆大公國（伊薩克·西爾伯弗羅斯特）
+  access_level: restricted
+  danger_level: deadly
+  religion: 普世教會西派（創世主阿薩，實質為軍事化地方信仰）
+  population: 80  # inferred: true
+  settlement_type: outpost
+  wonders: []
+
+# ── 關係即通道（connections）──
+connections:
+  - target: frostspire
+    type: physical
+    direction: 南方
+    hidden: false
+    description: >
+      沿凍土巡邏道向南約兩日行程可達霜尖塔要塞；
+      瓦克托恩的烽火警報是霜尖塔判斷白霜大規模攻勢的最早信號。 # inferred: true
+  - target: northern_mountains
+    type: physical
+    direction: 北方
+    hidden: false
+    description: >
+      約恩維德山脈橫亙哨站正北方，山脈隘口是白霜滲透與霜生襲擊的主要通道；
+      瓦克托恩的瞭望塔終日監視山脈雪線上的任何異動。 # inferred: true
+  - target: isgrav
+    type: conceptual
+    direction: 東方
+    hidden: false
+    description: >
+      伊斯格拉夫冰墓位於瓦克托恩哨站東方的凍土帶上，
+      是哨站巡邏範圍的東界，也是寒法師活動最頻繁的區域之一。 # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 瓦克托恩瞭望塔
+    location: 哨站中央高地
+    guardian: 寒法師獵人小隊
+    description: >
+      以隕鐵與黑曜石加固的軍事瞭望塔，塔頂設有終年不熄的烽火台。
+      塔內安裝有粗糙的寒法探測儀，以隕鐵共振頻率感應極寒魔力波動。 # inferred: true
+  - item: npc
+    name: 寒法師獵人隊長
+    location: 瞭望塔指揮層
+    guardian: 無
+    description: >
+      率領瓦克托恩哨站寒法師獵人小隊的資深軍官，專精於追蹤與獵殺白霜滲透者。
+      在物資斷絕與傭兵盤踞的困境下，仍堅持執行冰防役的最前線任務。 # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 哨站
+  - 邊境
+  - 北方邊境
+  - 凍土帶
+  - 軍事化
+  - 寒法師獵人
+  - 西爾伯弗羅斯特
+  - 白霜前線

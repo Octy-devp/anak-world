@@ -1,0 +1,102 @@
+# ── 身份錨定（必填）──
+id: silva_navalis
+name: 西爾瓦納瓦利斯伐木谷
+layer: settlement
+region: 莫爾根王國境內
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  西爾瓦納瓦利斯伐木谷位於莫爾根王國內陸一處縱深的森林谷地，
+  是王國艦隊與私掠船隻所需造船木材的主要來源地。
+  谷中生長著耐水腐蝕的鐵橡木與質地輕韌的雲杉，
+  經傑米努斯河支流漂運至南方海岸的船塢。
+
+  伐木工人多為內陸貧農與契約奴工，在嚴苛的冬季伐木季中
+  以斧鋸與人力將巨木放倒、去枝，順著人工滑道推入河道。
+  莫爾根王國的「聖焰私掠艦隊」對木材品質要求極高，
+  次等木料則低價賣給漁民修補船隻或建造棚屋。
+  谷地深處傳說有古老的森林守護靈，伐木者會在開斧前以烈酒祭奠樹根。 # inferred: true
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 新伐鐵橡木的辛辣樹脂與苦澀單寧味
+    - 雲杉針葉被踩踏後散發的清新松香 # inferred: true
+    - 冬季枯枝落葉腐熟後的潮濕霉味 # inferred: true
+    - 伐木工營地篝火中燃燒松脂的濃烈煙燻味 # inferred: true
+  light: >
+    谷地深處終年被濃密林冠遮蔽，僅有正午時分幾縷陽光如金色長矛刺入林間；
+    清晨與黃昏，霧氣在伐木滑道與河道上瀰漫，能見度不足十步；
+    夜間營地篝火是唯一光源，在巨木殘樁間投下搖曳的鬼魅陰影。 # inferred: true
+  temperature: >
+    林冠遮蔽使夏季涼爽宜人，但冬季谷地成為寒氣的陷阱，
+    積雪深及膝蓋，伐木工需在零下氣溫中持續勞作以維持體溫；
+    篝火與烈酒是抵禦嚴寒僅有的手段，凍傷與失溫每年奪走數條人命。 # inferred: true
+  sound:
+    - 巨木放倒時的沉悶斷裂聲與地面震動的轟響
+    - 斧鋸交替的規律節奏與工人低沉的號子 # inferred: true
+    - 傑米努斯河支流漂運木材時的撞擊與水流嘩啦聲 # inferred: true
+    - 夜間林間貓頭鷹的淒厲啼叫與遠處狼嚎 # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 莫爾根王國（聖焰私掠艦隊後勤部） # inferred: true
+  access_level: restricted
+  danger_level: medium
+  religion: 普世教會西派（混雜森林精靈信仰殘留） # inferred: true
+  population: 700  # 伐木工、漂運工與家眷約六百至八百人；inferred: true
+  settlement_type: village
+  wonders: []
+
+# ── 關係即通道（connections）──
+connections:
+  - target: palace_of_tidal_song
+    type: physical
+    direction: 南方下游
+    description: >
+      經傑米努斯河支流漂運木材南下，最終抵達潮音宮周邊的船塢與修繕所，
+      為莫爾根王國的私掠艦隊提供造船與維修所需的優質木料。 # inferred: true
+  - target: flumen_geminus
+    type: physical
+    direction: 谷地東側
+    description: >
+      伐木谷東側緊鄰傑米努斯河支流上游，
+      人工滑道與漂木水道將砍伐的巨木直接送入河道運輸系統。 # inferred: true
+  - target: pearl_bay_village
+    type: conceptual
+    direction: 南方海岸
+    description: >
+      部分次等木料經河運轉海運，低價售予珍珠灣漁民修補漁船與建造棚屋，
+      漁村與伐木谷之間形成物資互補的隱秘聯繫。 # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: resource
+    name: 鐵橡木與雲杉林
+    location: 谷地兩側山坡
+    description: >
+      耐水腐蝕的鐵橡木與質地輕韌的雲杉混生林，
+      是莫爾根王國艦隊造船的核心戰略資源，由私掠艦隊後勤部直接管控採伐配額。 # inferred: true
+  - item: landmark
+    name: 人工滑道與漂木水道
+    location: 谷地中央至河道
+    description: >
+      以原木與夯土搭建的陡峭滑道，伐木工人將去枝巨木推入滑道，
+      順勢滾入傑米努斯河支流的漂木水道，經數日漂運抵達南方海岸。 # inferred: true
+  - item: landmark
+    name: 伐木工冬季營地
+    location: 谷地避風處
+    description: >
+      簡陋的半地下木屋群，冬季伐木季時容納數百名工人。
+      營地中央設有長明火塘與蒸餾烈酒槽，是工人們夜間取暖與消愁的唯一去處。 # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 村莊
+  - 伐木谷
+  - 莫爾根王國
+  - 造船木材
+  - 傑米努斯河
+  - 森林

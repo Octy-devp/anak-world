@@ -4,6 +4,59 @@
 
 ---
 
+## 2026-05-12 21:40 CKII Duchy-County 擴展：塞拉菲昂帝國新增 16 個定居點
+
+- **任務**: 回應用戶「圍繞各大王國領和公爵領建立分支，模擬勢力強度，並生成非選帝侯公爵」的指示
+- **執行方式**: 4 個 subagent 並行 + 父代理修復與整合
+- **新增檔案**: 16 個 YAML，全部通過 YAML 語法驗證
+
+### 新增定居點清單
+
+| # | 檔案 | ID | 名稱 | 層級 | 所屬 Duchy |
+|---|------|-----|------|------|-----------|
+| 1 | `sword-oath-pool.yaml` | `sword_oath_pool` | 劍誓池 | 特殊地點 | 瓦羅蘭特直轄（歷史遺跡） |
+| 2 | `vinetum-estate.yaml` | `vinetum_estate` | 維內圖姆葡萄園莊園 | Tier 3 | 格蘭迪斯大公國 |
+| 3 | `molinaria.yaml` | `molinaria` | 莫利納里亞磨坊鎮 | Tier 3 | 格蘭迪斯大公國 |
+| 4 | `ruina-damni.yaml` | `ruina_damni` | 魯伊納達姆遺跡村 | Tier 3 | 格蘭迪斯大公國 |
+| 5 | `silva-navalis.yaml` | `silva_navalis` | 西爾瓦納瓦利斯伐木谷 | Tier 3 | 莫爾根王國 |
+| 6 | `corallium-cove.yaml` | `corallium_cove` | 科拉利烏姆珊瑚灣 | Tier 3 | 莫爾根王國 |
+| 7 | `isgrav.yaml` | `isgrav` | 伊斯格拉夫冰墓 | Tier 3 | 西爾伯弗羅斯特邊疆大公國 |
+| 8 | `frostborg.yaml` | `frostborg` | 弗羅斯特堡 | Tier 3 | 西爾伯弗羅斯特邊疆大公國 |
+| 9 | `vaktorn.yaml` | `vaktorn` | 瓦克托恩哨站 | Tier 3 | 西爾伯弗羅斯特邊疆大公國 |
+| 10 | `venatorium.yaml` | `venatorium` | 維納托里烏姆狩獵莊園 | Tier 3 | 瓦羅蘭特直轄 |
+| 11 | `aurora-castra.yaml` | `aurora_castra` | 奧羅拉堡 | Tier 2 | 東境邊防公國（新公爵領，首都） |
+| 12 | `specula-ruptus.yaml` | `specula_ruptus` | 斯佩庫拉魯普圖斯哨塔 | Tier 3 | 東境邊防公國 |
+| 13 | `via-mercatorum.yaml` | `via_mercatorum` | 維亞默卡托魯姆商道村 | Tier 3 | 東境邊防公國 |
+| 14 | `radix-specula.yaml` | `radix_specula` | 拉迪克斯守望修道院 | Tier 2 | 席爾瓦因邊境領（新公爵領，首都） |
+| 15 | `terminus-hamlet.yaml` | `terminus_hamlet` | 特爾米努斯邊境村 | Tier 3 | 席爾瓦因邊境領 |
+| 16 | `arbor-tower.yaml` | `arbor_tower` | 阿爾博塔瞭望塔 | Tier 3 | 席爾瓦因邊境領 |
+
+### CKII 結構更新後的塞拉菲昂 Duchy 層級
+
+| Duchy | 類型 | 首都 | 下屬 County 數 |
+|-------|------|------|---------------|
+| 瓦羅蘭特皇室直轄 | Empire Capital | 維特魯斯（Tier 1） | 赤土鎮、夕照畿農奴村、劍誓池、維納托里烏姆狩獵莊園 = 4 |
+| 格蘭迪斯大公國 | Duchy | 金穗堡（Tier 2） | 北岸黑麥村、堤壩遺跡哨站、邊境哨站、維內圖姆、莫利納里亞、魯伊納達姆 = 6 |
+| 莫爾根王國 | Kingdom | 潮音宮（Tier 2） | 私掠艦隊錨地、珍珠灣漁村、南方海岸鹽田、西爾瓦納瓦利斯、科拉利烏姆 = 5 |
+| 西爾伯弗羅斯特邊疆大公國 | Duchy | 霜尖塔要塞（Tier 2） | 永火燈塔修道院、伊斯格拉夫、弗羅斯特堡、瓦克托恩 = 4 |
+| 五大特別市聯盟 | 城市聯盟 | 五城各為 Tier 2 | 無下屬 County（平等聯盟） |
+| 護憲封建議會 | 封建集合體 | 小赫斯領（Tier 3） | 巴羅瑪奇堡、荊棘維克莊園、阿什福德塔堡 = 3 |
+| **東境邊防公國** | **新 Duchy（非選帝侯）** | **奧羅拉堡（Tier 2）** | **斯佩庫拉魯普圖斯、維亞默卡托魯姆 = 2** |
+| **席爾瓦因邊境領** | **新 Duchy（非選帝侯）** | **拉迪克斯守望修道院（Tier 2）** | **特爾米努斯邊境村、阿爾博塔 = 2** |
+
+### 命名風格執行
+
+- 格蘭迪斯 + 莫爾根 + 瓦羅蘭特 + 東境：拉丁文（Vinetum, Molinaria, Ruina Damni, Silva Navalis, Corallium, Venatorium, Aurora Castra, Specula Ruptus, Via Mercatorum, Radix Specula, Terminus, Arbor）
+- 西爾伯弗羅斯特：諾德文（Isgrav, Frostborg, Vaktorn）
+
+### 其他變更
+
+- [x] `empire.yaml` 更新：description 新增「兩個非選帝侯邊境公國」段落
+- [x] 流泉修道院 vs 淨瓶之泉定位修復：淨瓶之泉明確標註為「流泉修道院在維特魯斯城牆外的分院」
+- [x] 森民隔離：席爾瓦因邊境領三個定居點嚴格遵守「人類與森民完全隔離」原則
+
+---
+
 ## 2026-05-12 21:05 架構簡化：定居點粒度分級（Tier System）
 
 - **任務**: 回應用戶「架構會不會太複雜」的疑慮，以維特魯斯為參考建立分級制度

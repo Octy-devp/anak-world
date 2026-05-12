@@ -1,0 +1,106 @@
+# ── 身份錨定（必填）──
+id: specula_ruptus
+name: 斯佩庫拉魯普圖斯哨塔
+layer: settlement
+region: 東部邊境
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  斯佩庫拉魯普圖斯（Specula Ruptus，意為「隘口瞭望塔」）是魯普圖斯隘口西端的一座石砌哨塔，
+  位於怒嘯山脈西麓最後一道山脊的懸崖邊緣。
+  這座哨塔最初由峽谷行會與帝國邊防軍共同修建，用於監控隘口往來的船隊與商隊，
+  後來逐漸擴建為包含兵營、糧倉與信鴿站的小型軍事前哨。
+
+  到了第825年，哨塔駐軍約八十人，由一名帝國邊防尉官指揮，
+  名義上隸屬於東境邊防公國，實際上與奧羅拉堡的聯絡時斷時續。
+  哨塔的核心功能從未改變：第一時間發現東方動向，並以烽火或信鴿向奧羅拉堡與維特魯斯通報。
+
+  由於地勢險峻，冬季大雪封山時哨塔常常與外界隔絕數週，
+  駐軍必須在秋季儲備足夠六個月消耗的糧食與燃料。
+  這種孤立讓斯佩庫拉魯普圖斯成為帝國最艱苦的駐防點之一，
+  只有犯了輕罪的下級軍官才會被「發配」至此。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 懸崖邊終年不散的水霧潮濕氣息
+    - 信鴿籠中羽毛與穀糠的悶臭  # inferred: true
+    - 石砌壁爐中燃燒濕柴的嗆人濃煙  # inferred: true
+    - 隘口方向隨風飄來的河水腥味與鐵鏽味
+  light: >
+    白天僅有東向箭窗透入的狹窄光線，室內終年昏暗；
+    夜間依靠壁爐與油脂燈照明，懸崖外則是一片漆黑，
+    唯有遠處凱撒里克邊境偶爾閃爐的營火可見。  # inferred: true
+  temperature: >
+    山脊高處終年寒冷，冬季風從隘口直灌而入，室內壁爐難以驅散骨縫中的濕冷；
+    夏季短暫涼爽，夜間仍需毛毯。  # inferred: true
+  sound:
+    - 傑米努斯河在隘口峽谷中奔流的轟鳴
+    - 怒嘯山脈永恆的風嘯穿過懸崖縫隙
+    - 信鴿撲翅與銅鈴輕響
+    - 駐軍士兵在狹窄石室中低聲交談與骰子滾動聲  # inferred: true
+    - 夜間山崖下不明生物的尖嘯迴盪（傳說是黑曜石守望者的巡邏）  # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 東境邊防公國 / 帝國邊防尉官  # inferred: true
+  access_level: restricted
+  danger_level: high
+  religion: 普世教會西派（創世主阿薩）
+  population: 80  # 駐軍及少量隨軍雜役；inferred: true
+  settlement_type: outpost
+  wonders: []
+
+# ── 關係即通道（connections）──
+connections:
+  - target: ruptus_pass
+    type: physical
+    direction: 東方俯瞰
+    description: >
+      哨塔正對魯普圖斯隘口西端出口，從塔頂瞭望台可清晰看見隘口內往來的船隻與兩岸稅站活動。
+  - target: aurora_castra
+    type: physical
+    direction: 西方
+    description: >
+      沿軍用驛道向西方半日馬程可達奧羅拉堡，是哨塔補給與指揮鏈的上級節點。  # inferred: true
+  - target: the_howling_peaks
+    type: physical
+    direction: 東方緊鄰
+    description: >
+      哨塔直接坐落於怒嘯山脈西麓山脊，山體岩石構成哨塔的天然基座。  # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 斷崖瞭望台
+    location: 哨塔頂層
+    description: >
+      懸挑於懸崖邊緣的木製瞭望台，以隕鐵加固的鐵鏈固定於岩壁。
+      風大時整個平台會輕微搖晃，新手哨兵必須克服恐高才能在此值勤。
+      這裡是帝國境內視野最開闊的邊境觀測點之一。
+  - item: resource
+    name: 信鴿站
+    location: 哨塔三層
+    guardian: 駐軍通訊兵
+    description: >
+      飼養約四十隻軍用信鴿，可在惡劣天氣中穿越山隘傳遞消息。
+      冬季大雪封山時，信鴿是哨塔與外界唯一的聯繫方式。  # inferred: true
+  - item: npc
+    name: 邊防尉官馬蒂亞斯·克羅姆
+    location: 哨塔指揮室
+    description: >
+      四十歲出頭的邊防尉官，因在一次軍賭中毆打上司而被「發配」至斯佩庫拉魯普圖斯已逾五年。
+      他對這座哨塔的每一塊石頭都瞭如指掌，也培養出對隘口天氣的直覺預判能力。
+      據說他曾三次提前半日預知凱撒里克的軍事調動，但帝國議會從未給予任何嘉獎。  # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 哨塔
+  - 邊境
+  - 軍事
+  - 魯普圖斯隘口
+  - 東境邊防公國
+  - 監視
+  - inferred: true

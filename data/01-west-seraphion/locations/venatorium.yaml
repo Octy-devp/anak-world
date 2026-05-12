@@ -1,0 +1,118 @@
+# ── 身份錨定（必填）──
+id: venatorium
+name: 維納托里烏姆狩獵莊園
+layer: settlement
+region: 夕照畿
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  維納托里烏姆狩獵莊園是瓦羅蘭特皇室在夕照畿僅存的私人產業之一，
+  坐落於維特魯斯近郊的森林深處，是第825年夕照帝為數不多的實質特權象徵。
+
+  現任皇帝利奧三世維持宮廷運作的唯一進項，
+  是向教廷借債的「神恩券」預支，以及變賣祖上巴爾塔薩留下的戰利品。
+  其直轄領地「夕照畿」僅包括維特魯斯內城、外城貧民窟，以及周邊五十里的農村。
+  在這片日漸縮小的直轄區內，維納托里烏姆莊園是皇室僅存的非政治性空間——
+  一處用於秋季狩獵與偶爾接見親密廷臣的私人莊園。 # inferred: true
+
+  莊園由一圈低矮的石牆環繞，牆內有一座混合羅馬式與哥德式風格的狩獵 lodge、
+  幾間馬廄與獵犬舍，以及一片被精心維護的古老橡樹林。
+  然而，小冰期的持續影響使林中的獵物日益稀少，
+  莊園的維護費用迫使皇室不時向教廷或格蘭迪斯大公借貸。
+  到了第825年，這座莊園與其說是皇權的展現，不如說是夕照帝對失落榮光的最後一次徒勞緬懷。 # inferred: true
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 古老橡樹林潮濕落葉與腐殖質的泥土氣息 # inferred: true
+    - 馬廄中乾草與皮革的溫暖氣味 # inferred: true
+    - 獵犬舍中動物皮毛與殘留血腥味 # inferred: true
+    - 狩獵 lodge 壁爐中燃燒蘋果木與雪松的甜膩煙氣 # inferred: true
+  light: >
+    清晨透過橡樹冠層的斑駁金綠光點；
+    午後 lodge 高窗射入的狹長光束，照亮空氣中飄浮的塵埃；
+    黃昏時分，壁爐火光照亮牆上掛著的褪色狩獵戰利品與巴爾塔薩時代的青銅裝飾。 # inferred: true
+  temperature: >
+    秋季涼爽宜人，林間微風帶有落葉的乾燥氣息；
+    冬季小冰期的寒風自北方長驅直入，壁爐與厚重的掛毯勉強維持室內溫度；
+    夏季短暫而潮濕，蚊蟲在林間沼澤地帶滋生。 # inferred: true
+  sound:
+    - 橡樹林間風吹葉動的沙沙細響 # inferred: true
+    - 遠處獵犬的低吠與馬匹的輕嘶 # inferred: true
+    - 壁爐中木柴爆裂的輕微噼啪聲 # inferred: true
+    - 維特魯斯方向隱約傳來的遠方鐘聲 # inferred: true
+    - 夜間林間貓頭鷹的斷續鳴叫 # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 瓦羅蘭特皇室 # inferred: true
+  access_level: private
+  danger_level: low
+  religion: 普世教會西派（創世主阿薩）
+  population: 30  # inferred: true
+  settlement_type: village
+  wonders: []
+
+# ── 關係即通道（connections）──
+connections:
+  - target: vetustapolis
+    type: physical
+    direction: 東方
+    hidden: false
+    description: >
+      沿夕照畿林間獵道向東約半日馬程可達維特魯斯西城門；
+      這條道路僅供皇室與受邀廷臣使用，沿途設有不起眼的界碑。 # inferred: true
+  - target: red_earth_hamlet
+    type: conceptual
+    direction: 東南方
+    hidden: false
+    description: >
+      赤土鎮位於維特魯斯東郊，與維納托里烏姆莊園同屬夕照畿的狹小直轄區域；
+      兩地雖僅隔一座城市的距離，卻象徵著瓦羅蘭特皇室從鐵匠起義到垂暮榮光的兩極命運。 # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 狩獵 lodge
+    location: 莊園中央
+    guardian: 皇室侍衛
+    description: >
+      一座混合羅馬式與哥德式風格的狩獵 lodge，牆上掛滿歷代皇帝與廷臣的狩獵戰利品。
+      大廳中央的壁爐終年燃燒蘋果木與雪松，是皇室舉行小型宴會與接見親信的唯一場所。 # inferred: true
+  - item: landmark
+    name: 皇家橡樹林
+    location: 莊園西側
+    guardian: 皇室林務官
+    description: >
+      一片被精心維護的古老橡樹林，是夕照畿內僅存的原始林地之一。
+      林中設有狩獵用的隐蔽看台與誘餌投放點，但小冰期使鹿與野豬的數量逐年下降。 # inferred: true
+  - item: npc
+    name: 莊園總管
+    location: 狩獵 lodge 側廳
+    guardian: 無
+    description: >
+      負責管理維納托里烏姆日常運作的皇室僕役總管，
+      精通在極度緊縮的預算下維持莊園體面的技藝。
+      他深知這座莊園的華麗外表下是教廷借債與格蘭迪斯大公「恩賜」的脆弱支撐。 # inferred: true
+
+# ── 歷史事件（events）──
+events:
+  - id: venatorium_established
+    year: 620
+    name: 維納托里烏姆莊園建立
+    description: >
+      艾森瓦爾王朝時期，皇帝下令在維特魯斯近郊森林中闢建皇家狩獵莊園，
+      作為皇室秋季傳統狩獵與接見外國使節的場所。 # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 狩獵莊園
+  - 皇室
+  - 夕照畿
+  - 瓦羅蘭特
+  - 私人領地
+  - 森林
+  - 維特魯斯近郊
+  - 夕照之地

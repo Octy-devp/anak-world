@@ -1,0 +1,116 @@
+# ── 身份錨定（必填）──
+id: terminus_hamlet
+name: 特爾米努斯邊境村
+layer: settlement
+region: 西南邊境
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  特爾米努斯（Terminus，意為「邊界」）是帝國與艾爾達拉秘境邊界上的一座農奴村，
+  坐落於拉迪克斯守望修道院南方約半日步行路程的丘陵谷地中。
+  這裡的村民世代是修道院的農奴，為修士們耕種田地、放牧山羊、砍伐邊界木材，
+  並執行一項無形的義務：監聽森林方向的聲音，並向修道院報告任何異常。
+
+  村民們從未見過森民。他們中的大多數人甚至不確定森民是否真實存在——
+  那些銀髮尖耳的生物更像是修士們在禮拜堂中講述的古老寓言。
+  但村民們確實「感受」到森林的異樣：夜間從西方傳來的不明低鳴、
+  偶爾在田邊發現的奇異發光痕跡、以及那些生長速度異常快的蘑菇圈。
+  老一輩村民會在森林方向的田邊立起粗糙的木刻神像，但年輕人認為那只是迷信。
+
+  第825年，迷霧結界的緩慢擴張令村莊最西邊的兩塊田地變得無法耕作——
+  任何在那裡播種的穀物都會在一夜之間枯萎，土壤呈現不自然的灰白。
+  修道院長下令放棄這兩塊田地，但沒有解釋原因。
+  村民們在恐懼與無知中繼續生活，離邊界越來越近。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 農田中新翻泥土與腐熟糞肥的厚重氣息
+    - 山羊圈與雞舍的牲畜腥臭  # inferred: true
+    - 木柴炊煙中樺樹與橡樹的混合煙味  # inferred: true
+    - 森林方向飄來的淡淡霧氣濕潤味（村民稱之為「樹的呼吸」）  # inferred: true
+    - 被放棄田地中枯萎穀物散發的詭異甜腐味  # inferred: true
+  light: >
+    白天是開闊谷地的自然天光，但西方森林方向的陽光總顯得有些「過濾」——
+    彷彿有一層看不見的薄紗擋在太陽與田地之間；
+    夜間僅有農舍的微弱燈火，西方森林則是一片沒有星光的濃黑。  # inferred: true
+  temperature: >
+    谷地夏季溫和，冬季濕冷；
+    但被放棄的田地周邊常年比村莊其他區域低兩至三度，
+    村民們不願在夜間接近那裡。  # inferred: true
+  sound:
+    - 農耕時節的鋤頭與鐮刀節奏聲
+    - 山羊鈴鐺與牧羊人的吆喝
+    - 夜間貓頭鷹與狐狸的尋常叫聲
+    - 森林深處偶爾傳來的不明低鳴（從未確認來源，村民稱之為「樹語」）  # inferred: true
+    - 風吹過被放棄田地時發出的異常嘶嘶聲（與普通風聲不同）  # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 拉迪克斯守望修道院（農奴制）  # inferred: true
+  access_level: public
+  danger_level: low
+  religion: 普世教會西派（創世主阿薩）/ 民間樹靈崇拜（非正式）  # inferred: true
+  population: 90  # 農奴家庭合計；inferred: true
+  settlement_type: village
+  wonders: []
+
+# ── 關係即通道（connections）──
+connections:
+  - target: eldara_worldtree
+    type: conceptual
+    direction: 西方緊鄰
+    description: >
+      艾爾達拉世界樹森林的迷霧結界位於村莊西方不遠處，肉眼可見淡金色的霧氣在林線後方流動。
+      村民從未進入結界，也從未見過森民——他們只在夜間聽到聲音，在田邊發現痕跡。
+  - target: radix_specula
+    type: physical
+    direction: 北方
+    description: >
+      拉迪克斯守望修道院是村莊的上級領主與保護者，村民每週需向修道院繳納農產品，
+      並報告任何來自森林方向的異常。  # inferred: true
+  - target: arbor_tower
+    type: physical
+    direction: 西北方向
+    description: >
+      阿爾博塔瞭望塔位於村莊西北方的丘陵高處，從村莊可遠遠望見塔頂的微弱燈火。  # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 界碑木刻群
+    location: 村莊最西邊的田邊
+    description: >
+      十餘座粗糙的木刻神像，由歷代村民釘入田邊土壤中。
+      這些木刻沒有統一的形象——有的是簡化的太陽圓盤（創世主阿薩），
+      有的是模糊的樹形輪廓（村民口中的「樹爺爺」）。
+      修道院長多次下令拆除這些「異教偶像」，但村民總會在夜間重新豎立。  # inferred: true
+  - item: npc
+    name: 老農埃爾溫·邊界（Erwin Terminus）
+    location: 村莊西端農舍
+    description: >
+      村中最年長的農奴，據稱年輕時曾在森林邊緣見過「銀色的光點在霧中移動」。
+      他從不確定那是森民、狐狸的眼睛反光、還是自己的幻覺。
+      他是唯一敢於夜間獨自在被放棄田地附近行走的人，
+      聲稱「樹的呼吸不會傷害尊重它的人」。  # inferred: true
+  - item: resource
+    name: 被放棄的灰白田地
+    location: 村莊最西端兩塊田地
+    description: >
+      約兩公頃的農田，自第815年迷霧擴張後變得無法耕作。
+      土壤呈現不自然的灰白色，任何播種的穀物都會在一夜之間枯萎。
+      修道院長下令放棄這兩塊田地，但從未解釋原因。
+      偶爾有年輕人打賭進入灰白田地中央，出來後都聲稱「聽到了樹根在地下移動的聲音」。  # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 村莊
+  - 農奴
+  - 邊境
+  - 席爾瓦因邊境領
+  - 森民隔離
+  - 迷霧結界
+  - 世界樹
+  - inferred: true
