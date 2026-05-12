@@ -1,0 +1,107 @@
+# ── 身份錨定（必填）──
+id: eldara_worldtree
+name: 艾爾達拉世界樹
+layer: geography
+region: 西南部
+empire: 無
+parent_id: ankora
+
+# ── 敘事錨定（必填）──
+description: >
+  艾爾達拉世界樹位於安納克大陸西南部，是世界樹「艾爾達拉」（Eldara）根系緊緊擁抱的廣袤大地，
+  亦稱「艾特恩瓦爾德森海」（Worldtree Greenwood）。
+  這裡是森民（席爾凡／Sylvans）的唯美隱世國度，一個與世界樹共生的有機文明。
+  世界樹並非普通樹木，而是超巨型生命體——其高度可能超過雲層，樹冠覆蓋數十平方公里，
+  根系深入地底數公里，形成獨立的「溫室氣候島」。
+  森民的「建築」是世界樹根系與礦脈共鳴生長出的水晶樹脂結構，稱為「水晶宮廷」。
+  該區域緊鄰塞拉菲昂神聖帝國西南邊境，再往西南則無人知曉。
+  自第490年「大隱遁」後，濃厚的迷霧結界將此地封閉，森民退回深處，不再過問外界紛爭。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 樹脂與松針的甜膩
+    - 腐殖土與蘑菇的濕潤
+    - 水晶的礦物清冽
+    - 霧雨的無味清新
+    - 邊境處飄來的神聖帝國薰香  # inferred: 邊境緊張感
+  light: >
+    黎明時樹冠縫隙的淡金光束、正午的翠綠濾光、月夜時水晶牆壁的銀藍微光，
+    永恆不散的薄霧使光線呈現夢幻的散射
+  temperature: 恆溫濕潤，冬暖夏涼，樹雨帶來的涼意
+  sound:
+    - 樹葉的沙沙細語（有人說是世界樹的低語）
+    - 根系的緩慢生長聲（人耳幾乎聽不見，但森民能感知）  # inferred: true
+    - 樹雨敲打水晶的清脆
+    - 遠方帝國邊境巡邏隊的號角（不協和音）  # inferred: 邊境緊張感
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 席爾瓦裡翁
+  access_level: secret
+  danger_level: medium
+  religion: 世界樹之靈艾爾達拉（共鳴信仰）
+  population: null  # 森民數量不為外界所知
+
+# ── 關係即通道（connections）──
+connections:
+  - target: the_howling_peaks
+    type: physical
+    direction: 東方
+    description: 怒嘯山脈西麓的融雪與地下水系滋養世界樹根系
+  - target: flumen_geminus
+    type: physical
+    direction: 北方
+    description: 大河的西向支流「希爾薇恩河」流經森林邊緣，為世界樹提供水源
+  - target: the_abyssus
+    type: conceptual
+    direction: 對立
+    description: 世界樹代表生命與自然魔法，深淵代表死亡與失傳的毀滅技術，兩者通過地下水系形成微妙的能量平衡
+  - target: west_seraphion
+    type: conceptual
+    direction: 東北方
+    description: 與神聖帝國的邊境關係緊張——帝國覬覦森林資源，森民拒絕人類進入
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 水晶宮廷（Crystal Court）
+    location: 世界樹主幹與根系交會處
+    description: >
+      並非人類意義上的建築，而是世界樹的「器官」。
+      由樹脂與水晶混合物構成，內部充滿流動光線與永恆薄霧，
+      牆壁隨晝夜變色：黎明淡金、正午翠綠、月夜銀藍。
+  - item: npc
+    name: 席爾瓦裡翁長老議會
+    location: 水晶宮廷最深處的共鳴大廳
+    description: >
+      以母系血統為基礎的貴族長老制議會，
+      在月光下討論著與人類世界無關的永恆話題，
+      決定著森民與世界樹的命運。
+
+# ── 歷史事件（events）──
+events:
+  - id: the_great_seclusion
+    year: 490
+    name: 大隱遁
+    description: >
+      森民見證人類戰後的殘酷與貪婪後，啟動大隱遁。
+      世界樹艾爾達拉的邊界開始自動擴張，濃厚的迷霧結界湧出，
+      將艾特恩瓦爾德森海徹底封閉。森民退回深處，進入「修養紀元」。
+  - id: ferroth_oath
+    year: 483
+    name: 費羅斯誓約
+    description: >
+      席爾瓦裡翁長老因世界樹幻象而打破隱遁，
+      森民首次大規模與人類合作，共同對抗霜生的第二次白色洪流。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 秘境
+  - 世界樹
+  - 森民
+  - 席爾凡
+  - 自然魔法
+  - 迷霧結界
+  - 水晶宮廷
+  - 大隱遁

@@ -1,0 +1,115 @@
+# ── 身份錨定（必填）──
+id: the_howling_peaks
+name: 怒嘯山脈
+layer: geography
+region: 中央
+empire: 爭議
+parent_id: ankora
+
+# ── 敘事錨定（必填）──
+description: >
+  怒嘯山脈縱貫安納克大陸中央，呈南北走向，如巨龍脊骨般隔開東西兩大帝國。
+  山體富含隕鐵礦脈，是大洪水時期地殼撕裂形成的褶皺山脈。
+  傑米努斯大河（Flumen Geminus）東西貫穿其間的魯普圖斯隘口，成為東西陸路的唯一通道。
+  西坡緩坡面向塞拉菲昂，接受海洋濕氣，覆蓋高山草甸與針葉林；
+  東坡陡坡面向凱撒里克，背風乾燥，岩石裸露，風蝕嚴重。
+  山脈深處隱居著黑曜石守望者，他們透過「黑曜石之約」向人類傳授冷鍛隕鐵的技術。
+  傳說山脈是巨龍脊骨所化，永恆的風嘯是其得名由來。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 高海拔稀薄冷冽的空氣
+    - 針葉林的松脂
+    - 西坡腐殖土與野花
+    - 東坡風蝕岩石的粉塵味
+    - 隘口處的馬匹與鐵鏽味
+  light: 西坡晨曦與夕照金紅，東坡陰影中的冷藍反光，雪線以上的刺眼白茫
+  temperature: 山腳溫帶涼爽，山腰寒冷，主峰極寒
+  sound:
+    - 永恆風嘯（山脈得名由來）
+    - 融雪溪流的湍急
+    - 隘口商隊的鈴鐺
+    - 東坡風蝕岩的尖嘯
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  access_level: restricted
+  danger_level: high
+  controlled_by: 無（跨帝國自然屏障，黑曜石守望者隱居深處）
+  religion: 巨龍脊骨傳說、星隕之神（黑曜石守望者信仰）
+  population: 0
+
+# ── 關係即通道（connections）──
+connections:
+  - target: ruptus_pass
+    type: physical
+    direction: 中央段
+    hidden: false
+    description: 傑米努斯河切穿山脈的唯一隘口，東西陸路通道
+  - target: the_abyssus
+    type: conceptual
+    direction: 南端
+    hidden: false
+    description: 南端斷續山脈鏈與塔爾塔魯斯山脈地質同源，皆為大洪水時期的地殼傷疤
+  - target: eldara_worldtree
+    type: physical
+    direction: 西麓
+    hidden: false
+    description: 西麓融雪與地下水系滋養世界樹根系
+  - target: flumen_geminus
+    type: physical
+    direction: 貫穿
+    hidden: false
+    description: 河流從魯普圖斯隘口東西貫穿山脈
+  - target: jarnvid_river
+    type: physical
+    direction: 北麓
+    hidden: false
+    description: 約恩維德河發源於山脈北麓，向北流淌
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 魯普圖斯隘口
+    location: 山脈中央段
+    description: 傑米努斯河切穿山脈的唯一通道，設有邊境稅站與走私密道
+  - item: resource
+    name: 隕鐵礦脈
+    location: 山脈深處
+    description: 安納克文明的技術基礎，帶有暗紅色紋路的神秘金屬
+  - item: landmark
+    name: 黑曜石守望者修道院
+    location: 山脈深處（確切位置不為人知）
+    guardian: 黑曜石守望者
+    description: 隱修士與黑曜石守望者的居所，冷鍛隕鐵技術的源頭
+  - item: landmark
+    name: 瞭望塔
+    location: 山脊線多處
+    description: 東西兩大帝國設立的邊境瞭望塔
+
+# ── 歷史事件（events）──
+events:
+  - id: great_flood
+    year: 0
+    name: 大洪水
+    description: 地殼撕裂形成怒嘯山脈的褶皺山體，隕鐵隨古代隕石墜入山脈深處。大陸的傷疤同時催生了中央山脈與南部深淵
+  - id: obsidian_pact
+    year: 328
+    name: 黑曜石之約
+    description: 馬爾施克羅內領的使者登上怒嘯山脈最高峰，與黑曜石守望者達成協議，守望者同意大規模傳授冷鍛隕鐵技術
+  - id: iron_crown_uprising
+    year: 726
+    name: 鐵冠起義
+    description: 鐵冠騎士團攻佔聖鑰院，教廷分裂為東西兩派，間接影響山脈兩側的政治格局
+
+# ── 快速標籤（tags）──
+tags:
+  - 山脈
+  - 自然屏障
+  - 隕鐵
+  - 黑曜石守望者
+  - 冷鍛技術
+  - 魯普圖斯隘口
+  - 傳說
+  - 秘境

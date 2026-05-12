@@ -1,0 +1,119 @@
+id: the_abyssus
+name: 阿比蘇斯大無底洞
+layer: geography
+region: 南部
+empire: 無
+parent_id: ankora
+
+description: >
+  阿比蘇斯大無底洞，又稱星隕深淵（Starfall Deeps），位於安納克大陸南部塔爾塔魯斯山脈以南。
+  它並非普通的峽谷或火山口，而是「大陸的傷口」——大洪水時期隕鐵撞擊或地殼被撕裂的結果。
+  深淵邊緣的岩石呈現不自然的紫黑色，帶有金屬光澤，隕鐵礦脈暴露於地表。
+  目前無人知曉其底部，是一個永恆的謎。
+  這裡是隕鐵與失傳技術的源頭，黑曜石守望者嚴密看守著深淵入口，阻止凡人進入核心。
+  深淵持續釋放地熱與硫磺氣體，在塔爾塔魯斯山脈南麓形成局部的「熱霾區」，
+  即使在冬季，山腳某些谷地也終年溫暖，生長著不應存在的熱帶植物。
+
+atmosphere:
+  scent:
+    - 硫磺與腐蛋味
+    - 燒焦金屬的刺鼻氣息
+    - 深淵底部飄上來的潮濕霉味
+    - 熱霾區的異常花香 # inferred: 熱霾區生長著不應存在的熱帶植物
+  light: >
+    深淵內部是絕對的漆黑，僅有邊緣發光真菌的幽綠微光，
+    以及熱霾區扭曲光線折射的詭異景象
+  temperature: 深淵邊緣因地熱而溫熱，越往下越熱，與常理相反
+  sound:
+    - 深淵底部傳來的低頻嗡鳴 # 有人說是地下海的潮汐，有人說是某種巨獸的呼吸
+    - 風吹過深淵的尖嘯
+    - 發光真菌的輕微爆裂聲
+
+properties:
+  controlled_by: 黑曜石守望者
+  access_level: secret
+  danger_level: deadly
+
+connections:
+  - target: the_howling_peaks
+    type: conceptual
+    direction: 北方
+    description: 南端山脈鏈與塔爾塔魯斯山脈地質同源，皆為大洪水時期的地殼傷疤
+  - target: southern_mountains
+    type: physical
+    direction: 北界
+    description: 塔爾塔魯斯山脈是深淵與已知世界的最後屏障
+  - target: tartarus_stream
+    type: physical
+    direction: 北方匯入
+    description: 暗河從山脈滲入深淵，傳說在底部形成地下海
+  - target: eldara_worldtree
+    type: conceptual
+    direction: 對立
+    description: >
+      深淵代表死亡與失傳的毀滅技術，世界樹代表生命與自然魔法，
+      兩者通過地下水系形成微妙的能量平衡
+
+contents:
+  - item: resource
+    name: 隕鐵礦脈
+    location: 深淵邊緣岩壁
+    description: >
+      帶有暗紅色天然紋路的神秘金屬，比青銅更輕、比鋼鐵更堅韌，
+      且對魔法有天然的親和性
+  - item: landmark
+    name: 發光真菌群
+    location: 深淵邊緣
+    description: 利用地熱與硫化氫進行化能合成的幽綠色發光真菌與苔藓
+  - item: npc
+    name: 黑曜石守望者
+    location: 深淵入口哨站
+    description: >
+      身披黑曜石鎧甲的古老守護者，面容從未被人看清，
+      以類似風聲的低鳴交流，阻止凡人進入星隕深淵的核心
+  - item: landmark
+    name: 廢棄營地與絞架
+    location: 深淵邊緣
+    description: >
+      盜礦者與冒險家留下的廢棄營地，以及警示後來者的絞架，
+      見證了無數試圖採集隕鐵碎片者的死亡
+  - item: artifact
+    name: 地熱核心
+    location: 深淵邊緣（已被挖掘殆盡）
+    description: >
+      從星隕深淵邊緣挖掘出的發熱隕石，能在極寒中融化冰層、製造掩護。
+      地熱之子馬庫斯曾攜帶一顆參與極北遠征。
+      # inferred: 原為深淵邊緣特有礦物
+
+events:
+  - id: the_great_flood_scar
+    year: 0
+    name: 大陸傷疤的形成
+    description: >
+      大洪水時期，隕鐵撞擊或地殼撕裂形成阿比蘇斯大無底洞，
+      成為安納克大陸永恆的傷痕，將大陸切割為三大命運迥異的舞台
+  - id: obsidian_pact
+    year: 328
+    name: 黑曜石之約
+    description: >
+      馬爾施克羅內領使者登上怒嘯山脈最高峰，與黑曜石守望者達成歷史性協議。
+      守望者同意大規模傳授冷鍛隕鐵的入門技術，
+      條件是人類永遠不得試圖進入星隕深淵的核心。
+      作為契約見證，守望者贈予一塊「誓約黑曜石」。
+  - id: bridge_of_the_abyss_destroyed
+    year: 478
+    name: 深淵之橋摧毀
+    description: >
+      費羅斯誓約發動極北遠征，格雷克斯率領赭石行會解放軍
+      在橫跨星隕深淵的天然隕鐵岩柱上與霜生展開白刃戰。
+      馬庫斯引發地熱炸彈摧毀橋樑，切斷霜生主要南進通道。
+      格雷克斯與橋一同墜入深淵，卻奇蹟生還，身體被永久改變。
+
+tags:
+  - 秘境
+  - 隕鐵
+  - 深淵
+  - 大洪水遺跡
+  - 黑曜石守望者
+  - 毀滅技術
+  - 地熱
