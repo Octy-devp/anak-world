@@ -4,6 +4,41 @@
 
 ---
 
+## 2026-05-13 00:50 維特魯斯 district/room 層完整建立
+
+- **任務**: 基於用戶提供的詳細內部設定資料，建立維特魯斯（Vetustapolis）的 district 與 room 層級 YAML
+- **執行方式**: 3 個 subagent 並行（內城區 / 下城區 / 城牆外區）+ 手動補充
+- **新建檔案**: 16 個 YAML，全部通過 YAML 語法驗證
+
+### 維特魯斯三層空間結構（CKII 一 County 多 Holdings）
+
+| 層級 | 數量 | 檔案 |
+|------|------|------|
+| County（settlement） | 1 | `vetustapolis/settlement.yaml`（已有） |
+| district | 3 | `inner-city/district.yaml`, `lower-city/district.yaml`, `beyond-walls/district.yaml` |
+| room | 13 | 內城區 2 + 下城區 6 + 城牆外區 5 |
+
+### 內城區（2 room）
+- `sacred_key_complex` — 聖鑰院複合體（教廷心臟）：聖座宮東西兩翼、聖光大教堂、聖秩總修院、聖輪經院、神恩鑄幣所、殉道者聖龕、熾天使堂、護教軍營房、靈魂檢疫塔、樞機墓窖、大救濟院物質網絡（聖淨療養院、慈惠堂、靈糧大倉、救濟廚房、藥草園）、懺悔迴廊
+- `twilight_palace` — 暮光宮（皇權囚籠）：杜寧高地、宴會廳、花園、西翼坍塌區、地下暗道網絡、青銅太陽圓盤
+
+### 下城區（6 room）
+- `craftsmens_quarter` — 百工坊區：打鐵街、鞣革染坊巷、木作羊毛紡織區、繪畫聖像工坊區
+- `bridge_markets` — 橋樑市集：木板商鋪群、以物易物黑市、橋洞無家可歸者營地、地下黑幫兌換人
+- `arena_slums` — 競技場貧民窟：大環廢墟、拱洞貧民「房間」、皇家觀覽台破衣區、聖奴徵召隊
+- `disabitato` — 廢墟農耕區：廢墟農田、乾涸噴泉池菜園、麥穗與磐石農墾區、廢墟牧童
+- `water_rights_monopoly` — 水權壟斷區：斷裂水道橋、教廷「水承載者」取水點、登記冊告解亭、黑市污水偷取者
+- `basal_monasteries` — 基層修道院群：慈恩之盾、永火燈塔、麥穗與磐石
+
+### 城牆外區（5 room）
+- `ash_garden_catacombs` — 灰土園與地下層疊墓窖
+- `monastery_of_quiet_keepers` — 安眠引者修道院（「最後的慈惠所」）
+- `tower_of_silence` — 靜默之塔：上層聖女候選區、下層騎士團哨兵站、塔頂烽火台
+- `monastery_of_the_pure_spring` — 淨瓶之泉修道院（傳染病與隕鐵中毒收容）
+- `shantytown_and_gau` — 棚戶帶與夕照畿：城牆根草棚帶、逃荒農奴聚居地、救濟熱湯發放點、凍土麥田、教廷收稅官駐所、格蘭迪斯糧倉分窖
+
+---
+
 ## 2026-05-13 00:05 CKII 模式澄清 — County = settlement, Holding = district
 
 - **From**: 用戶指示 + 父代理 (Kimi Code CLI)
