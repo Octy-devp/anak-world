@@ -1,0 +1,56 @@
+id: anchora
+name: 昂科拉
+layer: settlement
+region: 東南部
+empire: 自由城邦聯盟
+parent_id: south_libertania
+
+description: >
+  群島最大的造船廠與醃魚場所在。巨大的木質船塢沿著海岸線排列，
+  空氣中瀰漫松脂、焦油與醃魚的鹹腥味。
+  斧頭劈木聲與鐵錘敲釘聲日夜不停，北海運來的木材與糧食在此卸貨，
+  調度到群島各處。昂科拉的造船師傅掌握雙體帆船的核心技術，
+  他們的工藝秘方代代相傳，不輕易外流。
+
+atmosphere:
+  scent:
+    - 松脂、焦油與醃魚的鹹腥味
+  light: 熱帶強光，船塢上銳利陰影，夕照金紅  # inferred: true
+  temperature: 常年濕熱無冬，午後雷陣雨
+  sound:
+    - 斧頭劈木聲與鐵錘敲釘聲日夜不停
+
+properties:
+  settlement_type: town
+  wonders:
+    - great_shipyard
+  controlled_by: 昂科拉造船師傅  # inferred: true
+  access_level: public
+  danger_level: low
+  religion: 風母與七洋靈泛靈信仰
+
+connections:
+  - target: wind_isles
+    type: physical
+    direction: 所屬群島  # inferred: true
+    description: 昂科拉坐落於風息群島主島群東南島  # inferred: true
+  - target: thalassa
+    type: physical
+    direction: 西北方  # inferred: true
+    description: 經石橋與堤道通往主島群西北島的塔拉薩  # inferred: true
+  - target: free_port
+    type: physical
+    direction: 北方  # inferred: true
+    description: 經石橋與堤道通往主島群東北島的菲惹港  # inferred: true
+  - target: aeolis
+    type: physical
+    direction: 西北方  # inferred: true
+    description: 經石橋與堤道通往主島群中央島的艾歐利斯  # inferred: true
+
+tags:
+  - 造船
+  - 醃魚
+  - 雙體帆船
+  - 工匠
+  - 港口
+  - 城邦

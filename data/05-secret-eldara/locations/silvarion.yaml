@@ -1,0 +1,165 @@
+# ── 身份錨定（必填）──
+id: silvarion
+name: 席爾瓦裡翁
+layer: settlement
+region: 西南部
+empire: 艾爾達拉秘境
+parent_id: secret_eldara
+
+# ── 敘事錨定（必填）──
+description: >
+  席爾瓦裡翁（Silverleaf Concord），森民（Sylvans）在世界樹艾爾達拉的蔭庇下建立的城市，
+  亦稱「銀葉同盟」。這是一個以母系血統為基礎的貴族長老制社會，
+  森民們擁有銀白色的長髮與尖耳，肌膚如月光下的瓷器般剔透。
+  他們不追求擴張與征服，而是以「唯美與永恆」為至高信條。
+  森民的魔法並非來自祈禱，而是來自與世界樹的「共鳴」——
+  流水、烈焰、大地、疾風四大元素在他們的歌聲中聽從召喚。
+  森民拒絕金屬工具，認為隕鐵是「深淵的毒」，使用「生長工藝」而非鍛造。
+  核心建築「水晶宮廷」並非人類意義上的建築，
+  而是世界樹根系與礦脈共鳴生長出的水晶樹脂結構。
+  長老議會位於水晶宮廷最深處的共鳴大廳，在月光下討論著與人類世界無關的永恆話題。
+  第483年，費羅斯誓約成立，席爾瓦裡翁的長老們因世界樹幻象而打破隱遁，
+  森民首次大規模與人類合作，共同對抗霜生的第二次白色洪流。
+  第485年極北會戰中，席爾瓦裡翁派遣的森民法師希爾薇恩為阻止混戰而化身銀葉聖樹。
+  第490年，森民見證人類戰後的體系性屠殺，啟動「大隱遁」，
+  以濃厚的迷霧結界將艾特恩瓦爾德森海徹底封閉，退回深處。
+  至第825年，席爾瓦裡翁仍在迷霧深處運作，森民成為神話中的存在。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 樹脂與松針的甜膩
+    - 霧雨的無味清新
+    - 水晶的礦物清冽  # inferred: true
+    - 腐殖土與蘑菇的濕潤  # inferred: true
+  light: >
+    永恆不散的薄霧使光線呈現夢幻的散射，
+    月光穿透樹冠的斑駁銀光灑落水晶宮廷的牆壁，
+    黎明時樹冠縫隙的淡金光束、正午的翠綠濾光、月夜時水晶牆壁的銀藍微光交織流轉
+  temperature: >
+    恆溫濕潤，冬暖夏涼，世界樹蒸騰作用帶來的溫和氣息，
+    樹雨時分略有涼意  # inferred: true
+  sound:
+    - 樹葉沙沙細語（有人說是世界樹的低語）
+    - 根系的緩慢生長聲（人耳幾乎聽不見，但森民能感知）
+    - 樹雨敲打水晶的清脆  # inferred: true
+    - 遠方元素之歌的縹緲迴響  # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 席爾瓦裡翁長老議會
+  access_level: secret
+  danger_level: medium
+  religion: 世界樹之靈艾爾達拉（共鳴信仰）
+  population: null  # 森民數量不為外界所知
+  settlement_type: town
+  wonders:
+    - crystal_court
+
+# ── 區域預告（district 層）──
+districts:
+  - id: crystal_court
+    name: 水晶宮廷
+    settlement_type: monastery
+    description: >
+      世界樹根系與礦脈共鳴生長出的水晶樹脂結構，
+      森民的核心居所與長老議會所在地，
+      牆壁隨晝夜變色：黎明淡金、正午翠綠、月夜銀藍
+  - id: resonance_hall
+    name: 共鳴大廳
+    settlement_type: monastery
+    description: >
+      水晶宮廷最深處的議事聖所，長老們在此進行「共感冥想」，
+      透過世界樹的感知討論森民的永恆命運
+  - id: silverleaf_grove
+    name: 銀葉林苑
+    settlement_type: village
+    description: >
+      森民貴族與法師的居所區域，生長工藝塑造的有機建築群落，
+      銀白色長髮的森民在月光下詠唱古老的元素之歌  # inferred: true
+
+# ── 關係即通道（connections）──
+connections:
+  - target: eldara_worldtree
+    type: physical
+    direction: 核心
+    description: 席爾瓦裡翁環繞世界樹艾爾達拉生長，與之共生共鳴
+  - target: sylvaine_river
+    type: physical
+    direction: 東北方
+    description: 希爾薇恩河從森林深處流向傑米努斯大河，是與外界唯一的自然通道
+  - target: the_howling_peaks
+    type: physical
+    direction: 東方
+    description: 怒嘯山脈西麓的融雪與地下水系滋養世界樹根系，間接維繫森海的生機
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 水晶宮廷（Crystal Court）
+    location: 世界樹主幹與根系交會處
+    description: >
+      並非人類意義上的建築，而是世界樹的「器官」。
+      由樹脂與水晶混合物構成，內部充滿流動光線與永恆薄霧，
+      牆壁隨晝夜變色：黎明淡金、正午翠綠、月夜銀藍。
+  - item: npc
+    name: 席爾瓦裡翁長老議會
+    location: 水晶宮廷最深處的共鳴大廳
+    description: >
+      以母系血統為基礎的貴族長老制議會，
+      在月光下討論著與人類世界無關的永恆話題，
+      決定著森民與世界樹的命運。
+  - item: npc
+    name: 希爾薇恩（Sylvaine）
+    location: 銀葉聖樹（極北戰場）
+    description: >
+      席爾瓦裡翁派遣的森民法師，上古英雄希爾妲的後裔，
+      銀髮及腰，眼眸如翡翠般翠綠。
+      第485年極北會戰最後時刻釋放禁術「生命綻放」，化身銀葉聖樹。
+  - item: artifact
+    name: 銀葉聖樹種子
+    location: 由埃爾莎帶回，親手關閉森海大門時所植
+    description: >
+      希爾薇恩化身的銀葉聖樹所結的種子，
+      成為人類與森民兩族盟約最唯美的象徵。
+
+# ── 歷史事件（events）──
+events:
+  - id: founding_of_silvarion
+    year: 115
+    name: 席爾瓦裡翁建立
+    description: >
+      森民在世界樹艾爾達拉的蔭庇下建立「席爾瓦裡翁」（Silverleaf Concord），
+      以母系血統為基礎的貴族長老制社會成形。
+  - id: ferroth_oath
+    year: 483
+    name: 費羅斯誓約
+    description: >
+      席爾瓦裡翁的長老們因世界樹幻象而打破隱遁，
+      森民首次大規模與人類合作，共同對抗霜生的第二次白色洪流。
+  - id: battle_of_utter_north
+    year: 485
+    name: 極北會戰
+    description: >
+      決戰在極北荒原爆發。希爾薇恩為阻止雙方繼續混戰，
+      釋放禁術「生命綻放」，將自己的生命精華注入大地，化身銀葉聖樹。
+  - id: the_great_seclusion
+    year: 490
+    name: 大隱遁
+    description: >
+      森民見證人類戰後的殘酷與貪婪後，啟動大隱遁。
+      世界樹艾爾達拉的邊界開始自動擴張，濃厚的迷霧結界湧出，
+      將艾特恩瓦爾德森海徹底封閉。森民退回深處，進入「修養紀元」。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 森民
+  - 席爾凡
+  - 銀葉同盟
+  - 世界樹
+  - 水晶宮廷
+  - 共鳴
+  - 自然魔法
+  - 大隱遁
+  - 費羅斯誓約
+  - 母系社會

@@ -1,0 +1,90 @@
+# ── 身份錨定（必填）──
+id: thalassa
+name: 塔拉薩
+layer: settlement
+region: 風息群島
+empire: 自由城邦聯盟
+parent_id: south_libertania
+
+# ── 敘事錨定（必填）──
+description: >
+  塔拉薩（Thalassa）坐落於風息群島主島群的西北島，是群島的行政與法律核心，
+  一座古老的石造港口城市。
+  建築風格類似威尼斯總督宮，宏偉的石造法律大廳牆上刻滿商法條文與薩穆德拉盟誓的原始文本。
+  空氣中瀰漫羊皮紙與乾燥墨水的氣味，法庭上的辯論聲與銅鐘聲日夜迴盪。
+  法學家與書吏在此聚集，仲裁城邦間的貿易糾紛。
+  作為自由城邦聯盟的法律中樞，塔拉薩約有三萬常住人口，  # inferred: true
+  其中近半數從事法律、書記與檔案管理相關職業。  # inferred: true
+  薩穆德拉盟誓的雙語原件自第892年簽訂以來便保存於法律大廳的密室之中，  # inferred: true
+  每年盟誓紀念日，四城邦代表會在此公開朗誦盟約條文。  # inferred: true
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 羊皮紙與乾燥墨水味
+  light: >
+    熱帶強光投射銳利陰影，夕照時石造建築鍍上金紅色光輝
+  temperature: >
+    常年濕熱無冬，午後雷陣雨後悶熱黏膩
+  sound:
+    - 法庭辯論聲與銅鐘聲日夜迴盪
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 塔拉薩法律議會  # inferred: true
+  access_level: public
+  danger_level: low
+  religion: 風母與七洋靈泛靈信仰
+  population: 30000  # inferred: true
+  settlement_type: town
+  wonders:
+    - grand_courthouse
+
+# ── 關係即通道（connections）──
+connections:
+  - target: wind_isles
+    type: physical
+    direction: 所屬群島
+    description: 塔拉薩坐落於風息群島主島群西北島，是群島行政與法律核心
+  - target: free_port
+    type: physical
+    direction: 東北方
+    description: 石橋與堤道連接塔拉薩與菲惹港  # inferred: true
+  - target: anchora
+    type: physical
+    direction: 東南方
+    description: 石橋與堤道連接塔拉薩與昂科拉  # inferred: true
+  - target: aeolis
+    type: physical
+    direction: 東南方
+    description: 石橋與堤道連接塔拉薩與艾歐利斯  # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 石造法律大廳（Grand Courthouse）
+    location: 城市中央
+    description: >
+      宏偉的石造建築，牆上刻滿商法條文與薩穆德拉盟誓的原始文本。
+      法學家與書吏在此聚集，仲裁城邦間的貿易糾紛。
+      薩穆德拉盟誓雙語原件保存於大廳密室。  # inferred: true
+
+# ── 歷史事件（events）──
+events:
+  - id: samudra_pact_signed
+    year: 892
+    name: 薩穆德拉盟誓簽訂
+    description: >
+      四城邦代表在艾歐利斯議政廳簽訂薩穆德拉盟誓，
+      確立自由城邦聯邦制的基本框架，約定共同防禦、自由貿易與風息議會的仲裁權。
+      盟誓原件保存於塔拉薩法律大廳。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 法律核心
+  - 石造城市
+  - 港口
+  - 薩穆德拉盟誓
+  - 商法仲裁
+  - 風息群島
+  - 自由城邦

@@ -1,0 +1,120 @@
+# ── 身份錨定（必填）──
+id: horotoria
+name: 霍羅托里亞
+layer: settlement
+region: 極北溫泉谷地  # inferred: true
+empire: 北境諸邦
+parent_id: north_frost
+
+# ── 敘事錨定（必填）──
+description: >
+  霍羅托里亞（Horotoria）位於大陸最北端，夾在白霜與人類世界之間的溫泉谷地，
+  是安納克聯軍在極北會戰（第485年）後，由部分選擇留守極北的聯軍所逐步形成的城市聚落。
+  統治者自稱「瓦萊里安第一公民」繼承者的軍事領袖，
+  拒絕接受普世教會的「一神多從」學說，
+  堅持大洪水後傳承下來的「大陸眾神」信仰——認為阿薩只是眾神之一，
+  而嚴冬之神卡德摩斯也同樣值得敬畏。
+  整座城邦建構於地熱溫泉系統之上，利用地熱與溫泉熱氣對抗零下四十度的極寒，
+  這種被稱為「舊火」的技術正是「地熱之子」馬庫斯技藝的結晶與延續。
+  第790年後，霍羅托里亞徹底封閉國門，頒布《工藝封存令》，
+  禁止任何法尼斯工匠離開國境，對試圖滲透的外國細作處以極刑，
+  以維持對溫泉技藝的壟斷。
+  第810年，霍羅托里亞與宿敵阿爾比諾克拉西亞達成「冰晶協定」，進行技術交換；
+  雙方邊界持續進行「邊界禮儀戰」——一種有限的襲擊與反襲擊，
+  戰後甚至會交換俘虜與技術情報，
+  這種「敵對合作」令南方帝國貴族完全無法理解。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 硫磺與溫泉蒸汽的刺鼻氣息
+    - 地熱噴泉帶來的礦物鹽味  # inferred: true
+    - 極北凍原的冰冷無味空氣  # inferred: true
+  light: >
+    極北永晝的慘白與永夜的幽深極光，
+    溫泉蒸汽折射出的迷離光暈  # inferred: true
+  temperature: >
+    溫泉谷地終年溫暖，但踏出蒸汽範圍即是零下四十度的極寒  # inferred: true
+  sound:
+    - 地熱噴泉的轟鳴與蒸汽逸散的嘶嘶聲
+    - 溫泉唧筒機械轉動的低沉節奏  # inferred: true
+    - 極北風嘯穿越冰原的嗚咽  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 瓦萊里安第一公民繼承者  # inferred: true
+  access_level: restricted
+  danger_level: medium
+  religion: 大陸眾神信仰
+  population: 30000  # inferred: true
+  settlement_type: town
+  wonders:
+    - geothermal_springs
+
+# ── 關係即通道（connections）──
+connections:
+  - target: northern_mountains
+    type: physical
+    direction: 南方
+    description: 約恩維德山脈是霍羅托里亞與南方帝國的天然屏障
+  - target: jarnvid_river
+    type: physical
+    direction: 南方
+    description: 約恩維德河發源於山脈，向南流入傑米努斯大河
+  - target: the_howling_peaks
+    type: conceptual
+    direction: 南方遠眺
+    description: 晴天時自溫泉谷地高處可遠眺怒嘯山脈的北方余脈  # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 地熱溫泉群（Geothermal Springs）
+    description: >
+      馬庫斯技藝的結晶，整座城邦建構於地熱溫泉系統之上。
+      溫泉唧筒利用地熱與溫泉熱氣推動活瓣與轉輪，
+      維持供暖與小型機巧裝置，是「舊火」技術的核心象徵。
+  - item: artifact
+    name: 《地熱之子手稿》殘篇
+    description: >
+      馬庫斯留下的筆記殘篇，記載了如何利用地熱與溫泉熱氣對抗嚴寒，
+      被視為霍羅托里亞溫泉技藝的奠基文獻。
+  - item: document
+    name: 《工藝封存令》
+    description: >
+      第790年後頒布的法令，禁止任何法尼斯工匠離開國境，
+      對試圖滲透的外國細作處以極刑，確保溫泉技藝的壟斷。
+
+# ── 歷史事件（events）──
+events:
+  - id: battle_of_utter_north
+    year: 485
+    name: 極北會戰
+    description: >
+      決戰在極北荒原爆發，安納克聯軍在瓦萊里安領導下擊潰霜生主力。
+      戰後部分聯軍選擇留守極北，形成霍羅托里亞的雛形。
+  - id: horotoria_seclusion
+    year: 790
+    name: 霍羅托里亞封國
+    description: >
+      霍羅托里亞徹底封閉國門，頒布《工藝封存令》，
+      禁止法尼斯工匠離境，對外國細作處以極刑。
+  - id: crystal_pact
+    year: 810
+    name: 冰晶協定
+    description: >
+      霍羅托里亞與阿爾比諾克拉西亞達成技術交換協定。
+      雙方邊界持續進行「邊界禮儀戰」——有限襲擊與反襲擊，
+      戰後交換俘虜與技術情報。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 溫泉城邦
+  - 舊火
+  - 地熱
+  - 封閉國門
+  - 大陸眾神
+  - 瓦萊里安
+  - 馬庫斯
+  - 冰晶協定
+  - 邊界禮儀戰

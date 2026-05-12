@@ -84,7 +84,7 @@ contents:
     name: 地熱溝渠網絡
     location: 要塞地下與外圍
     description: >
-      利用特爾馬嶺地熱資源修建的溝渠系統，
+      利用北方邊境地熱資源修建的溝渠系統，
       既能融化積雪、防止寒法冰封地面，也為地下冰窖提供熱源。  # inferred: true
   - item: npc
     name: 奧羅·伊格尼斯邊境支隊指揮官

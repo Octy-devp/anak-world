@@ -1,0 +1,55 @@
+id: aeolis
+name: 艾歐利斯
+layer: settlement
+region: 東南部
+empire: 自由城邦聯盟
+parent_id: south_libertania
+
+description: >
+  風息議會的永久召開地，純粹中立協商區域。核心建築是一座露天圓形議政廳，
+  無頂設計讓風直接吹入廳堂，象徵風母見證所有盟約。
+  這裡幾乎沒有其他氣味，只有純淨海風的鹽味；
+  風穿過石柱的鳴響與代表的低語是唯一的聲音。
+  四城邦代表在此平等協商，無人可攜帶武器進入。
+
+atmosphere:
+  scent:
+    - 純淨海風的鹽味（幾乎無其他氣味）
+  light: 熱帶強光直射議政廳石柱，夕照金紅  # inferred: true
+  temperature: 常年濕熱無冬，風直接吹入廳堂帶來涼意  # inferred: true
+  sound:
+    - 風穿過石柱的鳴響與代表的低語
+
+properties:
+  settlement_type: town
+  wonders:
+    - windbreath_council_hall
+  controlled_by: 風息議會  # inferred: true
+  access_level: public
+  danger_level: low
+  religion: 風母與七洋靈泛靈信仰
+
+connections:
+  - target: wind_isles
+    type: physical
+    direction: 所屬群島  # inferred: true
+    description: 艾歐利斯坐落於風息群島主島群中央島  # inferred: true
+  - target: thalassa
+    type: physical
+    direction: 西北方  # inferred: true
+    description: 經石橋與堤道通往主島群西北島的塔拉薩  # inferred: true
+  - target: free_port
+    type: physical
+    direction: 東北方  # inferred: true
+    description: 經石橋與堤道通往主島群東北島的菲惹港  # inferred: true
+  - target: anchora
+    type: physical
+    direction: 東南方  # inferred: true
+    description: 經石橋與堤道通往主島群東南島的昂科拉  # inferred: true
+
+tags:
+  - 風息議會
+  - 協商
+  - 中立
+  - 露天議政廳
+  - 城邦

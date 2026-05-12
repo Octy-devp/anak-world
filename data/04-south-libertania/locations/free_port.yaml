@@ -1,0 +1,80 @@
+# ── 身份錨定（必填）──
+id: free_port
+name: 菲惹港
+layer: settlement
+region: 風息群島
+empire: 自由城邦聯盟
+parent_id: south_libertania
+
+# ── 敘事錨定（必填）──
+description: >
+  菲惹港（Free Port）坐落於風息群島主島群的東北島，是群島的開拓先鋒與貿易中樞。
+  巨型碼頭延伸到潟湖之中，桅杆如林。
+  木質高腳屋與石造倉庫混雜，街道狹窄而喧囂。
+  各國香料的混合辛香瀰漫空氣，多國語言的喧囂與錢幣碰撞聲不絕於耳。
+  流亡技術人才與冒險家在此落腳，是群島最具活力也最混亂的城邦。
+  常住人口約四萬，是風息群島人口最多的城邦，  # inferred: true
+  碼頭區每日吞吐來自塞拉菲昂、凱撒里克與傳說中香料島的貨物。  # inferred: true
+  這裡沒有固定的市場管理機構，交易全憑口頭契約與風母見證，  # inferred: true
+  任何持有風役護照的人均可在碼頭區設攤貿易。  # inferred: true
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 各國香料的混合辛香
+  light: >
+    熱帶強光與潟湖波光，夜間藍眼淚與星空輝映
+  temperature: >
+    常年濕熱無冬，季風時短暫涼爽
+  sound:
+    - 多國語言的喧囂與錢幣碰撞聲，碼頭上日夜不息
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 菲惹港商會理事會  # inferred: true
+  access_level: public
+  danger_level: low
+  religion: 風母與七洋靈泛靈信仰
+  population: 40000  # inferred: true
+  settlement_type: town
+  wonders:
+    - grand_dock
+
+# ── 關係即通道（connections）──
+connections:
+  - target: wind_isles
+    type: physical
+    direction: 所屬群島
+    description: 菲惹港坐落於風息群島主島群東北島，是群島貿易中樞與開拓先鋒
+  - target: thalassa
+    type: physical
+    direction: 西北方
+    description: 石橋與堤道連接菲惹港與塔拉薩  # inferred: true
+  - target: anchora
+    type: physical
+    direction: 東南方
+    description: 石橋與堤道連接菲惹港與昂科拉  # inferred: true
+  - target: aeolis
+    type: physical
+    direction: 西南方
+    description: 石橋與堤道連接菲惹港與艾歐利斯  # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 巨型碼頭（Grand Dock）
+    location: 潟湖東北岸
+    description: >
+      巨型碼頭延伸到潟湖之中，桅杆如林。
+      各國商船在此停泊、卸貨與補給，
+      是風息群島與外界貿易的首要門戶。  # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 貿易中樞
+  - 港口
+  - 多元文化
+  - 香料市場
+  - 冒險家
+  - 風息群島
+  - 自由城邦
