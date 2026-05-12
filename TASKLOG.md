@@ -4,6 +4,26 @@
 
 ---
 
+## 2026-05-13 00:05 CKII 模式澄清 — County = settlement, Holding = district
+
+- **From**: 用戶指示 + 父代理 (Kimi Code CLI)
+- **To**: 未來的父代理 / 子代理
+- **背景**：用戶指出 22 個 settlement 中，金穗堡、潮音宮、小赫斯領等嚴格來說應是 County 而非獨立 Kingdom。用戶明確指示「Kingdom 層就是選帝侯領地（格蘭迪斯大公國、莫爾根王國），他們的首都已經是一個基礎，可以按照這些首都來重構下屬的 County」。
+- **設計決策（已確認）**：
+  1. **Kingdom/Duchy 層不需要獨立 YAML** — 選帝侯領地（如格蘭迪斯大公國、莫爾根王國）由 `empire.yaml` 描述，是政治聚合體而非地理實體。
+  2. **County = `settlement` YAML** — 金穗堡、潮音宮、小赫斯領、維特魯斯等 22 個 YAML 都是 County。命名為「堡」「宮」「莊園」的 County 僅表示其主要 Holding 類型為 Castle（`settlement_type: fortress`）。
+  3. **Holding = `district` YAML**（待建立）— County 內的具體區域，如維特魯斯的「內城區（暮光宮 fortress）」「大教堂區（聖鑰院 monastery）」「商業區（town）」。
+  4. **選帝侯首都 = 特殊 County** — 金穗堡是格蘭迪斯大公國的首都 County；潮音宮是莫爾根王國的首都 County；維特魯斯是瓦羅蘭特皇室直轄 County + 五大特別市聯盟之一。
+  5. **未來擴展方向**：圍繞每個選帝侯首都，在其周圍建立更多下屬 County（如格蘭迪斯大公國境內的金穗堡周邊農村、貿易站等）。
+- **行動**：
+  - [x] 更新 `AGENTS.md` v0.3：新增「CKII 模式映射」章節（第 39–68 行）
+  - [x] 更新 `AGENTS.md` 章節編號（三→十）
+  - [ ] 可選：在 `schema.json` 增加 `properties.liege` 或 `properties.suzerain` 字段（標記 County 歸屬）
+  - [ ] 可選：在 22 個 settlement YAML 中補充 `properties.liege` 指向所屬選帝侯
+- **重要原則**：`settlement` 永遠是 County，不是 Holding。任何將「堡」「宮」理解為單一建築的偏差都應糾正。
+
+---
+
 ## 2026-05-13 00:00 當前狀態總覽
 
 - **Schema**: v0.3（layer: settlement, settlement_type enum, wonders[], districts[]）
