@@ -1,0 +1,120 @@
+# ── 身份錨定（必填）──
+id: saltwhite
+name: 鹽白城
+layer: settlement
+region: 南方海岸
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  鹽白城（Saltwhite）位於塞拉菲昂神聖帝國的南方海岸，與莫爾根王國的領地犬牙交錯。
+  這座城市以海鹽提煉、漁業與玻璃吹制聞名，其市民多為自由民，
+  穿著色彩鮮豔的帆布服飾，與莫爾根領地內陰鬱的封建氛圍形成鮮明對比。
+
+  鹽白城與莫爾根之間的關係充滿張力：莫爾根的私掠艦隊時常「誤劫」鹽白城的商船，
+  而鹽白城則通過向凱撒里克帝國走私食鹽來報復。
+  作為「五大特別市聯盟」成員之一，鹽白城與維特魯斯聖座、雙子門市、焰紋市及阿申斯塔特共享一個選帝侯投票權。
+
+  第821年，莫爾根王國的「聖焰私掠艦隊」以「緝拿異端走私者」之名擊沉了私鹽走私商科拉·鹽歌家的商船，
+  父母與兄長溺斃。水流動者在海灘上發現她時，她正抱著一塊浮木，
+  口中反覆念叨著利貝塔尼亞商船上的契約口訣。此後她被帶入靜默之塔，成為聖女候選人。
+
+  到了第825年，鹽白城的港口依舊繁忙，漁船與走私小艇在晨曦中穿梭，
+  鹽晶在陽光下閃爍，玻璃工坊的火焰從未熄滅。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 海鹽的鹹腥與潮濕海藻氣息
+    - 剛出爐的玻璃與熔砂的熾熱礦物味
+    - 漁獲與曬乾魚貨的濃烈海鮮氣
+    - 彩色帆布染料與亞麻織物的清新氣味 # inferred: true
+  light: >
+    海岸晨光將鹽田映照為一片銀白，正午時分玻璃工坊的熔爐將窗櫺染成琥珀色；
+    黃昏時漁船歸港，桅杆與帆布在落日中剪出鮮豔的輪廓。
+  temperature: >
+    海風終年調節，夏季涼爽，冬季溫和；
+    但玻璃工坊周邊終年燥熱，與海邊的潮濕形成對比。 # inferred: true
+  sound:
+    - 海浪拍打礁石的節奏與海鷗鳴叫
+    - 玻璃吹制師轉動吹管的細微嘶嘶聲
+    - 漁船出入港口的搖櫓聲與船鐘鳴響
+    - 市集上自由民以鹽白城方言討價還價的喧嚷 # inferred: true
+    - 遠方莫爾根私掠艦巡弋時隱約的號角聲 # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 鹽白城市民議會 # inferred: true
+  access_level: public
+  danger_level: medium
+  religion: 普世教會西派（創世主阿薩）
+  population: 35000  # inferred: true（沿海自由市規模）
+  settlement_type: town
+  wonders:
+    - salt_crystal_glassworks
+
+# ── 關係即通道（connections）──
+connections:
+  - target: flumen_geminus
+    type: physical
+    direction: 北方水域
+    description: >
+      傑米努斯河在此注入海洋，鹽白城的漁船與商船經由河口水域往返，
+      並利用河道向北進行食鹽走私貿易。
+  - target: twin_gates
+    type: conceptual
+    direction: 北方海上同盟
+    description: >
+      五大特別市聯盟成員，與雙子門市之間存在海上貿易與海上衝突的複雜關係；
+      雙子門市商人公會曾提高莫爾根艦隊通過傑米努斯河入海口的「聖輪維護稅」以協助鹽白城。
+  - target: vetustapolis
+    type: conceptual
+    direction: 北方同盟
+    description: >
+      五大特別市聯盟成員，與維特魯斯聖座共享一個選帝侯投票權，
+      在政治與軍事上互相支援以抗衡封建大領主。
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 鹽晶玻璃工坊
+    location: 臨海工坊區
+    guardian: 玻璃行會
+    description: >
+      鹽白城最負盛名的玻璃吹制工坊，以本地提煉的純淨海鹽為助熔劑，
+      生產出帶有獨特銀白光澤的玻璃器皿與窗櫺。
+      工坊穹頂終年透著熔爐的橘紅色光芒。
+  - item: resource
+    name: 海鹽礦床
+    location: 南方海岸淺灘與鹽田
+    guardian: 鹽業公會
+    description: >
+      鹽白城經濟命脈，利用南方海岸的淺灘與潮間帶進行日曬蒸發提煉，
+      產品供應帝國內陸，並暗中輸往凱撒里克帝國。
+  - item: npc
+    name: 私鹽走私商網絡
+    location: 港口暗巷與河灣渡口
+    description: >
+      科拉之父曾參與的走私網絡，至今仍在莫爾根艦隊的封鎖間隙運作，
+      將食鹽裝入利貝塔尼亞商船的貨艙，運往凱撒里克帝國。
+
+# ── 歷史事件（events）──
+events:
+  - id: cora_family_shipwrecked
+    year: 821
+    name: 科拉家商船遭莫爾根私掠艦擊沉
+    description: >
+      莫爾根王國的「聖焰私掠艦隊」以「緝拿異端走私者」之名擊沉了私鹽走私商科拉·鹽歌家的商船，
+      父母與兄長溺斃。科拉成為海上罹難孤兒，後被水流動者發現並帶入靜默之塔。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 自由市
+  - 海鹽
+  - 漁業
+  - 玻璃吹制
+  - 五大特別市聯盟
+  - 走私
+  - 南方海岸
+  - 科拉·鹽歌

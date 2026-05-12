@@ -1,0 +1,112 @@
+id: golden_spire_castle
+name: 金穗堡
+layer: settlement
+region: 中央沖積平原
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+description: >
+  格蘭迪斯大公奧托·馮·格蘭迪斯的宮殿，建於一座古代堤壩遺跡之上。
+  其地窖中儲藏著足以供應維特魯斯三年的糧食，但奧托從不輕易釋放。
+  在第825年的聖券惡性貶值中，格蘭迪斯是唯一拒絕接受神恩券的大領主，
+  強迫商人與農民以糧食、鹽、鐵釘進行以物易物。
+  這使得格蘭迪斯的領地實際上已成為一個經濟獨立王國，
+  與維特魯斯的聯繫僅剩形式上的效忠誓言。
+  奧托長期覬覦阿申斯塔特的市集稅收，在邊境駐紮軍隊，
+  隨時準備將這座自由市重新併入格蘭迪斯的麥田版圖。
+  他掌握中部平原的麥田，用糧食換取忠誠。
+atmosphere:
+  scent:
+    - 地窖深處陳年小麥與大麥的乾燥穀香
+    - 青銅盔甲與長戟上擦拭用的亞麻油味  # inferred: true
+    - 古代堤壩石材風化後的塵土與石灰氣息  # inferred: true
+    - 麥穗軍團營火炊煙中的烤餅焦香  # inferred: true
+  light: 主樓高窗透入的垂直光柱，地窖中只有油脂燈的昏黃搖曳  # inferred: true
+  temperature: 石砌建築內冬暖夏涼，但地窖終年陰冷，小冰期令周邊麥田秋收愈發艱難  # inferred: true
+  sound:
+    - 麥穗軍團操練時的青銅甲碰撞與長戟頓地聲  # inferred: true
+    - 地窖糧倉中老鼠窸窣與糧袋摩擦的低語  # inferred: true
+    - 古代堤壩遺跡縫隙中穿堂風的嗚咽  # inferred: true
+    - 邊境方向偶爾傳來的軍號與集結鼓點  # inferred: true
+
+properties:
+  controlled_by: 格蘭迪斯大公奧托·馮·格蘭迪斯
+  access_level: restricted
+  danger_level: high
+  religion: 普世教會西派
+  population: 5000  # 要塞、宮殿與周邊麥穗軍團駐地，推估約四千至六千人；inferred: true
+  settlement_type: fortress
+  wonders:
+    - golden_spire_keep
+
+connections:
+  - target: the_flood_plain
+    type: physical
+    direction: 四面八方
+    description: 金穗堡坐落於中央沖積平原核心，四周皆是格蘭迪斯壟斷的廣袤麥田
+  - target: flumen_geminus
+    type: physical
+    direction: 南方近處
+    description: 傑米努斯大河的沖積水源灌溉著格蘭迪斯的領地，河運是糧食輸出的命脈
+  - target: hess
+    type: conceptual
+    direction: 西方
+    description: 護憲議會等小領主在格蘭迪斯與莫爾根聯手壓迫下尋求自保，對金穗堡懷有戒懼
+  - target: ruptus_pass
+    type: physical
+    direction: 東方遠處
+    description: 魯普圖斯隘口是通往東部凱撒里克帝國的陸路咽喉，格蘭迪斯的糧食亦有部分經此走私  # inferred: true
+
+contents:
+  - item: landmark
+    name: 金穗堡主樓
+    location: 古代堤壩遺跡頂端
+    description: >
+      格蘭迪斯大公奧托的宮殿核心，建於一座古代堤壩遺跡之上。
+      主樓高聳，外牆以金色麥穗紋章裝飾，在平原地平線上遠遠可見。
+      堡內設有大公寢宮、麥穗軍團指揮廳與以物易物的糧食交易市集。
+  - item: resource
+    name: 三年儲糧地窖
+    location: 主樓地下
+    guardian: 麥穗軍團
+    description: >
+      地窖中儲藏著足以供應維特魯斯三年的糧食，是小冰期與聖券貶值時代格蘭迪斯的真正貨幣儲備。
+      奧托從不輕易釋放這些糧食，除非能換取領主的效忠或教廷的讓步。
+  - item: npc
+    name: 奧托·馮·格蘭迪斯
+    location: 金穗堡主樓
+    description: >
+      「麥田之主」，格蘭迪斯大公，第825年塞拉菲昂帝國實質上的「糧食皇帝」。
+      他拒絕接受神恩券，以糧食、鹽、鐵釘進行以物易物，
+      長期覬覦阿申斯塔特的市集稅收，在邊境駐紮軍隊。
+  - item: npc
+    name: 奧莉薇亞·馮·格蘭迪斯
+    location: 靜默之塔（已離開金穗堡）
+    description: >
+      「麥穗之淚」，九歲的靜默之塔聖女候選人，奧托·馮·格蘭迪斯的遠房姪女。
+      她的入選是第822年阿申斯塔特危機後的政治交易：
+      格蘭迪斯大公以向維特魯斯增供三年靈糧為籌碼，換取教廷接納一名格蘭迪斯血裔進入靜默之塔。
+
+events:
+  - id: golden_spire_barter_decrees
+    year: 825
+    name: 金穗堡以物易物令
+    description: >
+      在聖券惡性貶值中，格蘭迪斯是唯一拒絕接受神恩券的大領主。
+      奧托大公強迫商人與農民以糧食、鹽、鐵釘進行以物易物，
+      使格蘭迪斯領地實際上成為經濟獨立王國。
+  - id: ashtown_crisis
+    year: 822
+    name: 阿申斯塔特危機
+    description: >
+      格蘭迪斯大公奧托以「糧道安全」為由在阿申斯塔特邊境修築軍事哨站，
+      實質封鎖這座自由市的陸路補給。
+      作為政治交易，奧托以向維特魯斯增供三年靈糧為籌碼，
+      換取教廷接納其遠房姪女奧莉薇亞進入靜默之塔。
+
+tags:
+  - 格蘭迪斯
+  - 要塞
+  - 糧倉
+  - 選帝侯
+  - 以物易物
+  - 麥穗軍團

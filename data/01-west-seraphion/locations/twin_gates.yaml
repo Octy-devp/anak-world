@@ -1,0 +1,143 @@
+# ── 身份錨定（必填）──
+id: twin_gates
+name: 雙子門市
+layer: settlement
+region: 傑米努斯河交匯處
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+
+# ── 敘事錨定（必填）──
+description: >
+  雙子門市（Twin Gates）位於傑米努斯河（Twin Rivers）交匯處，
+  控制著帝國境內七座青銅大橋的過橋稅。
+
+  這座城市的建築以青銅與大理石為基調，商人公會極其強大，
+  其市場「橋樑廣場」是帝國內陸最大的以物易物交易中心。
+  雙子門市的市民以務實與狡詐聞名，他們發明了一種「橋樑語」——
+  一種夾雜著神聖鐵水語與古代商業術語的暗語，專門用於合同欺詐。
+
+  在主設定文獻中，雙子門市是「五大特別市聯盟」（The Pentapolis）成員之一，
+  五城共享一個選帝侯投票權。
+  阿申斯塔特依靠與雙子門市的聯盟，通過傑米努斯河航運維持生存。
+  莫爾根王國的私掠艦隊與雙子門市之間海上衝突激烈，
+  雙子門市的商人公會提高了莫爾根艦隊通過傑米努斯河入海口的「聖輪維護稅」，
+  並暗中向西爾伯弗羅斯特邊疆提供情報，協助其避開莫爾根的私掠。
+  聖女塞拉菲娜五世亦曾利用雙子門市商人公會的走私渠道，
+  將格蘭迪斯大公領地內的過剩小麥秘密運入維特魯斯貧民窟。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 青銅與大理石的冷冽金屬氣息
+    - 傑米努斯河交匯處的濕潤泥土與蘆葦腥甜
+    - 橋樑廣場上皮革、香料與魚鮮的混雜市肆氣味
+    - 契約羊皮紙與油墨的陳腐酸氣 # inferred: true
+  light: >
+    正午時分七座青銅橋樑將日光反射為暖金色波光，
+    大理石建築立面呈現慘白與金黃的交錯；
+    黃昏時河面倒映橋欄的銅綠光暈；
+    夜間商人公會的燈籠與橋頭火把在霧氣中暈開橙紅光圈。
+  temperature: >
+    河風終年帶來涼爽，夏季午後大理石廣場蓄熱悶熱，
+    冬季橋面青銅欄杆冰寒徹骨。
+  sound:
+    - 船夫號子與傑米努斯河交匯處的流水低語
+    - 橋樑廣場上商人討價還價與橋樑語的暗語低聲
+    - 錢幣與契約印章在櫃檯上的清脆碰撞 # inferred: true
+    - 七座大橋上車馬與行人的隆隆回響 # inferred: true
+
+# ── 屬性標籤──
+properties:
+  controlled_by: 雙子門市商人公會
+  access_level: public
+  danger_level: medium
+  religion: 普世教會西派（創世主阿薩）
+  population: 45000  # inferred: true（帝國內陸最大以物易物中心，自由市規模）
+  settlement_type: town
+  wonders:
+    - seven_bronze_bridges
+    - bridge_market
+
+# ── 關係即通道（connections）──
+connections:
+  - target: flumen_geminus
+    type: physical
+    direction: 坐落於交匯處
+    description: >
+      雙子門市位於傑米努斯河（Twin Rivers）交匯處，
+      河流是城市的命脈與財富之源，七座青銅大橋橫跨其上，
+      船運與過橋稅構成城市核心收入。
+  - target: vetustapolis
+    type: conceptual
+    direction: 東方順流
+    description: >
+      沿傑米努斯河順流而下可達帝國首都維特魯斯，
+      雙子門市商人公會與教廷、選帝侯之間存在複雜的利益交換與走私網絡。
+  - target: the_flood_plain
+    type: physical
+    direction: 北岸平原
+    description: >
+      傑米努斯河交匯後向北形成沖積平原，
+      雙子門市是平原農產品向東西貿易的轉運樞紐之一。
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 橋樑廣場
+    location: 城市中心，七座青銅大橋交匯處
+    guardian: 雙子門市商人公會
+    description: >
+      帝國內陸最大的以物易物交易中心，
+      攤位沿橋樑與河岸密佈，貨物從北方毛皮到南方香料應有盡有。
+      這裡是橋樑語最活躍的場所，一份合同的每一個詞都可能藏有三重含義。
+  - item: landmark
+    name: 七座青銅大橋
+    location: 橫跨傑米努斯河交匯處
+    guardian: 商人公會僱傭的橋樑守衛
+    description: >
+      帝國境內最宏偉的河橋群，以青銅與大理石築成，
+      每座橋設有收稅閘口，過橋稅是雙子門市最主要的財政來源。
+  - item: npc
+    name: 雙子門市商人公會
+    location: 橋樑廣場周邊的公會廳
+    description: >
+      帝國內陸最強大的商業行會，壟斷了傑米努斯河中游的水路貿易與過橋稅。
+      公會成員精通橋樑語，以合同欺詐與關稅操縱聞名，
+      同時也經營著通往維特魯斯與西爾伯弗羅斯特的地下走私網絡。
+  - item: document
+    name: 橋樑語詞典（地下抄本）
+    location: 商人公會密室與黑市流傳
+    description: >
+      一種夾雜神聖鐵水語與古代商業術語的暗語手冊，
+      專門用於合同欺詐與關稅規避，
+      每個季度都會更新詞彙以應對教廷與帝國法庭的審查。
+
+# ── 歷史事件（events）──
+events:
+  - id: pentapolis_formed
+    year: 788  # inferred: true（source: 隨著第788年帝國議會的癱瘓，維特魯斯周邊四座自由市與維特魯斯聖座結成五大特別市聯盟）
+    name: 五大特別市聯盟成立
+    description: >
+      第788年帝國議會癱瘓後，雙子門市與維特魯斯聖座、焰紋市、鹽白城、阿申斯塔特
+      結成「五大特別市聯盟」（The Pentapolis），共享一個選帝侯投票權，
+      以抗衡格蘭迪斯與莫爾根等大地主的吞併。
+  - id: seraphina_smuggling_network
+    year: 823
+    name: 聖女地下糧倉網絡
+    description: >
+      聖女塞拉菲娜五世利用雙子門市商人公會的走私渠道，
+      將格蘭迪斯大公領地內的過剩小麥秘密運入維特魯斯貧民窟，
+      以繞過教廷《救濟規範化令》造成的救濟糧發放拖延。
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 五大特別市聯盟
+  - 商人公會
+  - 橋樑廣場
+  - 以物易物
+  - 青銅大橋
+  - 橋樑語
+  - 走私
+  - 自由市
+  - 傑米努斯河
+  - 商業

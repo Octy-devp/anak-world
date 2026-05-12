@@ -1,0 +1,91 @@
+id: hess
+name: 小赫斯領
+layer: settlement
+region: 中央沖積平原
+empire: 塞拉菲昂神聖帝國
+parent_id: west_seraphion
+description: >
+  護憲封建議會現任護憲伯爵艾德里安·馮·小赫斯的封地，位於塞拉菲昂神聖帝國中部平原邊緣。
+  領地僅有一座石塔與三百畝葡萄園，規模極小，卻因護憲伯爵的身份而在選帝侯議會中佔有一席之地。
+  護憲議會沒有強大的常備軍，但掌握地方裁判與古老傳統特權：在領地內審訊案件、
+  徵收古法定額稅收、以及拒絕大領主軍隊無償通過的權利。
+  在選帝侯會議中，護憲議會充當教廷與大領主之間的平衡木——
+  當格蘭迪斯與莫爾根聯手壓迫小領主時，轉向教廷尋求保護；
+  當教廷稅收要求過於苛刻時，又與世俗大領主結成暫時同盟。
+  靜默之塔聖女候選人艾拉·馮·小赫斯的出身地。
+atmosphere:
+  scent:
+    - 發酵中的葡萄汁與木桶陳釀的酸香
+    - 石塔牆壁上潮濕苔蘚的土腥味
+    - 秋日葡萄園乾枯藤葉的草木氣息
+    - 羊皮紙卷宗與古代蠟封的霉味  # inferred: true
+  light: 石塔窄窗透入的稀薄午後陽光，葡萄園籬笆間漏下的斑駁樹影  # inferred: true
+  temperature: 溫帶內陸氣候，秋季溫暖，冬季因小冰期而寒風刺骨  # inferred: true
+  sound:
+    - 風吹過葡萄籬笆的沙沙聲
+    - 石塔階梯上護憲衛隊稀落的腳步聲  # inferred: true
+    - 領地內偶爾傳來的鐵砧敲擊與農具碰撞  # inferred: true
+    - 遠方大領主軍隊行軍時的悶雷般震動  # inferred: true
+
+properties:
+  controlled_by: 護憲封建議會／護憲伯爵艾德里安·馮·小赫斯
+  access_level: restricted
+  danger_level: low
+  religion: 普世教會西派
+  population: 300  # 僅一座石塔與三百畝葡萄園，推估約二至三百人；inferred: true
+  settlement_type: village
+  wonders:
+    - charter_stone_tower
+
+connections:
+  - target: the_flood_plain
+    type: physical
+    direction: 北界
+    description: 小赫斯領坐落於中央沖積平原邊緣，周遭皆為格蘭迪斯大公掌控的廣袤麥田
+  - target: flumen_geminus
+    type: physical
+    direction: 南方遠處
+    description: 傑米努斯大河的支流灌溉著領地內的葡萄園，但水源分配受上游大領主控制  # inferred: true
+  - target: golden_spire_castle
+    type: conceptual
+    direction: 東方
+    description: 格蘭迪斯大公的野心時時威脅著小領主的自治，護憲議會與格蘭迪斯處於長期緊張關係
+
+contents:
+  - item: landmark
+    name: 憲章石塔
+    location: 領地中央高地
+    description: >
+      小赫斯領唯一的石砌建築，既是護憲伯爵的居所，也是領地法庭與檔案庫。
+      塔內保存著歷代護憲伯爵傳承的《大憲章》抄本與地方裁判記錄，
+      石牆上刻著歷屆議會宣誓的拉丁銘文。
+  - item: npc
+    name: 艾德里安·馮·小赫斯
+    location: 憲章石塔
+    description: >
+      護憲封建議會現任護憲伯爵，以一部葡萄園與一座石塔為籌碼，
+      在格蘭迪斯、莫爾根與教廷之間維持著脆弱的平衡。
+  - item: npc
+    name: 艾拉·馮·小赫斯
+    location: 靜默之塔（已離開小赫斯領）
+    description: >
+      「憲章之影」，十二歲的靜默之塔聖女候選人，
+      艾德里安護憲伯爵的姪女。她熟記《大憲章》每一條款，
+      代表了帝國內部殘存的封建憲政傳統。
+
+events:
+  - id: ayla_sent_to_still_waters
+    year: 820
+    name: 艾拉入塔
+    description: >
+      艾拉·馮·小赫斯被送入靜默之塔，成為聖女候選人。
+      這是護憲議會與教廷之間脆弱平衡的產物：
+      議會需要教廷承認《大憲章》的古典特權，
+      教廷則需要通過吸納小貴族的女兒，來軟化護憲派對中央獨攬的抵抗。
+
+tags:
+  - 護憲議會
+  - 小領主
+  - 葡萄園
+  - 憲章
+  - 選帝侯
