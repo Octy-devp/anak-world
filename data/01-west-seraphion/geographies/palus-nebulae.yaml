@@ -1,0 +1,150 @@
+# ── 身份錨定（必填）──
+id: palus_nebulae
+name: 帕魯斯沼澤
+name_alt: 迷霧沼澤
+layer: geography
+region: 中央/西部
+empire: 塞拉菲昂神聖帝國
+parent_id: ankora
+
+# ── 敘事錨定（必填）──
+description: >
+  帕魯斯沼澤（拉丁：Palus Nebulae，意為「迷霧之沼」）位於中央沖積平原東部，
+  傑米努斯河主河道東側的一片低洼地帶。
+  這裡是大洪水前傑米努斯河的古河道遺跡，河道改道後遺留的牛軛湖與濕地群終年積水，
+  冬季濕冷多霧，夏季悶熱、蚊蟲滋生、瘴氣瀰漫。
+
+  此地法理上屬於格蘭迪斯大公國的領地，但真正的張力並非「領土爭奪」，而是「水權戰爭」。
+
+  雙子門市（Twin Gates）位於沼澤西方約一日馬程處，坐落於傑米努斯河主河道與一條南北向支流的交匯處。
+  這座城市依賴傑米努斯河主河道供水，其運河系統與七座青銅大橋的水力機構都需要穩定的河流水位。
+  然而，格蘭迪斯大公國控制著傑米努斯河主河道北岸的上游麥田區，
+  並在北岸修築了一系列石砌堰壩與灌溉溝渠。
+  每逢乾旱年份，這些堰壩優先將水引向格蘭迪斯的麥田，
+  導致主河道整體水位銳減——不是斷流，而是降到剛好維持航運的最低水位。
+  對雙子門市而言，這就是「功能性乾旱」：運河淤淺、磨坊水輪停擺、市民被迫排隊領取教廷水承載者配給的「神聖之水」。
+
+  對雙子門市而言，帕魯斯沼澤是它的**命根**。
+  沼澤底下蘊藏著古河道遺留的地下水與季節性積水。
+  第810年以來，雙子門市的商人行會祕密資助工程師與走私者，
+  在沼澤西緣開鑿暗渠、建立人力泵站，試圖將沼澤水引入城市運河系統作為備用水源，
+  同時排乾部分低洼地以開闢秘密農田。
+  這些工程夜間進行，白天則偽裝成「漁民聚落」或「蘆葦採集站」。
+
+  格蘭迪斯大公國對此並非全無察覺——麥穗軍團的巡邏隊時常在沼澤北緣發現陌生的排水溝與木樁——
+  但奧托·馮·格蘭迪斯選擇睜一隻眼閉一隻眼。
+  對他而言，沼澤是天然的東方屏障；只要雙子門市不敢公開挑戰水權，
+  他樂於讓這座自由市在慢性窒息中繼續為他的糧食貿易繳納過路稅。
+
+  教廷在沼澤地帶的立場更為複雜：普世教會西派的影響力不如此地格蘭迪斯的世俗權力，
+  但大救濟院仍維持著一座小型邊境禮拜堂，並派遣修士進入沼澤「救治瘴氣病患」——
+  實則是監控雙子門市的祕密水利工程，評估其對維特魯斯聖座水權的潛在威脅。
+  格蘭迪斯與教廷在此形成微妙的制衡：大公需要教會背書其水權的「神聖性」，
+  而教廷則藉此換取對雙子門市商人公會的影響力。
+
+  大洪水前的青銅時代，傑米努斯河的河道曾經過此處，
+  留下了被淹沒的古代村落與堤壩遺跡。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 腐殖質與泥炭的酸腐氣息 # inferred: true
+    - 夏季瘴氣的甜膩惡臭 # inferred: true
+    - 冬季濃霧中的濕霉味 # inferred: true
+    - 蚊蟲與沼澤植物的腥甜 # inferred: true
+    - 遠處麥田飄來的淡淡穀香 # inferred: true
+  light: >
+    終年迷霧瀰漫，光線被水汽折射成慘白或灰綠色；
+    午後偶有稀疏陽光穿透霧層，在沼澤水面形成斑駁銀斑。
+    黃昏時分，霧氣吸收夕照呈現病態的橘紅，
+    入夜後僅剩零星的走私者燈火在蘆葦叢中忽明忽滅。 # inferred: true
+  temperature: >
+    冬季濕冷刺骨，寒氣透過濕氣滲入骨髓；
+    夏季悶熱難耐，暑氣與濕氣交織令人窒息；
+    春秋短暫而陰涼，白晝與黑夜的溫差被濃霧抹平。 # inferred: true
+  sound:
+    - 氣泡從泥底升起的咕嚕聲 # inferred: true
+    - 水鳥的啼鳴與撲翅聲 # inferred: true
+    - 風吹蘆葦的沙沙聲 # inferred: true
+    - 夜間蛙鳴與蟲吟 # inferred: true
+    - 遠處傳來的隱約人聲或狗吠 # inferred: true
+    - 夏季蚊蟲的嗡嗡聲 # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 格蘭迪斯大公國（世俗權力主導）；教廷監控水權；雙子門市祕密滲透西緣
+  access_level: public
+  danger_level: high
+  religion: 普世教會西派與格蘭迪斯世俗權力共治；雙子門市商人公會資助的民間水利崇拜 # inferred: true
+  population: 極少（主要為逃犯、走私者與異端隱居者） # inferred: true
+
+# ── 關係即通道（connections）──
+connections:
+  - target: the_flood_plain
+    type: physical
+    direction: 南方
+    hidden: false
+    description: 沼澤是中央沖積平原北緣的低洼過渡帶，雨季時兩者幾乎連為一體
+  - target: flumen_geminus
+    type: physical
+    direction: 東方
+    hidden: false
+    description: 傑米努斯河的一條季節性支流在沼澤東緩緩沒入濕地，夏季氾濫時倒灌
+  - target: the_howling_peaks
+    type: physical
+    direction: 北方
+    hidden: false
+    description: 怒嘯山脈西麓丘陵的滲流水經地下徑流匯入沼澤
+  - target: molinaria
+    type: conceptual
+    direction: 東南方
+    hidden: false
+    description: 磨坊鎮位於傑米努斯河主河道旁，與沼澤之間的農田帶是格蘭迪斯大公國的開墾前線
+  - target: ruina_damni
+    type: conceptual
+    direction: 西方
+    hidden: false
+    description: 古代堤壩遺跡與沼澤中的被淹沒遺跡屬於同一青銅時代水利工程系統
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 被淹沒的古代村落遺跡
+    location: 沼澤深水區水下
+    description: 大洪水前青銅時代的聚落殘骸，僅在極度乾旱的年份才會露出水面
+  - item: landmark
+    name: 古代堤壩殘骸
+    location: 沼澤西緣與中央
+    description: 青銅時代水利工程的一部分，與魯普圖斯隘口附近的堤壩遺跡屬於同一系統
+  - item: npc
+    name: 沼澤走私者網絡
+    location: 蘆葦叢深處的隱蔽據點
+    description: 利用沼澤小徑避開五大特別市關稅站的走私集團，與格蘭迪斯的麥穗軍團和教廷巡察僧均保持距離
+  - item: landmark
+    name: 異端避難所
+    location: 沼澤深處（確切位置不為人知）
+    description: 教廷控制力薄弱使得異端得以藏身，據傳存在一座由廢棄古代堤壩改建的地下聚落
+    guardian: 異端隱居者與沼澤嚮導 # inferred: true
+
+# ── 歷史事件（events）──
+events:
+  - id: great_flood_palus_shift
+    year: 0
+    name: 大洪水與河道改道
+    description: 大洪水導致傑米努斯河主河道南移，原流經此地的支流逐漸淤積，最終形成終年積水的低洼沼澤
+  - id: bronze_age_dam_system
+    year: -400
+    name: 青銅時代堤壩系統興建
+    description: 古代文明在此處興建堤壩與灌溉渠，試圖馴服季節性河流；大洪水後廢棄，逐漸沉入沼澤
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 沼澤
+  - 迷霧
+  - 灰色地帶
+  - 瘴氣
+  - 走私
+  - 異端
+  - 古代遺跡
+  - 邊界爭議
+  - 法外之地

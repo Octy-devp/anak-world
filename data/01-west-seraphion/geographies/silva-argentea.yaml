@@ -1,0 +1,139 @@
+# ── 身份錨定（必填）──
+id: silva_argentea
+name: 西爾瓦阿根泰亞（銀葉林）
+layer: geography
+region: 西南部
+empire: 塞拉菲昂神聖帝國（東緣）；艾爾達拉秘境（西緣深處）
+parent_id: ankora
+
+# ── 敘事錨定（必填）──
+description: >
+  西爾瓦阿根泰亞（Silva Argentea，意為「銀色的森林」）位於安納克大陸西南部，
+  是塞拉菲昂神聖帝國與艾爾達拉秘境之間的廣闊溫帶—亞寒帶森林帶。
+  森林西端漸變為艾爾達拉世界樹森林的邊緣，森民（席爾凡）的領地自此開始，人類禁止進入；
+  東緣則是塞拉菲昂帝國的農耕區與邊境巡邏路線，以拉迪克斯守望修道院為中心的哨站體系監控著森民動向。
+  受世界樹魔法影響，森林內部比同緯度地區更溫暖濕潤；
+  秋季時，白楊與樺樹混交的銀白色樹葉形成壯觀景觀，「銀葉林」之名由此而來。
+  這裡是「已知世界」與「未知世界」之間的灰色過渡帶——
+  人類伐木工在東緣聽到西邊傳來奇異歌聲，但從未見過歌者。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 白楊與樺樹葉片的清甜樹脂味
+    - 秋季腐殖土與落葉的濕潤泥土氣息
+    - 東緣伐木區的松脂與新鮮木屑味
+    - 世界樹方向飄來的淡淡霧氣濕潤味（無味卻令人不安）  # inferred: true
+    - 邊境巡邏路線上馬匹與皮革的沉穩氣味  # inferred: true
+  light: >
+    秋季正午時，白楊與樺樹的銀白葉片將陽光反射成漫天的碎銀；
+    黎明與黃昏時，樹冠縫隙透出淡金色的斜射光柱；
+    森林深處（西端）因世界樹影響而呈現翠綠濾光與散射薄霧；
+    東緣邊境則是較為普通的溫帶林間天光，與西端形成漸變對比。  # inferred: true
+  temperature: >
+    森林內部受世界樹魔法影響，比同緯度地區更溫暖濕潤；
+    東緣靠近帝國邊境處氣溫較低，冬季濕冷刺骨；
+    越往西深入，氣溫越趨於恆定，冬暖夏涼。  # inferred: true
+  sound:
+    - 秋季銀白樹葉在風中沙沙作響（如細碎的銀鈴）
+    - 東緣伐木區的斧頭與鋸木聲
+    - 西端深處偶爾傳來的不明低鳴與奇異歌聲（從未確認來源）  # inferred: true
+    - 邊境巡邏隊的號角與馬蹄聲  # inferred: true
+    - 夜行動物與貓頭鷹的鳴叫  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 艾爾達拉秘境（西端深處）；塞拉菲昂神聖帝國（東緣邊境）
+  access_level: restricted
+  danger_level: medium
+  religion: 世界樹之靈艾爾達拉（森民信仰）；普世教會西派（東緣人類）
+  population: 0  # 森民數量不為外界所知；人類僅限東緣邊境活動，無定居點
+
+# ── 關係即通道（connections）──
+connections:
+  - target: eldara_worldtree
+    type: physical
+    direction: 西方深處
+    hidden: false
+    description: 銀葉林的西端漸變為世界樹森林，森民領地自此開始，人類禁止進入
+  - target: sylvaine_river
+    type: physical
+    direction: 北方
+    hidden: false
+    description: 席爾瓦因河沿森林北緣流淌，是銀葉林與北方平原的自然分界
+  - target: southern_mountains
+    type: physical
+    direction: 南方
+    hidden: false
+    description: 塔爾塔魯斯山脈北麓的丘陵地帶構成銀葉林的南部邊界
+  - target: radix_specula
+    type: conceptual
+    direction: 東方邊境
+    hidden: false
+    description: 拉迪克斯守望修道院位於森林東緣，監控森民動向並阻止人類誤入
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 銀葉秋景（The Silver Turning）
+    location: 森林中東部廣闊區域
+    description: >
+      秋季時白楊與樺樹的銀白葉片同時變色，將整片森林染成流動的銀河。
+      這是銀葉林得名的由來，也是塞拉菲昂詩人筆下「大地上的月光」。
+      人類伐木工只敢在東緣遠觀此景，不敢深入。  # inferred: true
+  - item: landmark
+    name: 東緣邊境巡邏路線（Limes Sylvae）
+    location: 森林東緣約二十至三十里範圍內
+    description: >
+      塞拉菲昂邊境哨站之間的林間小徑，由伐木工與巡邏隊共同維護。
+      路線以西立有界碑，標示「此處以東為帝國領地，以西為未知之境」。
+      超過此線即為森民領地，進入者失蹤。  # inferred: true
+  - item: resource
+    name: 白楊與樺木林
+    location: 森林中東部
+    description: >
+      銀葉林的主要樹種，木質輕軟易加工，是塞拉菲昂東緣伐木業的目標。
+      但伐木範圍嚴格限制在東緣二十里內，更深處的樹木被視為「森民所有」。  # inferred: true
+  - item: npc
+    name: 東緣伐木工與獵人
+    location: 森林東緣
+    description: >
+      在邊境巡邏路線以東活動的帝國平民，伐木、狩獵為生。
+      他們流傳著許多關於森林深處的歌謠——「銀葉後面有歌者，但歌者從不露面」。
+      沒有人敢獨自越過界碑。  # inferred: true
+
+# ── 歷史事件（events）──
+events:
+  - id: silva_argentea_naming
+    year: null
+    name: 銀葉林得名
+    description: >
+      塞拉菲昂早期探險家首次記錄這片森林的秋季銀白景觀，
+      以古語「Silva Argentea」（銀色的森林）命名。
+      確切年代已不可考，但名稱沿用至今。  # inferred: true
+  - id: great_seclusion_border
+    year: 490
+    name: 大隱遁與邊界形成
+    description: >
+      森民啟動大隱遁後，世界樹森林的迷霧結界緩慢擴張，
+      銀葉林的西端逐漸被納入森民領地。
+      塞拉菲昂帝國隨後在東緣建立邊境哨站體系，形成持續至今的隔離狀態。  # inferred: true
+  - id: mist_expansion_815
+    year: 815
+    name: 第815年迷霧擴張事件
+    description: >
+      世界樹森林的迷霧結界異常擴張，銀葉林西部約三百公尺的林地突然被濃霧覆蓋。
+      事後在擴張邊緣發現奇異的水晶樹脂碎片。
+      此事件證實銀葉林與世界樹森林之間並無明確界線，而是漸變的森民領地。  # inferred: true
+
+# ── 快速標籤（tags）──
+tags:
+  - 森林
+  - 自然屏障
+  - 銀葉林
+  - 森民
+  - 席爾凡
+  - 邊境
+  - 隔離
+  - 世界樹影響
+  - 緩衝帶

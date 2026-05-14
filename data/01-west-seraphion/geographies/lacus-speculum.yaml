@@ -1,0 +1,100 @@
+# ── 身份錨定（必填）──
+id: lacus_speculum
+name: 斯佩庫拉湖（鏡湖）
+layer: geography
+region: 北部/中央交界
+empire: 塞拉菲昂神聖帝國
+parent_id: ankora
+
+# ── 敘事錨定（必填）──
+description: >
+  鏡湖坐落於怒嘯山脈北麓與約恩維德山脈南端交會的高山谷地中，
+  是安納克大陸中部偏北的一座高山冰蝕湖。
+  海拔約 2000–2500 米，冬季湖面完全冰封，夏季冰緣逐漸消退，
+  露出如鏡面般平靜的湖水，故得拉丁名 Lacus Speculum（鏡湖）。
+  湖水經地下溶洞與夏季融雪補給傑米努斯大河的上游支流，
+  是下游維特魯斯與中央沖積平原夏季水量的重要來源。
+  春分與秋分的黎明時分，高海拔稀薄空氣與懸浮冰晶產生複雜的光學折射，
+  被當地修士解讀為「阿薩的預言」。
+  鏡湖位於塞拉菲昂神聖帝國境內，屬西爾伯弗羅斯特邊疆大公國實際控制的北部水源補給區，
+  但北境諸邦的霜生部落偶爾在冬季越過約恩維德山脈南麓的薄弱點接近湖區，
+  構成持續的邊境緊張。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 高海拔稀薄冷冽的空氣
+    - 冰蝕湖水的礦物清冽  # inferred: true
+    - 凍土與高山苔原的泥土氣息  # inferred: true
+    - 遠處針葉林飄來的淡淡松脂  # inferred: true
+  light: >
+    高海拔無遮蔽的強烈天光，
+    春分與秋分黎明時冰晶折射出的彩虹光暈與環地平弧
+  temperature: >
+    終年寒冷，冬季極寒冰封，
+    夏季冰緣消退但湖岸仍有積雪，夜間氣溫驟降至冰點以下
+  sound:
+    - 永恆風嘯掠過冰面與裸岩的尖嘯  # inferred: true
+    - 春季融雪時地下溶洞的水流迴響
+    - 遠處約恩維德山脈南麓的風聲  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  access_level: restricted
+  danger_level: medium
+  controlled_by: 西爾伯弗羅斯特邊疆大公國
+  religion: 普世教會西派（創世主阿薩）；當地修士解讀冰晶折射為「阿薩的預言」  # inferred: true
+  population: 0
+
+# ── 關係即通道（connections）──
+connections:
+  - target: the_howling_peaks
+    type: physical
+    direction: 南方
+    hidden: false
+    description: 鏡湖坐落於怒嘯山脈北麓的高山谷地中
+  - target: northern_mountains
+    type: physical
+    direction: 北方
+    hidden: false
+    description: 約恩維德山脈南端的余脈環繞湖泊北岸
+  - target: flumen_geminus
+    type: physical
+    direction: 東南方
+    hidden: false
+    description: 湖水經地下溶洞與夏季融雪補給傑米努斯河上游支流
+  - target: jarnvid_river
+    type: physical
+    direction: 北方
+    hidden: false
+    description: 約恩維德河的一條小支流發源於湖泊東側的冰蝕谷
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 預言之湖
+    location: 湖心與南岸冰蝕平台
+    description: >
+      春分與秋分黎明時，高海拔冰晶折射產生複雜光學現象，
+      當地修士將其解讀為「阿薩的預言」
+  - item: landmark
+    name: 地下溶洞水系
+    location: 湖床東側與東南岸下方
+    description: >
+      湖水經由地下溶洞滲透與匯流，補給傑米努斯大河上游支流，
+      控制了鏡湖就控制了下游的夏季水量
+  - item: landmark
+    name: 邊境巡邏哨站
+    location: 湖泊西岸高地
+    guardian: 西爾伯弗羅斯特邊境巡邏隊
+    description: >
+      監控北境霜生部落是否越過約恩維德山脈南麓薄弱點接近湖區  # inferred: true
+
+# ── 快速標籤（tags）──
+tags:
+  - 湖泊
+  - 冰蝕湖
+  - 水源
+  - 邊境
+  - 預言
+  - 秘境
