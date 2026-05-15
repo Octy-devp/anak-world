@@ -54,6 +54,10 @@ connections:
     type: conceptual
     direction: 東南方
     description: 山脈東南麓的熱霾區與風息群島的熱帶氣候可能有关联，深淵地熱的遠程影響
+  - target: silva_argentea
+    type: physical
+    direction: 北方
+    description: 塔爾塔魯斯山脈北麓的丘陵地帶構成銀葉林的南部邊界
 
 contents:
   - item: resource

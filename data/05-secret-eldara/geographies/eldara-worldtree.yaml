@@ -61,6 +61,26 @@ connections:
     type: conceptual
     direction: 東北方
     description: 與神聖帝國的邊境關係緊張——帝國覬覦森林資源，森民拒絕人類進入
+  - target: silva_argentea
+    type: physical
+    direction: 東方
+    description: 銀葉林的西端漸變為世界樹森林，是人類帝國與森民領地之間的緩衝帶
+  - target: sylvaine_river
+    type: physical
+    direction: 下游
+    description: 希爾薇恩河從世界樹森林深處發源，向東北流淌匯入傑米努斯大河
+  - target: tartarus_stream
+    type: conceptual
+    direction: 對立
+    description: 世界樹的生命之水與塔爾塔魯斯暗河的死亡腐蝕之水形成地下水系的陰陽兩極
+  - target: the_flood_plain
+    type: conceptual
+    direction: 北方
+    description: 世界樹的樹雨與蒸騰作用調節了沖積平原的微氣候，使南岸比同緯度更濕潤
+  - target: wind_isles
+    type: conceptual
+    direction: 東方
+    description: 世界樹的某些漂流木與種子偶爾被洋流帶到風息群島海岸，被視為森民的饋贈
 
 # ── 內容物（contents）──
 contents:

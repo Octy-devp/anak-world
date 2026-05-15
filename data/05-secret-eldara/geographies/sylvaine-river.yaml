@@ -49,6 +49,10 @@ connections:
     type: conceptual
     direction: 東北方
     description: 遠方怒嘯山脈西麓的融雪間接補給了森林地下水系
+  - target: silva_argentea
+    type: physical
+    direction: 南方
+    description: 席爾瓦因河沿森林北緣流淌，是銀葉林與北方平原的自然分界
 
 tags:
   - 河流

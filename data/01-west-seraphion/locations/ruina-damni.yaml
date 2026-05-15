@@ -70,6 +70,10 @@ connections:
     description: >
       名義上隸屬格蘭迪斯大公國，但奧托大公從未將救濟或保護延伸至這片邊陲遺跡帶，
       遺跡村的存在僅是為堤壩哨站提供廉價勞力與情報來源。 # inferred: true
+  - target: palus_nebulae
+    type: conceptual
+    direction: 東方
+    description: 古代堤壩遺跡與沼澤中的被淹沒遺跡屬於同一青銅時代水利工程系統
 
 # ── 內容物（contents）──
 contents:

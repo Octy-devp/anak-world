@@ -95,6 +95,14 @@ connections:
     type: conceptual
     direction: 東方入海口
     description: 大河最終注入東部海洋，與風息群島共享同一海域
+  - target: lacus_speculum
+    type: physical
+    direction: 西北方
+    description: 鏡湖經地下溶洞與夏季融雪補給傑米努斯河上游支流
+  - target: palus_nebulae
+    type: physical
+    direction: 西方
+    description: 傑米努斯河的季節性支流在沼澤東緩緩沒入濕地，夏季氾濫時倒灌
 
 # ── 內容物（contents）──
 contents:
@@ -114,6 +122,13 @@ contents:
     name: 河砂金
     location: 下游河床與沙洲
     description: 從西部高地沖刷而來的細微金砂，是沿岸漁民的副業收入來源
+  - item: landmark
+    name: 東遷河岸烽火台遺跡
+    location: 中游東岸某處山丘
+    description: >
+      傑米努斯河東岸一處低矮山丘上，仍留有第726至728年間東遷隊伍
+      用於聯絡主力的臨時烽火台殘基。石塊燻黑，周圍散落著燒焦的蘆葦稈。
+      當年每當夜間烽火升起，沿河隊伍便知中路主力尚存。  # inferred: true
 
 # ── 歷史事件（events）──
 events:
@@ -125,6 +140,30 @@ events:
     year: 726
     name: 鐵冠起義
     description: 教廷分裂導致東西帝國對峙加劇，魯普圖斯隘口航道一度封閉，東西貿易幾乎斷絕
+  - id: center_south_river_march
+    year: 726
+    name: 中路偏南沿河行軍
+    description: >
+      第726年秋，約五千名工匠、商人與步兵沿傑米努斯河東岸向東行進。
+      隊伍以河流為生命線，夏季捕魚、冬季破冰取水，
+      並利用河岸蘆葦叢掩護營地。與主力的聯絡依靠夜間烽火與騎兵傳令，
+      每當烽火在河岸山丘上升起，意味著主力仍在西側堅持。  # inferred: true
+  - id: river_march_winter_peril
+    year: 727
+    name: 河冰之險
+    description: >
+      第727年嚴冬，傑米努斯河北岸部分結冰。中路偏南隊伍試圖利用冰面
+      縮短繞行路程時，三艘載有建築圖紙與工具的木筏因冰層碎裂而沉沒。
+      雖然人員傷亡有限，但損失了包括維特魯斯聖光大教堂結構圖在內的
+      近半珍貴圖紙資料，對日後奧斯堡的建築規劃造成不可逆的影響。  # inferred: true
+  - id: river_column_reunion
+    year: 728
+    name: 東方平原河邊會合
+    description: >
+      第728年夏，中路偏南隊伍與主力在傑米努斯河東岸一條無名支流交匯處會合。
+      沿河隊伍因補給相對充足，損失約一成，且保留了大量種子與手工工具；
+      但也遭遇了土匪襲擾與冬季傷寒，失去了全部渡河舟筏。
+      兩路會合時，騎士團殘破的裝甲與工匠們相對完整的工具形成鮮明對比。  # inferred: true
 
 # ── 快速標籤（tags）──
 tags:

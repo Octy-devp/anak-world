@@ -83,6 +83,10 @@ connections:
     direction: 東北方
     description: >
       修道院長的報告需經由維特魯斯教廷層層上遞，但第825年的議會癱瘓令這條行政通道幾乎失效。  # inferred: true
+  - target: silva_argentea
+    type: conceptual
+    direction: 西方
+    description: 拉迪克斯守望修道院位於森林東緣，監控森民動向並阻止人類誤入
 
 # ── 內容物（contents）──
 contents:

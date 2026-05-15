@@ -58,10 +58,15 @@ connections:
     hidden: false
     description: 北境諸邦散居於山脈北麓的冰原與峽灣之間
   - target: flumen_geminus
-    type: conceptual
+    type: physical
     direction: 南方
     hidden: false
     description: 山脈阻擋極北冷空氣，使杰米努斯河北段冬季僅結薄冰，維持通航
+  - target: lacus_speculum
+    type: physical
+    direction: 南方
+    hidden: false
+    description: 約恩維德山脈南端的余脈環繞湖泊北岸
 
 # ── 內容物（contents）──
 contents:

@@ -1,0 +1,135 @@
+# ── 身份錨定（必填）──
+id: campus_cinereus
+name: 東部灰燼荒地
+layer: geography
+region: 東部
+empire: 凱撒里克帝國
+parent_id: ankora
+
+# ── 敘事錨定（必填）──
+description: >
+  東部灰燼荒地（Campus Cinereus）位於凱撒里克帝國東部內陸，
+  地處奧魯姆河上游山區以東、怒嘯山脈東麓延伸地帶。
+  這片廣闊的荒涼平原地表覆蓋著灰色火山灰與風化隕鐵碎屑，
+  是大洪水時期地殼撕裂與隕鐵撞擊的綜合遺跡。  # inferred: true
+  植被稀疏，僅有耐旱的灰茅草與苔蘚散佈於風蝕岩縫之間。  # inferred: true
+  傳說此地曾是古代火山帶，大洪水後火山活動平息，
+  留下一片死寂的灰色荒原，成為東西陸路最艱險的通道之一。  # inferred: true
+  第780年，為應對利貝塔尼亞海峽封鎖，凱撒里克帝國開闢「灰燼商道」，
+  穿越這片廢棄火山帶，通往里弗邦德的中立市場，
+  由希爾德家族與艾恩斯家族共同護衛。
+  灰燼平原上隨處可見燒焦的岩柱與半埋的鐵鏽碎片，
+  是數次邊疆衝突與隕鐵私採戰爭遺留的痕跡。  # inferred: true
+  商道沿線的無名墳塚與石砌避難所，
+  見證了這片荒地從未被真正馴服的歷史。  # inferred: true
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 火山灰與乾燥塵土的嗆鼻氣息  # inferred: true
+    - 硫磺殘留的刺鼻酸味  # inferred: true
+    - 風化隕鐵碎屑的金屬腥甜  # inferred: true
+  light: >
+    終年灰濛濛的天光，正午時分亦僅有慘白的漫射；
+    夕照偶爾將灰燼平原染成暗紅。  # inferred: true
+  temperature: >
+    晝夜溫差極大，白日乾熱如焚，夜間寒風刺骨。  # inferred: true
+  sound:
+    - 永恆不絕的風嘯穿過風蝕岩柱  # inferred: true
+    - 灰燼商道駝隊的鈴鐺與車輪聲
+    - 遠處山崩與岩石滾落的悶響  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  access_level: restricted  # inferred: true
+  danger_level: high  # inferred: true
+  controlled_by: 凱撒里克帝國
+  religion: 東派正教（凱撒里克）
+  population: 0
+
+# ── 關係即通道（connections）──
+connections:
+  - target: east_caesaric
+    type: conceptual
+    direction: 貫穿
+    hidden: false
+    description: 灰燼荒地是凱撒里克帝國東部內陸的核心領土，灰燼商道貫穿其中
+  - target: the_howling_peaks
+    type: physical
+    direction: 西方
+    hidden: false
+    description: 地質上為怒嘯山脈東麓的延伸，同為大洪水時期的地殼傷疤與風蝕帶
+  - target: aurum_river
+    type: physical
+    direction: 北方
+    hidden: false
+    description: 位於奧魯姆河上游山區東側，河流發源地的下游流域
+  - target: septempontis_vallis
+    type: physical
+    direction: 東方
+    hidden: false
+    description: 與七橋峽谷相鄰，灰燼商道向東延伸至里弗邦德
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 灰燼商道
+    location: 橫貫荒地中部
+    description: 第780年開闢的陸路商道，穿越廢棄火山帶通往里弗邦德，運輸隕鐵碎片、冷鍛武器與糧食
+  - item: resource
+    name: 隕鐵碎屑與火山礦物
+    location: 荒地地表與淺層岩縫
+    description: 大洪水時期隕鐵撞擊與火山活動遺留的碎片，可供冷鍛與冶煉  # inferred: true
+  - item: landmark
+    name: 廢棄火山帶
+    location: 荒地中部區域
+    description: 古代火山群遺跡，火山口已風化為盆地，邊緣留有凝固的熔岩流痕跡  # inferred: true
+  - item: landmark
+    name: 邊境哨站
+    location: 灰燼商道沿線
+    description: 凱撒里克帝國設立的少量哨站，用於護衛商隊與監控東方邊境  # inferred: true
+  - item: landmark
+    name: 灰燼堡壘
+    location: 灰燼商道東端
+    description: 原為木柵邊境哨站，第754年東西決裂後升級為石砌堡壘，駐紮奧羅·伊格尼斯軍團分隊，是監控東方邊境的前哨  # inferred: true
+  - item: landmark
+    name: 商道避難所
+    location: 灰燼商道沿線
+    description: 灰燼商道開闢戰後沿線修建的石砌避難所，配有地下倉庫與水源儲備，供商隊在劫掠襲擊時躲避  # inferred: true
+  - item: landmark
+    name: 無名墳塚群
+    location: 廢棄火山帶邊緣
+    description: 一片低矮的土丘與焦黑岩柱，傳說是邊疆軍閥叛亂與灰燼商道開闢戰中陣亡者的集體墓地，無人知曉確切數目  # inferred: true
+
+# ── 歷史事件（events）──
+events:
+  - id: great_flood
+    year: 0
+    name: 大洪水
+    description: 地殼撕裂與隕鐵撞擊形成灰燼荒地的地質基礎
+  - id: east_border_militarization
+    year: 754
+    name: 東方邊境軍事化
+    description: 東西教會大分裂後，凱撒里克帝國為防範西部滲透與東方未知威脅，將東部邊疆簡易哨站升級為石砌堡壘，並在灰燼荒地設立常駐軍團駐地  # inferred: true
+  - id: ash_road_opening
+    year: 780
+    name: 灰燼商道開闢
+    description: 面對利貝塔尼亞海峽封鎖，凱撒里克帝國開闢穿越東方邊境廢棄火山帶的商道，通往里弗邦德中立市場
+  - id: ash_road_campaign
+    year: 780
+    name: 灰燼商道開闢戰
+    description: 帝國軍隊在開闢商道過程中與荒地中的游牧劫掠者及廢棄礦坑盜礦集團發生衝突，希爾德家族與艾恩斯家族的聯合護衛隊確立了對商道的控制權  # inferred: true
+  - id: meteoric_iron_wars
+    year: 815
+    name: 隕鐵私採戰爭
+    description: 百年戰爭期間，帝國對隕鐵裝備的需求劇增，艾恩斯家族與盜礦集團在荒地淺層岩縫中爆發地下衝突，帝國稅吏與走私者的博弈持續數年  # inferred: true
+
+# ── 快速標籤（tags）──
+tags:
+  - 荒原
+  - 火山帶
+  - 隕鐵
+  - 灰燼商道
+  - 凱撒里克
+  - 邊境
+  - 推斷內容為主

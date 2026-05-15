@@ -51,6 +51,24 @@ connections:
     direction: 東方出口
     description: 隘口東端通往凱撒里克帝國的東部平原
 
+events:
+  - id: ruptus_pass_struggle_727
+    year: 727
+    name: 魯普圖斯隘口東遷爭奪戰
+    description: >
+      第727年春，馬庫斯親王率東遷主力搶佔隘口東端陡坡，背水一戰。
+      西端緩坡面向塞拉菲昂，追兵易於展開；東端陡坡面向凱撒里克，
+      馬庫斯利用此地形優勢以不足千騎阻擋數千追兵達三日。
+      幼帝艾森瓦爾六世的出現扭轉了瀕臨崩潰的士氣，
+      騎士團最終成功掩護主力與輜重通過隘口。  # inferred: true
+  - id: ruptus_pass_breached
+    year: 727
+    name: 隘口突破
+    description: >
+      背水一戰後，追兵暫時退卻。馬庫斯下令焚毀西端臨時棧道，
+      以延緩追兵再次追擊的速度。東遷隊伍隨後艱難攀越東麓陡坡，
+      進入凱撒里克方向的東方平原。  # inferred: true
+
 tags:
   - 隘口
   - 邊境

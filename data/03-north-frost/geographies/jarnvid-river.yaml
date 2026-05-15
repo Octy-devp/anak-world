@@ -47,7 +47,7 @@ connections:
     hidden: false
     description: 發源於約恩維德山脈南麓的冰川與永凍層
   - target: the_howling_peaks
-    type: conceptual
+    type: physical
     direction: 南方流經
     hidden: false
     description: 河流沿怒嘯山脈西麓南下，山脈融水不斷補給
@@ -61,6 +61,11 @@ connections:
     direction: 東岸
     hidden: false
     description: 河流東岸是格蘭迪斯大公領地的北界，砂質土壤適合黑麥
+  - target: lacus_speculum
+    type: physical
+    direction: 南方
+    hidden: false
+    description: 約恩維德河的一條小支流發源於鏡湖東側的冰蝕谷
 
 # ── 內容物（contents）──
 contents:

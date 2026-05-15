@@ -57,6 +57,10 @@ connections:
     type: physical
     direction: 西北方
     description: 奧魯姆河從凱撒里克東部山區流淌而來，泥沙與養分在出海口形成群島的珊瑚礁基礎
+  - target: delta_aurum
+    type: physical
+    direction: 西北方入海口
+    description: 奧魯姆河河口三角洲是進入凱撒里克帝國前的最後一站，商船在此交接貨物、補給淡水
   - target: south_libertania
     type: conceptual
     direction: 核心
@@ -73,6 +77,10 @@ connections:
     type: conceptual
     direction: 西方遠洋
     description: 群島的礦石與隕鐵主要從怒嘯山脈西麓的港口經海路運來
+  - target: southern_mountains
+    type: conceptual
+    direction: 西方遠洋
+    description: 塔爾塔魯斯山脈以南的深淵與群島遠海航線遙相呼應，某些漂流木與種子被洋流帶到群島海岸
 
 contents:
   - item: landmark

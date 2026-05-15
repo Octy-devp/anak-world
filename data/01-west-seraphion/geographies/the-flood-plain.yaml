@@ -71,6 +71,10 @@ connections:
     type: conceptual
     direction: 全境
     description: 平原是塞拉菲昂帝國的糧食核心，格蘭迪斯大公以此壟斷政治籌碼
+  - target: palus_nebulae
+    type: physical
+    direction: 北方
+    description: 沼澤是中央沖積平原北緣的低洼過渡帶，雨季時兩者幾乎連為一體
 
 # ── 內容物（contents）──
 contents:

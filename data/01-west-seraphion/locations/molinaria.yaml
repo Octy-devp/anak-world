@@ -69,6 +69,10 @@ connections:
     description: >
       磨坊鎮位於中央沖積平原的核心農作區，
       周邊數十個村莊的小麥與大麥皆匯集於此加工。 # inferred: true
+  - target: palus_nebulae
+    type: conceptual
+    direction: 西北方
+    description: 磨坊鎮與沼澤之間的農田帶是格蘭迪斯大公國的開墾前線
 
 # ── 內容物（contents）──
 contents:

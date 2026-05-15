@@ -67,6 +67,56 @@ connections:
     direction: 北麓
     hidden: false
     description: 約恩維德河發源於山脈北麓，向北流淌
+  - target: campus_cinereus
+    type: physical
+    direction: 東麓延伸
+    hidden: false
+    description: 東麓地質延伸至灰燼荒地，同為大洪水時期的地殼傷疤與風蝕帶
+  - target: lacus_speculum
+    type: physical
+    direction: 北方
+    hidden: false
+    description: 鏡湖坐落於山脈北麓的高山谷地中
+  - target: palus_nebulae
+    type: physical
+    direction: 南方
+    hidden: false
+    description: 西麓丘陵的滲流水經地下徑流匯入帕魯斯沼澤
+  - target: the_flood_plain
+    type: conceptual
+    direction: 西方
+    hidden: false
+    description: 西麓融雪是中央沖積平原水源的根本保障
+  - target: aurum_river
+    type: conceptual
+    direction: 東方
+    hidden: false
+    description: 奧魯姆河發源的東部山區與山脈東麓地質同源
+  - target: septempontis_vallis
+    type: physical
+    direction: 東方
+    hidden: false
+    description: 東部山脈為山脈東向延伸的褶皺山系，地質同源
+  - target: northern_mountains
+    type: physical
+    direction: 西北方
+    hidden: false
+    description: 約恩維德山脈與山脈北端相接，形成大陸東北部的山弧
+  - target: sylvaine_river
+    type: conceptual
+    direction: 西南方
+    hidden: false
+    description: 西麓融雪間接補給了世界樹森林的地下水系
+  - target: wind_isles
+    type: conceptual
+    direction: 東方遠洋
+    hidden: false
+    description: 山脈西麓的礦石與隕鐵經海路運往風息群島
+  - target: southern_mountains
+    type: conceptual
+    direction: 南方
+    hidden: false
+    description: 南端斷續山脈鏈與塔爾塔魯斯山脈地質同源，皆為大洪水時期的地殼傷疤
 
 # ── 內容物（contents）──
 contents:
@@ -87,6 +137,13 @@ contents:
     name: 瞭望塔
     location: 山脊線多處
     description: 東西兩大帝國設立的邊境瞭望塔
+  - item: landmark
+    name: 東坡阻擊戰遺跡
+    location: 魯普圖斯隘口東端陡坡
+    description: >
+      第727年東遷期間，馬庫斯主力在此利用陡坡地形阻擋追兵。
+      地表散落著生鏽的箭鏃、碎裂的馬蹄鐵與風化的盾牌殘片，
+      部分岩壁上留有當年臨時挖掘的步兵掩體溝槽。  # inferred: true
 
 # ── 歷史事件（events）──
 events:
@@ -102,6 +159,14 @@ events:
     year: 726
     name: 鐵冠起義
     description: 鐵冠騎士團攻佔聖鑰院，教廷分裂為東西兩派，間接影響山脈兩側的政治格局
+  - id: ruptus_pass_east_slope_battle
+    year: 727
+    name: 東坡阻擊戰痕跡
+    description: >
+      第727年春，馬庫斯親王率東遷主力搶佔魯普圖斯隘口東端陡坡，
+      利用背風乾燥、岩石裸露的險峻地形阻擋追兵。
+      至今東坡仍可見當年騎士衝鋒遺留的馬蹄鐵碎片與箭鏃，
+      以及臨時挖掘的步兵掩體溝槽。  # inferred: true
 
 # ── 快速標籤（tags）──
 tags:

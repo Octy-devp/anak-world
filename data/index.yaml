@@ -4,7 +4,7 @@ layer: continent
 region: 全域
 empire: 無
 description: >
-  安納克大陸是世界樹「艾爾達拉」根系擁抱的廣袤大地，呈南北走向。
+  安納克大陸是世界樹「艾爾達拉」根系擁抱的廣袤大地，呈東西走向。
   大洪水後，被三道山脈與一道深淵重塑：
   北部格萊西姆山脈橫亙極北，中央怒嘯山脈如脊骨縱貫南北隔開東西兩大帝國，
   南部塔爾塔魯斯山脈則隔開了已知世界與大無底洞的迷霧。
@@ -102,3 +102,45 @@ geographies:
       2. 菲惹港（Free Port）：開拓先鋒，桅杆如林的巨型碼頭，匯聚各國貨幣與流亡技術人才
       3. 昂科拉（Anchora）：群島最大造船廠與醃魚場，調度北海木材與糧食
       4. 艾歐利斯（Aeolis）：風息議會（Windbreath Council）永久召開地，純粹中立協商區域
+  - id: lacus_speculum
+    name: 鏡湖
+    region: 北部
+    description: >
+      坐落於怒嘯山脈北麓與約恩維德山脈南端交會的高山谷地中，
+      是安納克大陸中部偏北的一座高山冰蝕湖，冬季冰封，夏季如鏡
+  - id: palus_nebulae
+    name: 迷霧沼澤
+    region: 中央
+    description: >
+      位於中央沖積平原東部、傑米努斯河主河道東側的低洼地帶，
+      大洪水前古河道遺跡，終年積水、迷霧瀰漫、瘴氣滋生
+  - id: silva_argentea
+    name: 銀葉森林
+    region: 西南部
+    description: >
+      位於安納克大陸西南部，塞拉菲昂神聖帝國與艾爾達拉秘境之間的廣闊溫帶—亞寒帶森林帶，
+      秋季白楊與樺樹的銀白葉片形成壯觀景觀
+  - id: sylvaine_river
+    name: 希爾薇恩河
+    region: 西南部
+    description: >
+      傑米努斯大河的西向支流，發源於艾爾達拉世界樹森林深處，
+      河水帶著世界樹樹脂的淡金色，被森民視為聖河
+  - id: campus_cinereus
+    name: 東部灰燼荒地
+    region: 東部
+    description: >
+      位於凱撒里克帝國東部內陸，奧魯姆河上游山區以東、怒嘯山脈東麓延伸地帶，
+      地表覆蓋灰色火山灰與風化隕鐵碎屑的荒涼平原
+  - id: delta_aurum
+    name: 奧魯姆河口三角洲
+    region: 東部
+    description: >
+      奧魯姆河注入東海前的最後一站，凱撒里克帝國東南隅的門戶，
+      由紅樹林島群、蘆葦濕地與鹽沼交錯而成
+  - id: septempontis_vallis
+    name: 七橋峽谷
+    region: 東部
+    description: >
+      位於奧魯姆河上游山區段，河流切穿東部山脈形成的深邃峽谷，
+      七座橋樑橫跨於不同高度，見證凱撒里克帝國的工程史

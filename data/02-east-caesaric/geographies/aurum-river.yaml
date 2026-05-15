@@ -48,6 +48,18 @@ connections:
     type: conceptual
     direction: 西方
     description: 河流發源於東部山區，與怒嘯山脈東麓的地質有同源關係
+  - target: septempontis_vallis
+    type: physical
+    direction: 上游山區段
+    description: 奧魯姆河上游切穿東部山脈形成七橋峽谷，水流湍急，是峽谷形成的直接原因
+  - target: campus_cinereus
+    type: physical
+    direction: 上游東側
+    description: 奧魯姆河上游山區東側為灰燼荒地，河流發源地鄰近荒地西緣
+  - target: delta_aurum
+    type: physical
+    direction: 下游入海口
+    description: 奧魯姆河在下游形成河口三角洲，注入東海
 
 tags:
   - 河流

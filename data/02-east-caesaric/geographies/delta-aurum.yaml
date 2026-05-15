@@ -1,0 +1,179 @@
+# ── 身份錨定（必填）──
+id: delta_aurum
+name: 奧魯姆河口三角洲
+layer: geography
+region: 東部
+empire: 凱撒里克帝國
+parent_id: ankora
+
+# ── 敘事錨定（必填）──
+description: >
+  奧魯姆河口三角洲（Delta Aurum）是奧魯姆河注入東海前的最後一站，
+  凱撒里克帝國東南隅的門戶。每年夏季，上游沖刷而下的泥沙在此堆積，
+  不斷改變航道與沙洲形狀，只有熟悉水道的本地引水人才能安全進出。
+  河口外海就是風息群島，商船從此啟航，帶著東方的隕鐵與香料前往群島交易。
+
+  三角洲由紅樹林島群、蘆葦濕地與鹽沼交錯而成，
+  水網密布如迷宮，漲潮時鹹水倒灌，退潮時露出金黃色的泥灘。
+  凱撒里克帝國在此設有小型港口與燈塔，作為與自由城邦貿易的前哨。
+
+  歷史上，這片三角洲從未遠離戰火。金灘燈塔曾在東西帝國海上摩擦中被焚毀後重建，
+  石基上至今留有焦痕與弩箭彈孔；港口石牆在利貝塔尼亞海峽封鎖期間加筑了堡壘化胸牆，
+  牆縫中嵌著無法取出的舊砲彈碎片。退潮時，漁民偶爾能在泥灘中撈到鏽蝕的隕鐵箭頭與碎甲片，
+  這些沉默的遺物被統稱為「金灘骨」——三角洲的居民將它們熔鑄成漁網墜子，
+  以這種方式記住戰爭，同時繼續生活。
+
+# ── 感官錨定（必填）──
+atmosphere:
+  scent:
+    - 鹹淡水混合的獨特腥甜  # inferred: true
+    - 退潮後泥灘的硫化物氣息  # inferred: true
+    - 紅樹林腐殖質的濃郁土腥  # inferred: true
+    - 漁網與醃魚的鹹腥  # inferred: true
+    - 遠處港口飄來的焦油與松脂  # inferred: true
+  light: >
+    清晨薄霧中的蒼白天光，正午時分強烈陽光在潟湖水面折射成碎金，
+    黃昏時泥灘呈現金紅色澤（與奧魯姆河「黃金」之名遙相呼應）。
+    夜間燈塔光束規律掃過水面。  # inferred: true
+  temperature: >
+    冬季溫和濕冷，夏季悶熱潮濕，午後雷陣雨後短暫涼爽。
+    受海洋調節，溫差較內陸小。  # inferred: true
+  sound:
+    - 潮汐漲退的低語與泥沙摩擦聲  # inferred: true
+    - 候鳥群起落的撲翅與鳴叫  # inferred: true
+    - 船帆在風中的噼啪與引水人的號子  # inferred: true
+    - 紅樹林間招潮蟹爬行的細碎聲響  # inferred: true
+    - 遠處港口鐘聲與卸貨工人的呼喊  # inferred: true
+
+# ── 屬性標籤（可選但建議填寫）──
+properties:
+  controlled_by: 凱撒里克帝國
+  access_level: public
+  danger_level: medium
+  religion: 東派正教（官方）；漁民私下祭拜水神與風母  # inferred: true
+  population: 3000  # inferred: true
+
+# ── 關係即通道（connections）──
+connections:
+  - target: aurum_river
+    type: physical
+    direction: 上游（西北方）
+    description: 奧魯姆河由此注入東海，泥沙在河口堆積形成三角洲
+  - target: wind_isles
+    type: physical
+    direction: 東南方外海
+    description: 出海口外海即風息群島，商船與漁船往來頻繁
+  - target: east_caesaric
+    type: conceptual
+    direction: 核心領土
+    description: 三角洲是凱撒里克帝國東南門戶，農業與貿易的交匯點
+  - target: south_libertania
+    type: conceptual
+    direction: 東南方
+    description: 金灘港是凱撒里克與自由城邦貿易的前哨，商船在此交接貨物  # inferred: true
+
+# ── 內容物（contents）──
+contents:
+  - item: landmark
+    name: 金灘港（Golden Beach Port）
+    location: 三角洲北岸主航道入口
+    description: >
+      凱撒里克帝國在河口設立的小型貿易港，以退潮時裸露的金黃色泥灘得名。
+      港口規模不大，卻是帝國與風息群島之間最重要的貨物交接點。
+      碼頭上堆滿隕鐵錠、香料袋與醃魚桶，各國商人在此討價還價。
+    # inferred: true
+
+  - item: landmark
+    name: 金灘燈塔
+    location: 金灘港外防波堤末端
+    description: >
+      石砌燈塔，塔頂使用東派正教聖火長明燈而非油脂燈，
+      在夜間為進出港口的船隻標示主航道。
+      每年夏季泥沙改道時，引水人會與燈塔守夜人合作調整航道浮標。
+    # inferred: true
+
+  - item: landmark
+    name: 紅樹林島群
+    location: 三角洲南部與東部淺灘
+    description: >
+      由奧魯姆河沖積泥沙與紅樹林根系共同塑造的無數小島，
+      水道錯綜複雜如迷宮。漲潮時幾乎沒於水面，退潮時盤根錯節的氣根裸露。
+      是招潮蟹、彈塗魚與候鳥的棲息地，也是走私者與海盜的潛在藏身處。
+    # inferred: true
+
+  - item: landmark
+    name: 蘆葦濕地與鹽沼
+    location: 三角洲內陸側（西北方）
+    description: >
+      奧魯姆河淡水與海水交界的過渡帶，蘆葦叢高達兩三人，
+      鹽沼草地上生長著耐鹽植物。當地漁民在此放養水禽、採集蘆葦編織漁具。
+    # inferred: true
+
+  - item: landmark
+    name: 舊燈塔殘基與堡壘胸牆
+    location: 金灘港防波堤與石牆沿線
+    description: >
+      現存燈塔是第754年重建的版本，但其花崗岩基座仍保留著第753年焚毀時的焦黑痕跡。
+      基座側面嵌有三枚無法取出的隕鐵弩箭頭，據說是塞拉菲昂僱傭艦隊所用。
+      港口石牆在封鎖期間加筑了堡壘化胸牆，牆縫中卡著舊砲彈碎片與鏽蝕甲片，
+      漁民戲稱這些嵌在石中的金屬為「咬牆的鯊魚牙」。
+    # inferred: true
+
+  - item: npc
+    name: 老納瓦（Old Nava）
+    location: 金灘港燈塔下的小酒館
+    description: >
+      引水人行會現任長老，年過六旬的獨眼老婦，左眼在風息水道之戰中被流矢所傷。
+      她精通凱撒里克拉丁語與風息群島古印尼語混合而成的「金灘話」，
+      能在漲退潮的間隙閉眼報出所有主航道水深。
+      行會在她的領導下維持著「武裝中立」——不屬於帝國，也不屬於自由城邦，
+      誰付得起引水費和「航道安全稅」，誰就能安全通過三角洲。
+    # inferred: true
+
+# ── 歷史事件（events）──
+events:
+  - id: golden_beacon_lit
+    year: 645
+    name: 金灘燈塔點燈
+    description: >
+      凱撒里克帝國在奧魯姆河口建立燈塔，標誌著帝國對東南海岸的正式控制，
+      也為前往風息群島的商船提供安全指引。
+    # inferred: true
+
+  - id: lighthouse_burning
+    year: 753
+    name: 燈塔焚毀之戰
+    description: >
+      東西帝國對峙初期，塞拉菲昂僱傭艦隊夜襲金灘港，燈塔在戰鬥中被焚毀。
+      這是三角洲首次遭遇大規模海上攻擊，標誌著東西摩擦從間諜活動升級為公開暴力。
+      凱撒里克帝國次年重建燈塔，並在防波堤末端加築小型石堡。
+    # inferred: true
+
+  - id: strait_blockade_boom
+    year: 780
+    name: 封鎖潮與灰燼商道
+    description: >
+      利貝塔尼亞對凱撒里克施行海峽封鎖，金灘港地位驟升，成為帝國繞行封鎖的最後門戶。
+      走私者、海盜與帝國海軍在此角力，灰燼商道開闢後，港口人口在五年內翻了一倍。
+      漁村發展出地下避難所與秘密貨倉，本地混合語「金灘話」在此時成形。
+    # inferred: true
+
+  - id: wind_isles_channel_war
+    year: 798
+    name: 風息水道之戰
+    description: >
+      風息群島內部城邦衝突激化，島內一派系試圖封鎖三角洲航道，
+      切斷對手的貿易收入。凱撒里克帝國出兵護航，與城邦帆隊在紅樹林島群外海激戰。
+      最終以引水人行會出面斡旋，達成「武裝中立協議」停火，行會自此取得航道實質管制權。
+    # inferred: true
+
+# ── 快速標籤（tags，必填）──
+tags:
+  - 三角洲
+  - 河口
+  - 凱撒里克
+  - 風息群島
+  - 貿易
+  - 紅樹林
+  - 燈塔
+  - 航海
